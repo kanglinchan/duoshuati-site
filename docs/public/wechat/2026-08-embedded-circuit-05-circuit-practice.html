@@ -1,0 +1,92 @@
+<section style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">学到这里，电阻和电容的基本特性你已经熟悉了。但真实电路板上，它们往往以一些"约定俗成"的角色出现：引脚旁的上拉下拉电阻、LED 旁的限流电阻、电源入口的压敏电阻、跨线用的零欧姆电阻，还有电源脚上的滤波电容、信号链上的耦合与旁路电容。本章把这些实战用法逐一讲透，让你看懂原理图时不再一头雾水。</p>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">一、上拉电阻与下拉电阻</h2>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">首先要澄清：市面上并不存在"上拉电阻"这种实体元件——上拉、下拉说的是电阻的用法。把信号线通过一个电阻接到固定高电平 VCC，让它在空闲时保持高电平，这个电阻就叫上拉电阻；同理，把信号线通过电阻接到 GND，让空闲时保持低电平，就叫下拉电阻。最常见的用途是把不确定的信号钳位在已知电平：比如按键未按下时，单片机引脚悬空，电平飘忽不定，读数时高时低；加上一个上拉电阻后，空闲时稳定读到高电平，按下接地的按键时读到低电平，逻辑就确定了。</p>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">二、限流电阻</h2>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">限流电阻的作用是把电流限制在元器件的正常工作电流之内，最典型的是给 LED 串联电阻。确定阻值需要两个基本参数：元器件的压降和工作电流（或功率），核心公式是 电流 = 功率 ÷ 压降，再结合电源电压算出电阻上的压降，最后用欧姆定律求阻值。以 L-3N4GD 发光二极管为例，查数据手册得到其工作参数后即可计算；如果对亮度要求不高，还可以主动降低电流（比如让 LED 在 2V、10mA 下工作），牺牲一点亮度换取更长的使用寿命。</p>
+<img src="/assets/images/2026-08-embedded-circuit/img-219.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">查数据手册：压降与工作电流是算限流电阻的依据</p>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">三、压敏电阻与零欧姆电阻</h2>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">压敏电阻是一种限压型保护器件，利用其非线性特性吸收电路中的尖峰电压。工作原理很直观：加在它两端的电压低于阈值（压敏电压）时，它相当于无穷大的电阻，如同断开的开关，对电路毫无影响；一旦电压高于阈值，它瞬间变成极小的电阻，如同闭合的开关，把过电压钳位在一个相对固定的值，从而保护后级电路。选型时关注压敏电压、最大连续电压、最大限制电压、最大冲击电流和响应时间这几个参数。实际电路中，压敏电阻一般并联在电源入口两端，与保险丝配合使用。</p>
+<img src="/assets/images/2026-08-embedded-circuit/img-217.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">压敏电阻伏安特性：超过阈值后电流急剧增大</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">零欧姆电阻又称跨接电阻，它并非真的阻值为零，而是阻值很小的电阻，因此和普通贴片电阻一样有误差精度指标。它的用途很妙：一是方便测电流——想测某部分电路的耗电流时，在回路中预留一个零欧姆电阻的位置，拆掉它接上电流表即可测量，可用于测量大电流；二是布线救急——单面板布线实在布不过去时，焊一个零欧姆电阻当"跨线桥"，从其他走线上面跨过去。</p>
+<img src="/assets/images/2026-08-embedded-circuit/img-223.jpg" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">零欧姆电阻实物</p>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">四、电容三大实战用法</h2>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">第一种用法是滤波。单片机从上电到稳定供电的瞬间会产生很多杂波，利用电容隔直通交的特性可以把杂波滤掉，让供电更干净。由电阻电容组成的 RC 电路还能做成频率选择器：低通滤波让低于截止频率的信号通过，高通滤波则放行高频，两者的截止频率都是 f0=1/(2πRC)。</p>
+<img src="/assets/images/2026-08-embedded-circuit/img-226.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">滤波：滤除供电杂波</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">第二种用法是耦合。耦合就是两个电路之间的连接。后级电路如果只需要交流信号（比如一个方波），可以在两级之间串一个电容：利用隔直通交的特性，直流分量被挡下，想要的交流信号顺利通过，前后级的直流工作点互不干扰。第三种用法是旁路：同样利用通交隔直，把电路中不需要的高频信号通过电容引到地滤除，只留下需要的部分。记忆口诀：耦合电容串联在信号通路中"取交流"，旁路电容并联到地"去高频"。</p>
+<img src="/assets/images/2026-08-embedded-circuit/img-231.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">耦合电容：隔直传交，给后级纯净的交流信号</p>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">小结</h2>
+<ul style="padding-left: 24px; margin: 14px 0;"><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">上拉/下拉是电阻的用法而非元件种类，用来钳位不确定信号</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">限流电阻靠数据手册的压降与工作电流计算，可降电流延长 LED 寿命</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">压敏电阻低于阈值如开路、高于阈值如短路，并联在电源入口吸收尖峰</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">零欧姆电阻既是测电流的断点，也是布线的跨线桥</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">电容滤波净化供电；耦合串联传交流；旁路并联到地滤高频</li></ul>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">最后一章认识实操工具：稳压电源与示波器。</p>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">本章自测</h2>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">上拉与下拉电阻</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>1. 关于上拉电阻，下列说法正确的是：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 是把信号线通过电阻接到 VCC，让空闲电平保持高电平的普通电阻</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 是一种专门制造的元件，内部结构与普通电阻不同</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 是把信号线接到 GND 的电阻</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 只有按键电路才需要使用</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>2. 按键一端接 GND、另一端接单片机输入引脚，为了让未按时引脚读到确定的高电平，应该：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 在引脚与 VCC 之间接上拉电阻</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 在引脚与 GND 之间接下拉电阻</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 什么都不接，引脚自然就是高电平</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 在引脚上串联一个电容</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>3. 上拉/下拉电阻最核心的作用是：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 把不确定的信号钳位在已知电平</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 提升信号传输速度</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 增大信号电流</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 防止信号线发热</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">限流电阻计算</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>4. 确定 LED 限流电阻阻值，首先需要的两个参数是：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. LED 的压降和工作电流</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. LED 的颜色和封装</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 电源的频率和波形</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 导线的长度和粗细</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>5. 想让 LED 用得更久但亮度要求不高，可以：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 增大限流电阻，让 LED 在更小电流下工作</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 减小限流电阻，让 LED 更亮</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 去掉限流电阻，直接接电源</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 把 LED 反接</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>6. 已知元器件功率 P 和压降 U，其工作电流 I 的计算式是：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. I = P ÷ U</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. I = P × U</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. I = U ÷ P</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. I = P + U</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">压敏电阻与零欧姆电阻</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>7. 压敏电阻并联在电源入口，当电压低于其压敏电压时，它表现为：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 相当于无穷大电阻，如同断开的开关</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 相当于极小的电阻，如同闭合的开关</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 相当于一个电容</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 会持续发热耗电</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">电容三大实战用法</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>8. 后级电路只需要交流方波信号，要去掉前级信号中的直流分量，应该在两级之间：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 串联一个耦合电容</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 并联一个旁路电容到地</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 串联一个电感</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 并联一个电阻</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>9. 单片机供电脚旁的电容主要起什么作用？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 滤波：把上电瞬间及供电中的杂波滤掉</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 储能：断电后继续供电几小时</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 升压：把 3.3V 升到 5V</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 隔离：防止程序跑飞</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>10. 关于旁路电容，正确的是：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 并联到地，把不需要的高频信号泄放滤除</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 串联在两级电路之间传递交流</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 只能滤掉直流分量</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 必须用电解电容，瓷片电容不行</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">答案与解析</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>1. 答案：A</strong>　上拉/下拉是用法而非元件种类：接 VCC 的叫上拉，接 GND 的叫下拉。B 错：没有这种实体元件；C 错：那是下拉；D 错：任何需要确定空闲电平的信号线都可用。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>2. 答案：A</strong>　引脚悬空电平飘忽，上拉电阻把它钳位在高电平；按下按键接 GND 读低电平。B 错：空闲和按下都为低，无法区分；C 错：悬空电平不确定；D 错：电容不能提供确定直流电平。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>3. 答案：A</strong>　上拉下拉的本质是给悬空信号一个确定的默认电平。B、C、D 都不是它的作用。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>4. 答案：A</strong>　限流计算的核心是 LED 压降与工作电流（或功率），再由电源电压减去压降得电阻压降，用欧姆定律求阻值。B、C、D 与计算无关。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>5. 答案：A</strong>　增大限流电阻降低工作电流，牺牲亮度换寿命。B 错：电流大寿命短；C 错：没有限流会烧 LED；D 错：反接不亮。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>6. 答案：A</strong>　功率 = 电压 × 电流，变形得 I = P ÷ U。其余选项都是公式的错误变形。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>7. 答案：A</strong>　低于阈值时近似开路，对电路无影响；高于阈值才瞬间变为小电阻钳位过压。B 错：那是过压时的状态；C、D 不符合其非线性特性。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>8. 答案：A</strong>　耦合电容串联在信号通路中，隔直通交，把交流传过去、直流挡下。B 错：旁路是并联到地滤高频；C 错：电感通直阻交，效果相反；D 错：电阻不隔直。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>9. 答案：A</strong>　利用电容隔直通交滤除供电杂波。B 错：小电容储能只够毫秒级；C 错：电容不升压；D 错：与程序运行无关。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>10. 答案：A</strong>　旁路电容并联到地"去高频"。B 错：那是耦合电容的接法；C 错：它滤的是高频交流；D 错：小容量瓷片电容正是常用旁路电容。</p>
+</section>

@@ -1,0 +1,114 @@
+<section style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">前面认识了电阻、电容、电感这些基础元件，但实际搭建电路时还会用到一批"配角"：用仿真软件先在电脑上验证电路，用继电器实现小电流控制大电流，用保险丝守住安全底线，用接插件把各个模块连起来，用蜂鸣器发出提示音，用电池和稳压芯片给电路供电。本章还会介绍万用表——排查电路问题的必备工具，学会它你就拥有了给电路"看病"的能力。</p>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">一、CircuitJS 电路仿真</h2>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">动手搭电路之前，可以先用仿真软件在电脑上把电路跑一遍，验证设计是否正确。CircuitJS 是一款免费的在线电路仿真工具，打开浏览器就能用：左边拖出电源、电阻、电容、三极管等元件，连线之后电流的流动、各点的电压波形都实时可见。它不需要安装、不用买元件，试错成本为零，特别适合初学者理解电路原理。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">本课程的电路演示很多都可以先在 CircuitJS 里跑通，再搬到实物上。养成"先仿真、后动手"的习惯，能省下不少烧元件的学费。</p>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">二、继电器与保险丝</h2>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">继电器可以理解为一个用电磁铁控制的开关。它内部有一个电磁铁（线圈）和一组衔铁触点：线圈不通电时，衔铁在弹簧作用下与常闭触点接触；给线圈两端通电后，电磁铁产生磁性，把衔铁吸下来，衔铁带动公共端切换到另一组触点，主电路随之导通。这样我们就能用一个很小的控制电流（比如单片机 IO 口输出的几毫安），去控制大电流回路的通断。</p>
+<img src="/assets/images/2026-08-embedded-circuit/img-127.jpg" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">继电器内部结构：线圈通电吸合衔铁，公共端切换触点</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">继电器的典型应用场景是汽车电路。汽车的远光灯功率很大，如果直接用驾驶台上的开关去通断大电流，开关和导线都得做得又粗又重。实际做法是：开关只控制继电器线圈的通断，由继电器的触点去接通远光灯的大电流回路，这就是"小电流控制大电流"。</p>
+<img src="/assets/images/2026-08-embedded-circuit/img-129.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">汽车远光灯：小电流回路控制继电器，大电流回路点亮车灯</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">保险丝的作用是在电路发生过载或短路时自动熔断，切断电路，保护后端设备。常见的有玻璃管保险丝和陶瓷保险丝，烧断后必须更换新的；还有一种 PTC 自恢复保险丝，过流时自身阻值急剧增大从而限流，故障排除后又能恢复，可以重复使用，常见于 USB 端口等需要反复保护的场合。</p>
+<img src="/assets/images/2026-08-embedded-circuit/img-130.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">保险丝实物：玻璃管保险丝与 PTC 自恢复保险丝</p>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">三、电源方案：电池与稳压芯片</h2>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">电源是电路的能量来源，实验中最常用的是干电池。选电池主要看两个参数：容量和放电电流。容量用毫安时（mAh）表示，比如 500mAh 表示以 500mA 放电大约能用 1 小时；放电电流决定了电池能带动多大的负载。多节电池要靠电池盒组合使用：串联电压相加、并联容量相加，3 节 1.5V 电池串联后输出约 4.5V。</p>
+<img src="/assets/images/2026-08-embedded-circuit/img-161.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">电池盒：3 节电池串联提供约 4.5V</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">但电池的电压会随电量下降而跌落，而单片机等芯片要求稳定的工作电压，这时就需要稳压芯片。稳压芯片的作用是把一个波动的输入电压变成恒定的输出电压：输入在允许范围内变化时，输出始终不变。比如常见的 7805 能把 7V 以上的输入稳定成 5V 输出，低压差的 AMS1117-3.3 则能把 5V 转成单片机常用的 3.3V。实际产品里，电池负责"供能"，稳压芯片负责"稳压"，两者配合才能给电路干净可靠的电源。</p>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">四、接插件与蜂鸣器</h2>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">接插件就是各类插头与插座，负责在电路板和外部器件之间建立可靠连接。常用型号有 XH2.54，常用于各类传感器的连接；KF2510，常用于直流电机等电流较大的场合；PH2.0，针距 2.0mm，体积更小巧。型号里的数字通常就是针脚间距（单位 mm），间距越大，能承受的电流一般也越大。搭实验电路时最常用的是杜邦线：一头是针、一头是孔，针距同样是 2.54mm，按两端形态分为公对公、公对母、母对母三种，常备一盒混合装就能应付绝大多数接线需求。</p>
+<img src="/assets/images/2026-08-embedded-circuit/img-137.jpg" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">XH2.54 接插件：常用于传感器连接</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">蜂鸣器分为有源和无源两种。有源蜂鸣器内部自带振荡源，只要接上直流电就会以固定频率发声，频率不可调节；无源蜂鸣器内部没有振荡源，必须用方波信号驱动，发声频率可以调节——蜂鸣器播放音乐就是利用了这一特性。蜂鸣器工作时电流较大，单片机 IO 口直接驱动力不从心，通常用三极管做开关来驱动。</p>
+<img src="/assets/images/2026-08-embedded-circuit/img-159.jpg" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">蜂鸣器驱动电路：IO 口经三极管控制蜂鸣器</p>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">五、万用表的使用</h2>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">万用表是排查电路问题的必备工具。测电压时，预估被测电压并选好档位（拿不准就先用大量程），电压挡内阻极大，要把红表笔接高电位、黑表笔接低电位，与被测部分并联，红接反了读数会是负值。测电流则完全不同：电流挡内阻极小，必须把万用表串联进电路——先断开电路，把红表笔接断点的高电位侧、黑表笔接低电位侧，让电流从红表笔流入、黑表笔流出；小电流用 mA 孔，超过 200mA 要换 10A 大电流孔。</p>
+<blockquote style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0;"><p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 0;"><strong>注意：</strong>电流挡绝对不可以并联在电源两端，否则相当于短路，瞬间大电流可能烧坏万用表或电源。测电流必须串联进电路。</p></blockquote>
+<img src="/assets/images/2026-08-embedded-circuit/img-164.jpg" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">测电压：并联接入，红高黑低</p>
+<img src="/assets/images/2026-08-embedded-circuit/img-165.jpg" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">测电流：串联接入，让电流流过表内</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">电阻挡和电容挡使用简单，选好量程直接测量即可，注意测电阻要在断电状态下进行。二极管挡也很实用：红表笔接二极管正极、黑表笔接负极，屏幕会显示导通电压（硅管约 0.5~0.8V）；表笔反接则显示不导通，借此既能判断二极管好坏，也能分辨正负极。很多万用表还有通断挡，线路连通时蜂鸣器会响，查线特别方便。</p>
+<img src="/assets/images/2026-08-embedded-circuit/img-171.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">二极管挡：红笔接正极时显示导通电压</p>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">小结</h2>
+<ul style="padding-left: 24px; margin: 14px 0;"><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">CircuitJS 免费在线仿真，养成先仿真后动手的习惯</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">继电器用线圈吸合衔铁，实现小电流控制大电流；保险丝过流熔断，PTC 型可自恢复</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">电池供能、稳压芯片稳压；电池串联升压、并联扩容</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">接插件按针距选型，杜邦线分公对公、公对母、母对母</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">蜂鸣器分有源（直流直驱、频率固定）和无源（方波驱动、频率可调）</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">万用表测电压并联、测电流串联、二极管挡能分辨极性</li></ul>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">下一章进入模拟电路的核心——二极管、三极管、场效应管这三种半导体器件。</p>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">本章自测</h2>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">CircuitJS 电路仿真</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>1. 关于 CircuitJS，下列说法正确的是：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 免费在线仿真，无需安装，可实时看到电流流动与电压波形</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 必须付费购买授权才能使用</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 只能仿真数字电路，不能仿真模拟电路</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 仿真结果与实际电路完全无关，仅供娱乐</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">继电器与保险丝的保护机制</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>2. 汽车远光灯电路中使用继电器的核心目的是：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 用小电流回路控制大电流回路</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 提升灯泡亮度</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 降低电源电压</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 过滤电路中的干扰</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>3. 继电器线圈通电后，内部发生的变化是：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 电磁铁产生磁性吸合衔铁，公共端切换到另一组触点</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 线圈发热熔断，切断电路</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 内部电容开始充电储能</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 触点永久焊死，不再断开</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>4. 关于 PTC 自恢复保险丝，下列说法正确的是：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 过流时阻值增大限流，故障排除后可重复使用</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 熔断后必须更换新的</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 只能用于高压电路</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 过流时会爆炸提示故障</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">电源方案：电池与稳压芯片</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>5. 3 节 1.5V 干电池装入三节电池盒（串联），输出电压约为：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 4.5V</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 1.5V</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 3V</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 9V</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>6. 电池容量标注 500mAh，含义是：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 以 500mA 电流放电大约能持续 1 小时</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 电池最高电压是 500mV</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 电池内阻是 500mΩ</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 充电必须充 500 小时</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>7. 单片机要求 3.3V 稳定供电，而电池电压随电量下降而跌落，正确的做法是：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 电池经稳压芯片（如 AMS1117-3.3）稳压后再给单片机供电</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 直接把电池接到单片机电源脚</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 多串联几节电池让电压"够用"</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 给电池并联一个大电容代替稳压</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">万用表的使用</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>8. 用万用表测某段电路的电流，正确的接法是：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 断开电路，把万用表串联进去，电流从红表笔流入</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 把表笔直接并在被测元件两端</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 把红表笔接电源正极、黑表笔接地，无需断开电路</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 用电压挡串联进电路</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>9. 用万用表二极管挡测二极管，红表笔接一端显示约 0.6V，反接不显示。说明：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 红表笔接的是正极，二极管正常</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 红表笔接的是负极，二极管正常</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 二极管已击穿损坏</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 二极管开路损坏</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>10. 用万用表测量电路中某个电阻的阻值，正确的前提是：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 在断电状态下测量</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 电路通电且电流越大测得越准</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 必须用电流挡</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 红表笔必须接电阻色环多的一端</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">接插件与蜂鸣器</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>11. 想让蜂鸣器播放音乐（频率可调），应该选用：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 无源蜂鸣器，用方波驱动</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 有源蜂鸣器，接直流电</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 有源蜂鸣器，调节电压大小</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 无源蜂鸣器，接直流电</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">答案与解析</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>1. 答案：A</strong>　CircuitJS 打开浏览器即可用，元件拖拽连线后电流、波形实时可见。B 错：它免费；C 错：模拟数字都能仿真；D 错：仿真是验证设计的有效手段。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>2. 答案：A</strong>　开关只控制继电器线圈的小电流，由触点接通远光灯的大电流回路。B 错：继电器不改变灯泡功率；C 错：继电器不降压；D 错：滤波是电容的事。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>3. 答案：A</strong>　线圈通电→电磁铁吸合衔铁→公共端切换触点，主电路导通。A 正确；B 错：那是保险丝的行为；C 错：继电器内没有起开关作用的电容；D 错：断电后弹簧复位。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>4. 答案：A</strong>　PTC 过流时阻值急剧增大实现限流，故障排除后自动恢复，常见于 USB 端口。B 错：那是玻璃管保险丝；C 错：多用于低压场合；D 错：限流而非爆炸。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>5. 答案：A</strong>　电池盒内电池串联，电压相加：1.5V×3=4.5V。B 错：那是单节或并联的电压；C 错：少算一节；D 错：9V 需要 6 节串联。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>6. 答案：A</strong>　毫安时是容量单位：放电电流 × 时间。500mAh ≈ 500mA 放 1 小时，或 100mA 放 5 小时。B、C 混淆了单位；D 无此说法。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>7. 答案：A</strong>　稳压芯片把波动输入变成恒定输出。B 错：电压跌落会导致工作异常；C 错：串联只升压不稳压；D 错：电容只能滤除短暂波动，无法长期稳压。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>8. 答案：A</strong>　电流挡内阻极小，必须串联：断开电路，红表笔接断点高电位侧、黑表笔接低电位侧。B 错：并联会短路；C 错：那是测电压的思路；D 错：要换电流挡和对应表笔孔。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>9. 答案：A</strong>　二极管挡红表笔输出正电压，接正极时显示导通电压（硅管约 0.5~0.8V），反接截止。B 把极性记反；C 错：击穿则双向导通；D 错：开路则双向不导通。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>10. 答案：A</strong>　测电阻要断电，否则外部电压会干扰测量甚至损坏万用表。B 错：通电测量既不准又危险；C 错：用电阻挡；D 错：电阻无极性。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>11. 答案：A</strong>　无源蜂鸣器无内部振荡源，靠外部方波驱动，频率可调。B 错：有源频率固定；C 错：调电压只影响音量；D 错：无源接直流不发声。</p>
+</section>

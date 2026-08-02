@@ -1,0 +1,41 @@
+<section style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">前面几章讲的都是元器件和电路原理，本章换个视角，先补齐看懂原理图所需的电气符号，再认识两件实验室里天天打交道的仪器：稳压电源负责给电路提供稳定可控的直流电，示波器负责把看不见的电信号画成看得见的波形。会用这两件工具，加上之前学过的万用表，你就凑齐了电子实验的"三大件"。</p>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">一、常用电气符号识读</h2>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">看原理图的第一步是认识符号。前面章节陆续出现过：电阻是折线（或矩形框）、电容是两条平行线、电感是半圆弧、二极管是三角形加一竖、三极管是带箭头的三个引脚、接地是逐级变短的三条横线。符号就是电路世界的"文字"，建议把常见符号抄在便签上，对照原理图多看几遍就记住了。</p>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">二、稳压电源的使用</h2>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">稳压电源提供稳定可调且电压电流双显示的直流输出。它的三个输出端子容易让人困惑：中间标着 GND 的是接大地的地线，真正的输出负极是标"-"的端子——这与电池盒"黑负红正"的习惯不同，接线时务必看清。调节电压分两步：先粗调找到大致范围，再细调到精确值，顺时针调大、逆时针调小，别跟万用表的习惯记反了。</p>
+<img src="/assets/images/2026-08-embedded-circuit/img-240.jpg" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">注意：中间 GND 是接大地的地线，负极是"-"端子</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">使用之前还有一个关键步骤：设置电流上限。如果直接用默认电流驱动电路，一旦接错或短路，瞬间大电流可能烧坏电路板。正确做法是先接好电路，把电压从零缓慢增大，观察电流变化来设置合适的限流值，起到保护作用。</p>
+<img src="/assets/images/2026-08-embedded-circuit/img-247.jpg" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">限流保护：从零缓慢调压，观察电流变化</p>
+<blockquote style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0;"><p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 0;"><strong>注意：</strong>缓慢调压的同时观察电流变化，能在接错线或短路早期就发现异常。养成"先限流、再上电"的习惯，一块开发板的钱就省下来了。</p></blockquote>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">三、示波器的基本使用</h2>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">示波器是把电信号随时间的变化画成波形的仪器。万用表只能告诉你某一时刻的电压值，示波器则能让你看到信号的全貌：是直流还是交流、频率多少、幅值多大、有没有杂波和失真。基本使用流程是：把探头接好（探针接被测点、夹子接地），用自动设置（Auto Set）让示波器自动匹配合适的量程，屏幕上就会出现稳定波形；再通过水平和垂直旋钮调整时间与电压刻度，读出一个周期的宽度和峰峰值。调试蜂鸣器、PWM、通信信号时，示波器是无可替代的利器。</p>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">小结</h2>
+<ul style="padding-left: 24px; margin: 14px 0;"><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">电气符号是读懂原理图的文字，多看多记</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">稳压电源负极是"-"端子而非 GND；先粗调后细调</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">上电前设好限流，从零缓慢调压并观察电流</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">示波器把信号变成波形，Auto Set 是新手最好的朋友</li></ul>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">至此，从电的基本概念、元器件、半导体器件到实战用法与仪器工具，这门硬件电路基础课的全部内容就讲完了。接下来，去真实的嵌入式项目里练手吧。</p>
+<h2 style="font-size: 22px; font-weight: bold; color: #222; margin: 32px 0 16px; padding-left: 10px; border-left: 4px solid #0e88eb; line-height: 1.4;">本章自测</h2>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">常用电气符号识读</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>1. 原理图中"三角形加一竖"的符号代表：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 二极管</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 电阻</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 电容</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 三极管</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">稳压电源的使用</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>2. 给新接好的电路使用稳压电源，正确的做法是：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 电压从零缓慢调高，观察电流变化并设置限流上限</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 直接用默认大电流输出，快速调到额定电压</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 先把电压调到最大再接线</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 限流设置无所谓，反正电源会自动保护</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">示波器的基本使用</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>3. 相比万用表，示波器最核心的优势是：</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 能看到信号随时间变化的完整波形，包括频率、幅值与失真</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 测电压一定比万用表更精确</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 可以直接测量电阻阻值</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 价格更便宜，便于携带</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">答案与解析</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>1. 答案：A</strong>　三角形加一竖是二极管符号。B 错：电阻是折线或矩形框；C 错：电容是两条平行线；D 错：三极管是带箭头的三个引脚。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>2. 答案：A</strong>　缓慢调压加限流保护，能在接线错误或短路早期发现异常，避免瞬间大电流烧板。B、C、D 都可能让故障电流直接冲击电路。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>3. 答案：A</strong>　万用表只给某时刻数值，示波器呈现信号全貌：交直流形态、频率、幅值、杂波失真。B 错：精度并非核心优势；C 错：示波器不测电阻；D 错：示波器通常更贵更笨重。</p>
+</section>
