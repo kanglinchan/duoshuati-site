@@ -1,0 +1,359 @@
+{
+  "chapter": "01",
+  "groups": [
+    {
+      "knowledgePoint": "五种基本句型总览",
+      "level": "core",
+      "questions": [
+        {
+          "id": "kp1-q1",
+          "stem": "关于英语语法的三个层次，下列说法正确的是：",
+          "options": [
+            "复合句是语法的第一个层次，简单句是第三个层次",
+            "简单句是基本构件，所有复杂句子都由简单句组合或简化而来",
+            "简化从句是在简单句中加入更多修饰语",
+            "三个层次彼此独立，没有递进关系"
+          ],
+          "answer": 1,
+          "explanation": "语法分三层：简单句（第一层，基本构件）→ 并列句与复合句（第二层，组合）→ 简化从句（第三层，瘦身）。所有复杂句子拆到底都是简单句。"
+        },
+        {
+          "id": "kp1-q2",
+          "stem": "「任何一个正确的英语简单句，必然属于五种基本句型之一。」这句话：",
+          "options": [
+            "正确，五种句型覆盖了所有简单句，没有例外",
+            "错误，存在第六种特殊句型",
+            "只对陈述句成立，疑问句例外",
+            "只对书面语成立，口语例外"
+          ],
+          "answer": 0,
+          "explanation": "五种基本句型（S+V、S+V+O、S+V+P、S+V+O+O、S+V+O+C）覆盖了所有简单句，疑问句、感叹句等只是语序或语气变化，骨架仍在五种句型之内。"
+        },
+        {
+          "id": "kp1-q3",
+          "stem": "判断一个简单句属于哪种句型，最关键的分析对象是：",
+          "options": [
+            "主语的单复数",
+            "句子的长短",
+            "谓语动词的类型及其后面的成分",
+            "句子的时态"
+          ],
+          "answer": 2,
+          "explanation": "句型由动词的“性格”（及物/不及物、完全/不完全）决定，分析动词类型以及它后面跟的是宾语、补语还是什么都没有，即可判定句型。"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "句子的基本构成：主语与谓语",
+      "level": "core",
+      "questions": [
+        {
+          "id": "kp2-q1",
+          "stem": "一个完整的英语简单句至少需要哪两个部分？",
+          "options": [
+            "主语 + 宾语",
+            "谓语 + 宾语",
+            "主语 + 谓语",
+            "定语 + 状语"
+          ],
+          "answer": 2,
+          "explanation": "完整句子 = 主语（谁/什么）+ 谓语（怎么样/做什么）。宾语、补语、定语、状语都不是必备成分。"
+        },
+        {
+          "id": "kp2-q2",
+          "stem": "「The tall man in a gray suit smiled.」这个句子的谓语核心是：",
+          "options": [
+            "The tall man",
+            "in a gray suit",
+            "smiled",
+            "The tall man in a gray suit smiled"
+          ],
+          "answer": 2,
+          "explanation": "谓语的核心永远是动词本身。smiled 是谓语动词；in a gray suit 是修饰主语的介词短语，不属于谓语核心。"
+        },
+        {
+          "id": "kp2-q3",
+          "stem": "关于主语和谓语的作用，下列说法错误的是：",
+          "options": [
+            "主语回答“谁”或“什么”",
+            "谓语以动词为核心，回答主语“怎么样”或“做什么”",
+            "再复杂的句子剥到最后都有主语和谓语动词",
+            "修饰语（介词短语、副词）是谓语的必要成分"
+          ],
+          "answer": 3,
+          "explanation": "修饰语只是附加成分，可有可无。谓语的必要成分只有动词核心，例如 The dog barked at the stranger. 中谓语核心只是 barked。"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "S+V 句型（主谓）",
+      "level": "core",
+      "questions": [
+        {
+          "id": "kp3-q1",
+          "stem": "「The dog barked at the stranger.」这个句子的句型是：",
+          "options": [
+            "S+V+O（主谓宾），the stranger 是宾语",
+            "S+V（主谓），at the stranger 是状语",
+            "S+V+P（主系表），the stranger 是表语",
+            "S+V+O+C（主谓宾补）"
+          ],
+          "answer": 1,
+          "explanation": "bark 是不及物动词，不接宾语。at the stranger 是介词短语作状语（宾语直接跟在及物动词后，中间没有介词）。去掉状语后 The dog barked. 仍成立。"
+        },
+        {
+          "id": "kp3-q2",
+          "stem": "关于 S+V 句型，下列说法错误的是：",
+          "options": [
+            "动词必须是不及物完全动词",
+            "动词后面可以跟状语，不影响句型",
+            "不及物动词后面绝对不能跟任何词",
+            "这是五种句型中最精简的一种"
+          ],
+          "answer": 2,
+          "explanation": "不及物动词只是不接宾语，后面完全可以跟状语，如 The sun rises in the east. 中 in the east 就是状语。"
+        },
+        {
+          "id": "kp3-q3",
+          "stem": "下列哪个句子属于 S+V 句型？",
+          "options": [
+            "He reads books every day.",
+            "She seems tired.",
+            "The children laughed.",
+            "They elected her president."
+          ],
+          "answer": 2,
+          "explanation": "laughed 是不及物完全动词，后面无宾语无补语。A 是 S+V+O，B 是 S+V+P，D 是 S+V+O+C。"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "S+V+O 句型（主谓宾）",
+      "level": "core",
+      "questions": [
+        {
+          "id": "kp4-q1",
+          "stem": "判断 S+V+O 句型中宾语的方法是：",
+          "options": [
+            "看动词后面是不是名词",
+            "在动词后问“什么”或“谁”，能回答的名词就是宾语",
+            "看句子有没有介词短语",
+            "看动词是不是及物动词以外的类型"
+          ],
+          "answer": 1,
+          "explanation": "宾语是及物动词的直接承受者。在动词后问“什么/谁”，能回答出来的名词就是宾语：read 什么？→ a book。"
+        },
+        {
+          "id": "kp4-q2",
+          "stem": "下列哪个句子属于 S+V+O 句型？",
+          "options": [
+            "She looks happy.",
+            "He gave me a book.",
+            "Birds fly.",
+            "She speaks English."
+          ],
+          "answer": 3,
+          "explanation": "speaks 是及物完全动词，English 是宾语。A 是 S+V+P（looks 是系动词），B 是 S+V+O+O（双宾语），C 是 S+V。"
+        },
+        {
+          "id": "kp4-q3",
+          "stem": "「He listens to the teacher carefully.」中 the teacher 是：",
+          "options": [
+            "动词 listens 的直接宾语，句型为 S+V+O",
+            "介词 to 的宾语，listens 是不及物动词，句型为 S+V",
+            "表语，句型为 S+V+P",
+            "宾语补足语，句型为 S+V+O+C"
+          ],
+          "answer": 1,
+          "explanation": "listen 是不及物动词，必须借助介词 to 才能接对象。the teacher 是介词 to 的宾语，整个 to the teacher 是介词短语作状语，句型仍是 S+V。"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "补语与系动词（S+V+P 主系表）",
+      "level": "core",
+      "questions": [
+        {
+          "id": "kp5-q1",
+          "stem": "关于 S+V+P 句型的表语，下列说法正确的是：",
+          "options": [
+            "表语用来描述宾语的状态",
+            "表语与主语之间存在等号关系：主语 = 表语",
+            "表语只能是名词",
+            "表语前面的动词一定是 be 动词"
+          ],
+          "answer": 1,
+          "explanation": "表语（主语补语）描述主语“是什么/怎么样”，与主语构成等号关系。表语可以是名词也可以是形容词；系动词不只有 be。"
+        },
+        {
+          "id": "kp5-q2",
+          "stem": "「The soup tastes delicious.」的句型是：",
+          "options": [
+            "S+V+O（tastes 是及物动词，delicious 是宾语）",
+            "S+V（tastes 是不及物动词）",
+            "S+V+P（tastes 是系动词，delicious 是表语）",
+            "S+V+O+C"
+          ],
+          "answer": 2,
+          "explanation": "tastes 是感官系动词（可用 be 替换：The soup is delicious. 意思不变），delicious 描述主语，是表语。等号测试：The soup = delicious ✓。"
+        },
+        {
+          "id": "kp5-q3",
+          "stem": "识别一个动词是否为系动词的万能方法是：",
+          "options": [
+            "查词典看它有没有过去式",
+            "把它替换成 be 动词，句意基本不变则为系动词",
+            "看它后面是不是名词",
+            "看它是不是感官动词"
+          ],
+          "answer": 1,
+          "explanation": "替换测试：The coffee smells good. → The coffee is good. 意思基本不变，说明 smells 是系动词。反之 He bought a car. → He is a car. 荒谬，说明 bought 不是系动词。"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "动词分类的两个维度",
+      "level": "minor",
+      "questions": [
+        {
+          "id": "kp6-q1",
+          "stem": "动词分类的两个维度分别是：",
+          "options": [
+            "及物/不及物（要不要宾语）、完全/不完全（要不要补语）",
+            "规则/不规则、及物/不及物",
+            "动作是否完成、是否需要主语",
+            "实义/助动、单宾/双宾"
+          ],
+          "answer": 0,
+          "explanation": "维度一：及物/不及物（动词后要不要宾语）；维度二：完全/不完全（动词本身能否表达完整意思、要不要补语）。注意“完全/不完全”与动作是否完成无关。"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "S+V+O+O 句型（主谓双宾）",
+      "level": "core",
+      "questions": [
+        {
+          "id": "kp7-q1",
+          "stem": "「He gave me a book.」的成分分析正确的是：",
+          "options": [
+            "me 是宾语，a book 是宾语补足语",
+            "me 是间接宾语（接收者），a book 是直接宾语（内容）",
+            "a book 是唯一宾语，me 是状语",
+            "a book 是间接宾语，me 是直接宾语"
+          ],
+          "answer": 1,
+          "explanation": "give 是双宾动词：me 回答“给谁”（间接宾语，接收者），a book 回答“给了什么”（直接宾语，内容）。等号测试 me ≠ a book → 双宾语。"
+        },
+        {
+          "id": "kp7-q2",
+          "stem": "下列动词中，通常能带双宾语的是：",
+          "options": [
+            "arrive（到达）",
+            "seem（似乎）",
+            "teach（教）",
+            "laugh（笑）"
+          ],
+          "answer": 2,
+          "explanation": "teach 的动作既有接收者（教谁）又有内容（教什么）：She teaches us English. arrive、laugh 是不及物动词，seem 是系动词，都不能带双宾语。"
+        },
+        {
+          "id": "kp7-q3",
+          "stem": "双宾语中两个宾语的关系是：",
+          "options": [
+            "间接宾语 = 直接宾语，两者指同一事物",
+            "两者没有等号关系，间接宾语通常是接收者（人），直接宾语通常是内容（物）",
+            "直接宾语修饰间接宾语",
+            "间接宾语补充说明直接宾语的身份"
+          ],
+          "answer": 1,
+          "explanation": "双宾语中两个宾语互相独立、无等号关系：She bought her son a present. 中“儿子”不等于“礼物”。补充说明宾语身份的是宾语补足语，不是双宾语。"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "S+V+O+C 句型（主谓宾补）",
+      "level": "core",
+      "questions": [
+        {
+          "id": "kp8-q1",
+          "stem": "「I found the book interesting.」中 interesting 是：",
+          "options": [
+            "宾语，因为跟在动词后面",
+            "宾语补足语，因为 the book = interesting（等号成立）",
+            "表语，因为描述主语 I",
+            "定语，因为修饰名词 the book"
+          ],
+          "answer": 1,
+          "explanation": "interesting 补充说明宾语 the book 的状态，等号测试成立（the book = interesting），是宾语补足语。句型 S+V+O+C。宾补不一定是名词，也可以是形容词。"
+        },
+        {
+          "id": "kp8-q2",
+          "stem": "「They elected her president.」的句型是：",
+          "options": [
+            "S+V+O+O（双宾语）",
+            "S+V+O+C（宾语补足语）",
+            "S+V+O（单宾语）",
+            "S+V+P（主系表）"
+          ],
+          "answer": 1,
+          "explanation": "her 是宾语，president 补充说明 her 的身份。等号测试：her = president ✓ → 宾语补足语，句型为 S+V+O+C。"
+        },
+        {
+          "id": "kp8-q3",
+          "stem": "关于宾语补足语，下列说法错误的是：",
+          "options": [
+            "宾语补足语用来补充说明宾语的状态或身份",
+            "宾语与补足语之间存在等号关系",
+            "宾语补足语只能是名词，不能是形容词",
+            "对应的动词是及物不完全动词"
+          ],
+          "answer": 2,
+          "explanation": "宾语补足语可以是名词（a good friend）、形容词（interesting），甚至副词、不定式或分词。核心判定标准是宾语与补足语之间的等号关系。"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "双宾语与宾语补足语的区分",
+      "level": "core",
+      "questions": [
+        {
+          "id": "kp9-q1",
+          "stem": "区分 S+V+O+O（双宾）和 S+V+O+C（宾补）最有效的方法是：",
+          "options": [
+            "看第二个成分是名词还是形容词",
+            "等号测试：宾语与后面的名词能画等号 → 宾补；不能 → 双宾",
+            "看动词是不是 give、send 等词",
+            "数句子中名词的数量"
+          ],
+          "answer": 1,
+          "explanation": "等号测试是唯一可靠的判别法：They elected her president. 中 her = president ✓ → 宾补；She bought her son a present. 中 her son ≠ a present ✗ → 双宾。"
+        },
+        {
+          "id": "kp9-q2",
+          "stem": "「We call him a genius.」的句型是：",
+          "options": [
+            "S+V+O+O（双宾语）",
+            "S+V+O（单宾语）",
+            "S+V+O+C（宾语补足语）",
+            "S+V+P（主系表）"
+          ],
+          "answer": 2,
+          "explanation": "him 是宾语，a genius 补充说明 him 的身份。等号测试：him = a genius ✓ → 宾语补足语，句型为 S+V+O+C。"
+        },
+        {
+          "id": "kp9-q3",
+          "stem": "下列四组句子中，句型分类正确的一组是：",
+          "options": [
+            "He sent me a letter.（宾补）/ I made him happy.（双宾）",
+            "He sent me a letter.（双宾）/ I made him happy.（宾补）",
+            "He sent me a letter.（双宾）/ I made him happy.（双宾）",
+            "He sent me a letter.（宾补）/ I made him happy.（宾补）"
+          ],
+          "answer": 1,
+          "explanation": "He sent me a letter.：me ≠ a letter ✗ → 双宾（S+V+O+O）；I made him happy.：him = happy ✓ → 宾补（S+V+O+C）。"
+        }
+      ]
+    }
+  ]
+}
