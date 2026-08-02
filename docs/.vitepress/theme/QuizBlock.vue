@@ -42,6 +42,7 @@
 
 <script setup>
 import { onMounted, reactive, ref } from 'vue'
+import { withBase } from 'vitepress'
 
 const props = defineProps({
   src: { type: String, required: true },
@@ -56,7 +57,7 @@ const results = reactive({})
 
 onMounted(async () => {
   try {
-    const resp = await fetch(props.src)
+    const resp = await fetch(withBase(props.src))
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
     const data = await resp.json()
     groups.value = data.groups || []

@@ -29,6 +29,7 @@
 
 <script setup>
 import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { withBase } from 'vitepress'
 
 const props = defineProps({
   html: { type: String, required: true },  // 公众号富文本片段
@@ -48,7 +49,7 @@ const mainLabel = computed(() => ({
 }[state.value] || '复制页面'))
 
 async function fetchText(url) {
-  const resp = await fetch(url)
+  const resp = await fetch(withBase(url))
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
   return resp.text()
 }
