@@ -10,7 +10,7 @@
 
 电阻器（Resistor）就是专门"产生电阻"的元件，作用是阻碍电流流动。拆开一个最常见的碳膜电阻看内部：一根陶瓷棒，外面裹着碳膜涂层，两端引出导线——结构简单得令人发指，却是电路板上的用量冠军。
 
-![碳膜电阻内部结构：陶瓷棒外裹碳膜涂层](/assets/images/2026-08-embedded-circuit/img-027.jpg)
+![碳膜电阻内部结构：陶瓷棒外裹碳膜涂层](https://kanglinchan.github.io/duoshuati-site/assets/images/2026-08-embedded-circuit/img-027.jpg)
 <p align="center"><sub>碳膜电阻内部结构：陶瓷棒外裹碳膜涂层</sub></p>
 
 回到开头店家的四个问题，那正是选电阻要看的四个参数。阻值决定阻碍能力；额定功率是能长期承受的最大功耗；精度常见 1% 和 5%，精密的到 0.1%——精度每上一个台阶价格翻着倍涨，0.1% 的价格大约是 1% 的十倍；封装则决定它是直插还是贴片。
@@ -36,7 +36,7 @@
 
 直插电阻则流行色环法：用不同颜色的环带表示数字和倍率。颜色与数字的对应关系有张标准对照表，黑 0、棕 1、红 2、橙 3、黄 4、绿 5、蓝 6、紫 7、灰 8、白 9，金和银用来表示误差和小数倍率。
 
-![色环颜色与数字对照表，及四环、五环电阻的读法示意](/assets/images/2026-08-embedded-circuit/img-070.jpg)
+![色环颜色与数字对照表，及四环、五环电阻的读法示意](https://kanglinchan.github.io/duoshuati-site/assets/images/2026-08-embedded-circuit/img-070.jpg)
 <p align="center"><sub>色环颜色与数字对照表，及四环、五环电阻的读法示意</sub></p>
 
 > **例.** 例. 读出上图中两只电阻的阻值。
@@ -50,12 +50,12 @@
 
 电容的特性就八个字：充电、放电、隔直、通交。看一个仿真实验：开关闭合时电源给电容充电到约 10V；开关断开后，电容反过来给灯泡放电，灯亮一下再熄灭——这就是充放电的全过程。
 
-![电容充放电仿真：左图充电至约 10V，右图断开电源后向灯泡放电](/assets/images/2026-08-embedded-circuit/img-071.png)
+![电容充放电仿真：左图充电至约 10V，右图断开电源后向灯泡放电](https://kanglinchan.github.io/duoshuati-site/assets/images/2026-08-embedded-circuit/img-071.png)
 <p align="center"><sub>电容充放电仿真：左图充电至约 10V，右图断开电源后向灯泡放电</sub></p>
 
 再看隔直通交。直流电路里，电容充满电后相当于断开，电流过不去；交流电路里，电容反复充放电，电流却能"穿过"它。所以电容天生是筛选器：挡住直流，放交流过去。
 
-![隔直与通交仿真对比：直流下电容开路，交流下电流通过](/assets/images/2026-08-embedded-circuit/img-072.png)
+![隔直与通交仿真对比：直流下电容开路，交流下电流通过](https://kanglinchan.github.io/duoshuati-site/assets/images/2026-08-embedded-circuit/img-072.png)
 <p align="center"><sub>隔直与通交仿真对比：直流下电容开路，交流下电流通过</sub></p>
 
 电容对交流的"阻碍"也有名字，叫容抗，公式是 $X_C = \frac{1}{2\pi fC}$。频率越高、容量越大，容抗越小。这个公式不用背，记住趋势就行：频率越高、容量越大，交流越容易通过。
@@ -66,7 +66,7 @@
 
 > **注意：** 有极性电容接反，轻则漏液鼓包，重则直接爆炸。焊接前务必确认极性：电解电容外壳上银色条纹一侧是负极，长引脚一侧是正极。
 
-![电解电容正负极识别：银色条纹侧为负极](/assets/images/2026-08-embedded-circuit/img-081.png)
+![电解电容正负极识别：银色条纹侧为负极](https://kanglinchan.github.io/duoshuati-site/assets/images/2026-08-embedded-circuit/img-081.png)
 <p align="center"><sub>电解电容正负极识别：银色条纹侧为负极</sub></p>
 
 还有一种超级电容，容量大到接近电池，充电快、可反复充放电，常用在备用电源上——断电瞬间靠它撑住电压，给系统争取切换到备用电源的时间。上海的超级电容公交车就是它的杰作。
@@ -75,12 +75,12 @@
 
 电解电容最实在，容量直接印在表面，比如印着 1500μF 就是 1500μF，还贴心地附上耐压值。
 
-![电解电容直接标注容量与耐压（1500μF）](/assets/images/2026-08-embedded-circuit/img-093.jpg)
+![电解电容直接标注容量与耐压（1500μF）](https://kanglinchan.github.io/duoshuati-site/assets/images/2026-08-embedded-circuit/img-093.jpg)
 <p align="center"><sub>电解电容直接标注容量与耐压（1500μF）</sub></p>
 
 瓷片电容用三位数码，规则和贴片电阻一样：前两位有效数字，第三位补零，单位是皮法。所以 104 = 10 后面补 4 个零 = 100000pF = 100nF，不是 104pF——这是初学者最常读错的地方。
 
-![瓷片电容实物：104 表示 100nF](/assets/images/2026-08-embedded-circuit/img-094.jpg)
+![瓷片电容实物：104 表示 100nF](https://kanglinchan.github.io/duoshuati-site/assets/images/2026-08-embedded-circuit/img-094.jpg)
 <p align="center"><sub>瓷片电容实物：104 表示 100nF</sub></p>
 
 还有一种字母表示法，用 p、n、u、m 四个字母当小数点兼单位：4u7 是 4.7μF，3n9 是 3.9nF。贴片电解电容则更简单，表面数字直接按 μF 读，470 就是 470μF。
@@ -89,12 +89,12 @@
 
 电感（Inductor）就是把绝缘铜线绕成线圈，常见的是绕在磁环上。它和电容正好相反：电容隔直通交，电感通直阻交——直流几乎畅通无阻，交流则被拦住。
 
-![磁环电感实物：铜线绕在磁环上](/assets/images/2026-08-embedded-circuit/img-096.jpg)
+![磁环电感实物：铜线绕在磁环上](https://kanglinchan.github.io/duoshuati-site/assets/images/2026-08-embedded-circuit/img-096.jpg)
 <p align="center"><sub>磁环电感实物：铜线绕在磁环上</sub></p>
 
 电感对交流的阻碍叫感抗，公式 $X_L = 2\pi fL$。感量不变时，频率越高感抗越大。仿真对比一目了然：直流下电感几乎不影响电路，10Hz 交流被削弱，100Hz 交流被压掉大半。
 
-![感抗对比仿真：直流几乎无感抗，交流频率越高感抗越大](/assets/images/2026-08-embedded-circuit/img-098.png)
+![感抗对比仿真：直流几乎无感抗，交流频率越高感抗越大](https://kanglinchan.github.io/duoshuati-site/assets/images/2026-08-embedded-circuit/img-098.png)
 <p align="center"><sub>感抗对比仿真：直流几乎无感抗，交流频率越高感抗越大</sub></p>
 
 电感的单位是亨利（H），同样偏大，常用毫亨（mH）和微亨（μH）。参数看三个：感量（储存磁能的能力，与线圈面积、圈数、有无磁心有关）、直流电阻 DCR（铜线自身的电阻，越小越好）、允许误差（J 级 ±5%、K 级 ±10%、M 级 ±20%）。

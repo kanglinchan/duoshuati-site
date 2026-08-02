@@ -10,7 +10,7 @@
 
 你见过LED一闪一闪，但看不见导线里发生了什么。其实导线里正在发生一场"集体行军"：在电场的驱动下，无数电荷朝同一个方向移动。电流（Current）就是描述这场行军规模的物理量——单位时间内通过导体横截面的电荷量。
 
-![电场驱动电荷通过导体横截面，形成电流](/assets/images/2026-08-embedded-circuit/img-001.png)
+![电场驱动电荷通过导体横截面，形成电流](https://kanglinchan.github.io/duoshuati-site/assets/images/2026-08-embedded-circuit/img-001.png)
 <p align="center"><sub>电场驱动电荷通过导体横截面，形成电流</sub></p>
 
 电流的单位是安培（A）。1A 表示 1 秒内有 1 库仑（C）的电荷通过横截面，1 库仑约等于 $6.242\times10^{18}$ 个电子。日常换算：1A = 1000 毫安（mA），1mA = 1000 微安（μA），1μA = 1000 纳安（nA）。单片机引脚输出通常是几毫安到二十毫安，记住这个量级。
@@ -25,7 +25,7 @@
 
 你可以把电路想象成一套水管系统：电压是水压，电流是水流。水压越大，水流越急；同理，电压越高，在同样的导体里电流越大。这个类比后面还会反复用到。
 
-![电压是驱动电荷移动的电势差](/assets/images/2026-08-embedded-circuit/img-003.png)
+![电压是驱动电荷移动的电势差](https://kanglinchan.github.io/duoshuati-site/assets/images/2026-08-embedded-circuit/img-003.png)
 <p align="center"><sub>电压是驱动电荷移动的电势差</sub></p>
 
 电压的单位是伏特（V）。1V 的物理含义是：电场对 1C 电荷做 1 焦耳的功（$1V \times 1A \times 1s = 1J$）。换算关系：1kV = 1000V，1V = 1000mV，1mV = 1000μV。
@@ -42,19 +42,19 @@
 
 有了推力、流量和阻力，还需要一条路。物理学上把电池这类提供电能的装置叫电源，把灯泡、电动机、蜂鸣器这类消耗电能的装置叫用电器。电源、用电器，加上导线和开关，组成电流可以流过的路径——电路。
 
-![实物电路（左）与对应的电路图（右）：电池、开关、灯泡组成的简单回路](/assets/images/2026-08-embedded-circuit/img-009.png)
+![实物电路（左）与对应的电路图（右）：电池、开关、灯泡组成的简单回路](https://kanglinchan.github.io/duoshuati-site/assets/images/2026-08-embedded-circuit/img-009.png)
 <p align="center"><sub>实物电路（左）与对应的电路图（右）：电池、开关、灯泡组成的简单回路</sub></p>
 
 注意上面这条定义里最容易被忽视的一点：只有电路闭合时，电路中才有电流。电池接上灯泡，如果回路断开，哪怕只断一毫米，灯也不会亮。新手排查"灯不亮"，八成是回路没闭合。
 
 画图时如果把元件原样画出来，既麻烦又不清楚，所以工程师用图形符号表示元件。下图是几种常用元件及其符号（依据国家标准 GB/T4728 绘制），以后看原理图就是在读这些符号。
 
-![几种常用的电路元件及其符号（GB/T4728）](/assets/images/2026-08-embedded-circuit/img-010.png)
+![几种常用的电路元件及其符号（GB/T4728）](https://kanglinchan.github.io/duoshuati-site/assets/images/2026-08-embedded-circuit/img-010.png)
 <p align="center"><sub>几种常用的电路元件及其符号（GB/T4728）</sub></p>
 
 电路有三种状态，必须分清。正常接通、用电器能够工作的电路叫通路；某处被切断、电流中断叫断路；直接用导线把电源正、负极连起来叫短路。
 
-![三种状态实物演示：甲为通路，乙为断路，丙为短路](/assets/images/2026-08-embedded-circuit/img-011.png)
+![三种状态实物演示：甲为通路，乙为断路，丙为短路](https://kanglinchan.github.io/duoshuati-site/assets/images/2026-08-embedded-circuit/img-011.png)
 <p align="center"><sub>三种状态实物演示：甲为通路，乙为断路，丙为短路</sub></p>
 
 > **注意：** 短路时电流不经过任何用电器，电阻几乎为零，电流会瞬间变得极大，烧毁电源甚至引发火灾。接线前务必检查，绝对不要让电源两极直接相连。
@@ -71,7 +71,7 @@
 
 虽然嵌入式主要跟弱电打交道，但你总要给设备插电，所以花一分钟看懂家庭电路是值得的。我国家庭电路的电压是 220V，它的结构可以概括成一条"流水线"。
 
-![家庭电路示意图：进户线、电能表、总开关、保险装置、用电器](/assets/images/2026-08-embedded-circuit/img-020.png)
+![家庭电路示意图：进户线、电能表、总开关、保险装置、用电器](https://kanglinchan.github.io/duoshuati-site/assets/images/2026-08-embedded-circuit/img-020.png)
 <p align="center"><sub>家庭电路示意图：进户线、电能表、总开关、保险装置、用电器</sub></p>
 
 两根进户线（火线与零线）进门后，第一站是电能表，记录你消耗了多少电能；第二站是总开关，检修时断开它，室内电路就与外部输电线完全隔离；第三站是保险装置——老式的是保险盒里的熔丝，电流过大时熔断切断电路；新建居民楼普遍用空气开关，电流过大时自动断开，就是俗称的"跳闸"。
@@ -126,7 +126,7 @@ $$
 
 > **例.** 例. 计算下图中 A、B、C 三点的电压。
 
-![电路图1：12V 电源，100Ω 与两组并联支路](/assets/images/2026-08-embedded-circuit/img-021.png)
+![电路图1：12V 电源，100Ω 与两组并联支路](https://kanglinchan.github.io/duoshuati-site/assets/images/2026-08-embedded-circuit/img-021.png)
 <p align="center"><sub>电路图1：12V 电源，100Ω 与两组并联支路</sub></p>
 
 > **例.** 解. 分三步走。
