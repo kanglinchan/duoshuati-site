@@ -54,11 +54,52 @@ async function fetchText(url) {
   return resp.text()
 }
 
+/** 纯文本兜底复制：execCommand('copy') */
+function copyTextFallback(text) {
+  const ta = document.createElement('textarea')
+  ta.value = text
+  ta.style.position = 'fixed'
+  ta.style.left = '-9999px'
+  ta.style.top = '-9999px'
+  document.body.appendChild(ta)
+  ta.select()
+  const ok = document.execCommand('copy')
+  document.body.removeChild(ta)
+  if (!ok) throw new Error('execCommand 复制失败，请手动选中文字再 Ctrl+C')
+}
+
+/** 富文本兜底复制：借助 contenteditable */
+function copyHtmlFallback(htmlText) {
+  const div = document.createElement('div')
+  div.contentEditable = 'true'
+  div.style.position = 'fixed'
+  div.style.left = '-9999px'
+  div.style.top = '-9999px'
+  div.innerHTML = htmlText
+  document.body.appendChild(div)
+
+  const sel = window.getSelection()
+  const range = document.createRange()
+  range.selectNodeContents(div)
+  sel.removeAllRanges()
+  sel.addRange(range)
+
+  const ok = document.execCommand('copy')
+  sel.removeAllRanges()
+  document.body.removeChild(div)
+  if (!ok) throw new Error('execCommand 复制失败，请手动选中文字再 Ctrl+C')
+}
+
 async function copyMarkdown() {
   state.value = 'loading'
   error.value = ''
   try {
-    await navigator.clipboard.writeText(await fetchText(props.md))
+    const text = await fetchText(props.md)
+    try {
+      await navigator.clipboard.writeText(text)
+    } catch (_) {
+      copyTextFallback(text)
+    }
     state.value = 'md-done'
   } catch (e) { error.value = String(e); state.value = 'error' }
   resetLater()
@@ -69,17 +110,23 @@ async function copyWechat() {
   error.value = ''
   try {
     const htmlText = await fetchText(props.html)
-    const plain = new DOMParser().parseFromString(htmlText, 'text/html').body.innerText
+    // 先尝试 Clipboard API（支持 text/html）
     if (navigator.clipboard && window.ClipboardItem) {
-      await navigator.clipboard.write([
-        new ClipboardItem({
-          'text/html': new Blob([htmlText], { type: 'text/html' }),
-          'text/plain': new Blob([plain], { type: 'text/plain' })
-        })
-      ])
-    } else {
-      await navigator.clipboard.writeText(htmlText)
+      try {
+        const plain = new DOMParser().parseFromString(htmlText, 'text/html').body.innerText
+        await navigator.clipboard.write([
+          new ClipboardItem({
+            'text/html': new Blob([htmlText], { type: 'text/html' }),
+            'text/plain': new Blob([plain], { type: 'text/plain' })
+          })
+        ])
+        state.value = 'wx-done'
+        resetLater()
+        return
+      } catch (_) { /* 降级到 execCommand */ }
     }
+    // 兜底：execCommand 复制富文本
+    copyHtmlFallback(htmlText)
     state.value = 'wx-done'
   } catch (e) { error.value = String(e); state.value = 'error' }
   resetLater()

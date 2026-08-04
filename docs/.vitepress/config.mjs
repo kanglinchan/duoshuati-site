@@ -6,6 +6,14 @@ export default defineConfig({
   base: '/',
   title: '多刷题',
   description: '小书装口袋，越刷越明白',
+  vue: {
+    template: {
+      compilerOptions: {
+        // MathJax 输出的自定义标签，Vue 不认识会清空，需要声明为自定义元素
+        isCustomElement: (tag) => tag.startsWith('mjx-')
+      }
+    }
+  },
   markdown: {
     config: (md) => {
       md.use(mathjax3)

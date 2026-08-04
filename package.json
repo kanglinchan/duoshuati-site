@@ -3,11 +3,18 @@
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "preview": "vitepress preview docs"
+    "preview": "vitepress preview docs",
+    "wechat:gen": "node scripts/generate-wechat-html.js"
   },
   "devDependencies": {
+    "cheerio": "^1.2.0",
+    "juice": "^12.1.1",
+    "katex": "^0.18.1",
+    "markdown-it-mathjax3": "^4.3.2",
+    "marked": "^18.0.7",
+    "mathjax-full": "^3.2.1",
+    "sharp": "^0.35.3",
     "vitepress": "^1.6.0",
-    "vue": "^3.5.0",
-    "markdown-it-mathjax3": "^4.3.2"
+    "vue": "^3.5.0"
   }
 }
