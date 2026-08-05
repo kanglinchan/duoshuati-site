@@ -1,0 +1,165 @@
+<section style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">
+<img src="/assets/images/2026-08-arm-assembly/fig-cpsr.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">上一课，我们用 MOV 和 SWI 写出了第一个能跑的程序，并用退出码 42 证明它真的活过一次。但要说句实话——MOV 只是个搬运工，它只会把数据从 A 挪到 B，一个数都算不出来。一台只会搬运、不会算术的 CPU，充其量是个昂贵的快递柜。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">这一课，我们让 CPU 真正动起来：加（ADD）、减（SUB）、乘（MUL）。算完之后，还会顺手认识一位一直在场、却始终被我们无视的角色——CPSR。它像裁判手里的记分牌，时刻记着上一次运算留下的痕迹。别小看这块记分牌，后面所有的「如果……就跳转」，靠的全是它。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">本系列基于 ARMv7（ARM 的 32 位版本）。本课的寄存器与标志位变化，建议在 CPUlator（https://cpulator.01xz.net/ ，选 ARM + ARMv7）里单步看最直观——它会把你设置的标志位高亮成粗体。</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">1. 一句话记住 ARM 的算术指令</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">好消息是，ARM 的算术指令长得几乎一模一样——它们共享同一副骨架，都是三操作数结构。它做的事永远是这一句：把第一操作数和第二操作数做运算，结果存进目标寄存器。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">无论是加、减、乘，还是后面要学的逻辑、移位，换汤不换药。变的只是前面的助记符，和第二操作数允许填什么。</p>
+<pre style="background: #282c34; color: #abb2bf; padding: 14px 16px; border-radius: 6px; font-size: 13px; line-height: 1.6; overflow-x: auto; margin: 16px 0; font-family: Menlo, Consolas, monospace; white-space: pre;"><code>助记符  目标寄存器, 第一操作数, 第二操作数
+  Rd       ,      Rn    ,    &lt;操作数2&gt;</code></pre>
+<blockquote style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0;"><p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 0;"><strong>注：</strong>这正是上一课 MOV 的延伸：MOV 是把第二操作数抄进 Rd；本课的 ADD/SUB/MUL 是把两个操作数算一下再放进 Rd。</p></blockquote>
+<img src="/assets/images/2026-08-arm-assembly/fig-arith.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">图 1 · 算术指令的三操作数结构：Rn 与 &lt;操作数2&gt; 运算后存入 Rd</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">2. ADD：加法，两种填法</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">ADD 是这课的主角，先拿它开刀。它有两种用法，区别只在第二操作数填什么。</p>
+<h4 style="font-size: 16px; font-weight: bold; color: #333; margin: 20px 0 10px;">2.1 立即数加法</h4>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">第二操作数填一个常量（立即数，前缀 #）：</p>
+<pre style="background: #282c34; color: #abb2bf; padding: 14px 16px; border-radius: 6px; font-size: 13px; line-height: 1.6; overflow-x: auto; margin: 16px 0; font-family: Menlo, Consolas, monospace; white-space: pre;"><code>    mov r0, #4        @ 先给 R0 放个值 4
+    add r1, r0, #3    @ R1 = R0 + 3 = 7</code></pre>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">这条 add 读出 R0（值为 4），加上立即数 #3，把结果 7 写进目标寄存器 R1。翻译成你熟悉的高级语言，就是一句 r1 = r0 + 3;</p>
+<blockquote style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0;"><p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 0;"><strong>注：</strong># 表示立即数（常量），默认十进制；#0x.. 则是十六进制。和上一课 MOV 的写法一脉相承。</p></blockquote>
+<h4 style="font-size: 16px; font-weight: bold; color: #333; margin: 20px 0 10px;">2.2 寄存器加法</h4>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">第二操作数也可以填另一个寄存器——把两个寄存器的值相加：</p>
+<pre style="background: #282c34; color: #abb2bf; padding: 14px 16px; border-radius: 6px; font-size: 13px; line-height: 1.6; overflow-x: auto; margin: 16px 0; font-family: Menlo, Consolas, monospace; white-space: pre;"><code>    mov r0, #4        @ R0 = 4
+    mov r2, #2        @ R2 = 2
+    add r1, r0, r2    @ R1 = R0 + R2 = 6</code></pre>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">结果 6 落进 R1。至于把哪个寄存器相加——无所谓，R0+R2 也好、R3+R5 也好，CPU 一视同仁。其实上一课的 MOV 也支持寄存器源（mov r1, r0 把 R0 复制到 R1），原理同此。</p>
+<img src="/assets/images/2026-08-arm-assembly/fig-add.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">图 2 · ADD 加法实例：R0 与操作数2 相加后存入 R1</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">3. SUB：减法，与加法镜像</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">学会了加法，减法就是白送的。SUB（subtract）的写法和 ADD 完全对称，做的事是 Rd = Rn − &lt;操作数2&gt;。</p>
+<pre style="background: #282c34; color: #abb2bf; padding: 14px 16px; border-radius: 6px; font-size: 13px; line-height: 1.6; overflow-x: auto; margin: 16px 0; font-family: Menlo, Consolas, monospace; white-space: pre;"><code>    mov r0, #4        @ R0 = 4
+    mov r2, #2        @ R2 = 2
+    sub r1, r0, r2    @ R1 = R0 - R2 = 2</code></pre>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">它同样有立即数和寄存器两种填法。所以 ADD 会了，SUB 基本就会了——把 + 换成 −，仅此而已。</p>
+<blockquote style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0;"><p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 0;"><strong>注：</strong>助记符大小写不限：ADD/add、SUB/sub 等价。本系列统一用小写，少按一个 Shift。</p></blockquote>
+<img src="/assets/images/2026-08-arm-assembly/fig-sub.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">图 3 · SUB 减法实例：与加法同构，只是把 + 换成 −</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">4. MUL：乘法，且只能用寄存器</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">MUL（multiply）把两个值相乘，写法依旧眼熟：</p>
+<pre style="background: #282c34; color: #abb2bf; padding: 14px 16px; border-radius: 6px; font-size: 13px; line-height: 1.6; overflow-x: auto; margin: 16px 0; font-family: Menlo, Consolas, monospace; white-space: pre;"><code>    mov r0, #4        @ R0 = 4
+    mov r2, #2        @ R2 = 2
+    mul r1, r0, r2    @ R1 = R0 * R2 = 8</code></pre>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">结果 8 落进 R1。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">这里有个容易让你 debug 到怀疑人生的坑：MUL 没有立即数版本，第二操作数必须是寄存器。想乘以一个常量？对不起，先 MOV 进某个寄存器，再 MUL。这是 MUL 和 ADD/SUB 唯一的别扭之处，记住它，能少摔一个跟头。</p>
+<blockquote style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0;"><p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 0;"><strong>注意：</strong>千万不要写成 mul r1, r0, #4——MUL 没有立即数版本，第二操作数必须是寄存器。想乘常量，先 mov 进寄存器。</p></blockquote>
+<blockquote style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0;"><p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 0;"><strong>注：</strong>在 CPUlator 里 Compile &amp; Load 后单步，你会眼睁睁看到：执行 mul r1, r0, r2 那一步，R1 从 0 变成 0x00000008。</p></blockquote>
+<img src="/assets/images/2026-08-arm-assembly/fig-mul.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">图 4 · MUL 乘法实例：仅支持寄存器，没有立即数版本</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">5. CPSR：那块记录运算痕迹的看板</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">算术做完了，结果乖乖躺在 Rd 里。但运算过程中，还悄悄留下了别的东西——状态标志。它们集中存在一个一直被我们无视的特殊寄存器里：CPSR（Current Program Status Register，当前程序状态寄存器）。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">CPSR 是 32 位的，其中最高几位是标志位——可以理解成裁判记分牌上的几盏灯，每一盏记录一种运算后果：N（Negative，结果为负）、Z（Zero，结果为零）、C（Carry，进位/借位）、V（oVerflow，有符号溢出）。</p>
+<ul style="padding-left: 24px; margin: 14px 0;"><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">第 31 位 N：运算结果为负时置 1</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">第 30 位 Z：运算结果为零时置 1</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">第 29 位 C：加法产生进位 / 减法无借位时置 1</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">第 28 位 V：有符号运算溢出时置 1</li></ul>
+<blockquote style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0;"><p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 0;"><strong>注：</strong>C（进位）和 V（溢出）牵扯到无符号/有符号的细节，后续会单独细讲。本课先盯住 N 和 Z。</p></blockquote>
+<img src="/assets/images/2026-08-arm-assembly/fig-cpsr.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">图 5 · CPSR 高 4 位标志：N Z C V 分别占用第 31、30、29、28 位</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">为什么要盯着这块记分牌？因为后面写「如果上次结果为零就跳转」「如果是负数就走另一条路」这类条件分支时，CPU 靠的就是 CPSR 里这些灯的明灭来做判断。记分牌不亮，CPU 就是个只会闷头算、不会做决定的书呆子。</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">6. 一个关键字母：S 后缀</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">谜底揭晓：默认情况下，add / sub / mul 跑完，并不会去更新 CPSR 的标志位——它们只管闷头算、只管存结果，压根不碰记分牌。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">想让 CPU 顺手翻一下记分牌？就在助记符后面加一个 S：</p>
+<pre style="background: #282c34; color: #abb2bf; padding: 14px 16px; border-radius: 6px; font-size: 13px; line-height: 1.6; overflow-x: auto; margin: 16px 0; font-family: Menlo, Consolas, monospace; white-space: pre;"><code>    add  r1, r0, r2   @ 只算结果，CPSR 不动
+    adds r1, r0, r2   @ 算结果，并按结果更新 CPSR 标志</code></pre>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">S = Set flags（设置标志位）。ADD、SUB、MUL 都能戴这顶帽子，变成 ADDS/SUBS/MULS。一个字母，拨动的却是「要不要把这次运算的痕迹写进 CPSR」这道开关。</p>
+<img src="/assets/images/2026-08-arm-assembly/fig-s-suffix.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">图 6 · add 与 adds 的区别：加不加 S，决定了 CPSR 标志位是否被更新</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">7. 实战：让 Z 标志亮起来</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">光说不练假把式。来看一个完整例子，我们的目标是亲手点亮 Z（零）标志那盏灯——方法无他，造一个结果为零的减法：</p>
+<pre style="background: #282c34; color: #abb2bf; padding: 14px 16px; border-radius: 6px; font-size: 13px; line-height: 1.6; overflow-x: auto; margin: 16px 0; font-family: Menlo, Consolas, monospace; white-space: pre;"><code>    mov  r0, #3        @ R0 = 3
+    mov  r1, #3        @ R1 = 3
+    subs r2, r0, r1    @ R2 = R0 - R1 = 0，并更新 CPSR</code></pre>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">subs 把 R0 − R1 = 0 存进 R2，同时顺手翻了一下记分牌。因为结果是 0，Z 标志（第 30 位）应声点亮。</p>
+<blockquote style="background: #f6f8fa; border-left: 4px solid #0e88eb; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0;"><p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 0;"><strong>例. </strong>这里的 s 真是一字千金：写成 sub 就不会动 CPSR，Z 标志永远不亮；非 subs 不可。</p></blockquote>
+<h4 style="font-size: 16px; font-weight: bold; color: #333; margin: 20px 0 10px;">7.1 在二进制里看清楚</h4>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">CPSR 是 32 位的，CPUlator 默认用十六进制显示。把那串十六进制值翻译回二进制，你会看到：第 30 位（Z）从 0 翻成了 1。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">为什么是 32 位？因为 ARMv7 的寄存器就是 32 位 = 8 个十六进制位 = 8 × 4 个二进制位。每个十六进制数字管 4 个二进制位，8 × 4 = 32，严丝合缝。</p>
+<blockquote style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0;"><p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 0;"><strong>注：</strong>CPUlator 的贴心之处：点亮的标志会变成粗体黑色，没点亮的则是灰色。一眼就能看出 Z（以及本例里同时被点亮的 C）真的亮了。</p></blockquote>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">小结</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">这一课，我们让 CPU 从快递柜升级成了会算术的计算器，并第一次窥见了那块一直在场的记分牌：</p>
+<ul style="padding-left: 24px; margin: 14px 0;"><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">三操作数骨架：助记符 Rd, Rn, &lt;操作数2&gt;，运算结果进 Rd，加减乘共用一副骨架</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">ADD / SUB：各有立即数、寄存器两种填法，加法减法镜像对称，会一个就会一双</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">MUL：只有寄存器版本，没有立即数——这是它和加减法唯一的别扭，记住能少摔跟头</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">CPSR：用 N / Z / C / V 四盏灯记录运算后果，是后续所有条件分支的裁判</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">S 后缀：adds/subs 才会翻记分牌，少了这个字母，四盏灯纹丝不动</li></ul>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">加减乘有了，记分牌也会看了。下一课，我们就要让 CPU 拿着这些亮起的灯，去做决定了。下一课见。</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">三操作数骨架</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>1. ARM 算术指令 add r1, r0, #3 执行后，运算结果存进哪个寄存器？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. R1</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. R0</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. R3</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. R0 和 R1 同时保存结果</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>2. ARM 算术指令通用的三操作数结构是下列哪一种？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 助记符 Rn, Rd, &lt;操作数2&gt;</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 助记符 &lt;操作数2&gt;, Rn, Rd</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 助记符 Rd, Rn, &lt;操作数2&gt;，结果存 Rd</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 助记符 Rd, &lt;操作数2&gt;（两操作数）</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>3. 已知 R2 = 5，执行 add r3, r2, #4 后，R3 的值是？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 4</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 9</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 5</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 20</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">ADD / SUB 的两种填法</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>4. 指令 add r1, r0, r2 的第二操作数（operand2）采用的是什么形式？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 立即数（常量）</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 寄存器</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 内存地址</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 标号（label）</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>5. 关于 sub 与 add 的关系，下列说法正确的是？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. sub 也支持立即数与寄存器两种填法，写法与 add 对称，仅把加换成减</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. sub 没有立即数版本，只能用寄存器</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. sub 的目标寄存器必须写在最后</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. sub 只能做无符号减法，有符号需另换指令</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>6. 已知 R0 = 4、R2 = 2，执行 sub r1, r0, r2 后，R1 等于多少？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 6</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 8</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. −2</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 2</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">MUL 没有立即数版本</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>7. 关于 MUL 指令，下列说法正确的是？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 和 ADD 一样支持立即数作第二操作数</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 结果存在第一源操作数 Rn 中</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 第二操作数必须是寄存器，没有立即数版本</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 只能计算 2 的幂次乘法</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>8. 已知 R0 = 4，想得到 R1 = R0 × 3，下列写法正确的是？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. mul r1, r0, #3</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 先 mov r2, #3 再 mul r1, r0, r2</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. mov r1, #3 后再 mul r1, r0</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 连续执行三次 add r1, r0, r0</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>9. 已知 R0 = 4、R2 = 2，执行 mul r1, r0, r2 后，R1 等于多少？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 6</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 2</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 16</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 8</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">S 后缀与 CPSR 标志更新</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>10. adds 相比 add 多做了哪一件事？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 按运算结果更新 CPSR 的标志位</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 把结果多存一份到内存</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 让这条指令占用更多字节</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 把结果强制转成有符号数</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>11. 为什么默认的 add / sub / mul 执行后不会改变 CPSR 的标志位？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 因为 ARM 根本没有状态标志位</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 因为必须用单独的 cmp 指令才能更新标志</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 因为只有结果为零时才更新</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 因为默认只存结果、不碰标志位，需要 S 后缀才更新</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>12. 执行以下指令后，CPSR 的哪个标志会被点亮？mov r0, #3；mov r1, #3；subs r2, r0, r1</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. N（负）标志</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. Z（零）标志，因为结果为 0</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. V（溢出）标志</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 所有标志都不亮</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">CPSR 标志位含义</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>13. CPSR 中的 Z 标志在什么情况下被置 1？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 运算结果为负</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 加法产生了进位</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 有符号运算发生溢出</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 运算结果为零</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">答案与解析</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>1. 答案：A</strong>　正确项：指令第一个操作数是目标寄存器 Rd，结果写入 R1。错项②：R0 是第一源操作数 Rn，提供被加数，不被覆盖；错项③：把立即数 #3 误当成“第三个寄存器 R3”，立即数不是寄存器；错项④：结果只写 Rd 一处，不会同时存两个寄存器。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>2. 答案：C</strong>　正确项：统一为 助记符 Rd, Rn, &lt;操作数2&gt;，对 Rn 与&lt;操作数2&gt;做运算后结果进 Rd。错项①：把 Rd 与 Rn 的顺序颠倒了；错项②：整个操作数顺序全反；错项④：ARM 算术指令是三操作数而非两操作数结构。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>3. 答案：B</strong>　正确项：R3 = R2 + 4 = 5 + 4 = 9。错项①：取了立即数本身当结果，忘了要参与运算；错项③：取了源操作数 R2 的原值，说明没理解“结果存 Rd”是运算后的值；错项④：把加法当成了乘法（5×4）。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>4. 答案：B</strong>　正确项：第二操作数填的是寄存器 r2，属于“寄存器加法”。错项①：立即数形式应为 #数字（如 #3），此处没有 #；错项③：ARM 这类指令不直接用内存地址作 operand2，访存另有 ldr/str；错项④：标号用于跳转/分支，不能直接作算术 operand2。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>5. 答案：A</strong>　正确项：sub 与 add 同构，立即数/寄存器两种填法都有，仅运算是减法。错项①对应的是 MUL 的特性，sub 并无此限制；错项③：目标寄存器同样在第一位，位置与 add 一致；错项④：加减法对有符号/无符号用的是同一套指令，是否带符号取决于程序如何解释，无需另换指令。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>6. 答案：D</strong>　正确项：R1 = R0 − R2 = 4 − 2 = 2。错项①：把 sub 当成了 add（4+2=6）；错项②：把 sub 当成了乘法（4×2=8）；错项③：把操作数顺序算反，误以为是 R2 − R0。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>7. 答案：C</strong>　正确项：MUL 的第二操作数只能是寄存器，这是它和 ADD/SUB 唯一的别扭之处。错项①：ADD/SUB 支持立即数，但 MUL 不支持，这是高频踩坑点；错项③：结果存目标寄存器 Rd 而非 Rn；错项④：MUL 可做任意（寄存器值的）乘法，不限于 2 的幂，2 的幂通常用移位实现。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>8. 答案：B</strong>　正确项：因 MUL 不支持立即数，需先把常量 3 装进一个寄存器（mov r2, #3），再 mul r1, r0, r2。错项①：mul r1, r0, #3 直接用立即数，汇编器不接受；错项③：MUL 需要两个源操作数，只写一个不合法；错项④：三次 add r1, r0, r0 既不符合题意（那是 4+4+4+4），也不是乘 3 的写法。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>9. 答案：D</strong>　正确项：R1 = R0 × R2 = 4 × 2 = 8。错项①：把 mul 当成了加法（4+2=6）；错项②：把 mul 当成了减法（4−2=2）；错项③：把操作数误算成 4×4，多乘了一次 R0 自身。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>10. 答案：A</strong>　正确项：S = Set flags，加 S 后缀的指令会在算完后按结果更新 CPSR 标志。错项②：add/adds 都只把结果写 Rd，不会写内存（写内存是 str）；错项③：S 是助记符后缀，不改变指令编码长度；错项④：S 与符号无关，它只控制是否更新标志位。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>11. 答案：D</strong>　正确项：默认这几条指令只算只存、不碰标志，想更新需加 S。错项①：ARM 确实有 N/Z/C/V 标志，CPSR 里一直存在；错项②：cmp 会更新标志，但并非唯一途径，adds/subs 同样可以；错项③：标志是否更新取决于指令有无 S，而非结果是否为零——结果为零也要用了 S 才会点亮 Z。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>12. 答案：B</strong>　正确项：subs 算出 R0−R1 = 0，因结果为零而点亮 Z 标志。错项①：结果非负，N 不会亮；错项③：这次是有符号可表示范围内的小数运算，未溢出，V 不亮；错项④：指令带了 s 后缀必然更新标志，不会“都不亮”（实际上还可能附带点亮 C，但 N/V 不亮）。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>13. 答案：D</strong>　正确项：Z（Zero）标志在运算结果为零时置 1。错项①：结果为负对应的是 N（Negative）标志；错项②：进位/借位对应 C（Carry）标志；错项③：有符号溢出对应 V（oVerflow）标志。</p>
+</section>

@@ -45,6 +45,14 @@ export default defineConfig({
         items: [
           { text: '01. 五种基本句型', link: '/chapters/2026-08-english-grammar-01-five-basic-sentence-patterns' }
         ]
+      },
+      {
+        text: '图解 ARM 汇编',
+        collapsed: false,
+        items: [
+          { text: '01. MOV 指令与 exit 系统调用', link: '/chapters/2026-08-arm-assembly-01-mov-exit-syscall' },
+          { text: '02. ADD、SUB、MUL 与 CPSR 状态标志', link: '/chapters/2026-08-arm-assembly-02-add-sub-mul-cpsr' }
+        ]
       }
     ],
     outline: { level: [2, 3], label: '本页目录' },

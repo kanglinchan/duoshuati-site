@@ -12,3 +12,8 @@
 ## 英语语法精要
 
 - [01. 五种基本句型](/chapters/2026-08-english-grammar-01-five-basic-sentence-patterns)
+
+## 图解 ARM 汇编
+
+- [01. MOV 指令与 exit 系统调用](/chapters/2026-08-arm-assembly-01-mov-exit-syscall)
+- [02. ADD、SUB、MUL 与 CPSR 状态标志](/chapters/2026-08-arm-assembly-02-add-sub-mul-cpsr)

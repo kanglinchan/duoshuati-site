@@ -29,10 +29,16 @@ hero:
 
 - [01. 五种基本句型](/chapters/2026-08-english-grammar-01-five-basic-sentence-patterns)
 
+### 图解 ARM 汇编 · 默认专栏
+
+- [01. MOV 指令与 exit 系统调用](/chapters/2026-08-arm-assembly-01-mov-exit-syscall)
+- [02. ADD、SUB、MUL 与 CPSR 状态标志](/chapters/2026-08-arm-assembly-02-add-sub-mul-cpsr)
+
 ## 专栏问答模块
 
 每章末尾配有自测题：提交后答错直接显示解析，答对可手动展开解析。
 
 - [硬件电路基础 · 各章自测汇总](/answers)
 - [英语语法精要 · 各章自测汇总](/answers#英语语法精要)
+- [图解 ARM 汇编 · 各章自测汇总](/answers#图解-arm-汇编)
 - [专栏与课程归属总览](/columns)
