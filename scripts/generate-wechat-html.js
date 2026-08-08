@@ -35,6 +35,13 @@ const WECHAT_DIR = path.join(__dirname, '..', 'docs', 'public', 'wechat');
 const IMAGE_URL_PREFIX = 'https://kanglinchan.github.io/duoshuati-site/assets/images/';
 const MAX_IMAGE_WIDTH = 800;
 
+// 占位符 token：必须不含任何 markdown 特殊字符（* _ # > ! [ ] 等），
+// 否则会被下面的加粗/斜体正则误伤吞掉（曾用 __INLINE_CODE_n__ 导致代码丢失 + 乱码）。
+// @ 符号不参与任何 markdown 语法，最安全。
+const INLINE_CODE_TOKEN = '@@INLINECODE';
+const CODE_BLOCK_TOKEN = '@@CODEBLOCK';
+const TOKEN_END = '@@';
+
 // ---------- 工具函数 ----------
 
 /** 读取、压缩并 base64 编码图片 */
@@ -124,7 +131,7 @@ function markdownToHtml(mdContent) {
   // 先提取并保护代码块
   const codeBlocks = [];
   let content = mdContent.replace(/```[\s\S]*?```/g, (match) => {
-    const placeholder = `__CODE_BLOCK_${codeBlocks.length}__`;
+    const placeholder = `${CODE_BLOCK_TOKEN}${codeBlocks.length}${TOKEN_END}`;
     codeBlocks.push(match);
     return placeholder;
   });
@@ -132,7 +139,7 @@ function markdownToHtml(mdContent) {
   // 保护行内代码
   const inlineCodes = [];
   content = content.replace(/`[^`]+`/g, (match) => {
-    const placeholder = `__INLINE_CODE_${inlineCodes.length}__`;
+    const placeholder = `${INLINE_CODE_TOKEN}${inlineCodes.length}${TOKEN_END}`;
     inlineCodes.push(match);
     return placeholder;
   });
@@ -167,13 +174,11 @@ function markdownToHtml(mdContent) {
   // 链接 [text](url)
   content = content.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style="color:#0366d6;text-decoration:none;">$1</a>');
 
-  // 加粗
+  // 加粗（仅匹配 **...**；下划线版 __...__ 极易与占位符/变量名误伤，不再启用）
   content = content.replace(/\*\*([^*]+)\*\*/g, '<strong style="font-weight:bold;">$1</strong>');
-  content = content.replace(/__([^_]+)__/g, '<strong style="font-weight:bold;">$1</strong>');
 
-  // 斜体
+  // 斜体（仅匹配 *...*；下划线版 _..._ 会误伤含下划线的单词，不再启用）
   content = content.replace(/\*([^*]+)\*/g, '<em style="font-style:italic;">$1</em>');
-  content = content.replace(/_([^_]+)_/g, '<em style="font-style:italic;">$1</em>');
 
   // 分隔线
   content = content.replace(/^---+$/gm, '<hr style="border:none;border-top:1px solid #eee;margin:24px 0;">');
@@ -199,8 +204,8 @@ function markdownToHtml(mdContent) {
       continue;
     }
 
-    // 已经是 HTML 标签的行，直接输出
-    if (line.startsWith('<') && !line.startsWith('<li')) {
+    // 已经是 HTML 标签的行，或占位符行（代码块占位符单独成行，不应被包进 <p>），直接输出
+    if ((line.startsWith('<') && !line.startsWith('<li')) || line.startsWith(CODE_BLOCK_TOKEN)) {
       if (inList) {
         result.push('</ul>');
         inList = false;
@@ -234,7 +239,7 @@ function markdownToHtml(mdContent) {
   content = result.join('\n');
 
   // 恢复代码块
-  content = content.replace(/__CODE_BLOCK_(\d+)__/g, (match, idx) => {
+  content = content.replace(new RegExp(`${CODE_BLOCK_TOKEN}(\\d+)${TOKEN_END}`, 'g'), (match, idx) => {
     const code = codeBlocks[parseInt(idx)];
     // 简单处理代码块：提取内容和语言
     const lines = code.split('\n');
@@ -244,7 +249,7 @@ function markdownToHtml(mdContent) {
   });
 
   // 恢复行内代码
-  content = content.replace(/__INLINE_CODE_(\d+)__/g, (match, idx) => {
+  content = content.replace(new RegExp(`${INLINE_CODE_TOKEN}(\\d+)${TOKEN_END}`, 'g'), (match, idx) => {
     const code = inlineCodes[parseInt(idx)];
     const body = code.slice(1, -1);
     return `<code style="font-family:Menlo,Consolas,monospace;color:#c7254e;background:#f9f2f4;padding:1px 4px;border-radius:3px;font-size:14px;">${body}</code>`;
