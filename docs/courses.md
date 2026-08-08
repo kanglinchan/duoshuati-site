@@ -20,3 +20,4 @@
 - [03. LDR、STR 与内存访问](/chapters/2026-08-arm-assembly-03-ldr-str-memory)
 - [04. 逻辑运算：AND、ORR、EOR 与 MVN](/chapters/2026-08-arm-assembly-04-logical-operators)
 - [05. 有符号数与补码转换](/chapters/2026-08-arm-assembly-05-signed-numbers)
+- [06. LSL、LSR、ASR 与 ROR：移位与旋转](/chapters/2026-08-arm-assembly-06-shift-rotate)
