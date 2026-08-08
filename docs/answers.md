@@ -21,3 +21,5 @@
 - [02. ADD、SUB、MUL 与 CPSR 状态标志 自测](/chapters/2026-08-arm-assembly-02-add-sub-mul-cpsr#本章自测)
 - [05. 有符号数与补码转换 自测](/chapters/2026-08-arm-assembly-05-signed-numbers#本章自测)
 - [06. 移位与旋转：LSL、LSR、ASR 与 ROR 自测](/chapters/2026-08-arm-assembly-06-shift-rotate#本章自测)
+- [07. CMP 比较指令与 CPSR 标志 自测](/chapters/2026-08-arm-assembly-07-cmp-compare#本章自测)
+- [08. B 指令与条件后缀 自测](/chapters/2026-08-arm-assembly-08-branch-conditions#本章自测)

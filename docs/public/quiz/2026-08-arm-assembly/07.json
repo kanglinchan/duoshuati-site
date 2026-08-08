@@ -1,0 +1,173 @@
+{
+  "version": "qcp/2",
+  "meta": {
+    "title": "CMP 比较指令与 CPSR 标志 自测",
+    "chapter": "第7章",
+    "pkg": "2026-08-arm-assembly"
+  },
+  "groups": [
+    {
+      "knowledgePoint": "CMP 的本质",
+      "level": "core",
+      "questions": [
+        {
+          "q": "执行 cmp r0, r1 时，CPU 实际做了什么？",
+          "options": [
+            "计算 R0 + R1 并把结果存入 R0",
+            "暗中计算 R0 - R1，丢弃差值，只刷新 CPSR 标志位",
+            "比较 R0 和 R1 并把较大者存入 R0",
+            "把 R0 和 R1 交换位置"
+          ],
+          "answer": 1,
+          "explanation": "CMP 的本质是一场「只留痕迹的减法」：暗中计算 Rn - Rm，差值直接丢弃、不写回任何寄存器，但必然按差值刷新 CPSR 的 N/Z/C/V 标志。",
+          "difficulty": "easy"
+        },
+        {
+          "q": "cmp r0, r1 执行后，R0 和 R1 的值会怎样？",
+          "options": [
+            "R0 变成差值，R1 不变",
+            "两个寄存器都原封不动",
+            "R0 和 R1 都会清零",
+            "较小者会被存入 R0"
+          ],
+          "answer": 1,
+          "explanation": "CMP 不保存任何结果，源寄存器 R0、R1 都不会被修改。这就是它语法里没有目标寄存器的原因——痕迹只留在 CPSR 里。",
+          "difficulty": "easy"
+        },
+        {
+          "q": "为什么说 CMP 等价于「扔掉结果的 SUBS」？",
+          "options": [
+            "因为它们都会把结果写入内存",
+            "因为它们走同一个减法器、都刷新标志，区别只是 CMP 不保存差值",
+            "因为 SUBS 是 CMP 的旧名字，功能完全一样",
+            "因为 CMP 必须和 SUBS 成对使用"
+          ],
+          "answer": 1,
+          "explanation": "cmp r0, r1 与 subs 做同样的减法、同样设置 N/Z/C/V，唯一区别是 CMP 没有目标寄存器、差值算完就扔。理解这个等价关系，就抓住了 CMP 的全部语义。",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "N 与 Z 标志的解读",
+      "level": "core",
+      "questions": [
+        {
+          "q": "R0 = 4，R1 = 5，执行 cmp r0, r1 后，哪个标志位会被置 1？",
+          "options": ["Z", "N", "C", "V"],
+          "answer": 1,
+          "explanation": "4 - 5 = -1，差值为负，所以 N（Negative，bit 31）置 1。同时因为 4 减 5 需要借位，C=0。",
+          "difficulty": "easy"
+        },
+        {
+          "q": "执行 cmp r0, r1 后发现 Z 标志为 1，说明什么？",
+          "options": [
+            "R0 大于 R1",
+            "R0 小于 R1",
+            "R0 等于 R1",
+            "R0 与 R1 异号"
+          ],
+          "answer": 2,
+          "explanation": "Z（Zero）在差值为零时置 1，即 R0 - R1 = 0，两数相等。下一课的 BEQ（相等则跳）看的就是这个标志。",
+          "difficulty": "easy"
+        },
+        {
+          "q": "cmp r0, r1 之后，Z=0 且 N=0，说明（有符号意义下）？",
+          "options": [
+            "R0 < R1",
+            "R0 = R1",
+            "R0 > R1",
+            "无法判断"
+          ],
+          "answer": 2,
+          "explanation": "Z=0 排除相等，N=0 排除「差为负」。差值既不为零也不为负，那就是正数：R0 > R1（无溢出时成立）。",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "C 标志与借位",
+      "level": "core",
+      "questions": [
+        {
+          "q": "R0 = 5，R1 = 4，执行 cmp r0, r1 后，C 标志的状态及原因是？",
+          "options": [
+            "C=1，因为 5 - 4 不需要借位",
+            "C=0，因为 5 - 4 发生了借位",
+            "C=1，因为结果为正数",
+            "C=0，因为 N 标志为 0"
+          ],
+          "answer": 0,
+          "explanation": "减法语境下 C 的规则是反直觉的：C=1 表示「没借位」。5 - 4 够减、无需借位，所以 C=1。无符号比较时，C=1 恰好说明 R0 ≥ R1。",
+          "difficulty": "medium"
+        },
+        {
+          "q": "R0 = 5，R1 = 5，执行 cmp r0, r1 后，标志位的状态是？",
+          "options": [
+            "只有 Z=1",
+            "只有 C=1",
+            "Z=1 且 C=1",
+            "N=1 且 C=0"
+          ],
+          "answer": 2,
+          "explanation": "5 - 5 = 0，差值为零所以 Z=1；同时 5 减 5 不需要借位，所以 C=1。这是视频里第三次实验的结果：Z 和 C 同时点亮。",
+          "difficulty": "medium"
+        },
+        {
+          "q": "cmp r0, r1 之后发现 C=0，在无符号比较中说明什么？",
+          "options": [
+            "R0 ≥ R1",
+            "R0 < R1（减法发生了借位）",
+            "R0 = R1",
+            "发生了有符号溢出"
+          ],
+          "answer": 1,
+          "explanation": "C=0 表示减法「借了位」——被减数不够减，即无符号意义下 R0 < R1。溢出看的是 V 标志，与 C 无关。",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "CMP 与 SUB 的分工及分支配合",
+      "level": "core",
+      "questions": [
+        {
+          "q": "sub r2, r0, r1 与 cmp r0, r1 的区别，下列说法正确的是？",
+          "options": [
+            "SUB 会刷新标志位，CMP 不会",
+            "SUB 把差值写回 R2 且默认不动标志；CMP 丢弃差值且必然刷新标志",
+            "两者完全相同，只是名字不同",
+            "CMP 比 SUB 多一个目标寄存器"
+          ],
+          "answer": 1,
+          "explanation": "同一条减法，两种分工：SUB 要结果（写回目标寄存器，想设标志得加 S 后缀）；CMP 要判断（没有目标寄存器，标志必然刷新）。",
+          "difficulty": "easy"
+        },
+        {
+          "q": "想让 sub 指令在减法的同时刷新 CPSR 标志，应该怎么写？",
+          "options": [
+            "sub! r2, r0, r1",
+            "subs r2, r0, r1",
+            "sub r2, r0, r1, cmp",
+            "sub 做不到，必须用 cmp"
+          ],
+          "answer": 1,
+          "explanation": "加 S 后缀：subs r2, r0, r1 会在保存差值的同时刷新 N/Z/C/V。第二课学过这个后缀，CMP 可以理解成它的「结果丢弃版」。",
+          "difficulty": "medium"
+        },
+        {
+          "q": "ARM 代码里 cmp r0, r1 后面最常紧跟的是哪类指令？",
+          "options": [
+            "mov 数据传送指令",
+            "ldr/str 访存指令",
+            "beq/bne 等条件分支指令",
+            "mul 乘法指令"
+          ],
+          "answer": 2,
+          "explanation": "CMP 是侦察兵，负责布置标志；条件分支（BEQ 看 Z、BLT 看 N/V……）是决策者，拿标志行事。cmp + 条件跳转是 ARM 最高频的组合拳——这正是下一课的内容。",
+          "difficulty": "easy"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "version": "qcp/2",
+  "meta": {
+    "title": "B 指令与条件后缀 自测",
+    "chapter": "第8章",
+    "pkg": "2026-08-arm-assembly"
+  },
+  "groups": [
+    {
+      "knowledgePoint": "B 指令与标签机制",
+      "level": "core",
+      "questions": [
+        {
+          "q": "汇编里的标签（如 cond1:）在编译后的程序中扮演什么角色？",
+          "options": [
+            "它是一条独立的指令，占用 4 字节",
+            "它只是某个地址的名字，本身不产生任何指令",
+            "它会把后面的代码复制一份到内存",
+            "它会自动创建一个函数"
+          ],
+          "answer": 1,
+          "explanation": "标签以冒号结尾，只是给某个地址起了个名字，方便分支指令引用。汇编器会把标签换算成地址差编进 B 指令里，标签本身不占指令、不产生机器码。",
+          "difficulty": "easy"
+        },
+        {
+          "q": "执行 b cond2 时，CPU 本质上做了什么？",
+          "options": [
+            "把 cond2 的值加到这个 PC 上",
+            "把 PC 改成 cond2 标签对应的地址，从那里开始取下一条指令",
+            "把 cond2 处的指令复制到当前位置执行",
+            "暂停流水线，等待 cond2 执行完毕"
+          ],
+          "answer": 1,
+          "explanation": "顺序执行时 PC 每次 +4；分支指令的本质就是按条件（或无条件）改写 PC 的下一个值，流水线随后从目标标签处重新取指。",
+          "difficulty": "medium"
+        },
+        {
+          "q": "在 Ghidra 等反汇编工具里看到 BAL 指令，它是什么？",
+          "options": [
+            "一种带链接的跳转，会保存返回地址",
+            "B + AL（always），即无条件分支 B 的另一种写法",
+            "一种已经废弃的旧指令",
+            "跳转到绝对地址的专用指令"
+          ],
+          "answer": 1,
+          "explanation": "AL 是「总是」的意思，BAL = B + AL = 总是跳 = 无条件跳，和 B 是同一条指令。注意区分 BL（带链接跳转，用于函数调用），那是后话。",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "条件后缀与标志的对应",
+      "level": "core",
+      "questions": [
+        {
+          "q": "beq cond1 在什么条件下会跳转？",
+          "options": [
+            "N = 1 时",
+            "Z = 1 时",
+            "C = 1 时",
+            "任何情况下都跳"
+          ],
+          "answer": 1,
+          "explanation": "EQ 后缀看 Z（Zero）标志：Z=1 表示上一次 CMP 的差值为零、两数相等，此时 beq 才跳。",
+          "difficulty": "easy"
+        },
+        {
+          "q": "R0 = 5，R1 = 5，执行 cmp r0, r1 后再执行 bne cond2，会发生什么？",
+          "options": [
+            "跳转到 cond2，因为两数不等",
+            "不跳转，因为 Z=1 而 BNE 要求 Z=0",
+            "跳转到 cond2，因为 C=1",
+            "触发异常，因为两数相等"
+          ],
+          "answer": 1,
+          "explanation": "5 - 5 = 0，Z=1。BNE（不等则跳）要求 Z=0，条件不成立，所以不跳，继续顺序执行下一条指令。",
+          "difficulty": "medium"
+        },
+        {
+          "q": "blt（小于则跳）为什么看的是 N 和 V 的组合，而不只是 N 标志？",
+          "options": [
+            "因为 N 标志在减法中从来不准确",
+            "为了正确处理有符号溢出：溢出时 N 的符号意义会反转，需要 V 来校正",
+            "因为 C 标志被借位占用了",
+            "这是 ARM 的设计失误，其实只看 N 就够了"
+          ],
+          "answer": 1,
+          "explanation": "有符号比较中，如果减法溢出，N 显示的符号与真实大小关系相反。LT 的条件是 N ≠ V，GT 是 Z=0 且 N=V——V 标志正是为校正这种情况而存在的。",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "CMP + 条件分支组合推演",
+      "level": "core",
+      "questions": [
+        {
+          "q": "代码 mov r0,#4 / mov r1,#5 / cmp r0,r1 / beq cond1 / b cond2 / cond1: mov r2,#1 / cond2: mov r3,#2。执行完毕后 R2 和 R3 的值是？",
+          "options": [
+            "R2=1，R3=0",
+            "R2=0，R3=2",
+            "R2=1，R3=2",
+            "R2=0，R3=0"
+          ],
+          "answer": 1,
+          "explanation": "4≠5，Z=0，beq 不跳；顺序执行到 b cond2 无条件跳转，跳过 cond1 的 mov r2,#1，着陆后执行 mov r3,#2。最终 R2=0、R3=2——这正是视频单步实验的结果。",
+          "difficulty": "medium"
+        },
+        {
+          "q": "如果把上题的 R0 也改成 5（两数相等），执行完毕后 R2 和 R3 是？",
+          "options": [
+            "R2=1，R3=0",
+            "R2=0，R3=2",
+            "R2=1，R3=2（顺序穿透，两个分支都执行了）",
+            "R2=0，R3=0"
+          ],
+          "answer": 2,
+          "explanation": "Z=1，beq 跳进 cond1，R2=1；但标签挡不住顺序执行——mov r2,#1 之后 PC 继续 +4 滑进 cond2，R3=2 也被执行。这就是「最烂的 if 语句」的顺序穿透 bug。",
+          "difficulty": "hard"
+        },
+        {
+          "q": "想用汇编表达 if (r0 != r1) 就跳转，正确的组合是？",
+          "options": [
+            "cmp r0, r1 然后 beq label",
+            "cmp r0, r1 然后 bne label",
+            "sub r0, r1 然后 beq label",
+            "cmp r0, r1 然后 blt label"
+          ],
+          "answer": 1,
+          "explanation": "不等则跳 = BNE：CMP 后两数不等时 Z=0，正是 BNE 的跳转条件。后缀语义直接对应高级语言的比较符：!= 用 NE，== 用 EQ。",
+          "difficulty": "easy"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "顺序穿透与胶水分支",
+      "level": "core",
+      "questions": [
+        {
+          "q": "汇编实现 if-else 时，为什么 if 体末尾必须加一条 b end？",
+          "options": [
+            "为了提高执行速度",
+            "因为标签挡不住顺序执行，不加的话 if 体执行完会顺势滑进 else 体",
+            "因为 else 体的指令必须被显式跳过两次",
+            "语法要求，否则汇编器报错"
+          ],
+          "answer": 1,
+          "explanation": "高级语言的 if-else 自带互斥，汇编里没有「块」的概念。不加 b end 防穿透，if 体执行完 PC 继续 +4 就进了 else 体，两个分支都跑一遍。",
+          "difficulty": "medium"
+        },
+        {
+          "q": "标准的 if-else 汇编骨架里，三条 B 家族指令各自的角色是？",
+          "options": [
+            "三条都是条件跳，分别判断三种情况",
+            "beq 管「选谁」，b cond2 管「躲开谁」，b end 管「收队防穿透」",
+            "第一条初始化，第二条循环，第三条返回",
+            "三条可以任意互换位置"
+          ],
+          "answer": 1,
+          "explanation": "三段式：beq cond1（条件跳：条件成立去 if 体）→ b cond2（兜底跳：不成立去 else 体）→ if 体末尾 b end（防穿透：干完就走）。看懂这个骨架就看懂了所有 if-else 的汇编形态。",
+          "difficulty": "medium"
+        },
+        {
+          "q": "cmp r0,r1 / beq cond1 / b cond2 / cond1: mov r2,#1 / b end / cond2: mov r3,#2 / end:。若 R0=7、R1=7，R3 的最终值是？",
+          "options": [
+            "2，else 体被执行",
+            "0，b end 在 else 体之前把流程送走了",
+            "2，因为 end 标签在 else 体后面",
+            "无法确定"
+          ],
+          "answer": 1,
+          "explanation": "R0=R1，Z=1，beq 跳进 cond1 执行 mov r2,#1，随后 b end 直接跳到汇合点，cond2 的 mov r3,#2 被跳过。R3 保持初始值 0。",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "条件后缀大家族",
+      "level": "core",
+      "questions": [
+        {
+          "q": "条件后缀 GT（大于则跳）对应的标志条件是？",
+          "options": [
+            "Z = 1",
+            "N = 1",
+            "Z = 0 且 N = V",
+            "C = 1"
+          ],
+          "answer": 2,
+          "explanation": "GT 要求「差为正且未溢出」：Z=0 排除相等，N=V 保证符号判断未被溢出干扰。记语义即可：GT 对应高级语言的 > 。",
+          "difficulty": "medium"
+        },
+        {
+          "q": "高级语言的 if (a >= b) 应该用哪个条件后缀？",
+          "options": ["GT", "GE", "LE", "NE"],
+          "answer": 1,
+          "explanation": "大于等于 = GE（greater or equal），标志条件 N=V。后缀语义与高级语言比较符一一对应：> GT、>= GE、< LT、<= LE、== EQ、!= NE。",
+          "difficulty": "easy"
+        },
+        {
+          "q": "关于条件后缀的使用，下列说法错误的是？",
+          "options": [
+            "后缀直接拼在 B 后面，如 beq、bgt",
+            "AL 表示「总是」，通常省略不写",
+            "条件后缀只能拼在 B 指令上，别的指令一律不能用",
+            "所有后缀的判断依据都是 CPSR 的标志位"
+          ],
+          "answer": 2,
+          "explanation": "条件后缀是 ARM 指令集的通用机制，不止 B——mov、add 等指令也能带（如 moveq），这就是 ARM 招牌的「条件执行」。当然本课先用 B 家族把它练熟。",
+          "difficulty": "hard"
+        }
+      ]
+    }
+  ]
+}
