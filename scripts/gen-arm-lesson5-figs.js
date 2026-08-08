@@ -40,7 +40,7 @@ function text(x, y, s, opts = {}) {
 
 // ============ 图 1：4 位有符号 vs 无符号对照表（核心图，也作封面）============
 function figSignedUnsigned() {
-  const w = 820, h = 560;
+  const w = 820, h = 600;
   const rows = [
     ['0111', '+7', '7'],
     ['0110', '+6', '6'],
@@ -114,23 +114,13 @@ function figSignedUnsigned() {
 }
 
 // ============ 图 2：取负数的三步——取反、加一（two's complement得名）============
+// 竖向布局：三步从上到下，避免横向三列方框重叠
 function figNegateSteps() {
-  const w = 760, h = 460;
+  const w = 620, h = 600;
   let body = '';
-  body += text(380, 40, '把 +5 变成 -5：取反、加一', { size: 22, weight: 'bold', anchor: 'middle' });
-  body += text(380, 66, '这就是 "two\'s complement"（二进制补码）名字的由来', { size: 13, fill: SUB, anchor: 'middle' });
+  body += text(310, 40, '把 +5 变成 -5：取反、加一', { size: 22, weight: 'bold', anchor: 'middle' });
+  body += text(310, 66, '这就是 "two\'s complement"（二进制补码）名字的由来', { size: 13, fill: SUB, anchor: 'middle' });
 
-  // 三列：原值 / 取反 / 加一
-  const colX = [80, 320, 560];
-  const colW = 160;
-  const topY = 110;
-
-  const labels = ['第 1 步 · 写出 +5', '第 2 步 · 全部取反', '第 3 步 · 再加 1'];
-  labels.forEach((t, i) => {
-    body += text(colX[i] + colW/2, topY, t, { size: 15, weight: 'bold', anchor: 'middle', fill: i === 2 ? ORANGE : BLUE });
-  });
-
-  // 8 位二进制演示
   const bits = ['0','0','0','0','0','1','0','1'];
   const flipped = bits.map(b => b === '0' ? '1' : '0');
   const result = [];
@@ -141,87 +131,72 @@ function figNegateSteps() {
     carry = sum >= 2 ? 1 : 0;
   }
 
-  function drawBits(x, y, arr, highlightAll) {
-    const bw = 32, gap = 4;
+  const bw = 34, gap = 6;
+  const bitsW = 8 * bw + 7 * gap;          // 272 + 42 = 314
+  const bitsX = (w - bitsW) / 2;           // (620-314)/2 = 153
+
+  // 每行：标签 + 8 个位方框 + 注释
+  function drawRow(labelY, label, arr, accentColor, annotation, annotationColor) {
+    body += text(w / 2, labelY, label, { size: 16, weight: 'bold', anchor: 'middle', fill: accentColor });
+    const boxY = labelY + 16;
     arr.forEach((b, i) => {
-      const bx = x + i * (bw + gap);
-      const fill = (i === 7 && highlightAll) ? BLUE_SOFT : '#fff';
-      body += box(bx, y, bw, 40, fill, BLUE);
-      body += text(bx + bw/2, y + 26, b, { size: 18, weight: 'bold', anchor: 'middle', family: 'Consolas,monospace' });
+      const bx = bitsX + i * (bw + gap);
+      const fill = (accentColor === ORANGE && i === 7) ? ORANGE_SOFT : '#fff';
+      body += box(bx, boxY, bw, 42, fill, accentColor);
+      body += text(bx + bw / 2, boxY + 28, b, { size: 18, weight: 'bold', anchor: 'middle', family: 'Consolas,monospace' });
     });
+    body += text(w / 2, boxY + 64, annotation, { size: 13, anchor: 'middle', fill: annotationColor });
   }
 
-  const bitY = topY + 30;
-  drawBits(colX[0], bitY, bits, false);
-  drawBits(colX[1], bitY, flipped, false);
-  drawBits(colX[2], bitY, result, true);
-
-  // 每列下方十六进制/十进制标注
-  const dec = (arr) => parseInt(arr.join(''), 2);
-  const annotations = [
-    `十六进制 0x05\n十进制 +5`,
-    `十六进制 0xFA\n十进制 250（无符号）`,
-    `十六进制 0xFB\n有符号解读 = -5`
-  ];
-  annotations.forEach((t, i) => {
-    const lines = t.split('\n');
-    lines.forEach((ln, j) => {
-      body += text(colX[i] + colW/2, bitY + 70 + j*20, ln, { size: 13, anchor: 'middle', fill: j === 0 ? SUB : (i === 2 ? RED : INK), weight: j === 1 && i === 2 ? 'bold' : 'normal' });
-    });
-  });
-
-  // 箭头：列间
-  function arrow(x1, y1, x2, y2, label) {
-    body += `<defs><marker id="arr-${label.replace(/\s/g,'')}" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="${SUB}"/></marker></defs>`;
-    body += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${SUB}" stroke-width="2" marker-end="url(#arr-${label.replace(/\s/g,'')})"/>`;
-    body += text((x1+x2)/2, y1 - 8, label, { size: 12, fill: SUB, anchor: 'middle' });
-  }
-  arrow(colX[0] + colW + 10, bitY + 20, colX[1] - 6, bitY + 20, '取反');
-  arrow(colX[1] + colW + 10, bitY + 20, colX[2] - 6, bitY + 20, '+ 1');
+  // 三行 + 两个向下箭头
+  drawRow(100, '第 1 步 · 写出 +5', bits,      BLUE,   '十六进制 0x05  ·  十进制 +5',        SUB);
+  body += text(w / 2, 208, '↓  取反（每位翻转）', { size: 14, fill: SUB, anchor: 'middle' });
+  drawRow(228, '第 2 步 · 全部取反', flipped,  BLUE,   '十六进制 0xFA  ·  无符号解读 = 250', SUB);
+  body += text(w / 2, 336, '↓  + 1', { size: 14, fill: SUB, anchor: 'middle' });
+  drawRow(356, '第 3 步 · 再加 1', result,    ORANGE, '十六进制 0xFB  ·  有符号解读 = -5',  RED);
 
   // 底部：可逆性提示
-  const footY = bitY + 150;
-  body += box(80, footY, 600, 70, ORANGE_SOFT, ORANGE);
-  body += text(380, footY + 28, '双向通用：从 -5 回到 +5，同样「取反、加一」', { size: 15, weight: 'bold', anchor: 'middle', fill: ORANGE });
-  body += text(380, footY + 52, '因此补码下加法减法共用同一套电路，CPU 不需要专门的减法器', { size: 13, anchor: 'middle', fill: INK });
+  const footY = 486;
+  body += box(70, footY, w - 140, 84, ORANGE_SOFT, ORANGE);
+  body += text(w / 2, footY + 34, '双向通用：从 -5 回到 +5，同样「取反、加一」', { size: 15, weight: 'bold', anchor: 'middle', fill: ORANGE });
+  body += text(w / 2, footY + 62, '因此补码下加法减法共用同一套电路，CPU 不需要专门的减法器', { size: 13, anchor: 'middle', fill: INK });
 
   return svg(body, w, h);
 }
 
 // ============ 图 3：符号扩展（8 位 → 32 位）============
 function figSignExtension() {
-  const w = 820, h = 380;
+  const w = 820, h = 440;
   let body = '';
   body += text(410, 40, '符号扩展：把 8 位的 -5 搬进 32 位寄存器', { size: 22, weight: 'bold', anchor: 'middle' });
   body += text(410, 66, '用符号位填充所有新增的高位 —— 正数补 0，负数补 1', { size: 13, fill: SUB, anchor: 'middle' });
 
-  // 上：8 位 -5
-  body += text(80, 110, '原值（8 位）', { size: 14, weight: 'bold', fill: RED });
+  const boxW = 640;                         // 宽到能放下 35 字符的 32 位串
+  const boxX = (w - boxW) / 2;             // (820-640)/2 = 90
+
+  // 上：8 位 -5（单独方框）
+  body += text(boxX, 112, '原值（8 位）', { size: 14, weight: 'bold', fill: RED });
   const bits8 = ['1','1','1','1','1','0','1','1'];
   const bw = 30, gap = 3;
   bits8.forEach((b, i) => {
-    const bx = 80 + i * (bw + gap);
+    const bx = boxX + i * (bw + gap);
     const isSign = i === 0;
-    body += box(bx, 120, bw, 36, isSign ? RED_SOFT : '#fff', isSign ? RED : BLUE);
-    body += text(bx + bw/2, 144, b, { size: 16, weight: 'bold', anchor: 'middle', family: 'Consolas,monospace' });
+    body += box(bx, 122, bw, 36, isSign ? RED_SOFT : '#fff', isSign ? RED : BLUE);
+    body += text(bx + bw / 2, 146, b, { size: 16, weight: 'bold', anchor: 'middle', family: 'Consolas,monospace' });
   });
-  body += text(80, 174, '符号位 = 1（负数）', { size: 12, fill: RED });
+  body += text(boxX, 178, '符号位 = 1（负数）', { size: 12, fill: RED });
 
-  // 中：错误做法（零扩展）
-  body += text(80, 210, '错误：零扩展（补 0）', { size: 14, weight: 'bold', fill: RED });
-  const wrongBits = [];
-  for (let i = 0; i < 24; i++) wrongBits.push('0');
-  wrongBits.push(...bits8);
-  // 用紧凑表示：24 个 0 ... 11111011
-  body += box(80, 220, 26*8, 36, '#fff', RED);
-  body += text(80 + 26*8/2, 244, '0000 0000  0000 0000  0000 0000  1111 1011', { size: 14, anchor: 'middle', family: 'Consolas,monospace', fill: INK });
-  body += text(80, 274, '解读成 +251 —— 符号丢了！', { size: 12, fill: RED });
+  // 中：错误做法（零扩展）—— 32 位文本放进够宽的方框
+  body += text(boxX, 220, '错误：零扩展（补 0）', { size: 14, weight: 'bold', fill: RED });
+  body += box(boxX, 230, boxW, 38, '#fff', RED);
+  body += text(w / 2, 255, '0000 0000  0000 0000  0000 0000  1111 1011', { size: 14, anchor: 'middle', family: 'Consolas,monospace', fill: INK });
+  body += text(boxX, 288, '解读成 +251 —— 符号丢了！', { size: 12, fill: RED });
 
   // 下：正确做法（符号扩展）
-  body += text(80, 310, '正确：符号扩展（补 1）', { size: 14, weight: 'bold', fill: GREEN });
-  body += box(80, 320, 26*8, 36, GREEN_SOFT, GREEN);
-  body += text(80 + 26*8/2, 344, '1111 1111  1111 1111  1111 1111  1111 1011', { size: 14, anchor: 'middle', family: 'Consolas,monospace', fill: INK });
-  body += text(80, 374, '解读成 -5 —— 数值保住了，这就是 0xFFFFFFFB', { size: 12, fill: GREEN });
+  body += text(boxX, 322, '正确：符号扩展（补 1）', { size: 14, weight: 'bold', fill: GREEN });
+  body += box(boxX, 332, boxW, 38, GREEN_SOFT, GREEN);
+  body += text(w / 2, 357, '1111 1111  1111 1111  1111 1111  1111 1011', { size: 14, anchor: 'middle', family: 'Consolas,monospace', fill: INK });
+  body += text(boxX, 390, '解读成 -5 —— 数值保住了，这就是 0xFFFFFFFB', { size: 12, fill: GREEN });
 
   return svg(body, w, h);
 }
@@ -290,7 +265,7 @@ function figHowToTell() {
   body += text(lx + 150, ly + 30, '按有符号解读', { size: 16, weight: 'bold', anchor: 'middle', fill: GREEN });
   body += text(lx + 150, ly + 60, '（看符号位 = 1 → 负数）', { size: 12, anchor: 'middle', fill: SUB });
   body += text(lx + 150, ly + 100, '取反加一 → 0000...0101', { size: 13, anchor: 'middle', family: 'Consolas,monospace' });
-  body += text(lx + 150, ly + 124, '= 5', { size: 13, anchor: 'middle', family: 'Consolas,monospace' });
+  body += text(lx + 150, ly + 124, '= 5', { size: 13, anchor: 'middle', family: 'Consolas,monospace', fill: INK });
   body += text(lx + 150, ly + 160, '值 = -5', { size: 22, weight: 'bold', anchor: 'middle', fill: RED });
   body += text(lx + 150, ly + 186, '用 SDIV / LDRS 等带 S 的指令', { size: 11, anchor: 'middle', fill: SUB });
 
@@ -300,7 +275,7 @@ function figHowToTell() {
   body += text(rx + 150, ry + 30, '按无符号解读', { size: 16, weight: 'bold', anchor: 'middle', fill: BLUE });
   body += text(rx + 150, ry + 60, '（所有位都是数值位）', { size: 12, anchor: 'middle', fill: SUB });
   body += text(rx + 150, ry + 100, '直接读 32 位二进制', { size: 13, anchor: 'middle', family: 'Consolas,monospace' });
-  body += text(rx + 150, ry + 124, '= 2³² - 5', { size: 13, anchor: 'middle', family: 'Consolas,monospace' });
+  body += text(rx + 150, ry + 124, '= 2^32 - 5', { size: 13, anchor: 'middle', family: 'Consolas,monospace' });
   body += text(rx + 150, ry + 160, '值 = 4,294,967,291', { size: 18, weight: 'bold', anchor: 'middle', fill: BLUE });
   body += text(rx + 150, ry + 186, '用 UDIV / LDR 等不带 S 的指令', { size: 11, anchor: 'middle', fill: SUB });
 
