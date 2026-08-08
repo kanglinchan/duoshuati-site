@@ -1,0 +1,160 @@
+# LDR、STR 与内存访问
+
+![LDR、STR 与内存访问封面](/assets/images/2026-08-arm-assembly/fig-load-store-arch.png)
+
+<CopyArticle html="/wechat/2026-08-arm-assembly-03-ldr-str-memory.html" md="/wechat/2026-08-arm-assembly-03-ldr-str-memory.md" />
+
+上一课我们学会了算术——加、减、乘，以及那块默默记录的记分牌 CPSR。但说句实话，寄存器就那么十几个，做一个三位数加法还行，真要存一个数组、一段字符串，寄存器就变成了一个只有十几个格子的写字板，擦来擦去，焦头烂额。
+
+好在 CPU 旁边还蹲着一大块地方：内存。它有数 GB 的容量，能放下你想要的任何复杂数据。这一课，我们就打开通往内存的大门——LDR（Load Register，从内存读）和 STR（Store Register，写回内存）。
+
+本系列基于 ARMv7（ARM 的 32 位版本）。本课可以继续在 QEMU 里跑，更推荐在 CPUlator（https://cpulator.01xz.net/，选 ARM + ARMv7）里用手点单步——它有个 Memory 标签页，能让你亲眼看到内存里的值被改写，那感觉像在看魔术揭密。
+
+### 1. ARM 是 Load/Store 架构
+
+在开始玩指令之前，先聊一个重要的背景概念。
+
+你之前学过的 ADD、SUB、MUL、MOV——它们只能操作寄存器。这跟 x86 完全不同：在 x86 上，add eax, [0x1000] 这样的指令可以一脚踩进内存、直接读一个地址里的值来做加法，一条指令同时干「访问内存」和「做运算」两件事。
+
+ARM 不这么干。ARM 的设计哲学叫 Load/Store Architecture（加载/存储架构）——整个指令集里，只有两拨指令有权碰内存：LDR（把内存数据加载进寄存器）和 STR（把寄存器数据存进内存）。
+
+![图 1 · Load/Store 架构：x86 的 ADD 可以直接读内存，ARM 的 ADD 只能操作寄存器，只有 LDR/STR 能穿越边界](/assets/images/2026-08-arm-assembly/fig-load-store-arch.png)
+<p align="center"><sub>图 1 · Load/Store 架构：x86 的 ADD 可以直接读内存，ARM 的 ADD 只能操作寄存器，只有 LDR/STR 能穿越边界</sub></p>
+
+这意味着什么？如果你想做「从内存里拿一个数 + 一个数」，在 ARM 上必须拆成三步：第一步用 LDR 把内存里的那个数装进寄存器；第二步用 ADD 做加法；第三步（如果需要）再用 STR 把结果写回去。
+
+听起来繁琐？没错。但这正是 RISC 的精髓：指令虽然多，但每条指令做的事单一、执行时间可预测。这是代价，也是美。
+
+### 2. 内存分段：.data 放数据，.text 放代码
+
+内存里不是所有东西都堆在一起的。汇编帮你分了两块互不干扰的区域：代码段（.text）放要执行的指令；数据段（.data）放声明的变量。
+
+还记得第一课写的那三行吗？我们把 _start 标签写在了 .section .text 的正下方——那就是代码段。现在，我们在代码段之上再加一段数据。
+
+![图 2 · .data 段存变量（.word 声明），.text 段存可执行指令，它们各占一块内存区域](/assets/images/2026-08-arm-assembly/fig-data-segment.png)
+<p align="center"><sub>图 2 · .data 段存变量（.word 声明），.text 段存可执行指令，它们各占一块内存区域</sub></p>
+
+> **注：** .data 不参与执行——CPU 不会把「变量 5」当指令来跑。它是纯数据，静静地躺在那里，等着指令来读或写。
+
+### 3. 声明变量：.word
+
+在 .data 段里声明一个变量，写法是「标签名 + .word + 初始值」：
+
+```asm
+.section .data
+
+var1:   .word   5       @ 声明 var1，初值 5
+var2:   .word   6       @ 声明 var2，初值 6
+var3:   .word   0       @ 声明 var3，初值 0
+
+.section .text
+.global _start
+
+_start:
+    mov r0, #42
+    mov r7, #1
+    swi #0
+```
+
+.word 是什么意思？它告诉汇编器：在这里分配 4 个字节（32 位），并填入指定的值。ARMv7 是 32 位架构，所以一个「字」（word）恰好是 4 字节——这是 ARM 内存管理的基本单位。
+
+> **注：** 32 位 = 4 字节 = 8 个十六进制位。所以 .word 5 在内存里实际存的是 0x00000005，占完整 4 个字节。
+
+### 4. LDR：从内存读数据（分两步）
+
+终于到了主角。LDR（Load Register）负责把内存里的值搬进寄存器。
+
+但它不能一步到位。你需要分两步走，这是新手最容易掉进去的坑，所以我用加粗的方式强调：var1 是一个标签，标签的本质是内存地址——它不是值！
+
+#### 第一步：LDR =var1，拿到地址
+
+= 符号是关键。写成 LDR Rx, =var1 时，汇编器会把 var1 所在的内存地址（而不是 var1 的值）放进寄存器：
+
+```asm
+    ldr r0, =var1     @ 把 var1 的地址（如 0x1000）放进 R0
+```
+
+执行后 R0 里的不是 5，而是一个十六进制地址，比如 0x00001000。这个地址指向内存中存放 var1（值为 5）的那 4 个字节。
+
+#### 第二步：LDR [R0]，用地址拿到值
+
+地址拿到了，怎么把地址指着的那个真实值取出来？用方括号——[Rx] 的意思是：把 Rx 里存的数字当成内存地址，去那个地址把真正的值读出来：
+
+```asm
+    ldr r0, =var1     @ R0 = var1 的地址（指针）
+    ldr r1, [r0]      @ R1 = 内存 [R0] 处的值（解引用后得到 5）
+```
+
+![图 3 · LDR 两步走：=var1 取地址（左），[Rx] 用地址取到真正的值（右）](/assets/images/2026-08-arm-assembly/fig-ldr-two-step.png)
+<p align="center"><sub>图 3 · LDR 两步走：=var1 取地址（左），[Rx] 用地址取到真正的值（右）</sub></p>
+
+翻译成 C 语言，一目了然：LDR =var1 → &var1（取地址）；LDR [Rx] → *ptr（解引用）。地址是指向数据的箭头，方括号是「沿着箭头走过去拿到实物」。
+
+> **注意：** 最经典的错误：写成 ldr r1, var1（没有等号、也没有括号）。汇编器很可能不报错，但 r1 里拿到的不是值 5——在伪指令模式下它可能被默默转成 ldr =var1，拿到的是地址而不是值。除非你想自虐，否则别偷懒省掉符号。
+
+### 5. STR：往内存写数据
+
+LDR 是从内存往家搬东西；STR（Store Register）正好相反——把寄存器里的值存进内存。写法跟 LDR 第二步如出一辙，只是把 L 换成了 S：
+
+```asm
+    ldr r0, =var2     @ R0 = var2 的地址（比如 0x1004）
+    mov r2, #3         @ R2 = 3（要写入的值）
+    str r2, [r0]       @ 把 R2 的值 3 写入内存 [R0] 处
+```
+
+执行完之后，内存中 var2 的位置就不再是声明的初值 6，而是被覆盖成了 3。在 CPUlator 里切换到 Memory 标签页，你会眼睁睁看着那个 6 变成 3。
+
+![图 4 · STR 写内存：准备好值（R2=3）和地址（R3=0x1004），STR 执行后 0x1004 处从 6 变成 3](/assets/images/2026-08-arm-assembly/fig-str-demo.png)
+<p align="center"><sub>图 4 · STR 写内存：准备好值（R2=3）和地址（R3=0x1004），STR 执行后 0x1004 处从 6 变成 3</sub></p>
+
+### 6. 实战：加载、改写、存回
+
+把 LDR 和 STR 串起来，就是一个完整的「读-改-写」循环。来看一份完整程序——从内存中取出 var1（值为 5），加上 10，把结果存进 var3：
+
+```asm
+.section .data
+var1:   .word   5
+var2:   .word   6
+var3:   .word   0
+
+.section .text
+.global _start
+
+_start:
+    ldr r0, =var1         @ R0 = var1 的地址
+    ldr r1, [r0]          @ R1 = var1 的值（5）
+    add r1, r1, #10       @ R1 = 5 + 10 = 15
+    ldr r2, =var3         @ R2 = var3 的地址
+    str r1, [r2]          @ 把 15 写入 var3
+
+    mov r0, #42
+    mov r7, #1
+    swi #0
+```
+
+把这个粘进 CPUlator，点 Compile & Load，然后去 Memory 标签页。你会看到：0x00001000（var1）躺着 5，0x00001004（var2）躺着 6，0x00001008（var3）躺着 0。单步执行完所有的 LDR/ADD/STR，再回 Memory 看一眼——0x00001008（var3）已经变成了 0x0000000F（15）。
+
+> **注：** 单步时留意 R0 和 R1 的区别：ldr r0, =var1 执行后 R0 是一个地址（如 0x00001000），不是 5；ldr r1, [r0] 执行后 R1 才是 5。这两步截然不同，混淆了就是 bug。
+
+### 7. 内存地址解码
+
+注意观察地址的变化规律——var2 的地址总是比 var1 大 4，var3 又比 var2 大 4。这不是巧合：既然每个 .word 占 4 字节，下一个 word 自然要从「当前地址 + 4」开始。
+
+![图 5 · 32 位内存布局：地址以 4 为单位递增（十六进制：0, 4, 8, C），每个 .word 占恰好 4 字节](/assets/images/2026-08-arm-assembly/fig-memory-layout.png)
+<p align="center"><sub>图 5 · 32 位内存布局：地址以 4 为单位递增（十六进制：0, 4, 8, C），每个 .word 占恰好 4 字节</sub></p>
+
+如果换成十六进制看：0x1000 的下一个 word 是 0x1004，再下一个是 0x1008 和 0x100C——末尾永远是 0、4、8、C 这四个数字在轮回。这在调试时是一个极好的「地址是否对齐」的快速检查法。
+
+### 小结
+
+这一课，我们打开了 ARM 的 Load/Store 大门，打通了寄存器与内存之间那条被严密看守的边界：
+
+- Load/Store 架构：ARM 只有 LDR 和 STR 能访问内存——ADD/SUB/MUL/MOV 休想碰，这是 RISC 的铁律
+- .data 段与 .word 声明：用标签 + 初值声明变量，每个 .word 占 4 字节 = 32 位
+- LDR =var1：拿到变量的内存地址——不是值，是「住在哪」
+- LDR [Rx]：把 Rx 里的地址当钥匙，打开内存的门取出真正的值——C 语言的 *ptr
+- STR：反方向的 LDR，把寄存器的值塞回内存——数据和地址都要提前备好
+
+至此，你已经拥有了写很多实用程序的基础：变量能存、能读、能改。下一课，我们将用 CMP 指令把 CPSR 的那几盏灯和这扇内存门结合起来——让 CPU 不再闷头跑，而是看着数据做选择。下一课见。
+
+<QuizBlock src="/quiz/2026-08-arm-assembly/03.json" title="本章自测" />

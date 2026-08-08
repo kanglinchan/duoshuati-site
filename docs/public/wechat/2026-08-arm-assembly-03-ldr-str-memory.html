@@ -1,0 +1,194 @@
+<section style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">
+<img src="/assets/images/2026-08-arm-assembly/fig-load-store-arch.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">上一课我们学会了算术——加、减、乘，以及那块默默记录的记分牌 CPSR。但说句实话，寄存器就那么十几个，做一个三位数加法还行，真要存一个数组、一段字符串，寄存器就变成了一个只有十几个格子的写字板，擦来擦去，焦头烂额。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">好在 CPU 旁边还蹲着一大块地方：内存。它有数 GB 的容量，能放下你想要的任何复杂数据。这一课，我们就打开通往内存的大门——LDR（Load Register，从内存读）和 STR（Store Register，写回内存）。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">本系列基于 ARMv7（ARM 的 32 位版本）。本课可以继续在 QEMU 里跑，更推荐在 CPUlator（https://cpulator.01xz.net/，选 ARM + ARMv7）里用手点单步——它有个 Memory 标签页，能让你亲眼看到内存里的值被改写，那感觉像在看魔术揭密。</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">1. ARM 是 Load/Store 架构</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">在开始玩指令之前，先聊一个重要的背景概念。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">你之前学过的 ADD、SUB、MUL、MOV——它们只能操作寄存器。这跟 x86 完全不同：在 x86 上，add eax, [0x1000] 这样的指令可以一脚踩进内存、直接读一个地址里的值来做加法，一条指令同时干「访问内存」和「做运算」两件事。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">ARM 不这么干。ARM 的设计哲学叫 Load/Store Architecture（加载/存储架构）——整个指令集里，只有两拨指令有权碰内存：LDR（把内存数据加载进寄存器）和 STR（把寄存器数据存进内存）。</p>
+<img src="/assets/images/2026-08-arm-assembly/fig-load-store-arch.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">图 1 · Load/Store 架构：x86 的 ADD 可以直接读内存，ARM 的 ADD 只能操作寄存器，只有 LDR/STR 能穿越边界</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">这意味着什么？如果你想做「从内存里拿一个数 + 一个数」，在 ARM 上必须拆成三步：第一步用 LDR 把内存里的那个数装进寄存器；第二步用 ADD 做加法；第三步（如果需要）再用 STR 把结果写回去。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">听起来繁琐？没错。但这正是 RISC 的精髓：指令虽然多，但每条指令做的事单一、执行时间可预测。这是代价，也是美。</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">2. 内存分段：.data 放数据，.text 放代码</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">内存里不是所有东西都堆在一起的。汇编帮你分了两块互不干扰的区域：代码段（.text）放要执行的指令；数据段（.data）放声明的变量。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">还记得第一课写的那三行吗？我们把 _start 标签写在了 .section .text 的正下方——那就是代码段。现在，我们在代码段之上再加一段数据。</p>
+<img src="/assets/images/2026-08-arm-assembly/fig-data-segment.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">图 2 · .data 段存变量（.word 声明），.text 段存可执行指令，它们各占一块内存区域</p>
+<blockquote style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0;"><p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 0;"><strong>注：</strong>.data 不参与执行——CPU 不会把「变量 5」当指令来跑。它是纯数据，静静地躺在那里，等着指令来读或写。</p></blockquote>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">3. 声明变量：.word</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">在 .data 段里声明一个变量，写法是「标签名 + .word + 初始值」：</p>
+<pre style="background: #282c34; color: #abb2bf; padding: 14px 16px; border-radius: 6px; font-size: 13px; line-height: 1.6; overflow-x: auto; margin: 16px 0; font-family: Menlo, Consolas, monospace; white-space: pre;"><code>.section .data
+
+var1:   .word   5       @ 声明 var1，初值 5
+var2:   .word   6       @ 声明 var2，初值 6
+var3:   .word   0       @ 声明 var3，初值 0
+
+.section .text
+.global _start
+
+_start:
+    mov r0, #42
+    mov r7, #1
+    swi #0</code></pre>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">.word 是什么意思？它告诉汇编器：在这里分配 4 个字节（32 位），并填入指定的值。ARMv7 是 32 位架构，所以一个「字」（word）恰好是 4 字节——这是 ARM 内存管理的基本单位。</p>
+<blockquote style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0;"><p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 0;"><strong>注：</strong>32 位 = 4 字节 = 8 个十六进制位。所以 .word 5 在内存里实际存的是 0x00000005，占完整 4 个字节。</p></blockquote>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">4. LDR：从内存读数据（分两步）</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">终于到了主角。LDR（Load Register）负责把内存里的值搬进寄存器。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">但它不能一步到位。你需要分两步走，这是新手最容易掉进去的坑，所以我用加粗的方式强调：var1 是一个标签，标签的本质是内存地址——它不是值！</p>
+<h4 style="font-size: 16px; font-weight: bold; color: #333; margin: 20px 0 10px;">第一步：LDR =var1，拿到地址</h4>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">= 符号是关键。写成 LDR Rx, =var1 时，汇编器会把 var1 所在的内存地址（而不是 var1 的值）放进寄存器：</p>
+<pre style="background: #282c34; color: #abb2bf; padding: 14px 16px; border-radius: 6px; font-size: 13px; line-height: 1.6; overflow-x: auto; margin: 16px 0; font-family: Menlo, Consolas, monospace; white-space: pre;"><code>    ldr r0, =var1     @ 把 var1 的地址（如 0x1000）放进 R0</code></pre>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">执行后 R0 里的不是 5，而是一个十六进制地址，比如 0x00001000。这个地址指向内存中存放 var1（值为 5）的那 4 个字节。</p>
+<h4 style="font-size: 16px; font-weight: bold; color: #333; margin: 20px 0 10px;">第二步：LDR [R0]，用地址拿到值</h4>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">地址拿到了，怎么把地址指着的那个真实值取出来？用方括号——[Rx] 的意思是：把 Rx 里存的数字当成内存地址，去那个地址把真正的值读出来：</p>
+<pre style="background: #282c34; color: #abb2bf; padding: 14px 16px; border-radius: 6px; font-size: 13px; line-height: 1.6; overflow-x: auto; margin: 16px 0; font-family: Menlo, Consolas, monospace; white-space: pre;"><code>    ldr r0, =var1     @ R0 = var1 的地址（指针）
+    ldr r1, [r0]      @ R1 = 内存 [R0] 处的值（解引用后得到 5）</code></pre>
+<img src="/assets/images/2026-08-arm-assembly/fig-ldr-two-step.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">图 3 · LDR 两步走：=var1 取地址（左），[Rx] 用地址取到真正的值（右）</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">翻译成 C 语言，一目了然：LDR =var1 → &amp;var1（取地址）；LDR [Rx] → *ptr（解引用）。地址是指向数据的箭头，方括号是「沿着箭头走过去拿到实物」。</p>
+<blockquote style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0;"><p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 0;"><strong>注意：</strong>最经典的错误：写成 ldr r1, var1（没有等号、也没有括号）。汇编器很可能不报错，但 r1 里拿到的不是值 5——在伪指令模式下它可能被默默转成 ldr =var1，拿到的是地址而不是值。除非你想自虐，否则别偷懒省掉符号。</p></blockquote>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">5. STR：往内存写数据</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">LDR 是从内存往家搬东西；STR（Store Register）正好相反——把寄存器里的值存进内存。写法跟 LDR 第二步如出一辙，只是把 L 换成了 S：</p>
+<pre style="background: #282c34; color: #abb2bf; padding: 14px 16px; border-radius: 6px; font-size: 13px; line-height: 1.6; overflow-x: auto; margin: 16px 0; font-family: Menlo, Consolas, monospace; white-space: pre;"><code>    ldr r0, =var2     @ R0 = var2 的地址（比如 0x1004）
+    mov r2, #3         @ R2 = 3（要写入的值）
+    str r2, [r0]       @ 把 R2 的值 3 写入内存 [R0] 处</code></pre>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">执行完之后，内存中 var2 的位置就不再是声明的初值 6，而是被覆盖成了 3。在 CPUlator 里切换到 Memory 标签页，你会眼睁睁看着那个 6 变成 3。</p>
+<img src="/assets/images/2026-08-arm-assembly/fig-str-demo.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">图 4 · STR 写内存：准备好值（R2=3）和地址（R3=0x1004），STR 执行后 0x1004 处从 6 变成 3</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">6. 实战：加载、改写、存回</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">把 LDR 和 STR 串起来，就是一个完整的「读-改-写」循环。来看一份完整程序——从内存中取出 var1（值为 5），加上 10，把结果存进 var3：</p>
+<pre style="background: #282c34; color: #abb2bf; padding: 14px 16px; border-radius: 6px; font-size: 13px; line-height: 1.6; overflow-x: auto; margin: 16px 0; font-family: Menlo, Consolas, monospace; white-space: pre;"><code>.section .data
+var1:   .word   5
+var2:   .word   6
+var3:   .word   0
+
+.section .text
+.global _start
+
+_start:
+    ldr r0, =var1         @ R0 = var1 的地址
+    ldr r1, [r0]          @ R1 = var1 的值（5）
+    add r1, r1, #10       @ R1 = 5 + 10 = 15
+    ldr r2, =var3         @ R2 = var3 的地址
+    str r1, [r2]          @ 把 15 写入 var3
+
+    mov r0, #42
+    mov r7, #1
+    swi #0</code></pre>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">把这个粘进 CPUlator，点 Compile &amp; Load，然后去 Memory 标签页。你会看到：0x00001000（var1）躺着 5，0x00001004（var2）躺着 6，0x00001008（var3）躺着 0。单步执行完所有的 LDR/ADD/STR，再回 Memory 看一眼——0x00001008（var3）已经变成了 0x0000000F（15）。</p>
+<blockquote style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0;"><p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 0;"><strong>注：</strong>单步时留意 R0 和 R1 的区别：ldr r0, =var1 执行后 R0 是一个地址（如 0x00001000），不是 5；ldr r1, [r0] 执行后 R1 才是 5。这两步截然不同，混淆了就是 bug。</p></blockquote>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">7. 内存地址解码</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">注意观察地址的变化规律——var2 的地址总是比 var1 大 4，var3 又比 var2 大 4。这不是巧合：既然每个 .word 占 4 字节，下一个 word 自然要从「当前地址 + 4」开始。</p>
+<img src="/assets/images/2026-08-arm-assembly/fig-memory-layout.png" style="display: block; max-width: 100%; margin: 16px auto; border-radius: 6px;" />
+<p style="text-align: center; font-size: 13px; color: #999; margin: -8px 0 16px;">图 5 · 32 位内存布局：地址以 4 为单位递增（十六进制：0, 4, 8, C），每个 .word 占恰好 4 字节</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">如果换成十六进制看：0x1000 的下一个 word 是 0x1004，再下一个是 0x1008 和 0x100C——末尾永远是 0、4、8、C 这四个数字在轮回。这在调试时是一个极好的「地址是否对齐」的快速检查法。</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">小结</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">这一课，我们打开了 ARM 的 Load/Store 大门，打通了寄存器与内存之间那条被严密看守的边界：</p>
+<ul style="padding-left: 24px; margin: 14px 0;"><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">Load/Store 架构：ARM 只有 LDR 和 STR 能访问内存——ADD/SUB/MUL/MOV 休想碰，这是 RISC 的铁律</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">.data 段与 .word 声明：用标签 + 初值声明变量，每个 .word 占 4 字节 = 32 位</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">LDR =var1：拿到变量的内存地址——不是值，是「住在哪」</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">LDR [Rx]：把 Rx 里的地址当钥匙，打开内存的门取出真正的值——C 语言的 *ptr</li><li style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0;">STR：反方向的 LDR，把寄存器的值塞回内存——数据和地址都要提前备好</li></ul>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;">至此，你已经拥有了写很多实用程序的基础：变量能存、能读、能改。下一课，我们将用 CMP 指令把 CPSR 的那几盏灯和这扇内存门结合起来——让 CPU 不再闷头跑，而是看着数据做选择。下一课见。</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">Load/Store 架构</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>1. ARM 采用 Load/Store 架构，下列描述最准确的是？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 只有 LDR 和 STR 能访问内存，其余指令只能在寄存器之间操作</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. ADD、SUB 等算术指令也可以直接读写内存地址</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 所有指令都能访问内存，LDR/STR 只是其中两种</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. LDR 和 STR 因为要访存所以特别慢，应尽量少用</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>2. 执行 add r0, r1, r2 时，若 R1 里装的是某个内存地址，这个 add 会去读那个地址的内存吗？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 会，因为 R1 是地址，add 会自动解引用</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 不会，add 只把寄存器里的数值相加，根本不访问内存</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 会，但只有加了 S 后缀（adds）才会</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 不会，因为 R1 装的是值而不是地址</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>3. 要把内存变量 var 的值取出、加 10、再存回内存，ARM 标准做法的指令顺序是？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. add r0, var, #10</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. ldr r0, =var ； add r0, r0, #10</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. ldr r0, =var ； ldr r1, [r0] ； add r1, r1, #10 ； str r1, [r0]</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. ldr r0, [var] ； add r0, r0, #10 ； str r0, [var]</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">.data 段与 .word 变量声明</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>4. 在 ARMv7 下，伪指令 .word 分配的存储空间是多少？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 2 字节</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 1 字节</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 8 字节</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 4 字节（32 位）</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>5. 关于 .data 段中声明的变量，下列说法正确的是？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. .data 段的变量会被 CPU 当作指令逐条执行</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. .data 是纯数据，只有 .text 段的内容才会被执行</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. .data 段必须放在源程序的最前面</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. .data 段的变量不能用标签引用</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>6. .data 段里写 num: .word 5，最终 num 指向的 4 字节内存里存的是？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 数值 5（即 0x00000005）</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 字符 '5' 的 ASCII 码</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 5 的内存地址</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 一段可执行指令的编码</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">LDR =label 取地址（伪指令）</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>7. 指令 ldr r0, =var1 中等号 = 的作用是？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 取出 var1 指向的内存里的值</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 声明 var1 是一个立即数</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 表示 var1 是浮点数</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 取标签 var1 的内存地址（而非它指向的值）</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>8. 若把取地址指令误写成 ldr r1, var1（漏了等号），通常会发生什么？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 汇编器直接报错，说这种写法不支持</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. r1 得到 var1 指向的内存值</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 在伪指令模式下可能拿到的仍是地址，但语义不明确、属易错写法</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 程序立即崩溃退出</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>9. 执行 ldr r0, =var1（其中 var1: .word 10）之后，下列说法正确的是？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. R0 里是数值 10</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. R0 里是字符 '10' 的编码</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. R0 里是 var1 在内存中的地址，要拿到 10 还需 ldr r1, [r0]</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. R0 被清零</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">LDR [Rx] 解引用取值</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>10. 指令 ldr r1, [r0] 中方括号 [r0] 的含义最接近 C 语言的哪种操作？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. &amp;r0（取 r0 的地址）</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. *ptr（把 R0 的值当地址，取出该地址处的内容）</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. r0 本身（原样复制）</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. r0 + 1（地址自增）</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>11. R0 里当前是未初始化的垃圾值，直接执行 ldr r1, [r0]，结果通常是？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 把垃圾值当作地址去访存，访问非法地址导致异常</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 正确取到变量值</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. R1 变成 R0 自身的地址</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 什么都不会发生，指令被忽略</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>12. 关于 ldr r0, =var1 和 ldr r1, [r0] 两条指令的配合，下列说法正确的是？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 两条指令作用相同，都是取 var1 的值</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 前者取值、后者取地址</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 方括号里的寄存器必须和 =label 用的是同一个寄存器</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 前者取变量地址装入 R0，后者再从该地址读出 4 字节内容；必须先取地址再解引用</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">STR 写内存</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>13. 执行 str r2, [r0]（R0 装有有效地址）后，下列哪项正确？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. R0 所指内存处的 4 字节被改写为 R2 的值，R2 本身不变</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. R2 被清空</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. R0 被清空</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. R0 和 R2 都被覆盖</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>14. STR 和 LDR 的数据流动方向，下列描述正确的是？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. STR：内存→寄存器；LDR：寄存器→内存</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 两者都是内存→寄存器</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 两者都是寄存器→内存</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. LDR：内存→寄存器（读）；STR：寄存器→内存（写）</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>15. str r2, [r0] 中，哪个寄存器提供要写入内存的数据？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. R0</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. R2（左边是数据源，右边方括号里是目标地址）</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 两个寄存器都提供数据</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 都不提供，写入的是一个固定常量</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">32 位内存地址布局</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>16. 若 var1: .word 分配在地址 0x1000，紧接其后的 var2: .word 地址是？</strong></p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">A. 0x1001</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">B. 0x1002</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">C. 0x1004（每个 .word 占 4 字节）</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;margin: 4px 0 4px 16px;">D. 0x1008</p>
+<h3 style="font-size: 18px; font-weight: bold; color: #222; margin: 24px 0 12px; line-height: 1.4;">答案与解析</h3>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>1. 答案：A</strong>　正确项①：Load/Store 架构是 RISC 核心设计——只有 LDR/STR 两条访存指令，其余指令一律只操作寄存器。错项②：以为 ARM 的 ADD 像 x86 那样能直接操作内存，实则不能。错项③：把「限制」误解为「都能访问」，正相反。错项④：LDR/STR 是专门优化过的访存指令，并非慢而应避免。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>2. 答案：B</strong>　正确项②：算术指令只能在寄存器间运算，是否「像地址」无所谓，add 不会解引用也不会访存。错项①：误以为 add 会自动按地址取内存值。错项③：S 后缀只控制是否更新标志位，与访存无关。错项④：寄存器里是值还是地址由程序解释，但 add 一律不访存。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>3. 答案：C</strong>　正确项③：完整四步——取地址、解引用取值、运算、写回，正体现 Load/Store 架构。错项①：add 不能直接用内存变量名操作。错项②：只取了地址却忘了 [r0] 解引用，实际算的是地址本身加 10。错项④：方括号里不能直接放标签，方括号要求里面是装有地址的寄存器。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>4. 答案：D</strong>　正确项④：ARMv7 是 32 位架构，.word = 4 字节 = 32 位。错项①：把 .word 误当 2 字节（那是 .hword/.short）。错项②：1 字节是 .byte。错项③：8 字节是 .quad/.double。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>5. 答案：B</strong>　正确项②：.data 存放数据、不参与执行，只有 .text 段才作为指令执行。错项①：以为 .data 段变量会被当指令执行，这正是常见误解。错项③：段的顺序可调整，并非必须放最前。错项④：标签正是用来引用 .data 段变量地址的。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>6. 答案：A</strong>　正确项①：.word 5 就是把整数 5 以 32 位形式存入内存（0x00000005）。错项②：5 不是字符 '5'（'5' 的 ASCII 是 0x35）。错项③：num 这个标签才是地址，标签指向的内容是数值 5 本身。错项④：.data 段是数据不是指令编码。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>7. 答案：D</strong>　正确项④：= 是伪指令标记，让汇编器把标签的地址装入寄存器，结果是一个指针。错项①：把「取地址」误当「取值」，拿到的是地址而非数据。错项②：= 与立即数无关，立即数用 # 前缀。错项③：与浮点毫无关系。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>8. 答案：C</strong>　正确项③：漏写等号不会必然报错，在伪指令模式下可能仍解析为地址，但语义模糊、易踩坑，应规范写 ldr r1, =var1。错项①：通常不会报错，恰恰因此更危险。错项②：它取不到值，值要用 [Rx] 解引用。错项④：编译/汇编阶段不会因此崩溃。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>9. 答案：C</strong>　正确项③：= 只给地址，数据 10 还在地址里，需再解引用一步。错项①：把「取地址」误当「取值」。错项②：与字符编码无关。错项④：取地址不会清零寄存器。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>10. 答案：B</strong>　正确项②：方括号是解引用，语义等同 C 的 *ptr。错项①：[Rx] 是取地址指向的内容，不是取寄存器自身的地址。错项③：方括号不是复制寄存器值，而是按地址访存。错项④：方括号不带偏移时不会自增地址。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>11. 答案：A</strong>　正确项①：[R0] 把 R0 的值当地址，垃圾值大概率指向非法地址，触发异常。错项②：必须先 ldr =label 装入有效地址才能正确取值。错项③：解引用是取「地址指向的内容」，不会得到「寄存器的地址」。错项④：CPU 会照常执行访存，不会忽略。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>12. 答案：D</strong>　正确项④：两步缺一不可——先 = 取地址、再 [] 解引用取值。错项①：两者职责不同，前者取地址、后者取值。错项②：方向说反了。错项③：任何装有正确地址的寄存器都可用于 [Rx]，不必是同一个。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>13. 答案：A</strong>　正确项①：STR 是把源寄存器的值写入内存，源寄存器只是被复制、不变。错项②：以为 STR 会清空源寄存器，实为复制。错项③：地址寄存器 R0 不受影响。错项④：STR 不会动任何参与寄存器，只改内存。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>14. 答案：D</strong>　正确项④：LDR 把内存数据加载进寄存器（读），STR 把寄存器数据存进内存（写），方向相反。错项①：把两者方向说反了。错项②：STR 不是读内存。错项③：LDR 不是写内存。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>15. 答案：B</strong>　正确项②：STR 语法「源在前、地址在后」，R2 是数据源、R0 给地址。错项①：R0 给的是目标地址而非数据。错项③：只有 R2 提供数据。错项④：写入的是寄存器里的值，不是固定常量。</p>
+<p style="font-size: 16px; color: #3f3f3f; line-height: 1.8; margin: 14px 0; letter-spacing: 0.03em;"><strong>16. 答案：C</strong>　正确项③：每个 .word 占 4 字节，相邻变量地址差为 4，十六进制末位按 0→4→8→C 循环。错项①：以为地址连续差 1，实则差 4。错项②：差 2 是半字（.hword）的步长。错项④：0x1008 是再隔一个变量的位置。</p>
+</section>

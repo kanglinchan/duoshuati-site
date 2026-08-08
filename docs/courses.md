@@ -17,3 +17,4 @@
 
 - [01. MOV 指令与 exit 系统调用](/chapters/2026-08-arm-assembly-01-mov-exit-syscall)
 - [02. ADD、SUB、MUL 与 CPSR 状态标志](/chapters/2026-08-arm-assembly-02-add-sub-mul-cpsr)
+- [03. LDR、STR 与内存访问](/chapters/2026-08-arm-assembly-03-ldr-str-memory)
