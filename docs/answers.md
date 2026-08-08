@@ -19,3 +19,4 @@
 
 - [01. MOV 指令与 exit 系统调用 自测](/chapters/2026-08-arm-assembly-01-mov-exit-syscall#本章自测)
 - [02. ADD、SUB、MUL 与 CPSR 状态标志 自测](/chapters/2026-08-arm-assembly-02-add-sub-mul-cpsr#本章自测)
+- [05. 有符号数与补码转换 自测](/chapters/2026-08-arm-assembly-05-signed-numbers#本章自测)
