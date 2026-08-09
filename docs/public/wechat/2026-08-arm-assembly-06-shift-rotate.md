@@ -6,7 +6,7 @@
 
 ### 四条路径，一个分水岭
 
-![四种移位操作总览](../images/chapters/fig-shift-ops.png)
+![四种移位操作总览](/assets/images/2026-08-arm-assembly/fig-shift-ops.png)
 
 五条指令的区别全在一个问题上：移动之后，空出来的位置填什么？LSL 在右端补 0，LSR 在左端补 0，ASR 在左端补符号位，ROR 干脆不补——让掉出去的比特绕一圈回来。RRX 更特别，它把 CPSR 里的 C 标志也拉进旋转队伍。
 
@@ -21,7 +21,7 @@
 
 `LSL`（逻辑左移）：所有比特向左移动 n 位，右端空位补 0，左端被挤出去的比特丢弃。
 
-![LSL 逻辑左移](../images/chapters/fig-lsl-multiply.png)
+![LSL 逻辑左移](/assets/images/2026-08-arm-assembly/fig-lsl-multiply.png)
 
 40 变成 80，再变成 160——每左移一位，数值恰好翻倍。二进制里每一位的权重都是右边的 2 倍，整体往左挪一格，等于每个比特都升了一级。左移 n 位就是乘以 2^n。
 
@@ -49,7 +49,7 @@
 
 `ASR`（算术右移）就是为这件事生的：右移时左端空位不补 0，而是补符号位——正数补 0，负数补 1。
 
-![LSR 与 ASR 的分水岭](../images/chapters/fig-asr-vs-lsr.png)
+![LSR 与 ASR 的分水岭](/assets/images/2026-08-arm-assembly/fig-asr-vs-lsr.png)
 
     @ R0 = 0xFFFFFFD8（即 -40）
     asr r0, r0, #1     @ R0 = 0xFFFFFFEC（即 -20）
@@ -63,7 +63,7 @@
 
 前面三条指令都会"丢比特"。而 `ROR`（循环右移）一个都舍不得丢——掉出右端的比特，会绕回左端重新入队。
 
-![ROR 与 RRX](../images/chapters/fig-ror-rrx.png)
+![ROR 与 RRX](/assets/images/2026-08-arm-assembly/fig-ror-rrx.png)
 
 `0101 0001`（81）循环右移一位，最右边的 1 不消失，而是绕到最左边，得到 `1010 1000`（168）。32 位全量旋转时数值会变得面目全非——ROR 不追求数值意义，追求的是比特图案的彻底重排，而且完全可逆：再转 31 位就原样回来。
 
@@ -86,7 +86,7 @@
 
 立即数写死在指令里，速度快；寄存器版把位移量变成运行时变量——循环里逐位处理数据时非它莫属。
 
-![五条移位指令速查表](../images/chapters/fig-shift-table.png)
+![五条移位指令速查表](/assets/images/2026-08-arm-assembly/fig-shift-table.png)
 
 ### 小结
 

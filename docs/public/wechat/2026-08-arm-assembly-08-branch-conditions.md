@@ -6,7 +6,7 @@
 
 之前所有程序都是"顺序流"：PC 寄存器自顾自地每次 +4，一条接一条往下跑。而分支指令只做一件事——按条件决定 PC 的下一个值。
 
-![顺序流 vs 分支流](../images/chapters/fig-branch-flow.png)
+![顺序流 vs 分支流](/assets/images/2026-08-arm-assembly/fig-branch-flow.png)
 
 分支需要两个新角色：标签（`cond1:` 这样以冒号结尾的行，只是地址的名字，不产生指令）和跳转（`b cond2`，汇编器会把标签换算成地址差编进指令里）。
 
@@ -27,7 +27,7 @@
 
 ### 完整实验：BEQ 不跳，B 兜底
 
-![单步执行轨迹](../images/chapters/fig-beq-demo.png)
+![单步执行轨迹](/assets/images/2026-08-arm-assembly/fig-beq-demo.png)
 
     mov r0, #4
     mov r1, #5
@@ -49,7 +49,7 @@ cond2:
 
 正确的拼装需要两条"胶水分支"：
 
-![if-else 的正确拼装](../images/chapters/fig-if-else-pattern.png)
+![if-else 的正确拼装](/assets/images/2026-08-arm-assembly/fig-if-else-pattern.png)
 
     cmp r0, r1
     beq cond1       @ 胶水① 条件跳：相等才去 if 体
@@ -65,7 +65,7 @@ end:
 
 ### 条件后缀大家族
 
-![条件后缀速查表](../images/chapters/fig-cond-suffix.png)
+![条件后缀速查表](/assets/images/2026-08-arm-assembly/fig-cond-suffix.png)
 
 EQ/NE/GT/LT/GE/LE/AL 一整族后缀，全部围绕 CPSR 标志设计。GT/LT 看的是 N 和 V 的组合而不只是 N，是为了正确处理有符号溢出——但不用背规则，记住"后缀语义 = 高级语言的比较符"就够了。
 

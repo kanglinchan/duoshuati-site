@@ -8,7 +8,7 @@
 
 `cmp r0, r1` 会在 CPU 内部暗中计算 R0 - R1，然后根据差值刷新 CPSR 的标志位。
 
-![CMP 的本质](../images/chapters/fig-cmp-essence.png)
+![CMP 的本质](/assets/images/2026-08-arm-assembly/fig-cmp-essence.png)
 
 注意它和 `SUB` 的关键区别：不保存结果。`sub r2, r0, r1` 把差值写进 R2；而 `cmp r0, r1` 算完就扔——没有任何寄存器被修改，唯一留下的痕迹是 CPSR 高 4 位标志被刷新。
 
@@ -16,7 +16,7 @@
 
 ### CPSR 高 4 位：CMP 的记分牌
 
-![CPSR 高 4 位](../images/chapters/fig-cpsr-nzcv.png)
+![CPSR 高 4 位](/assets/images/2026-08-arm-assembly/fig-cpsr-nzcv.png)
 
 - N（Negative，bit 31）：差值为负时置 1——读作"R0 比 R1 小"
 - Z（Zero，bit 30）：差值为零时置 1——读作"两数相等"
@@ -27,7 +27,7 @@
 
 ### 三次单步实验
 
-![三次 CMP 实验对照](../images/chapters/fig-cmp-cases.png)
+![三次 CMP 实验对照](/assets/images/2026-08-arm-assembly/fig-cmp-cases.png)
 
     mov r0, #4
     mov r1, #5
@@ -45,7 +45,7 @@
 
 ### CMP 与 SUB 的分工
 
-![CMP 与 SUB 的分工](../images/chapters/fig-cmp-vs-sub.png)
+![CMP 与 SUB 的分工](/assets/images/2026-08-arm-assembly/fig-cmp-vs-sub.png)
 
 `sub` 把差值写回寄存器、默认不动标志；`cmp` 丢弃差值、必然刷新标志。两者底层走同一个减法器，区别只在"结果存不存、标志动不动"。
 
