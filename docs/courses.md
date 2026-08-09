@@ -23,4 +23,4 @@
 - [06. LSL、LSR、ASR 与 ROR：移位与旋转](/chapters/2026-08-arm-assembly-06-shift-rotate)
 - [07. CMP 比较指令与 CPSR 标志](/chapters/2026-08-arm-assembly-07-cmp-compare)
 - [08. B 指令与条件后缀：分支跳转](/chapters/2026-08-arm-assembly-08-branch-conditions)
-- [09. while 循环：让代码重复执行](/chapters/2026-08-arm-assembly-09-while-loops)
+- [09. 循环：让代码重复执行](/chapters/2026-08-arm-assembly-09-while-loops)
