@@ -1,0 +1,173 @@
+{
+  "version": "qcp/2",
+  "meta": {
+    "title": "while 循环 自测",
+    "chapter": "第9章",
+    "pkg": "2026-08-arm-assembly"
+  },
+  "groups": [
+    {
+      "knowledgePoint": "循环骨架与四个角色",
+      "level": "core",
+      "questions": [
+        {
+          "q": "ARM 汇编实现 while 循环时，以下哪个不是必需的角色？",
+          "options": [
+            "初始化计数器的 mov 指令",
+            "循环入口标签（如 loop:）",
+            "cmp + 条件分支的退出守卫",
+            "mov r2, #0 这样的额外赋值"
+          ],
+          "answer": 3,
+          "explanation": "循环的四个必需角色是：初始化（mov）、入口标签（loop:）、退出判断（cmp+bge）、回头跳（b loop）。额外的 mov 赋值不属于循环骨架，是循环外部的代码。",
+          "difficulty": "easy"
+        },
+        {
+          "q": "在标准 while 循环汇编中，`b loop` 指令的作用是？",
+          "options": [
+            "跳到循环结束标签 end",
+            "无条件跳回循环入口 loop 标签，形成重复执行",
+            "条件跳转，只有满足某个标志才跳",
+            "保存返回地址以便函数调用"
+          ],
+          "answer": 1,
+          "explanation": "b loop 是无条件跳转，把 PC 改回 loop 标签的地址，让程序重新进入 CMP 判断和循环体。没有它，循环体只执行一次就顺序流走了。",
+          "difficulty": "easy"
+        },
+        {
+          "q": "下列哪种情况会导致「循环名存实亡」（看起来像循环，实际只跑一次）？",
+          "options": [
+            "cmp 写在了 add 之后",
+            "bge end 写成了 bne end",
+            "忘记写 b loop 回头跳指令",
+            "初始值设为 0 而不是 1"
+          ],
+          "answer": 2,
+          "explanation": "忘写 b loop 是第二常见的循环 bug。没有回头跳，PC 在执行完 add 后继续往下走，不会回到 loop 入口——循环体只穿过一次，跟普通 if 分支没区别。",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "do-while 形态与执行次数",
+      "level": "core",
+      "questions": [
+        {
+          "q": "代码 mov r0,#0 / loop: cmp r0,#5 / bge end / add r0,#1 / b loop / end: 执行完毕后，r0 的值是多少？add 指令执行了几次？",
+          "options": [
+            "r0=4, add 执行 4 次",
+            "r0=5, add 执行 5 次",
+            "r0=5, add 执行 6 次",
+            "r0=6, add 执行 5 次"
+          ],
+          "answer": 1,
+          "explanation": "r0 从 0 开始，每次 cmp 不满足 bge 就 add+1 再跳回。r0=0→1→2→3→4→5，共 5 次 add。第 6 次 cmp 时 r0=5，bge 成立跳出。最终 r0=5。",
+          "difficulty": "medium"
+        },
+        {
+          "q": "如果上题中 r0 的初始值改为 10（mov r0, #10），循环体（add r0, #1）会执行几次？",
+          "options": [
+            "10 次",
+            "5 次",
+            "1 次",
+            "0 次"
+          ],
+          "answer": 3,
+          "explanation": "进入 loop 后立即 cmp 10,5 → 10≥5，bge 直接生效跳到 end。add 一次都没执行——但注意这是 do-while 形态的特殊边界：虽然先干后判，但 cmp 就在 add 前面，所以实际上 0 次执行。",
+          "difficulty": "medium"
+        },
+        {
+          "q": "为什么说上面的写法本质上是 do-while 形态？",
+          "options": [
+            "因为它用了 bge 而不是 blt",
+            "因为 CMP 判断在循环体（add）之后才执行",
+            "因为它是死循环",
+            "因为初始化写在标签之前"
+          ],
+          "answer": 1,
+          "explanation": "do-while 的特征是「至少执行一次再判断」。这个写法里 add（循环体）排在 cmp+bge（判断）前面，第一次进入必然经过 add——这就是 do-while。C 的 while 是「可能 0 次」，需要把 CMP 挪到最顶部才能严格等价。",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "退出条件与死循环",
+      "level": "core",
+      "questions": [
+        {
+          "q": "想把 `while (i != 10)` 翻译成汇编，退出条件应该用哪条？",
+          "options": ["bge end", "ble end", "bne end", "beq end"],
+          "answer": 2,
+          "explanation": "i != 10 时继续循环，i == 10 时退出。bne（not equal）看的是 Z 标志：Z=0（不相等）时不跳（继续），Z=1（相等）时跳到 end（退出）。语义直接对应 C 的 !=。",
+          "difficulty": "easy"
+        },
+        {
+          "q": "循环中不写任何退出条件（去掉 cmp 和 bge 行），会发生什么？",
+          "options": [
+            "汇编器报错，缺少必要指令",
+            "循环体执行一次后自动停止",
+            "死循环：永远在 add 和 b loop 之间打转",
+            "CPU 自动检测并终止无限循环"
+          ],
+          "answer": 2,
+          "explanation": "没有退出守卫，每次到 b loop 都无条件跳回，永远不会到达 end。这不是错误——嵌入式系统的主循环就是故意设计的死循环，靠中断或特殊指令（如 WFI）来打破。",
+          "difficulty": "easy"
+        },
+        {
+          "q": "一个循环用 bge end 作为退出条件，对应 C 语言的什么写法？",
+          "options": [
+            "while (i > 5)",
+            "while (i < 5)",
+            "while (i >= 5)",
+            "while (i <= 5)"
+          ],
+          "answer": 1,
+          "explanation": "bge（greater or equal）在 r0 ≥ 5 时跳到 end（退出）。所以循环继续的条件是 r0 < 5，对应 C 的 while (i < 5)。ARM 的退出条件 = C 循环条件的取反。",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "knowledgePoint": "while 与 do-while 的区别",
+      "level": "core",
+      "questions": [
+        {
+          "q": "要让 ARM 循环实现严格的 while 语义（初始值不满足条件时循环体 0 次执行），应该怎么调整？",
+          "options": [
+            "把 b loop 改成 ble loop",
+            "把 add 移到 cmp+bge 之后",
+            "把 cmp+bge 移到循环体（add）之前、loop 标签紧后面",
+            "把初始值改成 1"
+          ],
+          "answer": 2,
+          "explanation": "严格 while 要求「先判断再执行」。把 cmp+bge 挪到 add 之前（loop 标签之后立即判断），这样首次进入就可能因条件不满足而直接 bge end 跳出，循环体 0 次执行。",
+          "difficulty": "medium"
+        },
+        {
+          "q": "以下两段代码在 r0 初始值为 0 时行为是否相同？(A) loop:/cmp/bge/add/b loop (B) loop:/add/cmp/bge/b loop",
+          "options": [
+            "完全相同",
+            "A 至少执行 0 次，B 至少执行 1 次",
+            "A 至少执行 1 次，B 至少执行 1 次",
+            "A 执行 6 次，B 执行 5 次"
+          ],
+          "answer": 1,
+          "explanation": "A 中 cmp 在 add 前（while 语义）：r0=0 时 cmp 发现不满足 bge，于是执行 add 变成 1 再跳回——至少 1 次。B 中 add 在 cmp 前（do-while 语义）：同样至少 1 次。区别在于 r0 初始 ≥5 时：A 可能 0 次（cmp 直接 bge），B 必然 1 次（先 add 再判）。等等——这里 A 其实也是先 cmp 后 add，所以 A 是 while、B 是 do-while。r0=0 时两者都至少 1 次；r0≥5 时 A 可 0 次、B 必 1 次。",
+          "difficulty": "hard"
+        },
+        {
+          "q": "for 循环（如 for(i=0;i<5;i++)）翻译成汇编后，与 while 循环的关系是？",
+          "options": [
+            "for 需要专用指令，while 不能模拟",
+            "for 的骨架和 while 完全一样，只是初始化/条件/增量写得更紧凑",
+            "for 比 while 多一条隐藏指令",
+            "for 只能用寄存器做计数器，while 可以用内存变量"
+          ],
+          "answer": 1,
+          "explanation": "for 只是语法糖。编译器把它拆开后就是：初始化（mov）、条件判断（cmp+bge）、增量（add）、回头跳（b loop）——和 while 的骨架一字不差。理解了 while 就理解了 for。",
+          "difficulty": "easy"
+        }
+      ]
+    }
+  ]
+}

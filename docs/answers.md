@@ -25,3 +25,4 @@
 - [06. 移位与旋转：LSL、LSR、ASR 与 ROR 自测](/chapters/2026-08-arm-assembly-06-shift-rotate#本章自测)
 - [07. CMP 比较指令与 CPSR 标志 自测](/chapters/2026-08-arm-assembly-07-cmp-compare#本章自测)
 - [08. B 指令与条件后缀 自测](/chapters/2026-08-arm-assembly-08-branch-conditions#本章自测)
+- [09. while 循环 自测](/chapters/2026-08-arm-assembly-09-while-loops#本章自测)
