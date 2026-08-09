@@ -40,14 +40,14 @@ ${inner}
 
 /* -------------------------------------- 图 1：C 与汇编逐行对照（封面） */
 function fig1() {
-  const W = 640;
+  const W = 700;
   const rows = [
     { c: 'int i = 0;', a: '    mov r0, #0', note: '初始化计数器', c2: GRAY },
     { c: 'while (i &lt; 5) {', a: 'loop:', note: '循环入口标签', c2: BLUE },
     { c: '    i++;', a: '    cmp r0, #5', note: '该退出吗？r0 ≥ 5 ?', c2: ORANGE },
     { c: '}', a: '    bge end', note: '≥5 则跳出', c2: RED },
     { c: '', a: '    add r0, #1', note: 'i++（循环体）', c2: GREEN },
-    { c: '', a: '    b loop', note: '无条件跳回循环入口', c2: ORANGE },
+    { c: '', a: '    b loop', note: '无条件跳回入口', c2: ORANGE },
     { c: '', a: 'end:', note: '循环结束，r0 = 5', c2: GRAY },
   ];
   const rowH = 56;
@@ -61,29 +61,29 @@ function fig1() {
       <path d="M0,0 L9,4.5 L0,9 z" fill="#57606a"/>
     </marker>
   </defs>`;
-  s += `<text x="320" y="34" font-family="${CJK}" font-size="18" font-weight="bold" fill="#24292f" text-anchor="middle">C 的 while 循环 vs ARM 汇编：逐行对照</text>`;
+  s += `<text x="${W / 2}" y="34" font-family="${CJK}" font-size="18" font-weight="bold" fill="#24292f" text-anchor="middle">C 的 while 循环 vs ARM 汇编：逐行对照</text>`;
 
   // 两列表头
-  s += `<text x="150" y="${topY - 10}" font-family="${CJK}" font-size="14" font-weight="bold" fill="#57606a" text-anchor="middle">C 代码</text>`;
-  s += `<text x="470" y="${topY - 10}" font-family="${CJK}" font-size="14" font-weight="bold" fill="#57606a" text-anchor="middle">ARM 汇编</text>`;
+  s += `<text x="160" y="${topY - 10}" font-family="${CJK}" font-size="14" font-weight="bold" fill="#57606a" text-anchor="middle">C 代码</text>`;
+  s += `<text x="500" y="${topY - 10}" font-family="${CJK}" font-size="14" font-weight="bold" fill="#57606a" text-anchor="middle">ARM 汇编</text>`;
 
   rows.forEach((r, i) => {
     const y = topY + i * rowH;
     // C 列
-    s += `<rect x="36" y="${y}" width="228" height="44" rx="6" fill="${r.c ? '#ffffff' : '#f6f8fa'}" stroke="#d0d7de" stroke-width="1"/>`;
+    s += `<rect x="36" y="${y}" width="240" height="44" rx="6" fill="${r.c ? '#ffffff' : '#f6f8fa'}" stroke="#d0d7de" stroke-width="1"/>`;
     s += `<text x="52" y="${y + 29}" font-family="${MONO}" font-size="14" fill="${r.c ? '#24292f' : '#8c959f'}">${r.c || ' '}</text>`;
     // 箭头
-    s += `<text x="288" y="${y + 29}" font-family="${MONO}" font-size="18" fill="#57606a" text-anchor="middle">→</text>`;
+    s += `<text x="300" y="${y + 29}" font-family="${MONO}" font-size="18" fill="#57606a" text-anchor="middle">→</text>`;
     // 汇编列
-    s += `<rect x="320" y="${y}" width="284" height="44" rx="6" fill="${r.c2.bg}" stroke="${r.c2.border}" stroke-width="1.5"/>`;
-    s += `<text x="336" y="${y + 29}" font-family="${MONO}" font-size="14" fill="${r.c2.text}">${r.a}</text>`;
+    s += `<rect x="332" y="${y}" width="300" height="44" rx="6" fill="${r.c2.bg}" stroke="${r.c2.border}" stroke-width="1.5"/>`;
+    s += `<text x="348" y="${y + 29}" font-family="${MONO}" font-size="14" fill="${r.c2.text}">${r.a}</text>`;
     if (r.note) {
-      s += `<text x="612" y="${y + 22}" font-family="${CJK}" font-size="11" fill="${r.c2.text}" text-anchor="end">${r.note}</text>`;
+      s += `<text x="${W - 20}" y="${y + 22}" font-family="${CJK}" font-size="11" fill="${r.c2.text}" text-anchor="end">${r.note}</text>`;
     }
   });
 
-  s += `<rect x="16" y="${noteY}" width="608" height="38" rx="8" fill="#ddf4ff"/>`;
-  s += `<text x="320" y="${noteY + 24}" font-family="${CJK}" font-size="13" fill="#0969da" text-anchor="middle">规律：先干活（add）再判断（cmp+bge），这正是 do-while 形态</text>`;
+  s += `<rect x="16" y="${noteY}" width="${W - 32}" height="38" rx="8" fill="#ddf4ff"/>`;
+  s += `<text x="${W / 2}" y="${noteY + 24}" font-family="${CJK}" font-size="13" fill="#0969da" text-anchor="middle">规律：先干活（add）再判断（cmp+bge），这正是 do-while 形态</text>`;
 
   return svgDoc(W, H, s);
 }
@@ -146,7 +146,7 @@ function fig2() {
 
 /* -------------------------------------- 图 3：单步轨迹 */
 function fig3() {
-  const W = 640;
+  const W = 700;
   const steps = [
     { r0: 0, flag: 'r0=0', act: '进入 loop，cmp 0,5 → N=1（0&lt;5）', c: ORANGE },
     { r0: 1, flag: 'r0=1', act: 'add → 1；b loop 跳回', c: GREEN },
@@ -161,11 +161,11 @@ function fig3() {
   const H = noteY + 46;
 
   let s = '';
-  s += `<text x="320" y="34" font-family="${CJK}" font-size="18" font-weight="bold" fill="#24292f" text-anchor="middle">单步轨迹：r0 从 0 累加到 5</text>`;
+  s += `<text x="${W / 2}" y="34" font-family="${CJK}" font-size="18" font-weight="bold" fill="#24292f" text-anchor="middle">单步轨迹：r0 从 0 累加到 5</text>`;
 
   steps.forEach((st, i) => {
     const y = topY + i * rowH;
-    s += `<rect x="16" y="${y}" width="608" height="48" rx="10" fill="#ffffff" stroke="${st.c.border}" stroke-width="i === 0 || i === steps.length - 1 ? 2 : 1"/>`;
+    s += `<rect x="16" y="${y}" width="${W - 32}" height="48" rx="10" fill="#ffffff" stroke="${st.c.border}" stroke-width="i === 0 || i === steps.length - 1 ? 2 : 1"/>`;
     // 序号 + r0 值
     s += `<rect x="32" y="${y + 8}" width="80" height="32" rx="6" fill="${st.c.bg}" stroke="${st.c.border}" stroke-width="1.5"/>`;
     s += `<text x="72" y="${y + 30}" font-family="${MONO}" font-size="15" font-weight="bold" fill="${st.c.text}" text-anchor="middle">r0=${st.r0}</text>`;
@@ -173,12 +173,12 @@ function fig3() {
     s += `<text x="130" y="${y + 31}" font-family="${CJK}" font-size="14" fill="#24292f">${st.act}</text>`;
     // 循环箭头（步骤间）
     if (i < steps.length - 1) {
-      s += `<text x="612" y="${y + 60}" font-family="${MONO}" font-size="14" fill="#57606a" text-anchor="end">↓ 第 ${i + 1} 轮</text>`;
+      s += `<text x="${W - 20}" y="${y + 50}" font-family="${MONO}" font-size="13" fill="#57606a" text-anchor="end">↓ 第 ${i + 1} 轮</text>`;
     }
   });
 
-  s += `<rect x="16" y="${noteY}" width="608" height="38" rx="8" fill="#dcf5e3"/>`;
-  s += `<text x="320" y="${noteY + 24}" font-family="${CJK}" font-size="13" fill="#2da44e" text-anchor="middle">循环体执行 5 次，最后 r0 = 5、R1 = 2（end 处写入），与 C 完全等价</text>`;
+  s += `<rect x="16" y="${noteY}" width="${W - 32}" height="38" rx="8" fill="#dcf5e3"/>`;
+  s += `<text x="${W / 2}" y="${noteY + 24}" font-family="${CJK}" font-size="13" fill="#2da44e" text-anchor="middle">循环体执行 5 次，最后 r0 = 5、R1 = 2（end 处写入），与 C 完全等价</text>`;
 
   return svgDoc(W, H, s);
 }
@@ -186,7 +186,7 @@ function fig3() {
 /* -------------------------------------- 图 4：do-while 骨架与退出条件 */
 function fig4() {
   const W = 640;
-  const H = 470;
+  const H = 520;
   let s = '';
   s += `<text x="320" y="34" font-family="${CJK}" font-size="18" font-weight="bold" fill="#24292f" text-anchor="middle">循环骨架：do-while 形态 + 退出条件三选一</text>`;
 
@@ -223,9 +223,11 @@ function fig4() {
     s += `<text x="488" y="${y + 42}" font-family="${CJK}" font-size="12" fill="#57606a" text-anchor="middle">${o.d}</text>`;
   });
 
-  s += `<rect x="16" y="322" width="608" height="44" rx="8" fill="#fff1e5"/>`;
-  s += `<text x="320" y="344" font-family="${CJK}" font-size="13" fill="#bc4c00" text-anchor="middle">提示：循环体至少做 1 次（do-while）；要「可能 0 次」得把 cmp 挪到循环顶部前</text>`;
-  s += `<text x="320" y="406" font-family="${CJK}" font-size="13" fill="#57606a" text-anchor="middle">下集预告：for 循环 = 初始化 + 条件 + 增量，是 while 的语法糖，骨架一模一样</text>`;
+  s += `<rect x="16" y="342" width="608" height="44" rx="8" fill="#fff1e5"/>`;
+  s += `<text x="320" y="368" font-family="${CJK}" font-size="13" fill="#bc4c00" text-anchor="middle">提示：循环体至少做 1 次（do-while）；要「可能 0 次」得把 cmp 挪到循环顶部前</text>`;
+  s += `<text x="320" y="430" font-family="${CJK}" font-size="13" fill="#57606a" text-anchor="middle">下集预告：for 循环 = 初始化 + 条件 + 增量，是 while 的语法糖，骨架一模一样</text>`;
+  s += `<rect x="16" y="456" width="608" height="44" rx="8" fill="#dcf5e3"/>`;
+  s += `<text x="320" y="482" font-family="${CJK}" font-size="13" fill="#2da44e" text-anchor="middle">记住这个骨架，后面 for/while 都是基于它变体出来的</text>`;
 
   return svgDoc(W, H, s);
 }
