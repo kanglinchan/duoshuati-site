@@ -136,6 +136,13 @@ function markdownToHtml(mdContent) {
     return placeholder;
   });
 
+  // 剔除站点专用 Vue 组件标签（<CopyArticle .../> / <QuizBlock .../> 等 PascalCase 自闭合组件）。
+  // 否则 cheerio 会把 <CopyArticle .../> 当成非自闭合标签（HTML 规范里 PascalCase 非 void 元素），
+  // 吞噬其后整篇正文，导致生成的 html 正文全部嵌套进 <copyarticle> 非法标签里，
+  // 粘贴到公众号编辑器后整篇结构错乱（"格式错乱、残留标签/markdown 内容"根因）。
+  // 代码块已在上面保护为占位符，故此处正则不会误伤代码块内展示的同类标签。
+  content = content.replace(/<[A-Z][A-Za-z]*\b[\s\S]*?\/>\s*\n?/g, '');
+
   // 保护行内代码
   const inlineCodes = [];
   content = content.replace(/`[^`]+`/g, (match) => {

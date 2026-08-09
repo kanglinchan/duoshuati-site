@@ -8,7 +8,6 @@
 <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; max-width: 680px; margin: 0 auto; padding: 20px; background: #fff;">
   <section style="background: #fff; padding: 20px;">
     <h1 style="font-size:22px;font-weight:bold;color:#222;margin:32px 0 16px;line-height:1.4;">典型电路实践：电阻电容的实战用法</h1>
-<copyarticle html="/wechat/2026-08-embedded-circuit-05-circuit-practice.html" md="/wechat/2026-08-embedded-circuit-05-circuit-practice.md">
 <p style="font-size:16px;color:#3f3f3f;line-height:1.8;margin:14px 0;letter-spacing:0.03em;">学到这里，电阻和电容的基本特性你已经熟悉了。但真实电路板上，它们往往以一些"约定俗成"的角色出现：引脚旁的上拉下拉电阻、LED 旁的限流电阻、电源入口的压敏电阻、跨线用的零欧姆电阻，还有电源脚上的滤波电容、信号链上的耦合与旁路电容。本章把这些实战用法逐一讲透，让你看懂原理图时不再一头雾水。</p>
 <h2 style="font-size:20px;font-weight:bold;color:#222;margin:28px 0 14px;line-height:1.4;">一、上拉电阻与下拉电阻</h2>
 <p style="font-size:16px;color:#3f3f3f;line-height:1.8;margin:14px 0;letter-spacing:0.03em;">首先要澄清：市面上并不存在"上拉电阻"这种实体元件——上拉、下拉说的是电阻的用法。把信号线通过一个电阻接到固定高电平 VCC，让它在空闲时保持高电平，这个电阻就叫上拉电阻；同理，把信号线通过电阻接到 GND，让空闲时保持低电平，就叫下拉电阻。最常见的用途是把不确定的信号钳位在已知电平：比如按键未按下时，单片机引脚悬空，电平飘忽不定，读数时高时低；加上一个上拉电阻后，空闲时稳定读到高电平，按下接地的按键时读到低电平，逻辑就确定了。</p>
@@ -39,7 +38,6 @@
 <li style="font-size:16px;color:#3f3f3f;line-height:1.8;margin:4px 0;">电容滤波净化供电；耦合串联传交流；旁路并联到地滤高频</li>
 </ul>
 <p style="font-size:16px;color:#3f3f3f;line-height:1.8;margin:14px 0;letter-spacing:0.03em;">最后一章认识实操工具：稳压电源与示波器。</p>
-<quizblock src="/quiz/2026-08-embedded-circuit/05.json" title="本章自测"></quizblock></copyarticle>
   </section>
 </body>
 </html>

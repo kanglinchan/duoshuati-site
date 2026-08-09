@@ -8,7 +8,6 @@
 <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; max-width: 680px; margin: 0 auto; padding: 20px; background: #fff;">
   <section style="background: #fff; padding: 20px;">
     <h1 style="font-size:22px;font-weight:bold;color:#222;margin:32px 0 16px;line-height:1.4;">模拟电路基础：半导体器件入门</h1>
-<copyarticle html="/wechat/2026-08-embedded-circuit-04-analog-circuit-basics.html" md="/wechat/2026-08-embedded-circuit-04-analog-circuit-basics.md">
 <p style="font-size:16px;color:#3f3f3f;line-height:1.8;margin:14px 0;letter-spacing:0.03em;">电信号分模拟与数字两种：模拟信号是连续的，数字信号是离散的。处理模拟信号的模拟电路，核心元件是二极管、三极管和场效应管这三种半导体器件。对嵌入式软件开发来说，重点不是信号放大与滤波（那是硬件工程师的事），而是用三极管和场效应管搭建开关电路——用一个 IO 口的电平去控制另一路电流的通断。本章就把这三种器件的开关原理讲清楚，并用一个光感灯电路把它们串起来。</p>
 <h2 style="font-size:20px;font-weight:bold;color:#222;margin:28px 0 14px;line-height:1.4;">一、模拟信号与数字信号</h2>
 <p style="font-size:16px;color:#3f3f3f;line-height:1.8;margin:14px 0;letter-spacing:0.03em;">信号是反映信息的物理量，以电流为载体方便存储和传递。模拟信号在时间和数值上都连续变化，比如声音经麦克风转换出的电压；数字信号则是离散的，只有高、低两种电平，单片机内部跑的就是数字信号。模拟电路负责对模拟信号进行滤波、放大和传递。在嵌入式开发中，我们主要用三极管和场效应管做开关电路——继电器虽然也能做开关，但封装体积大，不适合放进集成电路。至于信号的放大、滤波，交给嵌入式硬件工程师去操心就好。</p>
@@ -44,7 +43,6 @@
 <li style="font-size:16px;color:#3f3f3f;line-height:1.8;margin:4px 0;">光感灯 = 光敏电阻分压 + 三极管开关的经典组合</li>
 </ul>
 <p style="font-size:16px;color:#3f3f3f;line-height:1.8;margin:14px 0;letter-spacing:0.03em;">下一章进入典型电路实践，看电阻电容在真实电路板上的实战用法。</p>
-<quizblock src="/quiz/2026-08-embedded-circuit/04.json" title="本章自测"></quizblock></copyarticle>
   </section>
 </body>
 </html>
