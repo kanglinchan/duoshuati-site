@@ -3,8 +3,8 @@
  *
  * 输出目录：docs/public/assets/images/2026-08-arm-assembly/
  *
- * 图清单（全部宽度 640，竖向布局，适配手机阅读）：
- *   1. fig-loop-map.png      —— C do-while 循环与 ARM 汇编的逐行对照（兼作封面）
+ * 图清单（竖向布局，适配手机阅读）：
+ *   1. fig-loop-map.png      —— C do-while 循环与 ARM 汇编的逐行对照（兼作封面）W=720
  *   2. fig-loop-flow.png     —— 循环流程图：循环体 → CMP 判断 → 退出? / 回 loop（do-while 顺序）
  *   3. fig-loop-trace.png    —— 单步轨迹：r0 从 0 累加到 5 的每一步标志与动作
  *   4. fig-loop-patterns.png —— do-while 骨架 + 退出条件三选一（bge/beq/不写）
@@ -13,7 +13,10 @@
  * 依赖：sharp（npm install sharp --save-dev）
  *
  * 注意：改图后必须 node scripts/generate-wechat-html.js 重新生成；推送前务必 npm run build 验证。
- * 布局自检：容器顶部 y ≥ 上方元素底部 + 8px；SVG 文本 < > 需转义为 &lt; &gt;。
+ * 布局自检（踩坑记录）：
+ *   - 横向多列要先算总宽，列间互不重叠；text-anchor=end 的文字必须核算【左边缘】是否侵入左侧相邻元素。
+ *   - 容器顶部 y ≥ 上方元素底部 + 8px；SVG 文本 < > 需转义为 &lt; &gt;。
+ *   - 等宽字符宽约 0.6×fontSize，CJK 字符宽约 1.0×fontSize，按此估算文本框宽度并留 ≥10% 余量。
  */
 
 const sharp = require('sharp');
@@ -40,20 +43,25 @@ ${inner}
 
 /* -------------------------------------- 图 1：C 与汇编逐行对照（封面） */
 function fig1() {
-  const W = 700;
+  const W = 720;
   const rows = [
     { c: 'int i = 0;', a: '    mov r0, #0', note: '初始化计数器', c2: GRAY },
     { c: 'do {', a: 'loop:', note: '循环入口标签', c2: BLUE },
-    { c: '    i++;', a: '    add r0, #1', note: '循环体（先执行）', c2: GREEN },
-    { c: '} while (i &lt; 5);', a: '    cmp r0, #5', note: '判断：r0 ≥ 5 ?', c2: ORANGE },
+    { c: '    i++;', a: '    add r0, #1', note: '循环体·先执行', c2: GREEN },
+    { c: '} while (i &lt; 5);', a: '    cmp r0, #5', note: '判断：r0≥5 ?', c2: ORANGE },
     { c: '', a: '    bge end', note: '≥5 则跳出', c2: RED },
     { c: '', a: '    b loop', note: '否则跳回入口', c2: ORANGE },
-    { c: '', a: 'end:', note: '循环结束，r0 = 5', c2: GRAY },
+    { c: '', a: 'end:', note: '结束 r0=5', c2: GRAY },
   ];
-  const rowH = 56;
-  const topY = 64;
-  const noteY = topY + rows.length * rowH + 8;
-  const H = noteY + 50;
+  const rowH = 60;
+  const topY = 70;
+  const noteY = topY + rows.length * rowH + 10;
+  const H = noteY + 52;
+
+  // 三列完全分离（各自独立矩形，互不侵犯，杜绝文字压框/越界）
+  const cX = 24, cW = 212;   // C 列   24~236
+  const aX = 266, aW = 250;  // 汇编列 266~516
+  const nX = 532, nW = 164;  // 说明列 532~696
 
   let s = '';
   s += `<defs>
@@ -63,23 +71,24 @@ function fig1() {
   </defs>`;
   s += `<text x="${W / 2}" y="34" font-family="${CJK}" font-size="18" font-weight="bold" fill="#24292f" text-anchor="middle">C 的 do-while 循环 vs ARM 汇编：逐行对照</text>`;
 
-  // 两列表头
-  s += `<text x="160" y="${topY - 10}" font-family="${CJK}" font-size="14" font-weight="bold" fill="#57606a" text-anchor="middle">C 代码</text>`;
-  s += `<text x="500" y="${topY - 10}" font-family="${CJK}" font-size="14" font-weight="bold" fill="#57606a" text-anchor="middle">ARM 汇编</text>`;
+  // 三列表头
+  s += `<text x="${cX + cW / 2}" y="${topY - 12}" font-family="${CJK}" font-size="14" font-weight="bold" fill="#57606a" text-anchor="middle">C 代码</text>`;
+  s += `<text x="${aX + aW / 2}" y="${topY - 12}" font-family="${CJK}" font-size="14" font-weight="bold" fill="#57606a" text-anchor="middle">ARM 汇编</text>`;
+  s += `<text x="${nX + nW / 2}" y="${topY - 12}" font-family="${CJK}" font-size="14" font-weight="bold" fill="#57606a" text-anchor="middle">说明</text>`;
 
   rows.forEach((r, i) => {
     const y = topY + i * rowH;
     // C 列
-    s += `<rect x="36" y="${y}" width="240" height="44" rx="6" fill="${r.c ? '#ffffff' : '#f6f8fa'}" stroke="#d0d7de" stroke-width="1"/>`;
-    s += `<text x="52" y="${y + 29}" font-family="${MONO}" font-size="14" fill="${r.c ? '#24292f' : '#8c959f'}">${r.c || ' '}</text>`;
-    // 箭头
-    s += `<text x="300" y="${y + 29}" font-family="${MONO}" font-size="18" fill="#57606a" text-anchor="middle">→</text>`;
+    s += `<rect x="${cX}" y="${y}" width="${cW}" height="48" rx="6" fill="${r.c ? '#ffffff' : '#f6f8fa'}" stroke="#d0d7de" stroke-width="1"/>`;
+    s += `<text x="${cX + 16}" y="${y + 31}" font-family="${MONO}" font-size="14" fill="${r.c ? '#24292f' : '#8c959f'}">${r.c || ' '}</text>`;
+    // 箭头（C 列与汇编列之间）
+    s += `<text x="251" y="${y + 31}" font-family="${MONO}" font-size="18" fill="#57606a" text-anchor="middle">→</text>`;
     // 汇编列
-    s += `<rect x="332" y="${y}" width="300" height="44" rx="6" fill="${r.c2.bg}" stroke="${r.c2.border}" stroke-width="1.5"/>`;
-    s += `<text x="348" y="${y + 29}" font-family="${MONO}" font-size="14" fill="${r.c2.text}">${r.a}</text>`;
-    if (r.note) {
-      s += `<text x="${W - 20}" y="${y + 22}" font-family="${CJK}" font-size="11" fill="${r.c2.text}" text-anchor="end">${r.note}</text>`;
-    }
+    s += `<rect x="${aX}" y="${y}" width="${aW}" height="48" rx="6" fill="${r.c2.bg}" stroke="${r.c2.border}" stroke-width="1.5"/>`;
+    s += `<text x="${aX + 16}" y="${y + 31}" font-family="${MONO}" font-size="14" fill="${r.c2.text}">${r.a}</text>`;
+    // 说明列（独立背景框，文字居中，绝不越界压到汇编列）
+    s += `<rect x="${nX}" y="${y}" width="${nW}" height="48" rx="6" fill="#ffffff" stroke="#eaeef2" stroke-width="1"/>`;
+    s += `<text x="${nX + nW / 2}" y="${y + 31}" font-family="${CJK}" font-size="12" fill="${r.c2.text}" text-anchor="middle">${r.note}</text>`;
   });
 
   s += `<rect x="16" y="${noteY}" width="${W - 32}" height="38" rx="8" fill="#ddf4ff"/>`;
