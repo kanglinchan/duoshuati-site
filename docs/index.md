@@ -40,6 +40,8 @@ hero:
 - [07. CMP 比较指令与 CPSR 标志](/chapters/2026-08-arm-assembly-07-cmp-compare)
 - [08. B 指令与条件后缀：分支跳转](/chapters/2026-08-arm-assembly-08-branch-conditions)
 - [09. 循环：让代码重复执行](/chapters/2026-08-arm-assembly-09-while-loops)
+- [10. 函数调用：让代码学会复用](/chapters/2026-08-arm-assembly-10-function-calls)
+- [11. 栈上传参：寄存器不够用怎么办](/chapters/2026-08-arm-assembly-11-stack-args)
 
 ## 专栏问答模块
 
