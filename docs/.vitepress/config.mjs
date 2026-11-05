@@ -64,6 +64,90 @@ export default defineConfig({
           { text: '10. 函数调用：让代码学会复用', link: '/chapters/2026-08-arm-assembly-10-function-calls' },
           { text: '11. 栈上传参：寄存器不够用怎么办', link: '/chapters/2026-08-arm-assembly-11-stack-args' }
         ]
+      },
+      {
+        text: 'MIT 18.06 线性代数',
+        collapsed: false,
+        items: [
+          {
+            text: '第一部分 · 线性方程组与矩阵消元',
+            collapsed: false,
+            items: [
+              { text: '01. 线性方程的几何意义', link: '/chapters/2026-11-mit-linear-algebra-01-geometry-of-linear-equations' },
+              { text: '02. 矩阵消元', link: '/chapters/2026-11-mit-linear-algebra-02-elimination-with-matrices' },
+              { text: '03. 矩阵乘法和逆矩阵', link: '/chapters/2026-11-mit-linear-algebra-03-multiplication-and-inverse-matrices' },
+              { text: '04. 矩阵的 LU 分解', link: '/chapters/2026-11-mit-linear-algebra-04-factorization-into-lu' }
+            ]
+          },
+          {
+            text: '第二部分 · 向量空间与四个基本子空间',
+            collapsed: false,
+            items: [
+              { text: '05. 转置、置换和向量空间', link: '/chapters/2026-11-mit-linear-algebra-05-transposes-permutations-spaces-rn' },
+              { text: '06. 列空间和零空间', link: '/chapters/2026-11-mit-linear-algebra-06-column-space-and-nullspace' },
+              { text: '07. 解 Ax=0：主元和特解', link: '/chapters/2026-11-mit-linear-algebra-07-solving-ax0-pivots-and-special-solutions' },
+              { text: '08. 解 Ax=b：行最简形 R', link: '/chapters/2026-11-mit-linear-algebra-08-solving-axb-row-reduced-form' },
+              { text: '09. 线性相关性、基和维数', link: '/chapters/2026-11-mit-linear-algebra-09-independence-basis-and-dimension' },
+              { text: '10. 四个基本子空间', link: '/chapters/2026-11-mit-linear-algebra-10-four-fundamental-subspaces' },
+              { text: '11. 矩阵空间、秩 1 矩阵和小世界图', link: '/chapters/2026-11-mit-linear-algebra-11-matrix-spaces-rank1-small-world-graphs' },
+              { text: '12. 图、网络和关联矩阵', link: '/chapters/2026-11-mit-linear-algebra-12-graphs-networks-incidence-matrices' },
+              { text: '13. 小测 1 评讲', link: '/chapters/2026-11-mit-linear-algebra-13-quiz-1-review' }
+            ]
+          },
+          {
+            text: '第三部分 · 正交、投影与最小二乘',
+            collapsed: false,
+            items: [
+              { text: '14. 正交向量和正交子空间', link: '/chapters/2026-11-mit-linear-algebra-14-orthogonal-vectors-and-subspaces' },
+              { text: '15. 子空间投影', link: '/chapters/2026-11-mit-linear-algebra-15-projections-onto-subspaces' },
+              { text: '16. 投影矩阵和最小二乘法', link: '/chapters/2026-11-mit-linear-algebra-16-projection-matrices-and-least-squares' },
+              { text: '17. 正交矩阵和施密特正交化', link: '/chapters/2026-11-mit-linear-algebra-17-orthogonal-matrices-and-gram-schmidt' }
+            ]
+          },
+          {
+            text: '第四部分 · 行列式',
+            collapsed: false,
+            items: [
+              { text: '18. 行列式及其性质', link: '/chapters/2026-11-mit-linear-algebra-18-properties-of-determinants' },
+              { text: '19. 行列式公式和代数余子式', link: '/chapters/2026-11-mit-linear-algebra-19-determinant-formulas-and-cofactors' },
+              { text: '20. 克莱默法则、逆矩阵和体积', link: '/chapters/2026-11-mit-linear-algebra-20-cramers-rule-inverse-and-volume' }
+            ]
+          },
+          {
+            text: '第五部分 · 特征值与矩阵分解',
+            collapsed: false,
+            items: [
+              { text: '21. 特征值和特征向量', link: '/chapters/2026-11-mit-linear-algebra-21-eigenvalues-and-eigenvectors' },
+              { text: '22. 对角化和矩阵的幂', link: '/chapters/2026-11-mit-linear-algebra-22-diagonalization-and-powers-of-a' },
+              { text: '23. 微分方程和矩阵指数 exp(At)', link: '/chapters/2026-11-mit-linear-algebra-23-differential-equations-and-exp-at' },
+              { text: '24. 马尔可夫矩阵和傅里叶级数', link: '/chapters/2026-11-mit-linear-algebra-24-markov-matrices-and-fourier-series' },
+              { text: '24b. 小测 2 评讲', link: '/chapters/2026-11-mit-linear-algebra-24b-quiz-2-review' },
+              { text: '25. 对称矩阵和正定性', link: '/chapters/2026-11-mit-linear-algebra-25-symmetric-matrices-and-positive-definiteness' },
+              { text: '26. 复矩阵和快速傅里叶变换', link: '/chapters/2026-11-mit-linear-algebra-26-complex-matrices-and-fast-fourier-transform' },
+              { text: '27. 正定矩阵和最小值', link: '/chapters/2026-11-mit-linear-algebra-27-positive-definite-matrices-and-minima' },
+              { text: '28. 相似矩阵和若尔当标准型', link: '/chapters/2026-11-mit-linear-algebra-28-similar-matrices-and-jordan-form' }
+            ]
+          },
+          {
+            text: '第六部分 · 奇异值分解与线性变换',
+            collapsed: false,
+            items: [
+              { text: '29. 奇异值分解', link: '/chapters/2026-11-mit-linear-algebra-29-singular-value-decomposition' },
+              { text: '30. 线性变换及其矩阵', link: '/chapters/2026-11-mit-linear-algebra-30-linear-transformations-and-their-matrices' },
+              { text: '31. 基变换和图像压缩', link: '/chapters/2026-11-mit-linear-algebra-31-change-of-basis-image-compression' },
+              { text: '32. 小测 3 评讲', link: '/chapters/2026-11-mit-linear-algebra-32-quiz-3-review' },
+              { text: '33. 左右逆和伪逆', link: '/chapters/2026-11-mit-linear-algebra-33-left-and-right-inverses-pseudoinverse' },
+              { text: '34. 总复习', link: '/chapters/2026-11-mit-linear-algebra-34-final-course-review' }
+            ]
+          },
+          {
+            text: '附录',
+            collapsed: false,
+            items: [
+              { text: '斯特朗教授谈线性代数教学（访谈）', link: '/chapters/2026-11-mit-linear-algebra-36-appendix-strang-interview' }
+            ]
+          }
+        ]
       }
     ],
     outline: { level: [2, 3], label: '本页目录' },
