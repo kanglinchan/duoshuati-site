@@ -2,11 +2,11 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-<NceTranslateBar />
+<NceTranslateBar :has-ex="true" />
 
 <NcePair en="A true story" zh="一个真实的故事" />
 
-<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" ex="原版教材的固定指令：先听录音，再回答标题下的问题。建议先隐藏译文和讲解自测，再逐句打开对照。" />
 
 <NcePair en="Who called out to the thieves in the dark?" zh="是谁在黑暗中向那些小偷喊叫的？" />
 

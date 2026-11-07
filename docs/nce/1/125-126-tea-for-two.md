@@ -2,11 +2,11 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-<NceTranslateBar />
+<NceTranslateBar :has-ex="true" />
 
 <NcePair en="Tea for two" zh="“Tea for two” 的意思是“为两个人准备的茶”。" />
 
-<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" ex="原版教材的固定指令：先听录音，再回答标题下的问题。建议先隐藏译文和讲解自测，再逐句打开对照。" />
 
 <NcePair en="Does Susan have tea by herself?" zh="彼得，你现在不能进来喝杯茶吗？" />
 

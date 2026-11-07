@@ -1,23 +1,47 @@
 <template>
-  <div class="nce-bar" role="group" aria-label="译文显示控制">
-    <span class="nce-bar-state">
-      译文：<strong>{{ nceAll ? '全篇显示' : '全篇隐藏' }}</strong>
+  <div class="nce-bar" role="group" aria-label="译文与讲解显示控制">
+    <span class="nce-bar-group">
+      <span class="nce-bar-state">
+        译文：<strong>{{ zhAll ? '全篇显示' : '全篇隐藏' }}</strong>
+      </span>
+      <span class="nce-bar-actions">
+        <button :class="{ on: zhAll }" @click="setZh(true)">全篇显示</button>
+        <button :class="{ on: !zhAll }" @click="setZh(false)">全篇隐藏</button>
+      </span>
     </span>
-    <span class="nce-bar-actions">
-      <button :class="{ on: nceAll }" @click="setAll(true)">全篇显示</button>
-      <button :class="{ on: !nceAll }" @click="setAll(false)">全篇隐藏</button>
+    <span v-if="hasEx" class="nce-bar-group">
+      <span class="nce-bar-state">
+        讲解：<strong>{{ exAll ? '全篇显示' : '全篇隐藏' }}</strong>
+      </span>
+      <span class="nce-bar-actions">
+        <button :class="{ on: exAll }" @click="setEx(true)">全篇显示</button>
+        <button :class="{ on: !exAll }" @click="setEx(false)">全篇隐藏</button>
+      </span>
     </span>
-    <span class="nce-bar-tip">点句末「译」可单独切换本句译文</span>
+    <span class="nce-bar-tip">点句末图标可单独切换本句译文{{ hasEx ? ' / 讲解' : '' }}</span>
   </div>
 </template>
 
 <script setup>
-import { nceAll, nceEpoch } from './nce-store'
+import { computed } from 'vue'
+import { nceZhAll, nceExAll, nceZhEpoch, nceExEpoch } from './nce-store'
 
-function setAll(v) {
-  if (nceAll.value === v) return
-  nceAll.value = v
-  nceEpoch.value++
+const props = defineProps({
+  hasEx: { type: Boolean, default: false }
+})
+
+const zhAll = computed(() => nceZhAll.value)
+const exAll = computed(() => nceExAll.value)
+
+function setZh(v) {
+  if (nceZhAll.value === v) return
+  nceZhAll.value = v
+  nceZhEpoch.value++
+}
+function setEx(v) {
+  if (nceExAll.value === v) return
+  nceExAll.value = v
+  nceExEpoch.value++
 }
 </script>
 
@@ -26,13 +50,18 @@ function setAll(v) {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   padding: 10px 14px;
   margin: 16px 0 20px;
   border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
   background: var(--vp-c-bg-soft);
   font-size: 13px;
+}
+.nce-bar-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 .nce-bar-state {
   color: var(--vp-c-text-2);

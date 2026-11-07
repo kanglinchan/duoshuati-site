@@ -1,0 +1,46 @@
+{
+  "_common": {
+    "Listen to the tape then answer this question.": "原版教材的固定指令：先听录音，再回答标题下的问题。建议先隐藏译文和讲解自测，再逐句打开对照。",
+    "Yes it is.": "肯定简短回答 Yes, it is.（原书版式未加逗号）。it 代替问句中的 this；否定回答是 No, it isn't.（isn't = is not）。",
+    "Thank you very much.": "非常感谢。**very much** 加强感谢程度；日常致谢还可以只说 Thank you. / Thanks."
+  },
+  "001-002": {
+    "Excuse me!": "**excuse** /ɪkˈskjuːz/ 原谅、宽恕。**Excuse me!** 用于开口打扰别人：问路、借过、向陌生人搭话之前先说它（本课核心句型）。注意与做错事道歉的 I'm sorry 区分。",
+    "Whose handbag is it?": "本课听力目标问题。**whose** 谁的，对「所有者」提问；handbag（女式）手提包。",
+    "Yes?": "此处不是「是的」：单独用升调读 **Yes?** 表示「什么事？/您请讲」，是听到 Excuse me! 后的自然回应。",
+    "Is this your handbag?": "核心句型 **Is this your…?**「这是你的……吗？」：be 动词 is 提到句首构成一般疑问句，读升调；回答用 it 替换 this。",
+    "Pardon?": "没听清、请对方再说一遍：= (I beg your) pardon? 读升调。口语里也可说 Sorry?"
+  },
+  "003-004": {
+    "Sorry sir.": "**sir** 先生，对陌生男性的礼貌称呼（英式服务场景高频）。这里的 sorry 是礼貌性致歉/委婉表达，并非真的做错事。",
+    "Does the man get his umbrella back?": "本课听力目标问题。**get … back** 把……取回；does 用来构成第三人称单数的一般疑问句。",
+    "My coat and my umbrella please.": "省略句，完整形式 My coat and my umbrella, please.（请给我我的外套和雨伞）。句尾加 **please** 让请求更客气，寄存衣物场景常用。",
+    "Here is my ticket.": "重点句型 **Here is / Here's …**「这是……」，递出东西时说；Here's = Here is。",
+    "Thank you sir.": "致谢 + 称呼：英式习惯把 sir 放在句尾表示恭敬（服务人员对顾客）。",
+    "Number five.": "五号（存衣牌编号）。Lesson 4 数字训练覆盖 1–15 的说法。",
+    "Here's your umbrella and your coat.": "递还物品同样用 **Here's …** 句型；your「你的」，后面直接跟名词。",
+    "This is not my umbrella.": "重点句型 **This is not…**「这不是……」：not 放在 is 之后；也可以缩写成 This isn't my umbrella.（Lesson 4 句型训练专门练 is not = isn't、it is = it's）。",
+    "Is this your umbrella?": "句型与第 1 课相同：Is this your…? 一般疑问句读升调。",
+    "No it isn't.": "否定简短回答 No, it isn't.（原书版式未加逗号）；isn't 是 is not 的缩写。",
+    "Is this it?": "**it** 指双方都知道的那件东西：「是这一件吗？」it 指代更明确，口语高频。"
+  },
+  "005-006": {
+    "Nice to meet you.": "初次见面问候语「很高兴认识你」，回应时重复 Nice to meet you. 或加 too：Nice to meet you, too.",
+    "Is Chang-woo Chinese?": "本课听力目标问题。**Chinese** 中国的/中国人。问国籍还可以说 What nationality is he?（Lesson 5 理解训练）。",
+    "Good morning.": "早上好/上午好。按时段换用：Good morning. → Good afternoon. → Good evening.；教师用书要求从本单元起每次课先问候。",
+    "Good morning Mr. Blake.": "**Mr.** /ˈmɪstə(r)/ 先生，加在男性姓氏前；本课还会出现 **Miss**（小姐，未婚女性）：Miss Sophie Dupont。",
+    "This is Miss Sophie Dupont.": "介绍他人的专用句型 **This is …**「这位是……」。注意介绍时不用 He is… / She is…。",
+    "Sophie is a new student.": "**a new student** 一个新学生：单数可数名词前需要不定冠词 a/an。",
+    "She is French.": "**French** 法国的/法国人。说国籍的句型：主语 + be + 国籍形容词；She is = She's。",
+    "Sophie this is Hans.": "口语呼唤语 + 介绍句型（原书版式无逗号）：Sophie, this is Hans. 索菲，这位是汉斯。",
+    "He is German.": "**German** 德国的/德国人；He is = He's。国籍形容词首字母必须大写。",
+    "And this is Naoko.": "连续介绍多人时用 **And this is …**「这位是……」承接上文。",
+    "She's Japanese.": "**Japanese** 日本的/日本人；She's = She is。以 -ese 结尾的国籍词单复数同形。",
+    "And this is Chang-woo.": "继续用 And this is … 介绍下一位；Chang-woo 是韩国人名。",
+    "He's Korean.": "**Korean** 韩国的/韩国人。本课听力问题的答案就是这句：No, he isn't. He's Korean.",
+    "And this is Luming.": "Luming 拼音人名（鲁明），介绍中国同学。",
+    "He's Chinese.": "**Chinese** 中国的；He's = He is。",
+    "And this is Xiaohui.": "本课最后一位新同学晓惠。",
+    "She is Chinese too.": "**too** 也，放句尾；She is Chinese, too. 她也是中国人。"
+  }
+}

@@ -2,11 +2,11 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-<NceTranslateBar />
+<NceTranslateBar :has-ex="true" />
 
 <NcePair en="Your passports please." zh="请出示你们的护照。" />
 
-<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" ex="原版教材的固定指令：先听录音，再回答标题下的问题。建议先隐藏译文和讲解自测，再逐句打开对照。" />
 
 <NcePair en="Is there a problem with the Customs officer?" zh="海关官员有什么问题吗？" />
 
@@ -44,4 +44,4 @@
 
 <NcePair en="That's fine." zh="好了。/ 没问题了。" />
 
-<NcePair en="Thank you very much." zh="非常感谢你们。" />
+<NcePair en="Thank you very much." zh="非常感谢你们。" ex="非常感谢。**very much** 加强感谢程度；日常致谢还可以只说 Thank you. / Thanks." />

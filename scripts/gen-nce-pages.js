@@ -18,6 +18,14 @@ const SRC_DIR = process.argv[2] || 'C:/Users/60116/Nutstore/1/books/english/nce/
 const DOCS_DIR = path.resolve(__dirname, '../docs');
 const NCE_DIR = path.join(DOCS_DIR, 'nce');
 const SIDEBAR_JSON = path.join(DOCS_DIR, '.vitepress/nce-sidebar.json');
+const EX_DIR = path.join(__dirname, 'nce-explanations');
+
+// 逐句讲解数据：scripts/nce-explanations/book{N}.json，按课文英文原句索引；
+// 「_common」内的条目对所有课生效。没有数据文件的册次自动跳过（不显示讲解图标）。
+function loadExplanations(bookDir) {
+  const f = path.join(EX_DIR, `book${bookDir}.json`);
+  return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf-8')) : {};
+}
 
 const BOOKS = [
   {
@@ -119,6 +127,7 @@ function parseBook(book) {
       title: title.trim(),
       num1,
       num2,
+      key: fileNum,
       fileName: `${fileNum}-${slug}.md`,
       link: `/nce/${book.dir}/${fileNum}-${slug}`,
       listText: `${listNum}. ${title.trim()}`,
@@ -129,24 +138,52 @@ function parseBook(book) {
   return lessons;
 }
 
+// Windows 下目录可能被其他进程（IDE/资源管理器）占用导致 EBUSY，
+// 清理失败时退化为逐项删除，仍失败则靠 writeFileSync 原地覆盖
+function cleanBestEffort(dir) {
+  if (!fs.existsSync(dir)) return;
+  try {
+    fs.rmSync(dir, { recursive: true, force: true });
+    return;
+  } catch { /* 目录本身被锁 */ }
+  for (const name of fs.readdirSync(dir)) {
+    try {
+      fs.rmSync(path.join(dir, name), { recursive: true, force: true });
+    } catch { /* 单项被锁，保留旧文件（会被同名覆盖） */ }
+  }
+}
+
 function writeBookPages(book, lessons) {
   const dir = path.join(NCE_DIR, book.dir);
-  fs.rmSync(dir, { recursive: true, force: true });
+  cleanBestEffort(dir);
   fs.mkdirSync(dir, { recursive: true });
 
+  const exData = loadExplanations(book.dir);
+  const commonEx = exData['_common'] || {};
+
   for (const les of lessons) {
+    // 讲解索引：课文原句 → 讲解文本（课内条目优先于 _common）
+    const exMap = { ...commonEx, ...(exData[les.key] || {}) };
+    let hasEx = false;
+    const pairLines = [];
+    for (const [en, zh] of les.pairs) {
+      const ex = exMap[en] || '';
+      if (ex) hasEx = true;
+      pairLines.push(
+        `<NcePair en="${escapeAttr(en)}" zh="${escapeAttr(zh)}"${ex ? ` ex="${escapeAttr(ex)}"` : ''} />`
+      );
+    }
+
     const lines = [
       `# ${les.pageHeading}`,
       '',
       `> [新概念英语 · ${book.volume} ${book.subtitle}](/nce/ "返回目录")`,
       '',
-      // 译文控制条：全篇显示/隐藏 + 句末「译」单句切换（组件见 theme/NcePair.vue）
-      '<NceTranslateBar />',
-      ''
+      // 译文/讲解控制条（组件见 theme/NceTranslateBar.vue、theme/NcePair.vue）
+      `<NceTranslateBar${hasEx ? ' :has-ex="true"' : ''} />`,
+      '',
+      ...pairLines.flatMap((l) => [l, ''])
     ];
-    for (const [en, zh] of les.pairs) {
-      lines.push(`<NcePair en="${escapeAttr(en)}" zh="${escapeAttr(zh)}" />`, '');
-    }
     fs.writeFileSync(path.join(dir, les.fileName), lines.join('\n'), 'utf-8');
   }
 }
@@ -190,7 +227,6 @@ function main() {
     return { book, lessons };
   });
 
-  fs.rmSync(NCE_DIR, { recursive: true, force: true });
   fs.mkdirSync(NCE_DIR, { recursive: true });
   for (const { book, lessons } of booksData) writeBookPages(book, lessons);
   writeIndexPage(booksData);
