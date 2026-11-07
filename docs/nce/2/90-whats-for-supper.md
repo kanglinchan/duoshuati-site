@@ -2,34 +2,36 @@
 
 > [新概念英语 · 第二册 实践与进步](/nce/ "返回目录")
 
-What kind of fish are they?<br><span class="zh">这是什么鱼？</span>
+<NceTranslateBar />
 
-Fish and chips has always been a favourite dish in Britain,<br><span class="zh">炸鱼薯条一直是英国人喜爱的美食，</span>
+<NcePair en="What kind of fish are they?" zh="这是什么鱼？" />
 
-but as the oceans have been overfished, fish has become more and more expensive.<br><span class="zh">但由于海洋过度捕捞，鱼类的价格越来越高。</span>
+<NcePair en="Fish and chips has always been a favourite dish in Britain," zh="炸鱼薯条一直是英国人喜爱的美食，" />
 
-So it comes as a surprise to learn that giant fish are terrifying the divers on North Sea oil rigs.<br><span class="zh">因此，当人们得知巨大的鱼类正在北海石油钻井平台恐吓潜水员时，确实感到十分惊讶。</span>
+<NcePair en="but as the oceans have been overfished, fish has become more and more expensive." zh="但由于海洋过度捕捞，鱼类的价格越来越高。" />
 
-Oil rigs have to be repaired frequently and divers, who often have to work in darkness a hundred feet under water,<br><span class="zh">这些石油钻井平台需要频繁维修，而潜水员往往必须在百英尺深的水下工作；</span>
+<NcePair en="So it comes as a surprise to learn that giant fish are terrifying the divers on North Sea oil rigs." zh="因此，当人们得知巨大的鱼类正在北海石油钻井平台恐吓潜水员时，确实感到十分惊讶。" />
 
-have been frightened out of their wits by giant fish bumping into them as they work.<br><span class="zh">巨大的鱼类在潜水员作业时突然撞上他们，把他们吓得魂不附体。</span>
+<NcePair en="Oil rigs have to be repaired frequently and divers, who often have to work in darkness a hundred feet under water," zh="这些石油钻井平台需要频繁维修，而潜水员往往必须在百英尺深的水下工作；" />
 
-Now they have had special cages made to protect them from these monsters.<br><span class="zh">现在，他们专门制作了防护笼来保护自己免受这些怪物的伤害。</span>
+<NcePair en="have been frightened out of their wits by giant fish bumping into them as they work." zh="巨大的鱼类在潜水员作业时突然撞上他们，把他们吓得魂不附体。" />
 
-The fish are not sharks or killer whales,<br><span class="zh">这些鱼既不是鲨鱼，也不是虎鲸，</span>
+<NcePair en="Now they have had special cages made to protect them from these monsters." zh="现在，他们专门制作了防护笼来保护自己免受这些怪物的伤害。" />
 
-but favourite eating varieties like cod and skate which grow to unnatural sizes,<br><span class="zh">而是人们常吃的鳕鱼和鳐鱼等鱼类，它们长得异常巨大，</span>
+<NcePair en="The fish are not sharks or killer whales," zh="这些鱼既不是鲨鱼，也不是虎鲸，" />
 
-sometimes as much as twelve feet in length.<br><span class="zh">有些甚至长达十二英尺。</span>
+<NcePair en="but favourite eating varieties like cod and skate which grow to unnatural sizes," zh="而是人们常吃的鳕鱼和鳐鱼等鱼类，它们长得异常巨大，" />
 
-Three factors have caused these fish to grow so large:<br><span class="zh">导致这些鱼类体型如此庞大的原因有三个：</span>
+<NcePair en="sometimes as much as twelve feet in length." zh="有些甚至长达十二英尺。" />
 
-the warm water round the hot oil pipes under the sea;<br><span class="zh">一是海底热油管道周围的温暖海水；</span>
+<NcePair en="Three factors have caused these fish to grow so large:" zh="导致这些鱼类体型如此庞大的原因有三个：" />
 
-the plentiful supply of food thrown overboard by the crews on the rigs;<br><span class="zh">二是钻井平台工作人员扔到海里的大量食物；</span>
+<NcePair en="the warm water round the hot oil pipes under the sea;" zh="一是海底热油管道周围的温暖海水；" />
 
-the total absence of fishing boats around the oil rigs.<br><span class="zh">三是石油钻井平台周围完全没有渔船。</span>
+<NcePair en="the plentiful supply of food thrown overboard by the crews on the rigs;" zh="二是钻井平台工作人员扔到海里的大量食物；" />
 
-As a result, the fish just eat and eat and grow and grow in the lovely warm water.<br><span class="zh">因此，鱼儿在这片温暖舒适的海水里不停地吃啊吃，长啊长。</span>
+<NcePair en="the total absence of fishing boats around the oil rigs." zh="三是石油钻井平台周围完全没有渔船。" />
 
-Who eats who?<br><span class="zh">到底谁吃谁呢？</span>
+<NcePair en="As a result, the fish just eat and eat and grow and grow in the lovely warm water." zh="因此，鱼儿在这片温暖舒适的海水里不停地吃啊吃，长啊长。" />
+
+<NcePair en="Who eats who?" zh="到底谁吃谁呢？" />

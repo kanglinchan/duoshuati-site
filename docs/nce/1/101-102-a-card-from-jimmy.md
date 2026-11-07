@@ -2,48 +2,50 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-A card from Jimmy<br><span class="zh">一张来自吉米的卡片</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="A card from Jimmy" zh="一张来自吉米的卡片" />
 
-Does grandmother seem pleased to get a card from Jimmy? Why/Why not?<br><span class="zh">奶奶收到吉米送的卡片时，看起来很高兴吗？为什么呢？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Read Jimmy's card to me please, Penny.<br><span class="zh">请把吉米的卡片内容读给我听，佩妮。</span>
+<NcePair en="Does grandmother seem pleased to get a card from Jimmy? Why/Why not?" zh="奶奶收到吉米送的卡片时，看起来很高兴吗？为什么呢？" />
 
-'I have just arrived in Scotland and I'm staying at a Youth Hostel.'<br><span class="zh">我刚到苏格兰，现在住在一家青年旅舍里。</span>
+<NcePair en="Read Jimmy's card to me please, Penny." zh="请把吉米的卡片内容读给我听，佩妮。" />
 
-Eh?<br><span class="zh">啊？</span>
+<NcePair en="'I have just arrived in Scotland and I'm staying at a Youth Hostel.'" zh="我刚到苏格兰，现在住在一家青年旅舍里。" />
 
-He says he's just arrived in Scotland.<br><span class="zh">他说他刚刚抵达苏格兰。</span>
+<NcePair en="Eh?" zh="啊？" />
 
-He says he's staying at a Youth Hostel.<br><span class="zh">他说他现在住在一家青年旅舍里。</span>
+<NcePair en="He says he's just arrived in Scotland." zh="他说他刚刚抵达苏格兰。" />
 
-You know he's a member of the Y.H.A.<br><span class="zh">你知道他是 Y.H.A. 的成员。</span>
+<NcePair en="He says he's staying at a Youth Hostel." zh="他说他现在住在一家青年旅舍里。" />
 
-The what?<br><span class="zh">什么协会？</span>
+<NcePair en="You know he's a member of the Y.H.A." zh="你知道他是 Y.H.A. 的成员。" />
 
-The Y.H.A., Mum.<br><span class="zh">是Y.H.A.，妈妈。</span>
+<NcePair en="The what?" zh="什么协会？" />
 
-The Youth Hostels Association.<br><span class="zh">青年旅舍协会。</span>
+<NcePair en="The Y.H.A., Mum." zh="是Y.H.A.，妈妈。" />
 
-What else does he say?<br><span class="zh">他还说了什么？</span>
+<NcePair en="The Youth Hostels Association." zh="青年旅舍协会。" />
 
-'I'll write a letter soon.<br><span class="zh">我很快就会写一封信。</span>
+<NcePair en="What else does he say?" zh="他还说了什么？" />
 
-I hope you are all well.'<br><span class="zh">我希望你们大家都一切都好。</span>
+<NcePair en="'I'll write a letter soon." zh="我很快就会写一封信。" />
 
-What? Speak up, Penny.<br><span class="zh">什么？大声点，佩妮。</span>
+<NcePair en="I hope you are all well.'" zh="我希望你们大家都一切都好。" />
 
-I'm afraid I can't hear you.<br><span class="zh">恐怕我听不清你的话。</span>
+<NcePair en="What? Speak up, Penny." zh="什么？大声点，佩妮。" />
 
-He says he'll write a letter soon.<br><span class="zh">他说他很快就会写一封信。</span>
+<NcePair en="I'm afraid I can't hear you." zh="恐怕我听不清你的话。" />
 
-He hopes we are all well.<br><span class="zh">他希望我们都很好。</span>
+<NcePair en="He says he'll write a letter soon." zh="他说他很快就会写一封信。" />
 
-'Love, Jimmy.'<br><span class="zh">“爱你的，吉米。”</span>
+<NcePair en="He hopes we are all well." zh="他希望我们都很好。" />
 
-Is that all?<br><span class="zh">就这些吗？</span>
+<NcePair en="'Love, Jimmy.'" zh="“爱你的，吉米。”" />
 
-He doesn't say very much, does he?<br><span class="zh">他说话不多，对吧？</span>
+<NcePair en="Is that all?" zh="就这些吗？" />
 
-He can't write very much on a card, Mum.<br><span class="zh">妈妈，他在卡片上写不了太多内容。</span>
+<NcePair en="He doesn't say very much, does he?" zh="他说话不多，对吧？" />
+
+<NcePair en="He can't write very much on a card, Mum." zh="妈妈，他在卡片上写不了太多内容。" />

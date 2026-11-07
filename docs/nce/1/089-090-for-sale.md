@@ -2,50 +2,52 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-For sale<br><span class="zh">待售</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">请先听这段录音，然后回答这个问题：</span>
+<NcePair en="For sale" zh="待售" />
 
-Why couldn't Nigel decide?<br><span class="zh">为什么尼格尔无法做出决定？</span>
+<NcePair en="Listen to the tape then answer this question." zh="请先听这段录音，然后回答这个问题：" />
 
-Good afternoon.<br><span class="zh">下午好。</span>
+<NcePair en="Why couldn't Nigel decide?" zh="为什么尼格尔无法做出决定？" />
 
-I believe that this house is for sale.<br><span class="zh">我认为这栋房子正在出售。</span>
+<NcePair en="Good afternoon." zh="下午好。" />
 
-That's right.<br><span class="zh">没错。</span>
+<NcePair en="I believe that this house is for sale." zh="我认为这栋房子正在出售。" />
 
-May I have a look at it, please?<br><span class="zh">我可以看看吗？</span>
+<NcePair en="That's right." zh="没错。" />
 
-Yes, of course.<br><span class="zh">当然可以，请进来。</span>
+<NcePair en="May I have a look at it, please?" zh="我可以看看吗？" />
 
-Come in.<br><span class="zh">请进。</span>
+<NcePair en="Yes, of course." zh="当然可以，请进来。" />
 
-How long have you lived here?<br><span class="zh">您在这里住了多久？</span>
+<NcePair en="Come in." zh="请进。" />
 
-I've lived here for twenty years.<br><span class="zh">我在这里已经住了二十年。</span>
+<NcePair en="How long have you lived here?" zh="您在这里住了多久？" />
 
-Twenty years!<br><span class="zh">二十年了！</span>
+<NcePair en="I've lived here for twenty years." zh="我在这里已经住了二十年。" />
 
-That's a long time.<br><span class="zh">那真是很长的时间啊。</span>
+<NcePair en="Twenty years!" zh="二十年了！" />
 
-Yes, I've been here since 1976.<br><span class="zh">是的，我从1976年就住在这里了。</span>
+<NcePair en="That's a long time." zh="那真是很长的时间啊。" />
 
-Then why do you want to sell it?<br><span class="zh">那你为什么想卖掉它呢？</span>
+<NcePair en="Yes, I've been here since 1976." zh="是的，我从1976年就住在这里了。" />
 
-Because I've just retired.<br><span class="zh">因为我刚刚退休了。</span>
+<NcePair en="Then why do you want to sell it?" zh="那你为什么想卖掉它呢？" />
 
-I want to buy a small house in the country.<br><span class="zh">我想在乡下买一座小房子。</span>
+<NcePair en="Because I've just retired." zh="因为我刚刚退休了。" />
 
-How much does this house cost?<br><span class="zh">这房子多少钱？</span>
+<NcePair en="I want to buy a small house in the country." zh="我想在乡下买一座小房子。" />
 
-￡68, 500.<br><span class="zh">68,500英镑。</span>
+<NcePair en="How much does this house cost?" zh="这房子多少钱？" />
 
-That's a lot of money!<br><span class="zh">那可是一大笔钱啊！</span>
+<NcePair en="￡68, 500." zh="68,500英镑。" />
 
-It's worth every penny of it.<br><span class="zh">不过这笔钱花得很值。</span>
+<NcePair en="That's a lot of money!" zh="那可是一大笔钱啊！" />
 
-Well, I like the house, but I can't decide yet.<br><span class="zh">嗯，我很喜欢这房子，但我还没决定下来。</span>
+<NcePair en="It's worth every penny of it." zh="不过这笔钱花得很值。" />
 
-My wife must see it first.<br><span class="zh">我得先让我妻子看看才行。</span>
+<NcePair en="Well, I like the house, but I can't decide yet." zh="嗯，我很喜欢这房子，但我还没决定下来。" />
 
-Women always have the last word.<br><span class="zh">女人总是有最终发言权。</span>
+<NcePair en="My wife must see it first." zh="我得先让我妻子看看才行。" />
+
+<NcePair en="Women always have the last word." zh="女人总是有最终发言权。" />

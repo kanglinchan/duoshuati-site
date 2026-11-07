@@ -2,52 +2,54 @@
 
 > [新概念英语 · 第三册 培养技能](/nce/ "返回目录")
 
-By heart<br><span class="zh">牢记在心；熟记</span>
+<NceTranslateBar />
 
-Which actor read the letter in the end, the aristocrat or the gaoler?<br><span class="zh">最后是谁读了那封信——是那位贵族，还是狱卒？</span>
+<NcePair en="By heart" zh="牢记在心；熟记" />
 
-Some plays are so successful that they run for years on end.<br><span class="zh">有些剧目非常成功，以至于可以连续上演多年。</span>
+<NcePair en="Which actor read the letter in the end, the aristocrat or the gaoler?" zh="最后是谁读了那封信——是那位贵族，还是狱卒？" />
 
-In many ways, this is unfortunate for the poor actors who are required to go on repeating the same lines night after night.<br><span class="zh">在很多方面，这对那些可怜的演员来说确实很不公平——他们不得不夜复一夜地重复同样的台词。</span>
+<NcePair en="Some plays are so successful that they run for years on end." zh="有些剧目非常成功，以至于可以连续上演多年。" />
 
-One would expect them to know their parts by heart and never have cause to falter.<br><span class="zh">人们会以为他们早就把台词背得滚瓜烂熟，永远不会有结巴的时候。</span>
+<NcePair en="In many ways, this is unfortunate for the poor actors who are required to go on repeating the same lines night after night." zh="在很多方面，这对那些可怜的演员来说确实很不公平——他们不得不夜复一夜地重复同样的台词。" />
 
-Yet this is not always the case.<br><span class="zh">然而，情况并不总是如此。</span>
+<NcePair en="One would expect them to know their parts by heart and never have cause to falter." zh="人们会以为他们早就把台词背得滚瓜烂熟，永远不会有结巴的时候。" />
 
-A famous actor in a highly successful play was once cast in the role of an aristocrat who had been imprisoned in the Bastille for twenty years.<br><span class="zh">一位在非常成功的戏剧中表现出色的著名演员，曾饰演过这样一个角色：一位被关押在巴士底狱长达二十年的贵族。</span>
+<NcePair en="Yet this is not always the case." zh="然而，情况并不总是如此。" />
 
-In the last act, a gaoler would always come on to the stage with a letter which he would hand to the prisoner.<br><span class="zh">在最后一幕中，总是会有一个狱卒走上舞台，递给囚犯一封信。</span>
+<NcePair en="A famous actor in a highly successful play was once cast in the role of an aristocrat who had been imprisoned in the Bastille for twenty years." zh="一位在非常成功的戏剧中表现出色的著名演员，曾饰演过这样一个角色：一位被关押在巴士底狱长达二十年的贵族。" />
 
-Even though the noble was expected to read the letter at each performance, he always insisted that it should be written out in full.<br><span class="zh">尽管人们期望这位贵族在每次演出时都能宣读这封信，但他始终坚持要求必须把信的内容完整地写出来。</span>
+<NcePair en="In the last act, a gaoler would always come on to the stage with a letter which he would hand to the prisoner." zh="在最后一幕中，总是会有一个狱卒走上舞台，递给囚犯一封信。" />
 
-One night, the gaoler decided to play a joke on his colleague to find out if,<br><span class="zh">一天晚上，狱卒决定捉弄他的同事，想看看经过这么多次表演后，他是否已经把信的内容背下来了。</span>
+<NcePair en="Even though the noble was expected to read the letter at each performance, he always insisted that it should be written out in full." zh="尽管人们期望这位贵族在每次演出时都能宣读这封信，但他始终坚持要求必须把信的内容完整地写出来。" />
 
-after so many performances, he had managed to learn the contents of the letter by heart.<br><span class="zh">经过这么多次表演后，他已经能够将那封信的内容牢记在心了。</span>
+<NcePair en="One night, the gaoler decided to play a joke on his colleague to find out if," zh="一天晚上，狱卒决定捉弄他的同事，想看看经过这么多次表演后，他是否已经把信的内容背下来了。" />
 
-The curtain went up on the final act of the play and revealed the aristocrat sitting alone behind bars in his dark cell.<br><span class="zh">戏剧的最后一幕开始了：那位贵族独自坐在黑暗的牢房里，被关在铁栅栏后面。</span>
+<NcePair en="after so many performances, he had managed to learn the contents of the letter by heart." zh="经过这么多次表演后，他已经能够将那封信的内容牢记在心了。" />
 
-Just then, the gaoler appeared with the precious letter in his hands.<br><span class="zh">就在这时，狱卒出现了，他手里拿着那封珍贵的信。</span>
+<NcePair en="The curtain went up on the final act of the play and revealed the aristocrat sitting alone behind bars in his dark cell." zh="戏剧的最后一幕开始了：那位贵族独自坐在黑暗的牢房里，被关在铁栅栏后面。" />
 
-He entered the cell and presented the letter to the aristocrat.<br><span class="zh">他走进牢房，将那封信交给了那位贵族。</span>
+<NcePair en="Just then, the gaoler appeared with the precious letter in his hands." zh="就在这时，狱卒出现了，他手里拿着那封珍贵的信。" />
 
-But the copy he gave him had not been written out in full as usual.<br><span class="zh">但他递给他的那份信并没有像往常一样写满字。</span>
+<NcePair en="He entered the cell and presented the letter to the aristocrat." zh="他走进牢房，将那封信交给了那位贵族。" />
 
-It was simply a blank sheet of paper.<br><span class="zh">那只是一张空白的纸而已。</span>
+<NcePair en="But the copy he gave him had not been written out in full as usual." zh="但他递给他的那份信并没有像往常一样写满字。" />
 
-The gaoler looked on eagerly, anxious to see if his fellow actor had at last learnt his lines.<br><span class="zh">狱卒热切地注视着，急于想知道他的搭档演员是否终于记住了台词。</span>
+<NcePair en="It was simply a blank sheet of paper." zh="那只是一张空白的纸而已。" />
 
-The noble stared at the blank sheet of paper for a few seconds.<br><span class="zh">那位贵族盯着那张空白的纸张看了几秒钟。</span>
+<NcePair en="The gaoler looked on eagerly, anxious to see if his fellow actor had at last learnt his lines." zh="狱卒热切地注视着，急于想知道他的搭档演员是否终于记住了台词。" />
 
-Then, squinting his eyes, he said: 'The light is dim. Read the letter to me.'<br><span class="zh">然后，他眯起眼睛说：“光线太暗了。把那封信读给我听吧。”</span>
+<NcePair en="The noble stared at the blank sheet of paper for a few seconds." zh="那位贵族盯着那张空白的纸张看了几秒钟。" />
 
-And he promptly handed the sheet of paper to the gaoler.<br><span class="zh">然后他立刻把那张纸交给了狱卒。</span>
+<NcePair en="Then, squinting his eyes, he said: 'The light is dim. Read the letter to me.'" zh="然后，他眯起眼睛说：“光线太暗了。把那封信读给我听吧。”" />
 
-Finding that he could not remember a word of the letter either,<br><span class="zh">结果狱卒发现自己也一个字都记不起来。</span>
+<NcePair en="And he promptly handed the sheet of paper to the gaoler." zh="然后他立刻把那张纸交给了狱卒。" />
 
-the gaoler replied: 'The light is indeed dim, sire.  I must get my glasses.  '<br><span class="zh">狱卒回答说：“光线确实很暗，大人。我得去拿我的眼镜。”</span>
+<NcePair en="Finding that he could not remember a word of the letter either," zh="结果狱卒发现自己也一个字都记不起来。" />
 
-With this, he hurried off the stage.<br><span class="zh">说完这些，他便匆忙走下了舞台。</span>
+<NcePair en="the gaoler replied: 'The light is indeed dim, sire.  I must get my glasses.  '" zh="狱卒回答说：“光线确实很暗，大人。我得去拿我的眼镜。”" />
 
-Much to the aristocrat's amusement,<br><span class="zh">让贵族觉得好笑的是，</span>
+<NcePair en="With this, he hurried off the stage." zh="说完这些，他便匆忙走下了舞台。" />
 
-the gaoler returned a few moments later with a pair of glasses and the usual copy of the letter which he proceeded to read to the prisoner.<br><span class="zh">过了一会儿，狱卒拿着一副眼镜和那封熟悉的信回来了，然后开始把信的内容读给囚犯听。</span>
+<NcePair en="Much to the aristocrat's amusement," zh="让贵族觉得好笑的是，" />
+
+<NcePair en="the gaoler returned a few moments later with a pair of glasses and the usual copy of the letter which he proceeded to read to the prisoner." zh="过了一会儿，狱卒拿着一副眼镜和那封熟悉的信回来了，然后开始把信的内容读给囚犯听。" />

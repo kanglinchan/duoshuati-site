@@ -2,54 +2,56 @@
 
 > [新概念英语 · 第四册 流利英语](/nce/ "返回目录")
 
-Snake poison<br><span class="zh">蛇毒</span>
+<NceTranslateBar />
 
-What are the two different ways in which snake poison acts?<br><span class="zh">蛇毒的作用方式主要有哪两种？</span>
+<NcePair en="Snake poison" zh="蛇毒" />
 
-How in came about that snakes manufactured poison is a mystery.<br><span class="zh">蛇是如何制造出毒液的，这至今是个谜。</span>
+<NcePair en="What are the two different ways in which snake poison acts?" zh="蛇毒的作用方式主要有哪两种？" />
 
-Over the periods their saliva, a mild, digestive juice like our own, was converted into a poison that defies analysis even today.<br><span class="zh">经过漫长的岁月，它们的唾液——一种像我们一样的温和消化液——变成了毒液，这种毒液甚至今天都难以分析。</span>
+<NcePair en="How in came about that snakes manufactured poison is a mystery." zh="蛇是如何制造出毒液的，这至今是个谜。" />
 
-It was not forced upon them by the survival competition;<br><span class="zh">这种毒液的产生并非出于生存竞争的必然；</span>
+<NcePair en="Over the periods their saliva, a mild, digestive juice like our own, was converted into a poison that defies analysis even today." zh="经过漫长的岁月，它们的唾液——一种像我们一样的温和消化液——变成了毒液，这种毒液甚至今天都难以分析。" />
 
-they could have caught and lived on prey without using poison, just as the thousands of non-poisonous snakes still do.<br><span class="zh">它们本可以不使用毒液就捕获猎物并赖以为生，就像现在成千上万的无毒蛇那样。</span>
+<NcePair en="It was not forced upon them by the survival competition;" zh="这种毒液的产生并非出于生存竞争的必然；" />
 
-Poison to a snake is merely a luxury;<br><span class="zh">对蛇来说，毒液其实是一种“奢侈品”；</span>
+<NcePair en="they could have caught and lived on prey without using poison, just as the thousands of non-poisonous snakes still do." zh="它们本可以不使用毒液就捕获猎物并赖以为生，就像现在成千上万的无毒蛇那样。" />
 
-it enables it to get its food with very little effort, no more effort than one bite.<br><span class="zh">它让蛇能够毫不费力地捕获猎物，只需轻轻一咬即可。</span>
+<NcePair en="Poison to a snake is merely a luxury;" zh="对蛇来说，毒液其实是一种“奢侈品”；" />
 
-And why only snakes?<br><span class="zh">那么，为什么只有蛇会拥有毒液呢？</span>
+<NcePair en="it enables it to get its food with very little effort, no more effort than one bite." zh="它让蛇能够毫不费力地捕获猎物，只需轻轻一咬即可。" />
 
-Cats, for instance, would be greatly helped;<br><span class="zh">以猫为例，毒液对它们来说同样大有帮助：</span>
+<NcePair en="And why only snakes?" zh="那么，为什么只有蛇会拥有毒液呢？" />
 
-no running fights with large, fierce rats or tussles with grown rabbits--just a bite and no more effort needed.<br><span class="zh">不用与又大又凶的老鼠追逐打斗，也不用和成年兔子扭打——只需咬一口，再不用费力。</span>
+<NcePair en="Cats, for instance, would be greatly helped;" zh="以猫为例，毒液对它们来说同样大有帮助：" />
 
-In fact, it would be an assistance to all carnivores though it would be a two-edged weapon when they fought each other.<br><span class="zh">事实上，这对所有食肉动物来说都是一种帮助；不过当它们互相争斗时，这也会成为一把“双刃剑”（即既有利也有弊）。</span>
+<NcePair en="no running fights with large, fierce rats or tussles with grown rabbits--just a bite and no more effort needed." zh="不用与又大又凶的老鼠追逐打斗，也不用和成年兔子扭打——只需咬一口，再不用费力。" />
 
-But, of the vertebrates unpredictable Nature selected only snakes (and one lizard).<br><span class="zh">但是，在脊椎动物中，难以捉摸的大自然只选择了蛇（和一种蜥蜴）。</span>
+<NcePair en="In fact, it would be an assistance to all carnivores though it would be a two-edged weapon when they fought each other." zh="事实上，这对所有食肉动物来说都是一种帮助；不过当它们互相争斗时，这也会成为一把“双刃剑”（即既有利也有弊）。" />
 
-One wonders also why Nature, with some snakes concocted poison of such extreme potency.<br><span class="zh">人们也奇怪，为什么大自然在某些蛇身上调制出如此猛烈的毒药。</span>
+<NcePair en="But, of the vertebrates unpredictable Nature selected only snakes (and one lizard)." zh="但是，在脊椎动物中，难以捉摸的大自然只选择了蛇（和一种蜥蜴）。" />
 
-In the conversion of saliva into poison, one might suppose that a fixed process took place. It did not;<br><span class="zh">在唾液变成毒液的过程中，人们可能会认为有一个固定的过程发生。但事实并非如此；</span>
+<NcePair en="One wonders also why Nature, with some snakes concocted poison of such extreme potency." zh="人们也奇怪，为什么大自然在某些蛇身上调制出如此猛烈的毒药。" />
 
-some snakes manufactured a poison different in every respect from that of others,<br><span class="zh">有些蛇产生的毒液在各个方面都与其他蛇产生的毒液不同。</span>
+<NcePair en="In the conversion of saliva into poison, one might suppose that a fixed process took place. It did not;" zh="在唾液变成毒液的过程中，人们可能会认为有一个固定的过程发生。但事实并非如此；" />
 
-as different as arsenic is from strychnine, and having different effects.<br><span class="zh">就像砒霜和马钱子碱不同那样，并且效果也不同。</span>
+<NcePair en="some snakes manufactured a poison different in every respect from that of others," zh="有些蛇产生的毒液在各个方面都与其他蛇产生的毒液不同。" />
 
-One poison acts on the nerves, the other on the blood.<br><span class="zh">一种毒物作用于神经系统，另一种则作用于血液。</span>
+<NcePair en="as different as arsenic is from strychnine, and having different effects." zh="就像砒霜和马钱子碱不同那样，并且效果也不同。" />
 
-The makers of the nerve poison include the mambas and the cobras and their venom is called neurotoxic.<br><span class="zh">制造这种神经毒素的动物包括曼巴蛇和眼镜蛇，它们的毒液被称为神经毒素（neurotoxic venom）。</span>
+<NcePair en="One poison acts on the nerves, the other on the blood." zh="一种毒物作用于神经系统，另一种则作用于血液。" />
 
-Vipers (adders) and rattlesnakes manufacture the blood poison, which is known as haemolytic.<br><span class="zh">蝰蛇和响尾蛇会分泌一种血液毒素，这种毒素被称为“溶血毒素”（haemolytic toxin）。</span>
+<NcePair en="The makers of the nerve poison include the mambas and the cobras and their venom is called neurotoxic." zh="制造这种神经毒素的动物包括曼巴蛇和眼镜蛇，它们的毒液被称为神经毒素（neurotoxic venom）。" />
 
-Both poisons are unpleasant, but by far the more unpleasant is the blood poison.<br><span class="zh">两种毒液都令人不快，但远比神经毒液更令人不快的是血液毒液。</span>
+<NcePair en="Vipers (adders) and rattlesnakes manufacture the blood poison, which is known as haemolytic." zh="蝰蛇和响尾蛇会分泌一种血液毒素，这种毒素被称为“溶血毒素”（haemolytic toxin）。" />
 
-It is said that the nerve poison is the more primitive of the two, that the blood poison is, so to speak, a newer product from an improved formula.<br><span class="zh">据说，神经毒液是两者中较原始的一种，而血液毒液，可以这么说，是改良配方后的新产品。</span>
+<NcePair en="Both poisons are unpleasant, but by far the more unpleasant is the blood poison." zh="两种毒液都令人不快，但远比神经毒液更令人不快的是血液毒液。" />
 
-Be that as it may, the nerve poison does its business with man far more quickly than the blood poison.<br><span class="zh">尽管如此，这种神经毒素对人体的影响速度要比血液毒素快得多。</span>
+<NcePair en="It is said that the nerve poison is the more primitive of the two, that the blood poison is, so to speak, a newer product from an improved formula." zh="据说，神经毒液是两者中较原始的一种，而血液毒液，可以这么说，是改良配方后的新产品。" />
 
-This, however, means nothing.<br><span class="zh">然而，这毫无意义。</span>
+<NcePair en="Be that as it may, the nerve poison does its business with man far more quickly than the blood poison." zh="尽管如此，这种神经毒素对人体的影响速度要比血液毒素快得多。" />
 
-Snakes did not acquire their poison for use against man but for use against prey such as rats and mice,<br><span class="zh">蛇之所以拥有毒液，并不是为了用来对付人类，而是为了捕杀老鼠等猎物。</span>
+<NcePair en="This, however, means nothing." zh="然而，这毫无意义。" />
 
-and the effects on these of viperine poison is almost immediate.<br><span class="zh">而蝰蛇毒液对这些动物的效果几乎是立竿见影的。</span>
+<NcePair en="Snakes did not acquire their poison for use against man but for use against prey such as rats and mice," zh="蛇之所以拥有毒液，并不是为了用来对付人类，而是为了捕杀老鼠等猎物。" />
+
+<NcePair en="and the effects on these of viperine poison is almost immediate." zh="而蝰蛇毒液对这些动物的效果几乎是立竿见影的。" />

@@ -2,48 +2,50 @@
 
 > [新概念英语 · 第二册 实践与进步](/nce/ "返回目录")
 
-How long had the police taken to find his bicycle?<br><span class="zh">警察花了多长时间才找到他的自行车？</span>
+<NceTranslateBar />
 
-Dan Robinson has been worried all week.<br><span class="zh">丹·罗宾逊整个星期都一直很担心。</span>
+<NcePair en="How long had the police taken to find his bicycle?" zh="警察花了多长时间才找到他的自行车？" />
 
-Last Tuesday he received a letter<br><span class="zh">上周二，他收到了一封信。</span>
+<NcePair en="Dan Robinson has been worried all week." zh="丹·罗宾逊整个星期都一直很担心。" />
 
-from the local police.<br><span class="zh">来自当地警方。</span>
+<NcePair en="Last Tuesday he received a letter" zh="上周二，他收到了一封信。" />
 
-In the letter he was asked to call at the station.<br><span class="zh">信中要求他去一趟警察局。</span>
+<NcePair en="from the local police." zh="来自当地警方。" />
 
-Dan wondered why<br><span class="zh">丹想知道为什么。</span>
+<NcePair en="In the letter he was asked to call at the station." zh="信中要求他去一趟警察局。" />
 
-he was wanted by the police,<br><span class="zh">警察找他有什么事。</span>
+<NcePair en="Dan wondered why" zh="丹想知道为什么。" />
 
-but he went to the station yesterday<br><span class="zh">但他昨天去车站了。</span>
+<NcePair en="he was wanted by the police," zh="警察找他有什么事。" />
 
-and now he is not worried anymore.<br><span class="zh">现在他不再担心了。</span>
+<NcePair en="but he went to the station yesterday" zh="但他昨天去车站了。" />
 
-At the station,<br><span class="zh">在车站里，</span>
+<NcePair en="and now he is not worried anymore." zh="现在他不再担心了。" />
 
-he was told by a smiling policeman<br><span class="zh">一位面带微笑的警察告诉他</span>
+<NcePair en="At the station," zh="在车站里，" />
 
-that his bicycle had been found.<br><span class="zh">他的自行车已经被找到了。</span>
+<NcePair en="he was told by a smiling policeman" zh="一位面带微笑的警察告诉他" />
 
-Five days ago, the policeman told him,<br><span class="zh">五天前，警察对他说：</span>
+<NcePair en="that his bicycle had been found." zh="他的自行车已经被找到了。" />
 
-the bicycle was picked up in a small village<br><span class="zh">这辆自行车是在一个小村庄里被发现的。</span>
+<NcePair en="Five days ago, the policeman told him," zh="五天前，警察对他说：" />
 
-four hundred miles away.<br><span class="zh">四百英里之外。</span>
+<NcePair en="the bicycle was picked up in a small village" zh="这辆自行车是在一个小村庄里被发现的。" />
 
-It is now being sent to his home by train.<br><span class="zh">现在正通过火车运往他家。</span>
+<NcePair en="four hundred miles away." zh="四百英里之外。" />
 
-Dan was most surprised<br><span class="zh">丹感到非常惊讶。</span>
+<NcePair en="It is now being sent to his home by train." zh="现在正通过火车运往他家。" />
 
-when he heard the news.<br><span class="zh">当他听到这个消息时……</span>
+<NcePair en="Dan was most surprised" zh="丹感到非常惊讶。" />
 
-He was amused too,<br><span class="zh">他也很觉得有趣。</span>
+<NcePair en="when he heard the news." zh="当他听到这个消息时……" />
 
-because he never expected<br><span class="zh">因为他从没想过</span>
+<NcePair en="He was amused too," zh="他也很觉得有趣。" />
 
-the bicycle to be found.<br><span class="zh">这辆自行车还能被找到。</span>
+<NcePair en="because he never expected" zh="因为他从没想过" />
 
-It was stolen twenty years ago<br><span class="zh">它是在二十年前被偷走的。</span>
+<NcePair en="the bicycle to be found." zh="这辆自行车还能被找到。" />
 
-when Dan was a boy of fifteen!<br><span class="zh">那是丹十五岁的时候！</span>
+<NcePair en="It was stolen twenty years ago" zh="它是在二十年前被偷走的。" />
+
+<NcePair en="when Dan was a boy of fifteen!" zh="那是丹十五岁的时候！" />

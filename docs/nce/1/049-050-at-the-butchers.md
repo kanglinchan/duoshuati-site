@@ -2,42 +2,44 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-At the butcher's<br><span class="zh">在肉铺里</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="At the butcher's" zh="在肉铺里" />
 
-What does Mr. Bird like?<br><span class="zh">伯德先生喜欢什么？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Do you want any meat today, Mrs. Bird?<br><span class="zh">伯德夫人，今天您想要吃点肉吗？</span>
+<NcePair en="What does Mr. Bird like?" zh="伯德先生喜欢什么？" />
 
-Yes, please.<br><span class="zh">好的，请来点。</span>
+<NcePair en="Do you want any meat today, Mrs. Bird?" zh="伯德夫人，今天您想要吃点肉吗？" />
 
-Do you want beef or lamb?<br><span class="zh">您想要牛肉还是羊肉？</span>
+<NcePair en="Yes, please." zh="好的，请来点。" />
 
-Beef, please.<br><span class="zh">请给我来一份牛肉。</span>
+<NcePair en="Do you want beef or lamb?" zh="您想要牛肉还是羊肉？" />
 
-This lamb's very good.<br><span class="zh">这块羊肉很不错。</span>
+<NcePair en="Beef, please." zh="请给我来一份牛肉。" />
 
-I like lamb, but my husband doesn't.<br><span class="zh">我喜欢羊肉，但我丈夫不喜欢。</span>
+<NcePair en="This lamb's very good." zh="这块羊肉很不错。" />
 
-What about some steak?<br><span class="zh">来点牛排怎么样？</span>
+<NcePair en="I like lamb, but my husband doesn't." zh="我喜欢羊肉，但我丈夫不喜欢。" />
 
-This is a nice piece.<br><span class="zh">这块很不错。</span>
+<NcePair en="What about some steak?" zh="来点牛排怎么样？" />
 
-Give me that piece, please.<br><span class="zh">请给我那块肉。</span>
+<NcePair en="This is a nice piece." zh="这块很不错。" />
 
-And a pound of mince, too.<br><span class="zh">还要一磅肉末。</span>
+<NcePair en="Give me that piece, please." zh="请给我那块肉。" />
 
-Do you want a chicken, Mrs. Bird?<br><span class="zh">伯德夫人，您想要鸡肉吗？</span>
+<NcePair en="And a pound of mince, too." zh="还要一磅肉末。" />
 
-They're very nice.<br><span class="zh">这些鸡很不错。</span>
+<NcePair en="Do you want a chicken, Mrs. Bird?" zh="伯德夫人，您想要鸡肉吗？" />
 
-No, thank you.<br><span class="zh">不用了，谢谢。</span>
+<NcePair en="They're very nice." zh="这些鸡很不错。" />
 
-My husband likes steak,<br><span class="zh">我丈夫喜欢牛排，</span>
+<NcePair en="No, thank you." zh="不用了，谢谢。" />
 
-but he doesn't like chicken.<br><span class="zh">但他不喜欢鸡肉。</span>
+<NcePair en="My husband likes steak," zh="我丈夫喜欢牛排，" />
 
-To tell you the truth, Mrs. Bird,<br><span class="zh">说实话，伯德夫人，</span>
+<NcePair en="but he doesn't like chicken." zh="但他不喜欢鸡肉。" />
 
-I don't like chicken either!<br><span class="zh">我也不喜欢鸡肉！</span>
+<NcePair en="To tell you the truth, Mrs. Bird," zh="说实话，伯德夫人，" />
+
+<NcePair en="I don't like chicken either!" zh="我也不喜欢鸡肉！" />

@@ -2,48 +2,50 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Thank you, doctor.<br><span class="zh">谢谢您，医生。</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Thank you, doctor." zh="谢谢您，医生。" />
 
-Who else is in bed today? Why?<br><span class="zh">今天还有谁在床上？为什么？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-How's Jimmy today?<br><span class="zh">Jimmy今天怎么样？</span>
+<NcePair en="Who else is in bed today? Why?" zh="今天还有谁在床上？为什么？" />
 
-Better.<br><span class="zh">更好了。</span>
+<NcePair en="How's Jimmy today?" zh="Jimmy今天怎么样？" />
 
-Thank you, doctor.<br><span class="zh">谢谢您，医生。</span>
+<NcePair en="Better." zh="更好了。" />
 
-Can I see him please, Mrs. Williams?<br><span class="zh">请问威廉姆斯夫人，我能见见他吗？</span>
+<NcePair en="Thank you, doctor." zh="谢谢您，医生。" />
 
-Certainly, doctor.<br><span class="zh">当然可以，医生。</span>
+<NcePair en="Can I see him please, Mrs. Williams?" zh="请问威廉姆斯夫人，我能见见他吗？" />
 
-Come upstairs.<br><span class="zh">上来吧。</span>
+<NcePair en="Certainly, doctor." zh="当然可以，医生。" />
 
-You look very well, Jimmy.<br><span class="zh">你看起来气色很好，吉米。</span>
+<NcePair en="Come upstairs." zh="上来吧。" />
 
-You are better now, but you mustn't get up yet.<br><span class="zh">你现在好多了，但还不能起床哦。</span>
+<NcePair en="You look very well, Jimmy." zh="你看起来气色很好，吉米。" />
 
-You must stay in bed for another two days.<br><span class="zh">你必须再卧床休息两天。</span>
+<NcePair en="You are better now, but you mustn't get up yet." zh="你现在好多了，但还不能起床哦。" />
 
-The boy mustn't go to school yet, Mrs. Williams.<br><span class="zh">这个男孩还不能去上学，威廉姆斯夫人。</span>
+<NcePair en="You must stay in bed for another two days." zh="你必须再卧床休息两天。" />
 
-And he mustn't eat rich food.<br><span class="zh">而且他也不能吃油腻的食物。</span>
+<NcePair en="The boy mustn't go to school yet, Mrs. Williams." zh="这个男孩还不能去上学，威廉姆斯夫人。" />
 
-Does he have a temperature, doctor?<br><span class="zh">医生，他发烧了吗？</span>
+<NcePair en="And he mustn't eat rich food." zh="而且他也不能吃油腻的食物。" />
 
-No, he doesn't.<br><span class="zh">没有，他没有发烧。</span>
+<NcePair en="Does he have a temperature, doctor?" zh="医生，他发烧了吗？" />
 
-Must he stay in bed?<br><span class="zh">他必须继续卧床吗？</span>
+<NcePair en="No, he doesn't." zh="没有，他没有发烧。" />
 
-Yes. He must remain in bed for another two days.<br><span class="zh">是的，他必须再卧床两天。</span>
+<NcePair en="Must he stay in bed?" zh="他必须继续卧床吗？" />
 
-He can get up for about two hours each day, but you must keep the room warm.<br><span class="zh">他每天可以起来大约两个小时，但你们必须保持房间温暖。</span>
+<NcePair en="Yes. He must remain in bed for another two days." zh="是的，他必须再卧床两天。" />
 
-Where's Mr. Williams this evening?<br><span class="zh">威廉姆斯先生今晚在哪儿？</span>
+<NcePair en="He can get up for about two hours each day, but you must keep the room warm." zh="他每天可以起来大约两个小时，但你们必须保持房间温暖。" />
 
-He's in bed, doctor.<br><span class="zh">他也在床上，医生。</span>
+<NcePair en="Where's Mr. Williams this evening?" zh="威廉姆斯先生今晚在哪儿？" />
 
-Can you see him please?<br><span class="zh">您能去看看他吗？</span>
+<NcePair en="He's in bed, doctor." zh="他也在床上，医生。" />
 
-He has a bad cold, too!<br><span class="zh">他也得了重感冒！</span>
+<NcePair en="Can you see him please?" zh="您能去看看他吗？" />
+
+<NcePair en="He has a bad cold, too!" zh="他也得了重感冒！" />

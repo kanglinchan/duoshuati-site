@@ -2,22 +2,24 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Excuse me!<br><span class="zh">打扰一下！</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Excuse me!" zh="打扰一下！" />
 
-Whose handbag is it?<br><span class="zh">这是谁的手提包？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Excuse me!<br><span class="zh">打扰一下！</span>
+<NcePair en="Whose handbag is it?" zh="这是谁的手提包？" />
 
-Yes?<br><span class="zh">什么事？</span>
+<NcePair en="Excuse me!" zh="打扰一下！" />
 
-Is this your handbag?<br><span class="zh">这是你的手提包吗？</span>
+<NcePair en="Yes?" zh="什么事？" />
 
-Pardon?<br><span class="zh">什么？请再说一遍。</span>
+<NcePair en="Is this your handbag?" zh="这是你的手提包吗？" />
 
-Is this your handbag?<br><span class="zh">这是你的手提包吗？</span>
+<NcePair en="Pardon?" zh="什么？请再说一遍。" />
 
-Yes it is.<br><span class="zh">是的，它是。</span>
+<NcePair en="Is this your handbag?" zh="这是你的手提包吗？" />
 
-Thank you very much.<br><span class="zh">非常感谢您。</span>
+<NcePair en="Yes it is." zh="是的，它是。" />
+
+<NcePair en="Thank you very much." zh="非常感谢您。" />

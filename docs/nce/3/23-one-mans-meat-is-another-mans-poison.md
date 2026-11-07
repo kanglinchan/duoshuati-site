@@ -2,52 +2,54 @@
 
 > [新概念英语 · 第三册 培养技能](/nce/ "返回目录")
 
-One man's meat is another man's poison<br><span class="zh">一个人的佳肴，另一个人的毒药。</span>
+<NceTranslateBar />
 
-What was it about snails that made the writer collect them for his friend on that day in particular?<br><span class="zh">究竟是蜗牛的什么特性，让作者在那天特意为他的朋友收集了它们呢？</span>
+<NcePair en="One man's meat is another man's poison" zh="一个人的佳肴，另一个人的毒药。" />
 
-People become quite illogical when they try to decide what can be eaten and what cannot be eaten.<br><span class="zh">当人们试图决定什么能吃、什么不能吃时，他们的想法会变得非常不合逻辑。</span>
+<NcePair en="What was it about snails that made the writer collect them for his friend on that day in particular?" zh="究竟是蜗牛的什么特性，让作者在那天特意为他的朋友收集了它们呢？" />
 
-If you lived in the Mediterranean, for instance, you would consider octopus a great delicacy.<br><span class="zh">例如，如果你生活在地中海地区，你会认为章鱼是一种非常美味的佳肴。</span>
+<NcePair en="People become quite illogical when they try to decide what can be eaten and what cannot be eaten." zh="当人们试图决定什么能吃、什么不能吃时，他们的想法会变得非常不合逻辑。" />
 
-You would not be able to understand why some people find it repulsive.<br><span class="zh">你无法理解为什么有些人会觉得它令人反感。</span>
+<NcePair en="If you lived in the Mediterranean, for instance, you would consider octopus a great delicacy." zh="例如，如果你生活在地中海地区，你会认为章鱼是一种非常美味的佳肴。" />
 
-On the other hand, your stomach would turn at the idea of frying potatoes in animal fat-the normally accepted practice in many northern countries.<br><span class="zh">另一方面，一想到要用动物油脂来煎土豆，你就会感到恶心——而在许多北方国家，这种做法却是被普遍接受的。</span>
+<NcePair en="You would not be able to understand why some people find it repulsive." zh="你无法理解为什么有些人会觉得它令人反感。" />
 
-The sad truth is that most of us have been brought up to eat certain foods and we stick to them all our lives.<br><span class="zh">令人遗憾的事实是，我们大多数人都被教导要吃某些特定的食物，并且一生都坚持吃这些食物。</span>
+<NcePair en="On the other hand, your stomach would turn at the idea of frying potatoes in animal fat-the normally accepted practice in many northern countries." zh="另一方面，一想到要用动物油脂来煎土豆，你就会感到恶心——而在许多北方国家，这种做法却是被普遍接受的。" />
 
-No creature has received more praise and abuse than the common garden snail.<br><span class="zh">没有哪种生物像普通的花园蜗牛那样，既备受赞誉，又饱受诟病。</span>
+<NcePair en="The sad truth is that most of us have been brought up to eat certain foods and we stick to them all our lives." zh="令人遗憾的事实是，我们大多数人都被教导要吃某些特定的食物，并且一生都坚持吃这些食物。" />
 
-Cooked in wine, snails are a great luxury in various parts of the world.<br><span class="zh">用葡萄酒烹制的蜗牛，在世界各地都被视为一种高级的美食。</span>
+<NcePair en="No creature has received more praise and abuse than the common garden snail." zh="没有哪种生物像普通的花园蜗牛那样，既备受赞誉，又饱受诟病。" />
 
-There are countless people who, ever since their early years, have learned to associate snails with food.<br><span class="zh">有无数的人，从很小的时候起，就学会了将蜗牛与食物联系在一起。</span>
+<NcePair en="Cooked in wine, snails are a great luxury in various parts of the world." zh="用葡萄酒烹制的蜗牛，在世界各地都被视为一种高级的美食。" />
 
-My friend, Robert, lives in a country where snails are despised.<br><span class="zh">我的朋友罗伯特住在一个人们非常厌恶蜗牛的国家。</span>
+<NcePair en="There are countless people who, ever since their early years, have learned to associate snails with food." zh="有无数的人，从很小的时候起，就学会了将蜗牛与食物联系在一起。" />
 
-As his flat is in a large town, he has no garden of his own.<br><span class="zh">由于他的公寓位于一个较大的城镇里，所以他并没有自己的花园。</span>
+<NcePair en="My friend, Robert, lives in a country where snails are despised." zh="我的朋友罗伯特住在一个人们非常厌恶蜗牛的国家。" />
 
-For years he has been asking me to collect snails from my garden and take them to him.<br><span class="zh">多年来，他一直让我从我的花园里采集蜗牛，然后带给他。</span>
+<NcePair en="As his flat is in a large town, he has no garden of his own." zh="由于他的公寓位于一个较大的城镇里，所以他并没有自己的花园。" />
 
-The idea never appealed to me very much, but one day, after a heavy shower,<br><span class="zh">这个想法我一直不太感兴趣，但有一天，在一场大雨之后……</span>
+<NcePair en="For years he has been asking me to collect snails from my garden and take them to him." zh="多年来，他一直让我从我的花园里采集蜗牛，然后带给他。" />
 
-I happened to be walking in my garden when I noticed a huge number of snails taking a stroll on some of my prize plants.<br><span class="zh">我正好在花园里散步，突然发现大量的蜗牛正在我的那些珍贵的植物上爬来爬去。</span>
+<NcePair en="The idea never appealed to me very much, but one day, after a heavy shower," zh="这个想法我一直不太感兴趣，但有一天，在一场大雨之后……" />
 
-Acting on a sudden impulse, I collected several dozen, put them in a paper bag, and took them to Robert.<br><span class="zh">一时冲动之下，我收集了几十只蜗牛，把它们装进一个纸袋里，然后拿给了罗伯特。</span>
+<NcePair en="I happened to be walking in my garden when I noticed a huge number of snails taking a stroll on some of my prize plants." zh="我正好在花园里散步，突然发现大量的蜗牛正在我的那些珍贵的植物上爬来爬去。" />
 
-Robert was delighted to see me and equally pleased with my little gift.<br><span class="zh">罗伯特见到我非常高兴，对我的小礼物也同样感到满意。</span>
+<NcePair en="Acting on a sudden impulse, I collected several dozen, put them in a paper bag, and took them to Robert." zh="一时冲动之下，我收集了几十只蜗牛，把它们装进一个纸袋里，然后拿给了罗伯特。" />
 
-I left the bag in the hall and Robert and I went into the living room where we talked for a couple of hours.<br><span class="zh">我把袋子放在门厅里，然后和罗伯特一起进了客厅，我们在那里聊了两个小时。</span>
+<NcePair en="Robert was delighted to see me and equally pleased with my little gift." zh="罗伯特见到我非常高兴，对我的小礼物也同样感到满意。" />
 
-I had forgotten all about the snails when Robert suddenly said that I must stay to dinner.<br><span class="zh">我完全把那些蜗牛的事给忘了，直到罗伯特突然说：“你必须留下来吃晚饭。”</span>
+<NcePair en="I left the bag in the hall and Robert and I went into the living room where we talked for a couple of hours." zh="我把袋子放在门厅里，然后和罗伯特一起进了客厅，我们在那里聊了两个小时。" />
 
-Snails would, of course, be the main dish.<br><span class="zh">当然，蜗牛会是主菜。</span>
+<NcePair en="I had forgotten all about the snails when Robert suddenly said that I must stay to dinner." zh="我完全把那些蜗牛的事给忘了，直到罗伯特突然说：“你必须留下来吃晚饭。”" />
 
-I did not fancy the idea and I reluctantly followed Robert out of the room.<br><span class="zh">我并不喜欢这个主意，但还是不情愿地跟着罗伯特走出了房间。</span>
+<NcePair en="Snails would, of course, be the main dish." zh="当然，蜗牛会是主菜。" />
 
-To our dismay,<br><span class="zh">令我们惊恐的是……</span>
+<NcePair en="I did not fancy the idea and I reluctantly followed Robert out of the room." zh="我并不喜欢这个主意，但还是不情愿地跟着罗伯特走出了房间。" />
 
-we saw that there were snails everywhere:<br><span class="zh">我们发现到处都有蜗牛。</span>
+<NcePair en="To our dismay," zh="令我们惊恐的是……" />
 
-they had escaped from the paper bag<br><span class="zh">它们从那个纸袋里逃出来了。</span>
+<NcePair en="we saw that there were snails everywhere:" zh="我们发现到处都有蜗牛。" />
 
-and had taken complete possession of the hall! I have never be able to look at a snail since then.<br><span class="zh">并且完全占领了门厅！从那以后，我再也没法看蜗牛了。</span>
+<NcePair en="they had escaped from the paper bag" zh="它们从那个纸袋里逃出来了。" />
+
+<NcePair en="and had taken complete possession of the hall! I have never be able to look at a snail since then." zh="并且完全占领了门厅！从那以后，我再也没法看蜗牛了。" />

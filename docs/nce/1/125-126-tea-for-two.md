@@ -2,48 +2,50 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Tea for two<br><span class="zh">“Tea for two” 的意思是“为两个人准备的茶”。</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Tea for two" zh="“Tea for two” 的意思是“为两个人准备的茶”。" />
 
-Does Susan have tea by herself?<br><span class="zh">彼得，你现在不能进来喝杯茶吗？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Can't you come in and have tea now, Peter?<br><span class="zh">彼得，你现在就不能进来喝杯茶吗？</span>
+<NcePair en="Does Susan have tea by herself?" zh="彼得，你现在不能进来喝杯茶吗？" />
 
-Not yet.<br><span class="zh">还没有。</span>
+<NcePair en="Can't you come in and have tea now, Peter?" zh="彼得，你现在就不能进来喝杯茶吗？" />
 
-I must water the garden first.<br><span class="zh">我必须先给花园浇水。</span>
+<NcePair en="Not yet." zh="还没有。" />
 
-Do you have to water it now?<br><span class="zh">现在需要给它浇水吗？</span>
+<NcePair en="I must water the garden first." zh="我必须先给花园浇水。" />
 
-I'm afraid I must.<br><span class="zh">恐怕我必须这么做。</span>
+<NcePair en="Do you have to water it now?" zh="现在需要给它浇水吗？" />
 
-Look at it!<br><span class="zh">看啊！</span>
+<NcePair en="I'm afraid I must." zh="恐怕我必须这么做。" />
 
-It's terribly dry.<br><span class="zh">它干得厉害。</span>
+<NcePair en="Look at it!" zh="看啊！" />
 
-What a nuisance!<br><span class="zh">真烦人！</span>
+<NcePair en="It's terribly dry." zh="它干得厉害。" />
 
-Last summer it was very dry, too.<br><span class="zh">去年夏天也非常干燥。</span>
+<NcePair en="What a nuisance!" zh="真烦人！" />
 
-Don't you remember?<br><span class="zh">你不记得了吗？</span>
+<NcePair en="Last summer it was very dry, too." zh="去年夏天也非常干燥。" />
 
-I had to water it every day.<br><span class="zh">我每天都必须给它浇水。</span>
+<NcePair en="Don't you remember?" zh="你不记得了吗？" />
 
-Well, I'll have tea by myself.<br><span class="zh">好吧，我就自己喝杯茶吧。</span>
+<NcePair en="I had to water it every day." zh="我每天都必须给它浇水。" />
 
-That was quick!<br><span class="zh">真快啊！</span>
+<NcePair en="Well, I'll have tea by myself." zh="好吧，我就自己喝杯茶吧。" />
 
-Have you finished already?<br><span class="zh">你已经完成了吗？</span>
+<NcePair en="That was quick!" zh="真快啊！" />
 
-Yes.<br><span class="zh">是的。</span>
+<NcePair en="Have you finished already?" zh="你已经完成了吗？" />
 
-Look out of the window.<br><span class="zh">往窗外看。</span>
+<NcePair en="Yes." zh="是的。" />
 
-It's raining!<br><span class="zh">下雨了！</span>
+<NcePair en="Look out of the window." zh="往窗外看。" />
 
-That means you don't need to water the garden.<br><span class="zh">这意味着你不需要给花园浇水了。</span>
+<NcePair en="It's raining!" zh="下雨了！" />
 
-That was a pleasant surprise.<br><span class="zh">这真是个令人愉快的惊喜。</span>
+<NcePair en="That means you don't need to water the garden." zh="这意味着你不需要给花园浇水了。" />
 
-It means I can have tea, instead.<br><span class="zh">那我可以喝茶了。</span>
+<NcePair en="That was a pleasant surprise." zh="这真是个令人愉快的惊喜。" />
+
+<NcePair en="It means I can have tea, instead." zh="那我可以喝茶了。" />

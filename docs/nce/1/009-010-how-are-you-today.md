@@ -2,36 +2,38 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-How are you today?<br><span class="zh">你今天好吗？</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">艾玛好吗？</span>
+<NcePair en="How are you today?" zh="你今天好吗？" />
 
-How is Emma?<br><span class="zh">艾玛最近怎么样？</span>
+<NcePair en="Listen to the tape then answer this question." zh="艾玛好吗？" />
 
-Hello Helen.<br><span class="zh">你好，海伦。</span>
+<NcePair en="How is Emma?" zh="艾玛最近怎么样？" />
 
-Hi Steven.<br><span class="zh">嗨，史蒂文。</span>
+<NcePair en="Hello Helen." zh="你好，海伦。" />
 
-How are you today?<br><span class="zh">你今天好吗？</span>
+<NcePair en="Hi Steven." zh="嗨，史蒂文。" />
 
-I'm very well thank you.<br><span class="zh">我很好，谢谢。</span>
+<NcePair en="How are you today?" zh="你今天好吗？" />
 
-And you?<br><span class="zh">你呢？</span>
+<NcePair en="I'm very well thank you." zh="我很好，谢谢。" />
 
-I'm fine thanks.<br><span class="zh">我也很好，谢谢。</span>
+<NcePair en="And you?" zh="你呢？" />
 
-How is Tony?<br><span class="zh">托尼好吗？</span>
+<NcePair en="I'm fine thanks." zh="我也很好，谢谢。" />
 
-He's fine thanks.<br><span class="zh">他也很好，谢谢。</span>
+<NcePair en="How is Tony?" zh="托尼好吗？" />
 
-How's Emma?<br><span class="zh">艾玛好吗？</span>
+<NcePair en="He's fine thanks." zh="他也很好，谢谢。" />
 
-She's very well too Helen.<br><span class="zh">她也很好，海伦。</span>
+<NcePair en="How's Emma?" zh="艾玛好吗？" />
 
-Goodbye Helen.<br><span class="zh">再见，海伦。</span>
+<NcePair en="She's very well too Helen." zh="她也很好，海伦。" />
 
-Nice to see you.<br><span class="zh">很高兴见到你。</span>
+<NcePair en="Goodbye Helen." zh="再见，海伦。" />
 
-Nice to see you too Steven.<br><span class="zh">我也很高兴见到你，史蒂文。</span>
+<NcePair en="Nice to see you." zh="很高兴见到你。" />
 
-Goodbye.<br><span class="zh">再见。</span>
+<NcePair en="Nice to see you too Steven." zh="我也很高兴见到你，史蒂文。" />
+
+<NcePair en="Goodbye." zh="再见。" />

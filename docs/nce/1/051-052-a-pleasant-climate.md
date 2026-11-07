@@ -2,40 +2,42 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-A pleasant climate<br><span class="zh">宜人的气候</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">请听录音，然后回答以下问题：</span>
+<NcePair en="A pleasant climate" zh="宜人的气候" />
 
-Does it ever snow in Greece?<br><span class="zh">希腊会下雪吗？</span>
+<NcePair en="Listen to the tape then answer this question." zh="请听录音，然后回答以下问题：" />
 
-Where do you come from?<br><span class="zh">你来自哪里？</span>
+<NcePair en="Does it ever snow in Greece?" zh="希腊会下雪吗？" />
 
-I come from Greece.<br><span class="zh">我来自希腊。</span>
+<NcePair en="Where do you come from?" zh="你来自哪里？" />
 
-What's the climate like in your country?<br><span class="zh">你们国家的气候是怎样的？</span>
+<NcePair en="I come from Greece." zh="我来自希腊。" />
 
-It's very pleasant.<br><span class="zh">气候非常宜人。</span>
+<NcePair en="What's the climate like in your country?" zh="你们国家的气候是怎样的？" />
 
-What's the weather like in spring?<br><span class="zh">春天的天气是怎样的？</span>
+<NcePair en="It's very pleasant." zh="气候非常宜人。" />
 
-It's often windy in March.<br><span class="zh">三月份经常有风。</span>
+<NcePair en="What's the weather like in spring?" zh="春天的天气是怎样的？" />
 
-It's always warm in April and May, but it rains sometimes.<br><span class="zh">四月和五月总是很温暖，但有时会下雨。</span>
+<NcePair en="It's often windy in March." zh="三月份经常有风。" />
 
-What's it like in summer?<br><span class="zh">夏天的天气是怎样的？</span>
+<NcePair en="It's always warm in April and May, but it rains sometimes." zh="四月和五月总是很温暖，但有时会下雨。" />
 
-It's always hot in June, July and August.<br><span class="zh">六月、七月和八月总是很热。</span>
+<NcePair en="What's it like in summer?" zh="夏天的天气是怎样的？" />
 
-The sun shines every day.<br><span class="zh">每天都阳光明媚。</span>
+<NcePair en="It's always hot in June, July and August." zh="六月、七月和八月总是很热。" />
 
-Is it cold or warm in autumn?<br><span class="zh">秋天是冷还是暖呢？</span>
+<NcePair en="The sun shines every day." zh="每天都阳光明媚。" />
 
-It's always warm in September and October.<br><span class="zh">九月份和十月份总是很暖和的。</span>
+<NcePair en="Is it cold or warm in autumn?" zh="秋天是冷还是暖呢？" />
 
-It's often cold in November and it rains sometimes.<br><span class="zh">十一月份天气通常很冷，有时还会下雨。</span>
+<NcePair en="It's always warm in September and October." zh="九月份和十月份总是很暖和的。" />
 
-Is it very cold in winter?<br><span class="zh">冬天会很冷吗？</span>
+<NcePair en="It's often cold in November and it rains sometimes." zh="十一月份天气通常很冷，有时还会下雨。" />
 
-It's often cold in December, January and February.<br><span class="zh">十二月、一月和二月通常都很冷。</span>
+<NcePair en="Is it very cold in winter?" zh="冬天会很冷吗？" />
 
-It snows sometimes.<br><span class="zh">有时候会下雪。</span>
+<NcePair en="It's often cold in December, January and February." zh="十二月、一月和二月通常都很冷。" />
+
+<NcePair en="It snows sometimes." zh="有时候会下雪。" />

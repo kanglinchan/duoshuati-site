@@ -2,42 +2,44 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Hurry up!<br><span class="zh">快点！</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">你怎么知道山姆不常泡茶呢？</span>
+<NcePair en="Hurry up!" zh="快点！" />
 
-How do you know Sam doesn't make the tea very often?<br><span class="zh">你怎么知道山姆不经常泡茶的？</span>
+<NcePair en="Listen to the tape then answer this question." zh="你怎么知道山姆不常泡茶呢？" />
 
-Can you make the tea, Sam?<br><span class="zh">你能泡茶吗，山姆？</span>
+<NcePair en="How do you know Sam doesn't make the tea very often?" zh="你怎么知道山姆不经常泡茶的？" />
 
-Yes, of course I can, Penny.<br><span class="zh">当然能，佩妮。</span>
+<NcePair en="Can you make the tea, Sam?" zh="你能泡茶吗，山姆？" />
 
-Is there any water in this kettle?<br><span class="zh">这个水壶里有水吗？</span>
+<NcePair en="Yes, of course I can, Penny." zh="当然能，佩妮。" />
 
-Yes, there is.<br><span class="zh">有。</span>
+<NcePair en="Is there any water in this kettle?" zh="这个水壶里有水吗？" />
 
-Where's the tea?<br><span class="zh">茶在哪里？</span>
+<NcePair en="Yes, there is." zh="有。" />
 
-It's over there, behind the teapot.<br><span class="zh">就在那儿，茶壶后面。</span>
+<NcePair en="Where's the tea?" zh="茶在哪里？" />
 
-Can you see it?<br><span class="zh">你能看到它吗？</span>
+<NcePair en="It's over there, behind the teapot." zh="就在那儿，茶壶后面。" />
 
-I can see the teapot, but I can't see the tea.<br><span class="zh">我能看到茶壶，但看不到茶。</span>
+<NcePair en="Can you see it?" zh="你能看到它吗？" />
 
-There it is!<br><span class="zh">在那儿呢！</span>
+<NcePair en="I can see the teapot, but I can't see the tea." zh="我能看到茶壶，但看不到茶。" />
 
-It's in front of you!<br><span class="zh">它就在你面前！</span>
+<NcePair en="There it is!" zh="在那儿呢！" />
 
-Ah yes, I can see it now.<br><span class="zh">啊，对，我现在看到了。</span>
+<NcePair en="It's in front of you!" zh="它就在你面前！" />
 
-Where are the cups?<br><span class="zh">杯子在哪里？</span>
+<NcePair en="Ah yes, I can see it now." zh="啊，对，我现在看到了。" />
 
-There are some in the cupboard.<br><span class="zh">橱柜里有几个。</span>
+<NcePair en="Where are the cups?" zh="杯子在哪里？" />
 
-Can you find them?<br><span class="zh">你能找到它们吗？</span>
+<NcePair en="There are some in the cupboard." zh="橱柜里有几个。" />
 
-Yes. Here they are.<br><span class="zh">能。在这儿呢。</span>
+<NcePair en="Can you find them?" zh="你能找到它们吗？" />
 
-Hurry up, Sam!<br><span class="zh">快点，萨姆！</span>
+<NcePair en="Yes. Here they are." zh="能。在这儿呢。" />
 
-The kettle's boiling!<br><span class="zh">水壶已经烧开了！</span>
+<NcePair en="Hurry up, Sam!" zh="快点，萨姆！" />
+
+<NcePair en="The kettle's boiling!" zh="水壶已经烧开了！" />

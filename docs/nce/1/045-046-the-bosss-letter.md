@@ -2,44 +2,46 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-The boss's letter<br><span class="zh">老板的信</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="The boss's letter" zh="老板的信" />
 
-Why can't Pamela type the letter?<br><span class="zh">为什么帕梅打不了这封信呢？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Can you come here a minute please, Bob?<br><span class="zh">鲍勃，你能过来一下吗？</span>
+<NcePair en="Why can't Pamela type the letter?" zh="为什么帕梅打不了这封信呢？" />
 
-Yes, sir?<br><span class="zh">先生，有什么事吗？</span>
+<NcePair en="Can you come here a minute please, Bob?" zh="鲍勃，你能过来一下吗？" />
 
-Where's Pamela?<br><span class="zh">帕梅拉在哪里？</span>
+<NcePair en="Yes, sir?" zh="先生，有什么事吗？" />
 
-She's next door.<br><span class="zh">她在隔壁。</span>
+<NcePair en="Where's Pamela?" zh="帕梅拉在哪里？" />
 
-She's in her office, sir.<br><span class="zh">她现在在她的办公室里，先生。</span>
+<NcePair en="She's next door." zh="她在隔壁。" />
 
-Can she type this letter for me?<br><span class="zh">她能帮我打这封信吗？</span>
+<NcePair en="She's in her office, sir." zh="她现在在她的办公室里，先生。" />
 
-Ask her please.<br><span class="zh">请去问她。</span>
+<NcePair en="Can she type this letter for me?" zh="她能帮我打这封信吗？" />
 
-Yes, sir.<br><span class="zh">是的，先生。</span>
+<NcePair en="Ask her please." zh="请去问她。" />
 
-Can you type this letter for the boss please, Pamela?<br><span class="zh">帕梅拉，你能帮老板把这封信打出来吗？</span>
+<NcePair en="Yes, sir." zh="是的，先生。" />
 
-Yes, of course I can.<br><span class="zh">当然可以。</span>
+<NcePair en="Can you type this letter for the boss please, Pamela?" zh="帕梅拉，你能帮老板把这封信打出来吗？" />
 
-Here you are.<br><span class="zh">给你。</span>
+<NcePair en="Yes, of course I can." zh="当然可以。" />
 
-Thank you, Bob.<br><span class="zh">谢谢你，鲍勃。</span>
+<NcePair en="Here you are." zh="给你。" />
 
-Bob!<br><span class="zh">鲍勃！</span>
+<NcePair en="Thank you, Bob." zh="谢谢你，鲍勃。" />
 
-Yes?<br><span class="zh">怎么了？</span>
+<NcePair en="Bob!" zh="鲍勃！" />
 
-What's the matter?<br><span class="zh">怎么了？</span>
+<NcePair en="Yes?" zh="怎么了？" />
 
-I can't type this letter.<br><span class="zh">我打不了这封信。</span>
+<NcePair en="What's the matter?" zh="怎么了？" />
 
-I can't read it!<br><span class="zh">我看不懂！</span>
+<NcePair en="I can't type this letter." zh="我打不了这封信。" />
 
-The boss's handwriting is terrible!<br><span class="zh">老板的笔迹太糟糕了！</span>
+<NcePair en="I can't read it!" zh="我看不懂！" />
+
+<NcePair en="The boss's handwriting is terrible!" zh="老板的笔迹太糟糕了！" />

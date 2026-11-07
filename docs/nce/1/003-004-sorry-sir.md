@@ -2,32 +2,34 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Sorry sir.<br><span class="zh">对不起，先生。</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Sorry sir." zh="对不起，先生。" />
 
-Does the man get his umbrella back?<br><span class="zh">那个男人能拿回他的伞吗？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-My coat and my umbrella please.<br><span class="zh">请给我我的外套和雨伞。</span>
+<NcePair en="Does the man get his umbrella back?" zh="那个男人能拿回他的伞吗？" />
 
-Here is my ticket.<br><span class="zh">这是我的票。</span>
+<NcePair en="My coat and my umbrella please." zh="请给我我的外套和雨伞。" />
 
-Thank you sir.<br><span class="zh">谢谢您，先生。</span>
+<NcePair en="Here is my ticket." zh="这是我的票。" />
 
-Number five.<br><span class="zh">五号。</span>
+<NcePair en="Thank you sir." zh="谢谢您，先生。" />
 
-Here's your umbrella and your coat.<br><span class="zh">这是你的伞和外套。</span>
+<NcePair en="Number five." zh="五号。" />
 
-This is not my umbrella.<br><span class="zh">这不是我的伞。</span>
+<NcePair en="Here's your umbrella and your coat." zh="这是你的伞和外套。" />
 
-Sorry sir.<br><span class="zh">对不起，先生。</span>
+<NcePair en="This is not my umbrella." zh="这不是我的伞。" />
 
-Is this your umbrella?<br><span class="zh">这是你的伞吗？</span>
+<NcePair en="Sorry sir." zh="对不起，先生。" />
 
-No it isn't.<br><span class="zh">不，它不是。</span>
+<NcePair en="Is this your umbrella?" zh="这是你的伞吗？" />
 
-Is this it?<br><span class="zh">是这把吗？</span>
+<NcePair en="No it isn't." zh="不，它不是。" />
 
-Yes it is.<br><span class="zh">是的，这就是它。</span>
+<NcePair en="Is this it?" zh="是这把吗？" />
 
-Thank you very much.<br><span class="zh">非常感谢您。</span>
+<NcePair en="Yes it is." zh="是的，这就是它。" />
+
+<NcePair en="Thank you very much." zh="非常感谢您。" />

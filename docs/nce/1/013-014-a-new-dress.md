@@ -2,34 +2,36 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-A new dress<br><span class="zh">一条新裙子</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="A new dress" zh="一条新裙子" />
 
-What colour is Anna's hat?<br><span class="zh">安娜的帽子是什么颜色的？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-What colour's your new dress?<br><span class="zh">你的新裙子是什么颜色的？</span>
+<NcePair en="What colour is Anna's hat?" zh="安娜的帽子是什么颜色的？" />
 
-It's green.<br><span class="zh">它是绿色的。</span>
+<NcePair en="What colour's your new dress?" zh="你的新裙子是什么颜色的？" />
 
-Come upstairs and see it.<br><span class="zh">上来看看吧。</span>
+<NcePair en="It's green." zh="它是绿色的。" />
 
-Thank you.<br><span class="zh">谢谢。</span>
+<NcePair en="Come upstairs and see it." zh="上来看看吧。" />
 
-Look!<br><span class="zh">看！</span>
+<NcePair en="Thank you." zh="谢谢。" />
 
-Here it is!<br><span class="zh">给你！</span>
+<NcePair en="Look!" zh="看！" />
 
-That's a nice dress.<br><span class="zh">那条裙子真漂亮。</span>
+<NcePair en="Here it is!" zh="给你！" />
 
-It's very smart.<br><span class="zh">它很时髦。</span>
+<NcePair en="That's a nice dress." zh="那条裙子真漂亮。" />
 
-My hat's new too.<br><span class="zh">我的帽子也是新买的。</span>
+<NcePair en="It's very smart." zh="它很时髦。" />
 
-What colour is it?<br><span class="zh">它是什么颜色的？</span>
+<NcePair en="My hat's new too." zh="我的帽子也是新买的。" />
 
-It's the same colour.<br><span class="zh">颜色是一样的。</span>
+<NcePair en="What colour is it?" zh="它是什么颜色的？" />
 
-It's green  too.<br><span class="zh">也是绿色的。</span>
+<NcePair en="It's the same colour." zh="颜色是一样的。" />
 
-That is a lovely hat!<br><span class="zh">那是一顶非常漂亮的帽子！</span>
+<NcePair en="It's green  too." zh="也是绿色的。" />
+
+<NcePair en="That is a lovely hat!" zh="那是一顶非常漂亮的帽子！" />

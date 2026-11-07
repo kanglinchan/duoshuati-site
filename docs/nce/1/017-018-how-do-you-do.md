@@ -2,44 +2,46 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-How do you do?<br><span class="zh">你好！</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听录音，然后回答这个问题。</span>
+<NcePair en="How do you do?" zh="你好！" />
 
-What are Michael Baker and Jeremy Short's jobs?<br><span class="zh">迈克尔·贝克和杰里米·肖特是做什么工作的？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听录音，然后回答这个问题。" />
 
-Come and meet our employees Mr.Richards.<br><span class="zh">理查兹先生，来认识一下我们的员工吧。</span>
+<NcePair en="What are Michael Baker and Jeremy Short's jobs?" zh="迈克尔·贝克和杰里米·肖特是做什么工作的？" />
 
-Thank you Mr. Jackson.<br><span class="zh">谢谢杰克逊先生。</span>
+<NcePair en="Come and meet our employees Mr.Richards." zh="理查兹先生，来认识一下我们的员工吧。" />
 
-This is Nicola Grey<br><span class="zh">这位是尼古拉·格雷，</span>
+<NcePair en="Thank you Mr. Jackson." zh="谢谢杰克逊先生。" />
 
-and this is Claire Taylor.<br><span class="zh">这位是克莱尔·泰勒。</span>
+<NcePair en="This is Nicola Grey" zh="这位是尼古拉·格雷，" />
 
-How do you do?<br><span class="zh">你好！</span>
+<NcePair en="and this is Claire Taylor." zh="这位是克莱尔·泰勒。" />
 
-Those women are very hard-working.<br><span class="zh">那些女士工作很勤奋。</span>
+<NcePair en="How do you do?" zh="你好！" />
 
-What are their jobs?<br><span class="zh">她们是做什么工作的？</span>
+<NcePair en="Those women are very hard-working." zh="那些女士工作很勤奋。" />
 
-They're keyboard operators.<br><span class="zh">她们是键盘操作员。</span>
+<NcePair en="What are their jobs?" zh="她们是做什么工作的？" />
 
-This is Michael Baker<br><span class="zh">这位是迈克尔·贝克，</span>
+<NcePair en="They're keyboard operators." zh="她们是键盘操作员。" />
 
-and this is Jeremy Short.<br><span class="zh">这位是杰里米·肖特。</span>
+<NcePair en="This is Michael Baker" zh="这位是迈克尔·贝克，" />
 
-How do you do?<br><span class="zh">你好！</span>
+<NcePair en="and this is Jeremy Short." zh="这位是杰里米·肖特。" />
 
-They aren't very busy!<br><span class="zh">他们不怎么忙！</span>
+<NcePair en="How do you do?" zh="你好！" />
 
-What are their jobs?<br><span class="zh">他们是做什么工作的？</span>
+<NcePair en="They aren't very busy!" zh="他们不怎么忙！" />
 
-They're sales reps.<br><span class="zh">他们是销售代表。</span>
+<NcePair en="What are their jobs?" zh="他们是做什么工作的？" />
 
-They're very lazy.<br><span class="zh">他们很懒。</span>
+<NcePair en="They're sales reps." zh="他们是销售代表。" />
 
-Who is this young man?<br><span class="zh">这个年轻人是谁？</span>
+<NcePair en="They're very lazy." zh="他们很懒。" />
 
-This is Jim.<br><span class="zh">这位是吉姆。</span>
+<NcePair en="Who is this young man?" zh="这个年轻人是谁？" />
 
-He's our office assistant.<br><span class="zh">他是我们的办公室助理。</span>
+<NcePair en="This is Jim." zh="这位是吉姆。" />
+
+<NcePair en="He's our office assistant." zh="他是我们的办公室助理。" />

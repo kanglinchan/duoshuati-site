@@ -2,52 +2,54 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Tickets, please.<br><span class="zh">请给我票。</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Tickets, please." zh="请给我票。" />
 
-Why did George and Ken miss the train?<br><span class="zh">为什么乔治和肯错过了火车？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Two return tickets to London, please.<br><span class="zh">请给我两张去伦敦的往返票。</span>
+<NcePair en="Why did George and Ken miss the train?" zh="为什么乔治和肯错过了火车？" />
 
-What time will the next train leave?<br><span class="zh">下一班火车什么时候出发？</span>
+<NcePair en="Two return tickets to London, please." zh="请给我两张去伦敦的往返票。" />
 
-At nineteen minutes past eight.<br><span class="zh">八点十九分。</span>
+<NcePair en="What time will the next train leave?" zh="下一班火车什么时候出发？" />
 
-Which platform?<br><span class="zh">哪个站台？</span>
+<NcePair en="At nineteen minutes past eight." zh="八点十九分。" />
 
-Platform Two.<br><span class="zh">第二站台。</span>
+<NcePair en="Which platform?" zh="哪个站台？" />
 
-Over the bridge.<br><span class="zh">过桥。</span>
+<NcePair en="Platform Two." zh="第二站台。" />
 
-What time will the next train leave?<br><span class="zh">下一班火车什么时候出发？</span>
+<NcePair en="Over the bridge." zh="过桥。" />
 
-At eight nineteen.<br><span class="zh">八点十九分。</span>
+<NcePair en="What time will the next train leave?" zh="下一班火车什么时候出发？" />
 
-We've got plenty of time.<br><span class="zh">我们还有充足的时间。</span>
+<NcePair en="At eight nineteen." zh="八点十九分。" />
 
-It's only three minutes to eight.<br><span class="zh">现在才八点差三分。</span>
+<NcePair en="We've got plenty of time." zh="我们还有充足的时间。" />
 
-Let's go and have a drink.<br><span class="zh">我们一起去喝一杯吧。</span>
+<NcePair en="It's only three minutes to eight." zh="现在才八点差三分。" />
 
-There's a bar next door to the station.<br><span class="zh">车站旁边有一家酒吧。</span>
+<NcePair en="Let's go and have a drink." zh="我们一起去喝一杯吧。" />
 
-We had better go back to the station now, Ken.<br><span class="zh">我们最好现在就回车站去，肯。</span>
+<NcePair en="There's a bar next door to the station." zh="车站旁边有一家酒吧。" />
 
-Tickets, please.<br><span class="zh">请给我票。</span>
+<NcePair en="We had better go back to the station now, Ken." zh="我们最好现在就回车站去，肯。" />
 
-We want to catch the eight nineteen to London.<br><span class="zh">我们要赶八点十九分去伦敦的火车。</span>
+<NcePair en="Tickets, please." zh="请给我票。" />
 
-You've just missed it!<br><span class="zh">你刚刚错过了它！</span>
+<NcePair en="We want to catch the eight nineteen to London." zh="我们要赶八点十九分去伦敦的火车。" />
 
-What!<br><span class="zh">什么！</span>
+<NcePair en="You've just missed it!" zh="你刚刚错过了它！" />
 
-It's only eight fifteen.<br><span class="zh">现在才八点十五分。</span>
+<NcePair en="What!" zh="什么！" />
 
-I'm sorry, sir.<br><span class="zh">对不起，先生。</span>
+<NcePair en="It's only eight fifteen." zh="现在才八点十五分。" />
 
-That clock's ten minutes slow.<br><span class="zh">那个钟慢了十分钟。</span>
+<NcePair en="I'm sorry, sir." zh="对不起，先生。" />
 
-When's the next train?<br><span class="zh">下一班火车什么时候开？</span>
+<NcePair en="That clock's ten minutes slow." zh="那个钟慢了十分钟。" />
 
-In five hours' time!<br><span class="zh">五小时后！</span>
+<NcePair en="When's the next train?" zh="下一班火车什么时候开？" />
+
+<NcePair en="In five hours' time!" zh="五小时后！" />

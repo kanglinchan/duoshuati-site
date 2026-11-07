@@ -2,30 +2,32 @@
 
 > [新概念英语 · 第二册 实践与进步](/nce/ "返回目录")
 
-Did the young man speak English?<br><span class="zh">那个年轻人会说英语吗？</span>
+<NceTranslateBar />
 
-I had an amusing experience last year.<br><span class="zh">去年我有一段非常有趣的经历。</span>
+<NcePair en="Did the young man speak English?" zh="那个年轻人会说英语吗？" />
 
-After I had left a small village in the south of France,<br><span class="zh">我继续开车驶向下一个城镇。</span>
+<NcePair en="I had an amusing experience last year." zh="去年我有一段非常有趣的经历。" />
 
-I drove on to the next town.<br><span class="zh">我继续开车前往下一个城镇。</span>
+<NcePair en="After I had left a small village in the south of France," zh="我继续开车驶向下一个城镇。" />
 
-On the way, a young man waved to me.<br><span class="zh">路上，一个年轻人向我招手。</span>
+<NcePair en="I drove on to the next town." zh="我继续开车前往下一个城镇。" />
 
-I stopped and he asked me for a lift.<br><span class="zh">我停下车，他问我能否搭个便车。</span>
+<NcePair en="On the way, a young man waved to me." zh="路上，一个年轻人向我招手。" />
 
-As soon as he had got into the car,<br><span class="zh">他一上车，</span>
+<NcePair en="I stopped and he asked me for a lift." zh="我停下车，他问我能否搭个便车。" />
 
-I said good morning to him in French and he replied in the same language.<br><span class="zh">我用法语向他道了早安，他也用法语回应了我。</span>
+<NcePair en="As soon as he had got into the car," zh="他一上车，" />
 
-Apart from a few words,<br><span class="zh">除了几个单词之外，</span>
+<NcePair en="I said good morning to him in French and he replied in the same language." zh="我用法语向他道了早安，他也用法语回应了我。" />
 
-I do not know any French at all.<br><span class="zh">我完全不会说法语。</span>
+<NcePair en="Apart from a few words," zh="除了几个单词之外，" />
 
-Neither of us spoke during the journey.<br><span class="zh">在旅途中，我们俩都没有说话。</span>
+<NcePair en="I do not know any French at all." zh="我完全不会说法语。" />
 
-I had nearly reached the town, when the young man suddenly said, very slowly,<br><span class="zh">我快到镇上的时候，那个年轻人突然非常缓慢地说：</span>
+<NcePair en="Neither of us spoke during the journey." zh="在旅途中，我们俩都没有说话。" />
 
-'Do you speak English?'<br><span class="zh">“你会说英语吗？”</span>
+<NcePair en="I had nearly reached the town, when the young man suddenly said, very slowly," zh="我快到镇上的时候，那个年轻人突然非常缓慢地说：" />
 
-As I soon learnt, he was English himself!<br><span class="zh">很快我就发现，他本人就是英国人！</span>
+<NcePair en="'Do you speak English?'" zh="“你会说英语吗？”" />
+
+<NcePair en="As I soon learnt, he was English himself!" zh="很快我就发现，他本人就是英国人！" />

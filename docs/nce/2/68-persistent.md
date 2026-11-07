@@ -2,32 +2,34 @@
 
 > [新概念英语 · 第二册 实践与进步](/nce/ "返回目录")
 
-Why did Elizabeth tell Nigel that she was going to the dentist?<br><span class="zh">为什么伊丽莎白告诉奈杰尔她要去看牙医？</span>
+<NceTranslateBar />
 
-I crossed the street to avoid meeting him but he saw me and came running towards me.<br><span class="zh">我穿过马路想避开他，但他看见了我，就朝我跑了过来。</span>
+<NcePair en="Why did Elizabeth tell Nigel that she was going to the dentist?" zh="为什么伊丽莎白告诉奈杰尔她要去看牙医？" />
 
-It was no use pretending that I had not seen him, so I waved to him.<br><span class="zh">假装没看见他是没用的，所以我向他挥了挥手。</span>
+<NcePair en="I crossed the street to avoid meeting him but he saw me and came running towards me." zh="我穿过马路想避开他，但他看见了我，就朝我跑了过来。" />
 
-I never enjoy meeting Nigel Dykes.<br><span class="zh">我从来都不喜欢见到尼格尔·戴克斯。</span>
+<NcePair en="It was no use pretending that I had not seen him, so I waved to him." zh="假装没看见他是没用的，所以我向他挥了挥手。" />
 
-He never has anything to do.<br><span class="zh">他总是无所事事。</span>
+<NcePair en="I never enjoy meeting Nigel Dykes." zh="我从来都不喜欢见到尼格尔·戴克斯。" />
 
-No matter how busy you are, he always insists on coming with you.<br><span class="zh">无论你有多忙，他总是坚持要跟着你。</span>
+<NcePair en="He never has anything to do." zh="他总是无所事事。" />
 
-I had to think of a way of preventing him from following me around all morning.<br><span class="zh">我得想办法阻止他一整个早上都跟着我。</span>
+<NcePair en="No matter how busy you are, he always insists on coming with you." zh="无论你有多忙，他总是坚持要跟着你。" />
 
-'Hello, Nigel,' I said 'Fancy meeting you here!'<br><span class="zh">“你好，尼格尔，”我说，“真没想到在这里遇见你！”</span>
+<NcePair en="I had to think of a way of preventing him from following me around all morning." zh="我得想办法阻止他一整个早上都跟着我。" />
 
-'Hi, Elizabeth,' Nigel answered. 'I was just wondering how to spend the morning--until I saw you.<br><span class="zh">“嗨，伊丽莎白，”奈杰尔回答，“我正琢磨着怎么打发这个上午——直到看见了你。</span>
+<NcePair en="'Hello, Nigel,' I said 'Fancy meeting you here!'" zh="“你好，尼格尔，”我说，“真没想到在这里遇见你！”" />
 
-You're not busy doing anything, are you?'<br><span class="zh">“你现在不忙，对吧？”</span>
+<NcePair en="'Hi, Elizabeth,' Nigel answered. 'I was just wondering how to spend the morning--until I saw you." zh="“嗨，伊丽莎白，”奈杰尔回答，“我正琢磨着怎么打发这个上午——直到看见了你。" />
 
-'No, not at all,' I answered. 'I'm going to...'<br><span class="zh">“不忙，”我回答，“我正要去……”</span>
+<NcePair en="You're not busy doing anything, are you?'" zh="“你现在不忙，对吧？”" />
 
-'Would you mind my coming with you?' he asked, before I had finished speaking.<br><span class="zh">“你介意我陪你一起去吗？”他还没等我说完就问了。</span>
+<NcePair en="'No, not at all,' I answered. 'I'm going to...'" zh="“不忙，”我回答，“我正要去……”" />
 
-'Not at all,' I lied, 'but I'm going to the dentist.'<br><span class="zh">“当然不介意，”我撒谎说，“不过我要去看牙医。</span>
+<NcePair en="'Would you mind my coming with you?' he asked, before I had finished speaking." zh="“你介意我陪你一起去吗？”他还没等我说完就问了。" />
 
-'Then I'll come with you,' he answered.<br><span class="zh">“那我就跟你一起去，”他回答。</span>
+<NcePair en="'Not at all,' I lied, 'but I'm going to the dentist.'" zh="“当然不介意，”我撒谎说，“不过我要去看牙医。" />
 
-'There's always plenty to read in the waiting room!'<br><span class="zh">“候诊室里总有好多东西可以看！”</span>
+<NcePair en="'Then I'll come with you,' he answered." zh="“那我就跟你一起去，”他回答。" />
+
+<NcePair en="'There's always plenty to read in the waiting room!'" zh="“候诊室里总有好多东西可以看！”" />

@@ -2,38 +2,40 @@
 
 > [新概念英语 · 第二册 实践与进步](/nce/ "返回目录")
 
-Why did the writer complain to the people behind him?<br><span class="zh">为什么作者会向他身后的人抱怨呢？</span>
+<NceTranslateBar />
 
-Last week I went to the theatre.<br><span class="zh">上周我去剧院看戏。</span>
+<NcePair en="Why did the writer complain to the people behind him?" zh="为什么作者会向他身后的人抱怨呢？" />
 
-I had a very good seat.<br><span class="zh">我的座位非常好。</span>
+<NcePair en="Last week I went to the theatre." zh="上周我去剧院看戏。" />
 
-The play was very interesting.<br><span class="zh">这出戏非常有趣。</span>
+<NcePair en="I had a very good seat." zh="我的座位非常好。" />
 
-I did not enjoy it.<br><span class="zh">我并不喜欢它。</span>
+<NcePair en="The play was very interesting." zh="这出戏非常有趣。" />
 
-A young man and a young woman were sitting behind me.<br><span class="zh">一个年轻男子和一个年轻女子坐在我后面。</span>
+<NcePair en="I did not enjoy it." zh="我并不喜欢它。" />
 
-They were talking loudly.<br><span class="zh">他们说话的声音很大。</span>
+<NcePair en="A young man and a young woman were sitting behind me." zh="一个年轻男子和一个年轻女子坐在我后面。" />
 
-I got very angry.<br><span class="zh">我非常生气。</span>
+<NcePair en="They were talking loudly." zh="他们说话的声音很大。" />
 
-I could not hear the actors.<br><span class="zh">我听不到演员们的声音。</span>
+<NcePair en="I got very angry." zh="我非常生气。" />
 
-I turned round.<br><span class="zh">我转过身来。</span>
+<NcePair en="I could not hear the actors." zh="我听不到演员们的声音。" />
 
-I looked at the man and the woman angrily.<br><span class="zh">我愤怒地看着那个男人和那个女人。</span>
+<NcePair en="I turned round." zh="我转过身来。" />
 
-They did not pay any attention.<br><span class="zh">他们根本没有理会。</span>
+<NcePair en="I looked at the man and the woman angrily." zh="我愤怒地看着那个男人和那个女人。" />
 
-In the end, I could not bear it.<br><span class="zh">最后，我实在无法忍受下去了。</span>
+<NcePair en="They did not pay any attention." zh="他们根本没有理会。" />
 
-I turned round again.<br><span class="zh">我又转过身来。</span>
+<NcePair en="In the end, I could not bear it." zh="最后，我实在无法忍受下去了。" />
 
-'I can't hear a word!' I said angrily.<br><span class="zh">“我一个字都听不见！”我愤怒地说道。</span>
+<NcePair en="I turned round again." zh="我又转过身来。" />
 
-'It's none of your business,'<br><span class="zh">“这不关你的事。”</span>
+<NcePair en="'I can't hear a word!' I said angrily." zh="“我一个字都听不见！”我愤怒地说道。" />
 
-the young man said rudely.<br><span class="zh">那个年轻人粗鲁地说道。</span>
+<NcePair en="'It's none of your business,'" zh="“这不关你的事。”" />
 
-'This is a private conversation!'<br><span class="zh">“这可是私人谈话！”</span>
+<NcePair en="the young man said rudely." zh="那个年轻人粗鲁地说道。" />
+
+<NcePair en="'This is a private conversation!'" zh="“这可是私人谈话！”" />

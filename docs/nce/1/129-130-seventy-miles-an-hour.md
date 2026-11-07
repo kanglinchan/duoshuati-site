@@ -2,52 +2,54 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Seventy miles an hour<br><span class="zh">每小时七十英里</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Seventy miles an hour" zh="每小时七十英里" />
 
-What does Ann advise her husband to do next time?<br><span class="zh">安建议她丈夫下次该怎么做？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Look, Gary!<br><span class="zh">看，加里！</span>
+<NcePair en="What does Ann advise her husband to do next time?" zh="安建议她丈夫下次该怎么做？" />
 
-That policeman's waving to you.<br><span class="zh">那个警察正在向你挥手。</span>
+<NcePair en="Look, Gary!" zh="看，加里！" />
 
-He wants you to stop.<br><span class="zh">他希望你停下来。</span>
+<NcePair en="That policeman's waving to you." zh="那个警察正在向你挥手。" />
 
-Where do you think you are?<br><span class="zh">你以为自己在哪里啊？</span>
+<NcePair en="He wants you to stop." zh="他希望你停下来。" />
 
-On a race track?<br><span class="zh">在赛道上？</span>
+<NcePair en="Where do you think you are?" zh="你以为自己在哪里啊？" />
 
-You must have been driving at seventy miles an hour.<br><span class="zh">你当时肯定是以每小时70英里的速度在开车。</span>
+<NcePair en="On a race track?" zh="在赛道上？" />
 
-I can't have been.<br><span class="zh">我不可能开那么快。</span>
+<NcePair en="You must have been driving at seventy miles an hour." zh="你当时肯定是以每小时70英里的速度在开车。" />
 
-I was doing eighty when I overtook you.<br><span class="zh">我超过你的时候，时速是八十英里。</span>
+<NcePair en="I can't have been." zh="我不可能开那么快。" />
 
-Didn't you see the speed limit?<br><span class="zh">你没看到限速标志吗？</span>
+<NcePair en="I was doing eighty when I overtook you." zh="我超过你的时候，时速是八十英里。" />
 
-I'm afraid I didn't, officer.<br><span class="zh">恐怕我没有，警官。</span>
+<NcePair en="Didn't you see the speed limit?" zh="你没看到限速标志吗？" />
 
-I must have been dreaming.<br><span class="zh">我肯定是在做梦。</span>
+<NcePair en="I'm afraid I didn't, officer." zh="恐怕我没有，警官。" />
 
-He wasn't dreaming, officer.<br><span class="zh">他并没有在做梦，警官。</span>
+<NcePair en="I must have been dreaming." zh="我肯定是在做梦。" />
 
-I was telling him to drive slowly.<br><span class="zh">我当时在告诉他要开慢一点。</span>
+<NcePair en="He wasn't dreaming, officer." zh="他并没有在做梦，警官。" />
 
-That's why I didn't see the sign.<br><span class="zh">这就是为什么我没有看到那个标志的原因。</span>
+<NcePair en="I was telling him to drive slowly." zh="我当时在告诉他要开慢一点。" />
 
-Let me see your driving licence.<br><span class="zh">请让我看一下你的驾驶执照。</span>
+<NcePair en="That's why I didn't see the sign." zh="这就是为什么我没有看到那个标志的原因。" />
 
-I won't charge you this time.<br><span class="zh">这次我就不罚你了。</span>
+<NcePair en="Let me see your driving licence." zh="请让我看一下你的驾驶执照。" />
 
-But you'd better not do it again!<br><span class="zh">但你最好别再这么做了！</span>
+<NcePair en="I won't charge you this time." zh="这次我就不罚你了。" />
 
-Thank you.<br><span class="zh">谢谢。</span>
+<NcePair en="But you'd better not do it again!" zh="但你最好别再这么做了！" />
 
-I'll certainly be more careful.<br><span class="zh">我一定会更加小心的。</span>
+<NcePair en="Thank you." zh="谢谢。" />
 
-I told you to drive slowly, Gary.<br><span class="zh">我早就告诉过你要开慢一点，加里。</span>
+<NcePair en="I'll certainly be more careful." zh="我一定会更加小心的。" />
 
-You always tell me to drive slowly, darling.<br><span class="zh">你总是让我开慢车，亲爱的。</span>
+<NcePair en="I told you to drive slowly, Gary." zh="我早就告诉过你要开慢一点，加里。" />
 
-Well, next time you'd better take my advice!<br><span class="zh">嗯，下次你最好还是听我的建议吧！</span>
+<NcePair en="You always tell me to drive slowly, darling." zh="你总是让我开慢车，亲爱的。" />
+
+<NcePair en="Well, next time you'd better take my advice!" zh="嗯，下次你最好还是听我的建议吧！" />

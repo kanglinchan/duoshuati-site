@@ -2,52 +2,54 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Not a baby<br><span class="zh">我可不是小孩子了。</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Not a baby" zh="我可不是小孩子了。" />
 
-Does Jill take the key to the front door?<br><span class="zh">吉尔会拿前门的钥匙吗？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-What are you going to do this evening, Jill?<br><span class="zh">今晚你打算做什么，吉尔？</span>
+<NcePair en="Does Jill take the key to the front door?" zh="吉尔会拿前门的钥匙吗？" />
 
-I'm going to meet some friends, Dad.<br><span class="zh">爸爸，我要去见一些朋友。</span>
+<NcePair en="What are you going to do this evening, Jill?" zh="今晚你打算做什么，吉尔？" />
 
-You mustn't come home late.<br><span class="zh">你千万不要回家太晚。</span>
+<NcePair en="I'm going to meet some friends, Dad." zh="爸爸，我要去见一些朋友。" />
 
-You must be home at half past ten.<br><span class="zh">你必须在十点半到家。</span>
+<NcePair en="You mustn't come home late." zh="你千万不要回家太晚。" />
 
-I can't get home so early, Dad!<br><span class="zh">爸爸，我没办法这么早就回家啊！</span>
+<NcePair en="You must be home at half past ten." zh="你必须在十点半到家。" />
 
-Can I have the key to the front door, please?<br><span class="zh">请问，能给我前门的钥匙吗？</span>
+<NcePair en="I can't get home so early, Dad!" zh="爸爸，我没办法这么早就回家啊！" />
 
-No, you can't.<br><span class="zh">不，你不能。</span>
+<NcePair en="Can I have the key to the front door, please?" zh="请问，能给我前门的钥匙吗？" />
 
-Jill's eighteen years old, Tom.<br><span class="zh">吉尔已经十八岁了，汤姆。</span>
+<NcePair en="No, you can't." zh="不，你不能。" />
 
-She's not a baby.<br><span class="zh">她已经不是小孩子了。</span>
+<NcePair en="Jill's eighteen years old, Tom." zh="吉尔已经十八岁了，汤姆。" />
 
-Give her the key.<br><span class="zh">把钥匙给她。</span>
+<NcePair en="She's not a baby." zh="她已经不是小孩子了。" />
 
-She always comes home early.<br><span class="zh">她总是很早就回家。</span>
+<NcePair en="Give her the key." zh="把钥匙给她。" />
 
-Oh, all right!<br><span class="zh">哦，好吧！</span>
+<NcePair en="She always comes home early." zh="她总是很早就回家。" />
 
-Here you are.<br><span class="zh">给你。</span>
+<NcePair en="Oh, all right!" zh="哦，好吧！" />
 
-But you mustn't come home after a quarter past eleven.<br><span class="zh">但是你绝对不能在十一点一刻之后才回家。</span>
+<NcePair en="Here you are." zh="给你。" />
 
-Do you hear?<br><span class="zh">你听到了吗？</span>
+<NcePair en="But you mustn't come home after a quarter past eleven." zh="但是你绝对不能在十一点一刻之后才回家。" />
 
-Yes, Dad.<br><span class="zh">是的，爸爸。</span>
+<NcePair en="Do you hear?" zh="你听到了吗？" />
 
-Thanks, Mum.<br><span class="zh">谢谢，妈妈。</span>
+<NcePair en="Yes, Dad." zh="是的，爸爸。" />
 
-That's all right.<br><span class="zh">不客气。</span>
+<NcePair en="Thanks, Mum." zh="谢谢，妈妈。" />
 
-Goodbye.<br><span class="zh">再见。</span>
+<NcePair en="That's all right." zh="不客气。" />
 
-Enjoy yourself!<br><span class="zh">玩得开心！</span>
+<NcePair en="Goodbye." zh="再见。" />
 
-We always enjoy ourselves, Mum.<br><span class="zh">我们总是玩得很开心，妈妈。</span>
+<NcePair en="Enjoy yourself!" zh="玩得开心！" />
 
-Bye-bye.<br><span class="zh">再见。</span>
+<NcePair en="We always enjoy ourselves, Mum." zh="我们总是玩得很开心，妈妈。" />
+
+<NcePair en="Bye-bye." zh="再见。" />

@@ -2,46 +2,48 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Terrible toothache<br><span class="zh">牙痛太厉害了！</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Terrible toothache" zh="牙痛太厉害了！" />
 
-What time of day is it, do you think? How do you know?<br><span class="zh">你觉得现在是什么时间？你是怎么知道的？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Good morning, Mr. Croft.<br><span class="zh">早上好，克罗夫特先生。</span>
+<NcePair en="What time of day is it, do you think? How do you know?" zh="你觉得现在是什么时间？你是怎么知道的？" />
 
-Good morning, nurse.<br><span class="zh">早上好，护士。</span>
+<NcePair en="Good morning, Mr. Croft." zh="早上好，克罗夫特先生。" />
 
-I want to see the dentist, please.<br><span class="zh">我想去看牙医，请。</span>
+<NcePair en="Good morning, nurse." zh="早上好，护士。" />
 
-Do you have an appointment?<br><span class="zh">您有预约吗？</span>
+<NcePair en="I want to see the dentist, please." zh="我想去看牙医，请。" />
 
-No, I don't.<br><span class="zh">不，我没有。</span>
+<NcePair en="Do you have an appointment?" zh="您有预约吗？" />
 
-Is it urgent?<br><span class="zh">这很紧急吗？</span>
+<NcePair en="No, I don't." zh="不，我没有。" />
 
-Yes, it is.<br><span class="zh">是的，很紧急。</span>
+<NcePair en="Is it urgent?" zh="这很紧急吗？" />
 
-It's very urgent.<br><span class="zh">这件事非常紧急。</span>
+<NcePair en="Yes, it is." zh="是的，很紧急。" />
 
-I feel awful.<br><span class="zh">我感觉糟透了。</span>
+<NcePair en="It's very urgent." zh="这件事非常紧急。" />
 
-I have a terrible toothache.<br><span class="zh">我牙疼得非常厉害。</span>
+<NcePair en="I feel awful." zh="我感觉糟透了。" />
 
-Can you come at 10 a.m. on Monday, April 24th?<br><span class="zh">你能于4月24日星期一上午10点来吗？</span>
+<NcePair en="I have a terrible toothache." zh="我牙疼得非常厉害。" />
 
-I must see the dentist now, nurse.<br><span class="zh">我现在必须去看牙医了，护士。</span>
+<NcePair en="Can you come at 10 a.m. on Monday, April 24th?" zh="你能于4月24日星期一上午10点来吗？" />
 
-The dentist is very busy at the moment.<br><span class="zh">牙医现在非常忙。</span>
+<NcePair en="I must see the dentist now, nurse." zh="我现在必须去看牙医了，护士。" />
 
-Can you come at 2 p.m. ?<br><span class="zh">你能下午2点来吗？</span>
+<NcePair en="The dentist is very busy at the moment." zh="牙医现在非常忙。" />
 
-That's very late.<br><span class="zh">那已经太晚了。</span>
+<NcePair en="Can you come at 2 p.m. ?" zh="你能下午2点来吗？" />
 
-Can the dentist see me now?<br><span class="zh">牙医现在可以见我了吗？</span>
+<NcePair en="That's very late." zh="那已经太晚了。" />
 
-I'm afraid that he can't, Mr. Croft.<br><span class="zh">恐怕他不行，克罗夫特先生。</span>
+<NcePair en="Can the dentist see me now?" zh="牙医现在可以见我了吗？" />
 
-Can't you wait till this afternoon?<br><span class="zh">你就不能等到今天下午吗？</span>
+<NcePair en="I'm afraid that he can't, Mr. Croft." zh="恐怕他不行，克罗夫特先生。" />
 
-I can wait, but my toothache can't!<br><span class="zh">我可以等待，但我的牙痛却无法忍受！</span>
+<NcePair en="Can't you wait till this afternoon?" zh="你就不能等到今天下午吗？" />
+
+<NcePair en="I can wait, but my toothache can't!" zh="我可以等待，但我的牙痛却无法忍受！" />

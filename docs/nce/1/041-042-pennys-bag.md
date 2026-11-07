@@ -2,40 +2,42 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Penny's bag<br><span class="zh">佩妮的包</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Penny's bag" zh="佩妮的包" />
 
-Who is the tin of tobacco for?<br><span class="zh">这罐烟草是给谁用的呢？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Is that bag heavy, Penny?<br><span class="zh">那个包很重吗，Penny？</span>
+<NcePair en="Who is the tin of tobacco for?" zh="这罐烟草是给谁用的呢？" />
 
-Not very.<br><span class="zh">不太重。</span>
+<NcePair en="Is that bag heavy, Penny?" zh="那个包很重吗，Penny？" />
 
-Here!<br><span class="zh">给你！</span>
+<NcePair en="Not very." zh="不太重。" />
 
-Put it on this chair.<br><span class="zh">把它放在这把椅子上。</span>
+<NcePair en="Here!" zh="给你！" />
 
-What's in it?<br><span class="zh">里面有什么？</span>
+<NcePair en="Put it on this chair." zh="把它放在这把椅子上。" />
 
-A piece of cheese.<br><span class="zh">一块奶酪。</span>
+<NcePair en="What's in it?" zh="里面有什么？" />
 
-A loaf of bread.<br><span class="zh">一条面包。</span>
+<NcePair en="A piece of cheese." zh="一块奶酪。" />
 
-A bar of soap.<br><span class="zh">一块肥皂。</span>
+<NcePair en="A loaf of bread." zh="一条面包。" />
 
-A bar of chocolate.<br><span class="zh">一块巧克力。</span>
+<NcePair en="A bar of soap." zh="一块肥皂。" />
 
-A bottle of milk.<br><span class="zh">一瓶牛奶。</span>
+<NcePair en="A bar of chocolate." zh="一块巧克力。" />
 
-A pound of sugar.<br><span class="zh">一磅糖。</span>
+<NcePair en="A bottle of milk." zh="一瓶牛奶。" />
 
-Half a pound of coffee.<br><span class="zh">半磅咖啡。</span>
+<NcePair en="A pound of sugar." zh="一磅糖。" />
 
-A quarter of a pound of tea.<br><span class="zh">四分之一磅茶叶。</span>
+<NcePair en="Half a pound of coffee." zh="半磅咖啡。" />
 
-And a tin of tobacco.<br><span class="zh">还有一罐烟草。</span>
+<NcePair en="A quarter of a pound of tea." zh="四分之一磅茶叶。" />
 
-Is that tin of tobacco for me?<br><span class="zh">那罐烟草是给我的吗？</span>
+<NcePair en="And a tin of tobacco." zh="还有一罐烟草。" />
 
-Well, it's certainly not for me!<br><span class="zh">嗯，那肯定不是给我的！</span>
+<NcePair en="Is that tin of tobacco for me?" zh="那罐烟草是给我的吗？" />
+
+<NcePair en="Well, it's certainly not for me!" zh="嗯，那肯定不是给我的！" />

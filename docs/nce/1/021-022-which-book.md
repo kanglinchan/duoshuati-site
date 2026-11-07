@@ -2,24 +2,26 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Which book?<br><span class="zh">哪本书？</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听录音，然后回答这个问题。</span>
+<NcePair en="Which book?" zh="哪本书？" />
 
-Which book does the man want?<br><span class="zh">那个男人想要哪本书？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听录音，然后回答这个问题。" />
 
-Give me a book please, Jane.<br><span class="zh">请给我一本书，简。</span>
+<NcePair en="Which book does the man want?" zh="那个男人想要哪本书？" />
 
-Which book?<br><span class="zh">“哪本书？”</span>
+<NcePair en="Give me a book please, Jane." zh="请给我一本书，简。" />
 
-This one?<br><span class="zh">“这一本吗？”</span>
+<NcePair en="Which book?" zh="“哪本书？”" />
 
-No, not that one. The red one.<br><span class="zh">“不，不是那一本。是红色的那本。”</span>
+<NcePair en="This one?" zh="“这一本吗？”" />
 
-This one?<br><span class="zh">“这一本吗？”</span>
+<NcePair en="No, not that one. The red one." zh="“不，不是那一本。是红色的那本。”" />
 
-Yes, please.<br><span class="zh">是的，请给我。</span>
+<NcePair en="This one?" zh="“这一本吗？”" />
 
-Here you are.<br><span class="zh">“给你。”</span>
+<NcePair en="Yes, please." zh="是的，请给我。" />
 
-Thank you.<br><span class="zh">“谢谢。”</span>
+<NcePair en="Here you are." zh="“给你。”" />
+
+<NcePair en="Thank you." zh="“谢谢。”" />

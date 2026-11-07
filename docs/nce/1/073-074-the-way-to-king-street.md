@@ -2,38 +2,40 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-The way to King Street<br><span class="zh">通往国王街的路</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="The way to King Street" zh="通往国王街的路" />
 
-Why did the man need a phrasebook?<br><span class="zh">为什么那个人需要一本短语手册呢？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Last week Mrs. Mills went to London.<br><span class="zh">上周，米尔斯夫人去了伦敦。</span>
+<NcePair en="Why did the man need a phrasebook?" zh="为什么那个人需要一本短语手册呢？" />
 
-She does not know London very well, and she lost her way.<br><span class="zh">她对伦敦不太熟悉，结果迷路了。</span>
+<NcePair en="Last week Mrs. Mills went to London." zh="上周，米尔斯夫人去了伦敦。" />
 
-Suddenly, she saw a man near a bus stop.<br><span class="zh">突然，她在公交车站附近看到一个男人。</span>
+<NcePair en="She does not know London very well, and she lost her way." zh="她对伦敦不太熟悉，结果迷路了。" />
 
-'I can ask him the way,' she said to herself.<br><span class="zh">“我可以问他路该怎么走，”她自言自语道。</span>
+<NcePair en="Suddenly, she saw a man near a bus stop." zh="突然，她在公交车站附近看到一个男人。" />
 
-'Excuse me,' she said.<br><span class="zh">“对不起，”她说。</span>
+<NcePair en="'I can ask him the way,' she said to herself." zh="“我可以问他路该怎么走，”她自言自语道。" />
 
-'Can you tell me the way to King Street, please?'<br><span class="zh">“请问您能告诉我去King Street的路吗？”</span>
+<NcePair en="'Excuse me,' she said." zh="“对不起，”她说。" />
 
-The man smiled pleasantly.<br><span class="zh">那个男人愉快地笑了。</span>
+<NcePair en="'Can you tell me the way to King Street, please?'" zh="“请问您能告诉我去King Street的路吗？”" />
 
-He did not understand English!<br><span class="zh">他不懂英语！</span>
+<NcePair en="The man smiled pleasantly." zh="那个男人愉快地笑了。" />
 
-He spoke German.<br><span class="zh">他会说德语。</span>
+<NcePair en="He did not understand English!" zh="他不懂英语！" />
 
-He was a tourist.<br><span class="zh">他是一名游客。</span>
+<NcePair en="He spoke German." zh="他会说德语。" />
 
-Then he put his hand into his pocket, and took out a phrasebook.<br><span class="zh">然后他把手伸进口袋，拿出一本短语手册。</span>
+<NcePair en="He was a tourist." zh="他是一名游客。" />
 
-He opened the book and found a phrase.<br><span class="zh">他打开书，找到了一句话。</span>
+<NcePair en="Then he put his hand into his pocket, and took out a phrasebook." zh="然后他把手伸进口袋，拿出一本短语手册。" />
 
-He read the phrase slowly.<br><span class="zh">他慢慢地读了这个短语。</span>
+<NcePair en="He opened the book and found a phrase." zh="他打开书，找到了一句话。" />
 
-'I am sorry,' he said.<br><span class="zh">“我很抱歉，”他说。</span>
+<NcePair en="He read the phrase slowly." zh="他慢慢地读了这个短语。" />
 
-'I do not speak English.'<br><span class="zh">“我不会说英语。”</span>
+<NcePair en="'I am sorry,' he said." zh="“我很抱歉，”他说。" />
+
+<NcePair en="'I do not speak English.'" zh="“我不会说英语。”" />

@@ -2,50 +2,52 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-The latest report<br><span class="zh">最新报告</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">请先听录音，然后回答这个问题：</span>
+<NcePair en="The latest report" zh="最新报告" />
 
-Is Karen Marsh going to retire, do you think?<br><span class="zh">你觉得凯伦·马什会退休吗？</span>
+<NcePair en="Listen to the tape then answer this question." zh="请先听录音，然后回答这个问题：" />
 
-Are you really going to retire, Miss Marsh?<br><span class="zh">马什小姐，你真的打算退休吗？</span>
+<NcePair en="Is Karen Marsh going to retire, do you think?" zh="你觉得凯伦·马什会退休吗？" />
 
-I may.<br><span class="zh">我可能会吧……</span>
+<NcePair en="Are you really going to retire, Miss Marsh?" zh="马什小姐，你真的打算退休吗？" />
 
-I can't make up my mind.<br><span class="zh">我还没拿定主意。</span>
+<NcePair en="I may." zh="我可能会吧……" />
 
-I will have to ask my future husband.<br><span class="zh">我得问问我的未婚夫。</span>
+<NcePair en="I can't make up my mind." zh="我还没拿定主意。" />
 
-He won't let me make another film.<br><span class="zh">他不会允许我再拍电影了。</span>
+<NcePair en="I will have to ask my future husband." zh="我得问问我的未婚夫。" />
 
-Your future husband, Miss Marsh?<br><span class="zh">你的未婚夫吗，马什小姐？</span>
+<NcePair en="He won't let me make another film." zh="他不会允许我再拍电影了。" />
 
-Yes.<br><span class="zh">是的。</span>
+<NcePair en="Your future husband, Miss Marsh?" zh="你的未婚夫吗，马什小姐？" />
 
-Let me introduce him to you.<br><span class="zh">让我把他介绍给你。</span>
+<NcePair en="Yes." zh="是的。" />
 
-His name is Carlos.<br><span class="zh">他的名字叫卡洛斯。</span>
+<NcePair en="Let me introduce him to you." zh="让我把他介绍给你。" />
 
-We're going to get married next week.<br><span class="zh">我们下周就要结婚了。</span>
+<NcePair en="His name is Carlos." zh="他的名字叫卡洛斯。" />
 
-Look, Liz!<br><span class="zh">看，莉兹！</span>
+<NcePair en="We're going to get married next week." zh="我们下周就要结婚了。" />
 
-Here's another report about Karen Marsh.<br><span class="zh">这是另一份关于凯伦·马什的报告。</span>
+<NcePair en="Look, Liz!" zh="看，莉兹！" />
 
-Listen: 'Karen Marsh: The latest.<br><span class="zh">听着：“凯伦·马什：最新消息。”</span>
+<NcePair en="Here's another report about Karen Marsh." zh="这是另一份关于凯伦·马什的报告。" />
 
-At her London Hotel today Miss Marsh told reporters she might retire.<br><span class="zh">今天在伦敦的酒店里，马什小姐对记者们表示她可能会退休。</span>
+<NcePair en="Listen: 'Karen Marsh: The latest." zh="听着：“凯伦·马什：最新消息。”" />
 
-She said she couldn't make up her mind.<br><span class="zh">她说她拿不定主意。</span>
+<NcePair en="At her London Hotel today Miss Marsh told reporters she might retire." zh="今天在伦敦的酒店里，马什小姐对记者们表示她可能会退休。" />
 
-She said she would have to ask her future husband.<br><span class="zh">她说她必须先征求她未来丈夫的意见。</span>
+<NcePair en="She said she couldn't make up her mind." zh="她说她拿不定主意。" />
 
-She said her future husband would not let her make another film.<br><span class="zh">她说她的未来丈夫不会允许她再拍电影了。</span>
+<NcePair en="She said she would have to ask her future husband." zh="她说她必须先征求她未来丈夫的意见。" />
 
-Then she introduced us to Carlos and told us they would get married next week.'<br><span class="zh">然后她把我们介绍给了卡洛斯，并告诉我们他们下周就要结婚了。</span>
+<NcePair en="She said her future husband would not let her make another film." zh="她说她的未来丈夫不会允许她再拍电影了。" />
 
-That's sensational news, isn't it, Kate?<br><span class="zh">这真是个惊人的消息，对吧，凯特？</span>
+<NcePair en="Then she introduced us to Carlos and told us they would get married next week.'" zh="然后她把我们介绍给了卡洛斯，并告诉我们他们下周就要结婚了。" />
 
-It certainly is.<br><span class="zh">确实如此。</span>
+<NcePair en="That's sensational news, isn't it, Kate?" zh="这真是个惊人的消息，对吧，凯特？" />
 
-He'll be her sixth husband!<br><span class="zh">他将成为她的第六任丈夫！</span>
+<NcePair en="It certainly is." zh="确实如此。" />
+
+<NcePair en="He'll be her sixth husband!" zh="他将成为她的第六任丈夫！" />

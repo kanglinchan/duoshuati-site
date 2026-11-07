@@ -2,30 +2,32 @@
 
 > [新概念英语 · 第二册 实践与进步](/nce/ "返回目录")
 
-Who is Percy Buttons?<br><span class="zh">珀西·巴顿斯（Percy Buttons）是谁？</span>
+<NceTranslateBar />
 
-I have just moved to a house in Bridge Street.<br><span class="zh">我刚刚搬到了 Bridge Street 上的一栋房子里。</span>
+<NcePair en="Who is Percy Buttons?" zh="珀西·巴顿斯（Percy Buttons）是谁？" />
 
-Yesterday a beggar knocked at my door.<br><span class="zh">昨天，一个乞丐敲了我的门。</span>
+<NcePair en="I have just moved to a house in Bridge Street." zh="我刚刚搬到了 Bridge Street 上的一栋房子里。" />
 
-He asked me for a meal and a glass of beer.<br><span class="zh">他向我要了一顿饭和一杯啤酒。</span>
+<NcePair en="Yesterday a beggar knocked at my door." zh="昨天，一个乞丐敲了我的门。" />
 
-In return for this,<br><span class="zh">作为对此的回报，</span>
+<NcePair en="He asked me for a meal and a glass of beer." zh="他向我要了一顿饭和一杯啤酒。" />
 
-the beggar stood on his head and sang songs.<br><span class="zh">那个乞丐倒立着，同时还在唱歌。</span>
+<NcePair en="In return for this," zh="作为对此的回报，" />
 
-I gave him a meal.<br><span class="zh">我给他准备了一顿饭。</span>
+<NcePair en="the beggar stood on his head and sang songs." zh="那个乞丐倒立着，同时还在唱歌。" />
 
-He ate the food and drank the beer.<br><span class="zh">他吃了食物，喝了啤酒。</span>
+<NcePair en="I gave him a meal." zh="我给他准备了一顿饭。" />
 
-Then he put a piece of cheese in his pocket and went away.<br><span class="zh">然后他把一块奶酪放进口袋里，就离开了。</span>
+<NcePair en="He ate the food and drank the beer." zh="他吃了食物，喝了啤酒。" />
 
-Later a neighbour told me about him.<br><span class="zh">后来，一位邻居跟我讲起了他的情况。</span>
+<NcePair en="Then he put a piece of cheese in his pocket and went away." zh="然后他把一块奶酪放进口袋里，就离开了。" />
 
-Everybody knows him.<br><span class="zh">每个人都知道他。</span>
+<NcePair en="Later a neighbour told me about him." zh="后来，一位邻居跟我讲起了他的情况。" />
 
-His name is Percy Buttons.<br><span class="zh">他的名字叫珀西·巴顿斯（Percy Buttons）。</span>
+<NcePair en="Everybody knows him." zh="每个人都知道他。" />
 
-He calls at every house in the street once a month<br><span class="zh">他每个月都会挨家挨户地拜访这条街上的每一户人家。</span>
+<NcePair en="His name is Percy Buttons." zh="他的名字叫珀西·巴顿斯（Percy Buttons）。" />
 
-and always asks for a meal and a glass of beer.<br><span class="zh">并且总是要求吃一顿饭和喝一杯啤酒。</span>
+<NcePair en="He calls at every house in the street once a month" zh="他每个月都会挨家挨户地拜访这条街上的每一户人家。" />
+
+<NcePair en="and always asks for a meal and a glass of beer." zh="并且总是要求吃一顿饭和喝一杯啤酒。" />

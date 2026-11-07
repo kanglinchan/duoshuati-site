@@ -2,54 +2,56 @@
 
 > [新概念英语 · 第三册 培养技能](/nce/ "返回目录")
 
-A famous monastery<br><span class="zh">一座著名的修道院</span>
+<NceTranslateBar />
 
-What are the St.Bernard dogs used for?<br><span class="zh">圣伯纳德犬是用来做什么的？</span>
+<NcePair en="A famous monastery" zh="一座著名的修道院" />
 
-The Great St.Bernard Pass connects Switzerland to Italy.<br><span class="zh">大圣伯纳德山口（Great St. Bernard Pass）将瑞士与意大利连接起来。</span>
+<NcePair en="What are the St.Bernard dogs used for?" zh="圣伯纳德犬是用来做什么的？" />
 
-At 2,473 metres, it is the highest mountain pass in Europe.<br><span class="zh">海拔2,473米，它是欧洲最高的山口。</span>
+<NcePair en="The Great St.Bernard Pass connects Switzerland to Italy." zh="大圣伯纳德山口（Great St. Bernard Pass）将瑞士与意大利连接起来。" />
 
-The famous monastery of St.Bernard,<br><span class="zh">著名的圣伯纳德修道院</span>
+<NcePair en="At 2,473 metres, it is the highest mountain pass in Europe." zh="海拔2,473米，它是欧洲最高的山口。" />
 
-which was founded in the eleventh century, lies about a mile away.<br><span class="zh">这座修道院建于十一世纪，坐落在约一英里外。</span>
+<NcePair en="The famous monastery of St.Bernard," zh="著名的圣伯纳德修道院" />
 
-For hundreds of years, St.Bernard dogs have saved the lives of travellers crossing the dangerous Pass.<br><span class="zh">几个世纪以来，圣伯纳德犬一直拯救着那些穿越危险山口的旅行者的生命。</span>
+<NcePair en="which was founded in the eleventh century, lies about a mile away." zh="这座修道院建于十一世纪，坐落在约一英里外。" />
 
-These friendly dogs, which were first brought from Asia,<br><span class="zh">这些友好的狗狗最初是从亚洲引进的。</span>
+<NcePair en="For hundreds of years, St.Bernard dogs have saved the lives of travellers crossing the dangerous Pass." zh="几个世纪以来，圣伯纳德犬一直拯救着那些穿越危险山口的旅行者的生命。" />
 
-were used as watchdogs even in Roman times.<br><span class="zh">甚至在罗马时代，它们就被用作看门狗。</span>
+<NcePair en="These friendly dogs, which were first brought from Asia," zh="这些友好的狗狗最初是从亚洲引进的。" />
 
-Now that a tunnel has been built through the mountains, the Pass is less dangerous,<br><span class="zh">既然已经修建了一条穿山隧道，山口的危险性就降低了，</span>
+<NcePair en="were used as watchdogs even in Roman times." zh="甚至在罗马时代，它们就被用作看门狗。" />
 
-but each year, the dogs are still sent out into the snow whenever a traveller is in difficulty.<br><span class="zh">但每当有旅行者遇到困难时，这些狗仍会被派往雪地救援。</span>
+<NcePair en="Now that a tunnel has been built through the mountains, the Pass is less dangerous," zh="既然已经修建了一条穿山隧道，山口的危险性就降低了，" />
 
-Despite the new tunnel,<br><span class="zh">尽管有了这条新隧道，</span>
+<NcePair en="but each year, the dogs are still sent out into the snow whenever a traveller is in difficulty." zh="但每当有旅行者遇到困难时，这些狗仍会被派往雪地救援。" />
 
-there are still a few people who rashly attempt to cross the Pass on foot.<br><span class="zh">仍然有一些人贸然尝试徒步穿越这个山口。</span>
+<NcePair en="Despite the new tunnel," zh="尽管有了这条新隧道，" />
 
-During the summer months, the monastery is very busy,<br><span class="zh">在夏季，这座修道院非常繁忙。</span>
+<NcePair en="there are still a few people who rashly attempt to cross the Pass on foot." zh="仍然有一些人贸然尝试徒步穿越这个山口。" />
 
-for it is visited by thousands of people who cross the Pass in cars.<br><span class="zh">因为这里有成千上万的人开车穿过山口前来参观。</span>
+<NcePair en="During the summer months, the monastery is very busy," zh="在夏季，这座修道院非常繁忙。" />
 
-As there are so many people about, the dogs have to be kept in a special enclosure.<br><span class="zh">由于周围人太多，这些狗必须被关在专门的围栏里。</span>
+<NcePair en="for it is visited by thousands of people who cross the Pass in cars." zh="因为这里有成千上万的人开车穿过山口前来参观。" />
 
-In winter, however, life at the monastery is quite different.<br><span class="zh">然而，在冬天，修道院的生活却大不相同了。</span>
+<NcePair en="As there are so many people about, the dogs have to be kept in a special enclosure." zh="由于周围人太多，这些狗必须被关在专门的围栏里。" />
 
-The temperature drops to -30 degrees,<br><span class="zh">气温降到了零下30度。</span>
+<NcePair en="In winter, however, life at the monastery is quite different." zh="然而，在冬天，修道院的生活却大不相同了。" />
 
-and very few people attempt to cross the Pass.<br><span class="zh">而且，很少有人试图穿越这个山口。</span>
+<NcePair en="The temperature drops to -30 degrees," zh="气温降到了零下30度。" />
 
-The monks prefer winter to summer for they have more privacy.<br><span class="zh">僧侣们更喜欢冬天，因为那时他们更清静。</span>
+<NcePair en="and very few people attempt to cross the Pass." zh="而且，很少有人试图穿越这个山口。" />
 
-The dogs have greater freedom, too,<br><span class="zh">这些狗也拥有更大的自由。</span>
+<NcePair en="The monks prefer winter to summer for they have more privacy." zh="僧侣们更喜欢冬天，因为那时他们更清静。" />
 
-for they are allowed to wander outside their enclosure.<br><span class="zh">因为它们被允许在围栏外四处走动。</span>
+<NcePair en="The dogs have greater freedom, too," zh="这些狗也拥有更大的自由。" />
 
-The only regular visitors to the monastery in winter are parties of skiers who go there at Christmas and Easter.<br><span class="zh">冬天里，唯一经常造访这座修道院的人是一群滑雪者——他们会在圣诞节和复活节期间来到这里。</span>
+<NcePair en="for they are allowed to wander outside their enclosure." zh="因为它们被允许在围栏外四处走动。" />
 
-These young people,<br><span class="zh">这些年轻人，</span>
+<NcePair en="The only regular visitors to the monastery in winter are parties of skiers who go there at Christmas and Easter." zh="冬天里，唯一经常造访这座修道院的人是一群滑雪者——他们会在圣诞节和复活节期间来到这里。" />
 
-who love the peace of the mountains,<br><span class="zh">他们热爱山间的宁静，</span>
+<NcePair en="These young people," zh="这些年轻人，" />
 
-always receive a warm welcome at St.Bernard's monastery.<br><span class="zh">在圣伯纳德修道院总是受到热情的欢迎。</span>
+<NcePair en="who love the peace of the mountains," zh="他们热爱山间的宁静，" />
+
+<NcePair en="always receive a warm welcome at St.Bernard's monastery." zh="在圣伯纳德修道院总是受到热情的欢迎。" />

@@ -2,52 +2,54 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Small change<br><span class="zh">零钱；小额货币</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Small change" zh="零钱；小额货币" />
 
-Who has got some small change?<br><span class="zh">谁有零钱吗？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Fares, please!<br><span class="zh">请买票！</span>
+<NcePair en="Who has got some small change?" zh="谁有零钱吗？" />
 
-Trafalgar Square, please.<br><span class="zh">请去特拉法尔加广场。</span>
+<NcePair en="Fares, please!" zh="请买票！" />
 
-I'm sorry, sir.<br><span class="zh">对不起，先生。</span>
+<NcePair en="Trafalgar Square, please." zh="请去特拉法尔加广场。" />
 
-I can't change a ten-pound note.<br><span class="zh">我无法兑换一张十英镑的纸币。</span>
+<NcePair en="I'm sorry, sir." zh="对不起，先生。" />
 
-Haven't you got any small change?<br><span class="zh">你没有零钱吗？</span>
+<NcePair en="I can't change a ten-pound note." zh="我无法兑换一张十英镑的纸币。" />
 
-I've got no small change,<br><span class="zh">我没有零钱了。</span>
+<NcePair en="Haven't you got any small change?" zh="你没有零钱吗？" />
 
-I am afraid.<br><span class="zh">恐怕没有。</span>
+<NcePair en="I've got no small change," zh="我没有零钱了。" />
 
-I'll ask some of the passengers.<br><span class="zh">我会去问问一些乘客。</span>
+<NcePair en="I am afraid." zh="恐怕没有。" />
 
-Have you any small change, sir?<br><span class="zh">先生，您有零钱吗？</span>
+<NcePair en="I'll ask some of the passengers." zh="我会去问问一些乘客。" />
 
-I'm sorry.<br><span class="zh">对不起。</span>
+<NcePair en="Have you any small change, sir?" zh="先生，您有零钱吗？" />
 
-I've got none.<br><span class="zh">我一个都没有。</span>
+<NcePair en="I'm sorry." zh="对不起。" />
 
-I haven't got any either.<br><span class="zh">我一个也没有。</span>
+<NcePair en="I've got none." zh="我一个都没有。" />
 
-Can you change this ten-pound note, madam?<br><span class="zh">女士，您能帮我兑换这张十英镑的纸币吗？</span>
+<NcePair en="I haven't got any either." zh="我一个也没有。" />
 
-I'm afraid I can't.<br><span class="zh">恐怕我做不到。</span>
+<NcePair en="Can you change this ten-pound note, madam?" zh="女士，您能帮我兑换这张十英镑的纸币吗？" />
 
-Neither can I.<br><span class="zh">我也不能。</span>
+<NcePair en="I'm afraid I can't." zh="恐怕我做不到。" />
 
-I'm very sorry, sir.<br><span class="zh">非常抱歉，先生。</span>
+<NcePair en="Neither can I." zh="我也不能。" />
 
-You must get off the bus.<br><span class="zh">你必须下车。</span>
+<NcePair en="I'm very sorry, sir." zh="非常抱歉，先生。" />
 
-None of our passengers can change this note.<br><span class="zh">我们的乘客都换不开这张钞票。</span>
+<NcePair en="You must get off the bus." zh="你必须下车。" />
 
-They're all millionaires!<br><span class="zh">他们都是百万富翁！</span>
+<NcePair en="None of our passengers can change this note." zh="我们的乘客都换不开这张钞票。" />
 
-Except us.<br><span class="zh">除了我们之外。</span>
+<NcePair en="They're all millionaires!" zh="他们都是百万富翁！" />
 
-I've got some small change.<br><span class="zh">我有一些零钱。</span>
+<NcePair en="Except us." zh="除了我们之外。" />
 
-So have I.<br><span class="zh">我也有。</span>
+<NcePair en="I've got some small change." zh="我有一些零钱。" />
+
+<NcePair en="So have I." zh="我也有。" />

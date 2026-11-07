@@ -2,46 +2,48 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Is that all?<br><span class="zh">就这些吗？</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Is that all?" zh="就这些吗？" />
 
-Does the lady buy any chalk?<br><span class="zh">那位女士会买粉笔吗？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-I want some envelopes, please.<br><span class="zh">请给我一些信封。</span>
+<NcePair en="Does the lady buy any chalk?" zh="那位女士会买粉笔吗？" />
 
-Do you want the large size or the small size?<br><span class="zh">您想要大号的还是小号的？</span>
+<NcePair en="I want some envelopes, please." zh="请给我一些信封。" />
 
-The large size, please.<br><span class="zh">请给我大号的。</span>
+<NcePair en="Do you want the large size or the small size?" zh="您想要大号的还是小号的？" />
 
-Do you have any writing paper?<br><span class="zh">你们有写字用的纸吗？</span>
+<NcePair en="The large size, please." zh="请给我大号的。" />
 
-Yes, we do.<br><span class="zh">是的，我们有。</span>
+<NcePair en="Do you have any writing paper?" zh="你们有写字用的纸吗？" />
 
-I don't have any small pads.<br><span class="zh">我没有小本的信纸。</span>
+<NcePair en="Yes, we do." zh="是的，我们有。" />
 
-I only have large ones.<br><span class="zh">我只有大本的。</span>
+<NcePair en="I don't have any small pads." zh="我没有小本的信纸。" />
 
-Do you want a pad?<br><span class="zh">您需要一本吗？</span>
+<NcePair en="I only have large ones." zh="我只有大本的。" />
 
-Yes, please.<br><span class="zh">好的，请给我一本。</span>
+<NcePair en="Do you want a pad?" zh="您需要一本吗？" />
 
-And I want some glue.<br><span class="zh">我还需要一些胶水。</span>
+<NcePair en="Yes, please." zh="好的，请给我一本。" />
 
-A bottle of glue.<br><span class="zh">一瓶胶水。</span>
+<NcePair en="And I want some glue." zh="我还需要一些胶水。" />
 
-And I want a large box of chalk, too.<br><span class="zh">我还要一大盒粉笔。</span>
+<NcePair en="A bottle of glue." zh="一瓶胶水。" />
 
-I only have small boxes.<br><span class="zh">我只有小盒的。</span>
+<NcePair en="And I want a large box of chalk, too." zh="我还要一大盒粉笔。" />
 
-Do you want one?<br><span class="zh">您要一盒吗？</span>
+<NcePair en="I only have small boxes." zh="我只有小盒的。" />
 
-No, thank you.<br><span class="zh">不，谢谢。</span>
+<NcePair en="Do you want one?" zh="您要一盒吗？" />
 
-Is that all?<br><span class="zh">就这些吗？</span>
+<NcePair en="No, thank you." zh="不，谢谢。" />
 
-That's all, thank you.<br><span class="zh">就这些，谢谢。</span>
+<NcePair en="Is that all?" zh="就这些吗？" />
 
-What else do you want?<br><span class="zh">你还想要什么？</span>
+<NcePair en="That's all, thank you." zh="就这些，谢谢。" />
 
-I want my change.<br><span class="zh">我想要我的零钱。</span>
+<NcePair en="What else do you want?" zh="你还想要什么？" />
+
+<NcePair en="I want my change." zh="我想要我的零钱。" />

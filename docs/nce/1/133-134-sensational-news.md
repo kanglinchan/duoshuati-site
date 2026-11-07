@@ -2,44 +2,46 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Sensational news!<br><span class="zh">惊人的新闻！</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Sensational news!" zh="惊人的新闻！" />
 
-What reasons did Karen Marsh give for wanting to retire?<br><span class="zh">凯伦·马什提出了哪些想要退休的理由？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Have you just made a new film, Miss Marsh?<br><span class="zh">马什小姐，您刚刚完成了一部新电影的制作吗？</span>
+<NcePair en="What reasons did Karen Marsh give for wanting to retire?" zh="凯伦·马什提出了哪些想要退休的理由？" />
 
-Yes, I have.<br><span class="zh">是的。</span>
+<NcePair en="Have you just made a new film, Miss Marsh?" zh="马什小姐，您刚刚完成了一部新电影的制作吗？" />
 
-Are you going to make another?<br><span class="zh">您还准备再拍一部吗？</span>
+<NcePair en="Yes, I have." zh="是的。" />
 
-No, I'm not.<br><span class="zh">不，不拍了。</span>
+<NcePair en="Are you going to make another?" zh="您还准备再拍一部吗？" />
 
-I'm going to retire.<br><span class="zh">我打算退休了。</span>
+<NcePair en="No, I'm not." zh="不，不拍了。" />
 
-I feel very tired.<br><span class="zh">我感到非常疲倦。</span>
+<NcePair en="I'm going to retire." zh="我打算退休了。" />
 
-I don't want to make another film for a long time.<br><span class="zh">我很长时间都不想再拍电影了。</span>
+<NcePair en="I feel very tired." zh="我感到非常疲倦。" />
 
-Let's buy a newspaper, Liz.<br><span class="zh">我们买份报纸吧，莉兹。</span>
+<NcePair en="I don't want to make another film for a long time." zh="我很长时间都不想再拍电影了。" />
 
-Listen to this!<br><span class="zh">你听听这个！</span>
+<NcePair en="Let's buy a newspaper, Liz." zh="我们买份报纸吧，莉兹。" />
 
-'Karen Marsh: Sensational News!<br><span class="zh">凯伦·马什：轰动性新闻！</span>
+<NcePair en="Listen to this!" zh="你听听这个！" />
 
-By our reporter, Alan Jones.<br><span class="zh">本报记者艾伦·琼斯报道。</span>
+<NcePair en="'Karen Marsh: Sensational News!" zh="凯伦·马什：轰动性新闻！" />
 
-Karen Marsh arrived at London Airport today.<br><span class="zh">凯伦·马什今天抵达了伦敦机场。</span>
+<NcePair en="By our reporter, Alan Jones." zh="本报记者艾伦·琼斯报道。" />
 
-She was wearing a blue dress and a mink coat.<br><span class="zh">她穿着一条蓝色的连衣裙和一件貂皮大衣。</span>
+<NcePair en="Karen Marsh arrived at London Airport today." zh="凯伦·马什今天抵达了伦敦机场。" />
 
-She told me she had just made a new film.<br><span class="zh">她告诉我她刚刚完成了一部新电影的制作。</span>
+<NcePair en="She was wearing a blue dress and a mink coat." zh="她穿着一条蓝色的连衣裙和一件貂皮大衣。" />
 
-she said she was not going to make another.<br><span class="zh">她说她不会再拍了。</span>
+<NcePair en="She told me she had just made a new film." zh="她告诉我她刚刚完成了一部新电影的制作。" />
 
-She said she was going to retire.<br><span class="zh">她说她打算退休了。</span>
+<NcePair en="she said she was not going to make another." zh="她说她不会再拍了。" />
 
-She told reporters she felt very tired and didn't want to make another film for a long time.'<br><span class="zh">她对记者们表示，她感到非常疲惫，暂时不想再拍电影了。</span>
+<NcePair en="She said she was going to retire." zh="她说她打算退休了。" />
 
-I wonder why!<br><span class="zh">真不知道为什么！</span>
+<NcePair en="She told reporters she felt very tired and didn't want to make another film for a long time.'" zh="她对记者们表示，她感到非常疲惫，暂时不想再拍电影了。" />
+
+<NcePair en="I wonder why!" zh="真不知道为什么！" />

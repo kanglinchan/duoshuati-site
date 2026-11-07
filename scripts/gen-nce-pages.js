@@ -66,6 +66,9 @@ const REDUNDANT_ZH_RE = /^第\s*\d+\s*课$/;
 const escapeHtml = (s) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
+// 组件属性值转义（双引号属性内）
+const escapeAttr = (s) => escapeHtml(s).replace(/"/g, '&quot;');
+
 const slugify = (s) =>
   s
     .toLowerCase()
@@ -136,10 +139,13 @@ function writeBookPages(book, lessons) {
       `# ${les.pageHeading}`,
       '',
       `> [新概念英语 · ${book.volume} ${book.subtitle}](/nce/ "返回目录")`,
+      '',
+      // 译文控制条：全篇显示/隐藏 + 句末「译」单句切换（组件见 theme/NcePair.vue）
+      '<NceTranslateBar />',
       ''
     ];
     for (const [en, zh] of les.pairs) {
-      lines.push(`${escapeHtml(en)}<br><span class="zh">${escapeHtml(zh)}</span>`, '');
+      lines.push(`<NcePair en="${escapeAttr(en)}" zh="${escapeAttr(zh)}" />`, '');
     }
     fs.writeFileSync(path.join(dir, les.fileName), lines.join('\n'), 'utf-8');
   }

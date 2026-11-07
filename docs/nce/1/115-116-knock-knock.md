@@ -2,56 +2,58 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Knock, knock!<br><span class="zh">咚咚！</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后回答这个问题：</span>
+<NcePair en="Knock, knock!" zh="咚咚！" />
 
-What does Jim have to drink?<br><span class="zh">吉姆要喝什么？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后回答这个问题：" />
 
-Isn't there anyone at home?<br><span class="zh">家里没人吗？</span>
+<NcePair en="What does Jim have to drink?" zh="吉姆要喝什么？" />
 
-I'll knock again, Helen.<br><span class="zh">我再敲一次门，海伦。</span>
+<NcePair en="Isn't there anyone at home?" zh="家里没人吗？" />
 
-Everything's very quiet.<br><span class="zh">这里非常安静。</span>
+<NcePair en="I'll knock again, Helen." zh="我再敲一次门，海伦。" />
 
-I'm sure there's no one at home.<br><span class="zh">我肯定家里没人。</span>
+<NcePair en="Everything's very quiet." zh="这里非常安静。" />
 
-But that's impossible.<br><span class="zh">但那不可能。</span>
+<NcePair en="I'm sure there's no one at home." zh="我肯定家里没人。" />
 
-Carol and Tom invited us to lunch.<br><span class="zh">卡罗尔和汤姆邀请我们吃午饭了。</span>
+<NcePair en="But that's impossible." zh="但那不可能。" />
 
-Look through the window.<br><span class="zh">从窗户看看。</span>
+<NcePair en="Carol and Tom invited us to lunch." zh="卡罗尔和汤姆邀请我们吃午饭了。" />
 
-Can you see anything?<br><span class="zh">你能看到什么吗？</span>
+<NcePair en="Look through the window." zh="从窗户看看。" />
 
-Nothing at all.<br><span class="zh">什么也没有。</span>
+<NcePair en="Can you see anything?" zh="你能看到什么吗？" />
 
-Let's try the back door.<br><span class="zh">我们试试后门吧。</span>
+<NcePair en="Nothing at all." zh="什么也没有。" />
 
-Look! Everyone's in the garden.<br><span class="zh">看！大家都在花园里。</span>
+<NcePair en="Let's try the back door." zh="我们试试后门吧。" />
 
-Hello, Helen. Hello, Jim.<br><span class="zh">你好，海伦。你好，吉姆。</span>
+<NcePair en="Look! Everyone's in the garden." zh="看！大家都在花园里。" />
 
-Everybody wants to have lunch in the garden.<br><span class="zh">大家都想在花园里吃午饭。</span>
+<NcePair en="Hello, Helen. Hello, Jim." zh="你好，海伦。你好，吉姆。" />
 
-It's nice and warm out here.<br><span class="zh">外面又暖和又舒服。</span>
+<NcePair en="Everybody wants to have lunch in the garden." zh="大家都想在花园里吃午饭。" />
 
-Come and have something to drink.<br><span class="zh">过来喝点东西吧。</span>
+<NcePair en="It's nice and warm out here." zh="外面又暖和又舒服。" />
 
-Thanks, Carol.<br><span class="zh">谢谢，卡罗尔。</span>
+<NcePair en="Come and have something to drink." zh="过来喝点东西吧。" />
 
-May I have a glass of beer please?<br><span class="zh">可以给我一杯啤酒吗？</span>
+<NcePair en="Thanks, Carol." zh="谢谢，卡罗尔。" />
 
-Beer?<br><span class="zh">啤酒？</span>
+<NcePair en="May I have a glass of beer please?" zh="可以给我一杯啤酒吗？" />
 
-There's none left.<br><span class="zh">啤酒没有了。</span>
+<NcePair en="Beer?" zh="啤酒？" />
 
-You can have some lemonade.<br><span class="zh">你可以喝点柠檬水。</span>
+<NcePair en="There's none left." zh="啤酒没有了。" />
 
-Lemonade!<br><span class="zh">柠檬水！</span>
+<NcePair en="You can have some lemonade." zh="你可以喝点柠檬水。" />
 
-Don't believe her, Jim.<br><span class="zh">别相信她，吉姆。</span>
+<NcePair en="Lemonade!" zh="柠檬水！" />
 
-She's only joking.<br><span class="zh">她只是在开玩笑而已。</span>
+<NcePair en="Don't believe her, Jim." zh="别相信她，吉姆。" />
 
-Have some beer!<br><span class="zh">喝点啤酒吧！</span>
+<NcePair en="She's only joking." zh="她只是在开玩笑而已。" />
+
+<NcePair en="Have some beer!" zh="喝点啤酒吧！" />

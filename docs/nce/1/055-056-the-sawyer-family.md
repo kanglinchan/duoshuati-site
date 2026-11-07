@@ -2,38 +2,40 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-The Sawyer family<br><span class="zh">索耶一家</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="The Sawyer family" zh="索耶一家" />
 
-When do the children do their homework?<br><span class="zh">孩子们什么时候做作业？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-The Sawyers live at 87 King Street.<br><span class="zh">索耶一家住在国王街87号。</span>
+<NcePair en="When do the children do their homework?" zh="孩子们什么时候做作业？" />
 
-In the morning, Mr. Sawyer goes to work and the children go to school.<br><span class="zh">早上，索耶先生去上班，孩子们去上学。</span>
+<NcePair en="The Sawyers live at 87 King Street." zh="索耶一家住在国王街87号。" />
 
-Their father takes them to school every day.<br><span class="zh">他们的父亲每天送他们去上学。</span>
+<NcePair en="In the morning, Mr. Sawyer goes to work and the children go to school." zh="早上，索耶先生去上班，孩子们去上学。" />
 
-Mrs. Sawyer stays at home every day.<br><span class="zh">索耶夫人每天都待在家里。</span>
+<NcePair en="Their father takes them to school every day." zh="他们的父亲每天送他们去上学。" />
 
-She does the housework.<br><span class="zh">她做家务。</span>
+<NcePair en="Mrs. Sawyer stays at home every day." zh="索耶夫人每天都待在家里。" />
 
-She always eats her lunch at noon.<br><span class="zh">她总是在中午吃午饭。</span>
+<NcePair en="She does the housework." zh="她做家务。" />
 
-In the afternoon, she usually sees her friends.<br><span class="zh">下午，她通常会和朋友见面。</span>
+<NcePair en="She always eats her lunch at noon." zh="她总是在中午吃午饭。" />
 
-They often drink tea together.<br><span class="zh">他们经常一起喝茶。</span>
+<NcePair en="In the afternoon, she usually sees her friends." zh="下午，她通常会和朋友见面。" />
 
-In the evening, the children come home from school.<br><span class="zh">傍晚，孩子们放学回家。</span>
+<NcePair en="They often drink tea together." zh="他们经常一起喝茶。" />
 
-They arrive home early.<br><span class="zh">他们很早就到家了。</span>
+<NcePair en="In the evening, the children come home from school." zh="傍晚，孩子们放学回家。" />
 
-Mr. Sawyer comes home from work.<br><span class="zh">索耶先生下班回家。</span>
+<NcePair en="They arrive home early." zh="他们很早就到家了。" />
 
-He arrives home late.<br><span class="zh">他很晚才回到家。</span>
+<NcePair en="Mr. Sawyer comes home from work." zh="索耶先生下班回家。" />
 
-At night, the children always do their homework.<br><span class="zh">晚上，孩子们总是做作业。</span>
+<NcePair en="He arrives home late." zh="他很晚才回到家。" />
 
-Then they go to bed.<br><span class="zh">然后他们就上床睡觉了。</span>
+<NcePair en="At night, the children always do their homework." zh="晚上，孩子们总是做作业。" />
 
-Mr. Sawyer usually reads his newspaper, but sometimes he and his wife watch television.<br><span class="zh">索耶先生通常会读报纸，但有时候他和他妻子也会一起看电视。</span>
+<NcePair en="Then they go to bed." zh="然后他们就上床睡觉了。" />
+
+<NcePair en="Mr. Sawyer usually reads his newspaper, but sometimes he and his wife watch television." zh="索耶先生通常会读报纸，但有时候他和他妻子也会一起看电视。" />

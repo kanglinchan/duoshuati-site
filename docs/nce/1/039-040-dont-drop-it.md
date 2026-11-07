@@ -2,32 +2,34 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Don't drop it!<br><span class="zh">别把它掉下来！</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听录音，然后回答这个问题：</span>
+<NcePair en="Don't drop it!" zh="别把它掉下来！" />
 
-Where does Sam put the vase in the end?<br><span class="zh">最后萨姆把花瓶放在了哪里？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听录音，然后回答这个问题：" />
 
-What are you going to do with that vase, Penny?<br><span class="zh">佩妮，你打算怎么处理那个花瓶？</span>
+<NcePair en="Where does Sam put the vase in the end?" zh="最后萨姆把花瓶放在了哪里？" />
 
-I'm going to put it on this table, Sam.<br><span class="zh">我要把它放在这张桌子上，萨姆。</span>
+<NcePair en="What are you going to do with that vase, Penny?" zh="佩妮，你打算怎么处理那个花瓶？" />
 
-Don't do that.<br><span class="zh">别那么做。</span>
+<NcePair en="I'm going to put it on this table, Sam." zh="我要把它放在这张桌子上，萨姆。" />
 
-Give it to me.<br><span class="zh">把它给我。</span>
+<NcePair en="Don't do that." zh="别那么做。" />
 
-What are you going to do with it?<br><span class="zh">你打算怎么处理它？</span>
+<NcePair en="Give it to me." zh="把它给我。" />
 
-I'm going to put it here, in front of the window.<br><span class="zh">“我要把它放在这里，窗子前面。”</span>
+<NcePair en="What are you going to do with it?" zh="你打算怎么处理它？" />
 
-Be careful! Don't drop it!<br><span class="zh">小心！别把它掉下来！</span>
+<NcePair en="I'm going to put it here, in front of the window." zh="“我要把它放在这里，窗子前面。”" />
 
-Don't put it there, Sam.<br><span class="zh">“别放在那儿，萨姆。”</span>
+<NcePair en="Be careful! Don't drop it!" zh="小心！别把它掉下来！" />
 
-Put it here, on this shelf.<br><span class="zh">把它放在这儿，这个架子上。</span>
+<NcePair en="Don't put it there, Sam." zh="“别放在那儿，萨姆。”" />
 
-There we are!<br><span class="zh">好了，放好了！</span>
+<NcePair en="Put it here, on this shelf." zh="把它放在这儿，这个架子上。" />
 
-It's a lovely vase.<br><span class="zh">这是一个很漂亮的花瓶。</span>
+<NcePair en="There we are!" zh="好了，放好了！" />
 
-Those flowers are lovely, too.<br><span class="zh">那些花也很漂亮。</span>
+<NcePair en="It's a lovely vase." zh="这是一个很漂亮的花瓶。" />
+
+<NcePair en="Those flowers are lovely, too." zh="那些花也很漂亮。" />

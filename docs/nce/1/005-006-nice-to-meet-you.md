@@ -2,48 +2,50 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Nice to meet you.<br><span class="zh">很高兴见到你。</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Nice to meet you." zh="很高兴见到你。" />
 
-Is Chang-woo Chinese?<br><span class="zh">昌宇是中国人吗？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Good morning.<br><span class="zh">早上好。</span>
+<NcePair en="Is Chang-woo Chinese?" zh="昌宇是中国人吗？" />
 
-Good morning Mr. Blake.<br><span class="zh">早上好，布莱克先生。</span>
+<NcePair en="Good morning." zh="早上好。" />
 
-This is Miss Sophie Dupont.<br><span class="zh">这位是索菲·杜邦小姐。</span>
+<NcePair en="Good morning Mr. Blake." zh="早上好，布莱克先生。" />
 
-Sophie is a new student.<br><span class="zh">索菲是一名新学生。</span>
+<NcePair en="This is Miss Sophie Dupont." zh="这位是索菲·杜邦小姐。" />
 
-She is French.<br><span class="zh">她是法国人。</span>
+<NcePair en="Sophie is a new student." zh="索菲是一名新学生。" />
 
-Sophie this is Hans.<br><span class="zh">索菲，这位是汉斯。</span>
+<NcePair en="She is French." zh="她是法国人。" />
 
-He is German.<br><span class="zh">他是德国人。</span>
+<NcePair en="Sophie this is Hans." zh="索菲，这位是汉斯。" />
 
-Nice to meet you.<br><span class="zh">很高兴见到你。</span>
+<NcePair en="He is German." zh="他是德国人。" />
 
-And this is Naoko.<br><span class="zh">这是直子。</span>
+<NcePair en="Nice to meet you." zh="很高兴见到你。" />
 
-She's Japanese.<br><span class="zh">她是日本人。</span>
+<NcePair en="And this is Naoko." zh="这是直子。" />
 
-Nice to meet you.<br><span class="zh">很高兴见到你。</span>
+<NcePair en="She's Japanese." zh="她是日本人。" />
 
-And this is Chang-woo.<br><span class="zh">这是昌宇。</span>
+<NcePair en="Nice to meet you." zh="很高兴见到你。" />
 
-He's Korean.<br><span class="zh">他是韩国人。</span>
+<NcePair en="And this is Chang-woo." zh="这是昌宇。" />
 
-Nice to meet you.<br><span class="zh">很高兴见到你。</span>
+<NcePair en="He's Korean." zh="他是韩国人。" />
 
-And this is Luming.<br><span class="zh">这位是鲁明。</span>
+<NcePair en="Nice to meet you." zh="很高兴见到你。" />
 
-He's Chinese.<br><span class="zh">他是中国人。</span>
+<NcePair en="And this is Luming." zh="这位是鲁明。" />
 
-Nice to meet you.<br><span class="zh">很高兴见到你。</span>
+<NcePair en="He's Chinese." zh="他是中国人。" />
 
-And this is Xiaohui.<br><span class="zh">这是小辉。</span>
+<NcePair en="Nice to meet you." zh="很高兴见到你。" />
 
-She is Chinese too.<br><span class="zh">她也是中国人。</span>
+<NcePair en="And this is Xiaohui." zh="这是小辉。" />
 
-Nice to meet you.<br><span class="zh">很高兴见到你。</span>
+<NcePair en="She is Chinese too." zh="她也是中国人。" />
+
+<NcePair en="Nice to meet you." zh="很高兴见到你。" />

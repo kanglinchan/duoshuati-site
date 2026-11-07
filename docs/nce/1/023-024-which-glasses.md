@@ -2,26 +2,28 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Which glasses?<br><span class="zh">哪些眼镜？</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后回答这个问题。</span>
+<NcePair en="Which glasses?" zh="哪些眼镜？" />
 
-Which glasses does the man want?<br><span class="zh">那个男人想要哪些眼镜？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后回答这个问题。" />
 
-Give me some glasses please, Jane.<br><span class="zh">简，请给我拿些眼镜来。</span>
+<NcePair en="Which glasses does the man want?" zh="那个男人想要哪些眼镜？" />
 
-Which glasses?<br><span class="zh">哪些眼镜？</span>
+<NcePair en="Give me some glasses please, Jane." zh="简，请给我拿些眼镜来。" />
 
-These glasses?<br><span class="zh">这些眼镜？</span>
+<NcePair en="Which glasses?" zh="哪些眼镜？" />
 
-No, not those.<br><span class="zh">不，不是那些。</span>
+<NcePair en="These glasses?" zh="这些眼镜？" />
 
-The ones on the shelf.<br><span class="zh">架子上的那些（眼镜）。</span>
+<NcePair en="No, not those." zh="不，不是那些。" />
 
-These?<br><span class="zh">这些（眼镜）？</span>
+<NcePair en="The ones on the shelf." zh="架子上的那些（眼镜）。" />
 
-Yes, please.<br><span class="zh">对，请（就这些）。</span>
+<NcePair en="These?" zh="这些（眼镜）？" />
 
-Here you are.<br><span class="zh">给你。</span>
+<NcePair en="Yes, please." zh="对，请（就这些）。" />
 
-Thanks.<br><span class="zh">谢谢。</span>
+<NcePair en="Here you are." zh="给你。" />
+
+<NcePair en="Thanks." zh="谢谢。" />

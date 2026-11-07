@@ -2,36 +2,38 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Where's Sally?<br><span class="zh">莎莉在哪里？</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后回答这个问题。</span>
+<NcePair en="Where's Sally?" zh="莎莉在哪里？" />
 
-Is the cat climbing the tree?<br><span class="zh">那只猫在爬树吗？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后回答这个问题。" />
 
-Where's Sally, Jack?<br><span class="zh">莎莉在哪里，杰克？</span>
+<NcePair en="Is the cat climbing the tree?" zh="那只猫在爬树吗？" />
 
-She's in the garden, Jean.<br><span class="zh">她在花园里，琼。</span>
+<NcePair en="Where's Sally, Jack?" zh="莎莉在哪里，杰克？" />
 
-What's she doing?<br><span class="zh">她在做什么？</span>
+<NcePair en="She's in the garden, Jean." zh="她在花园里，琼。" />
 
-She's sitting under the tree.<br><span class="zh">她正坐在树下。</span>
+<NcePair en="What's she doing?" zh="她在做什么？" />
 
-Is Tim in the garden, too?<br><span class="zh">蒂姆也在花园里吗？</span>
+<NcePair en="She's sitting under the tree." zh="她正坐在树下。" />
 
-Yes, he is.<br><span class="zh">是的，他在。</span>
+<NcePair en="Is Tim in the garden, too?" zh="蒂姆也在花园里吗？" />
 
-He's climbing the tree.<br><span class="zh">他正在爬树。</span>
+<NcePair en="Yes, he is." zh="是的，他在。" />
 
-I beg your pardon?<br><span class="zh">什么？请再说一遍。</span>
+<NcePair en="He's climbing the tree." zh="他正在爬树。" />
 
-Who's climbing the tree?<br><span class="zh">谁在爬树？</span>
+<NcePair en="I beg your pardon?" zh="什么？请再说一遍。" />
 
-Tim is.<br><span class="zh">是蒂姆。</span>
+<NcePair en="Who's climbing the tree?" zh="谁在爬树？" />
 
-What about the dog?<br><span class="zh">那狗呢？</span>
+<NcePair en="Tim is." zh="是蒂姆。" />
 
-The dog's in the garden, too.<br><span class="zh">狗也在花园里。</span>
+<NcePair en="What about the dog?" zh="那狗呢？" />
 
-It's running across the grass.<br><span class="zh">它正在穿过草地。</span>
+<NcePair en="The dog's in the garden, too." zh="狗也在花园里。" />
 
-It's running after a cat.<br><span class="zh">它正在追一只猫。</span>
+<NcePair en="It's running across the grass." zh="它正在穿过草地。" />
+
+<NcePair en="It's running after a cat." zh="它正在追一只猫。" />

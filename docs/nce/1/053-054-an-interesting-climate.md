@@ -2,38 +2,40 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-An interesting climate<br><span class="zh">有趣的气候</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="An interesting climate" zh="有趣的气候" />
 
-What is the favourite subject of conversation in England?<br><span class="zh">在英格兰，人们最喜欢谈论的话题是什么？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Where do you come from?<br><span class="zh">你来自哪里？</span>
+<NcePair en="What is the favourite subject of conversation in England?" zh="在英格兰，人们最喜欢谈论的话题是什么？" />
 
-I come from England.<br><span class="zh">我来自英格兰。</span>
+<NcePair en="Where do you come from?" zh="你来自哪里？" />
 
-What's the climate like in your country?<br><span class="zh">你们国家的气候是怎样的？</span>
+<NcePair en="I come from England." zh="我来自英格兰。" />
 
-It's mild, but it's not always pleasant.<br><span class="zh">气候温和，但并非总是宜人。</span>
+<NcePair en="What's the climate like in your country?" zh="你们国家的气候是怎样的？" />
 
-The weather's often cold in the North and windy in the East.<br><span class="zh">北方常常寒冷，东部则多风。</span>
+<NcePair en="It's mild, but it's not always pleasant." zh="气候温和，但并非总是宜人。" />
 
-It's often wet in the West and sometimes warm in the South.<br><span class="zh">西部常常潮湿，而南方有时温暖。</span>
+<NcePair en="The weather's often cold in the North and windy in the East." zh="北方常常寒冷，东部则多风。" />
 
-Which seasons do you like best?<br><span class="zh">你最喜欢哪些季节？</span>
+<NcePair en="It's often wet in the West and sometimes warm in the South." zh="西部常常潮湿，而南方有时温暖。" />
 
-I like spring and summer.<br><span class="zh">我喜欢春天和夏天。</span>
+<NcePair en="Which seasons do you like best?" zh="你最喜欢哪些季节？" />
 
-The days are long and the nights are short.<br><span class="zh">白天长，夜晚短。</span>
+<NcePair en="I like spring and summer." zh="我喜欢春天和夏天。" />
 
-The sun rises early and sets late.<br><span class="zh">太阳升得早，落得晚。</span>
+<NcePair en="The days are long and the nights are short." zh="白天长，夜晚短。" />
 
-I don't like autumn and winter.<br><span class="zh">我不喜欢秋天和冬天。</span>
+<NcePair en="The sun rises early and sets late." zh="太阳升得早，落得晚。" />
 
-The days are short and the nights are long.<br><span class="zh">白天短，夜晚长。</span>
+<NcePair en="I don't like autumn and winter." zh="我不喜欢秋天和冬天。" />
 
-The sun rises late and sets early.<br><span class="zh">太阳升得晚，落得早。</span>
+<NcePair en="The days are short and the nights are long." zh="白天短，夜晚长。" />
 
-Our climate is not very good, but it's certainly interesting.<br><span class="zh">我们的气候不是很好，但确实很有趣。</span>
+<NcePair en="The sun rises late and sets early." zh="太阳升得晚，落得早。" />
 
-It's our favourite subject of conversation.<br><span class="zh">这是我们最喜欢谈论的话题。</span>
+<NcePair en="Our climate is not very good, but it's certainly interesting." zh="我们的气候不是很好，但确实很有趣。" />
+
+<NcePair en="It's our favourite subject of conversation." zh="这是我们最喜欢谈论的话题。" />

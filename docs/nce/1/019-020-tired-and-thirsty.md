@@ -2,36 +2,38 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Tired and thirsty<br><span class="zh">又累又渴</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Tired and thirsty" zh="又累又渴" />
 
-Why do the children thank their mother?<br><span class="zh">为什么孩子们要感谢他们的母亲呢？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-What's the matter children?<br><span class="zh">孩子们，怎么了？</span>
+<NcePair en="Why do the children thank their mother?" zh="为什么孩子们要感谢他们的母亲呢？" />
 
-We're tired ...<br><span class="zh">我们累了……</span>
+<NcePair en="What's the matter children?" zh="孩子们，怎么了？" />
 
-... and thirsty  Mum.<br><span class="zh">……而且渴了，妈妈。</span>
+<NcePair en="We're tired ..." zh="我们累了……" />
 
-Sit down here.<br><span class="zh">请坐在这里。</span>
+<NcePair en="... and thirsty  Mum." zh="……而且渴了，妈妈。" />
 
-Are you all right now?<br><span class="zh">现在好点了吗？</span>
+<NcePair en="Sit down here." zh="请坐在这里。" />
 
-No we aren't.<br><span class="zh">不，不好。</span>
+<NcePair en="Are you all right now?" zh="现在好点了吗？" />
 
-Look!<br><span class="zh">看！</span>
+<NcePair en="No we aren't." zh="不，不好。" />
 
-There's an ice cream man.<br><span class="zh">有一个卖冰淇淋的叔叔。</span>
+<NcePair en="Look!" zh="看！" />
 
-Two ice cream please.<br><span class="zh">请来两份冰淇淋。</span>
+<NcePair en="There's an ice cream man." zh="有一个卖冰淇淋的叔叔。" />
 
-Here you are children.<br><span class="zh">孩子们，给你们。</span>
+<NcePair en="Two ice cream please." zh="请来两份冰淇淋。" />
 
-Thanks Mum.<br><span class="zh">谢谢妈妈。</span>
+<NcePair en="Here you are children." zh="孩子们，给你们。" />
 
-These ice creams are nice.<br><span class="zh">这些冰淇淋很好吃。</span>
+<NcePair en="Thanks Mum." zh="谢谢妈妈。" />
 
-Are you all right now?<br><span class="zh">现在好点了吗？</span>
+<NcePair en="These ice creams are nice." zh="这些冰淇淋很好吃。" />
 
-Yes we are thank you!<br><span class="zh">是的，我们很好，谢谢！</span>
+<NcePair en="Are you all right now?" zh="现在好点了吗？" />
+
+<NcePair en="Yes we are thank you!" zh="是的，我们很好，谢谢！" />

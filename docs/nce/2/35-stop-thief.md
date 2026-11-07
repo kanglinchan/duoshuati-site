@@ -2,46 +2,48 @@
 
 > [新概念英语 · 第二册 实践与进步](/nce/ "返回目录")
 
-How did Roy stop the thieves?<br><span class="zh">罗伊是如何阻止那些小偷的？</span>
+<NceTranslateBar />
 
-Roy Trenton used to drive a taxi.<br><span class="zh">罗伊·特伦顿以前开过出租车。</span>
+<NcePair en="How did Roy stop the thieves?" zh="罗伊是如何阻止那些小偷的？" />
 
-A short while ago, however,<br><span class="zh">然而，就在不久前……</span>
+<NcePair en="Roy Trenton used to drive a taxi." zh="罗伊·特伦顿以前开过出租车。" />
 
-he became a bus driver<br><span class="zh">他成了一名公交车司机。</span>
+<NcePair en="A short while ago, however," zh="然而，就在不久前……" />
 
-and he has not regretted it.<br><span class="zh">他从未为此感到后悔。</span>
+<NcePair en="he became a bus driver" zh="他成了一名公交车司机。" />
 
-He is finding his new work far more exciting.<br><span class="zh">他发现自己的新工作要有趣得多。</span>
+<NcePair en="and he has not regretted it." zh="他从未为此感到后悔。" />
 
-When he was driving<br><span class="zh">当他开车的时候</span>
+<NcePair en="He is finding his new work far more exciting." zh="他发现自己的新工作要有趣得多。" />
 
-along Catford Street recently,<br><span class="zh">最近，在卡特福德街（Catford Street）上……</span>
+<NcePair en="When he was driving" zh="当他开车的时候" />
 
-he saw two thieves rush out of a shop<br><span class="zh">他看到两个小偷从商店里冲了出来。</span>
+<NcePair en="along Catford Street recently," zh="最近，在卡特福德街（Catford Street）上……" />
 
-and run towards a waiting car.<br><span class="zh">然后跑向一辆正在等待的车辆。</span>
+<NcePair en="he saw two thieves rush out of a shop" zh="他看到两个小偷从商店里冲了出来。" />
 
-One of them was carrying a bag full of money.<br><span class="zh">其中一个人带着一个装满钱的袋子。</span>
+<NcePair en="and run towards a waiting car." zh="然后跑向一辆正在等待的车辆。" />
 
-Roy acted quickly and drove the bus<br><span class="zh">罗伊反应迅速，立刻驾驶着公交车</span>
+<NcePair en="One of them was carrying a bag full of money." zh="其中一个人带着一个装满钱的袋子。" />
 
-straight at the thieves.<br><span class="zh">直接冲向那些小偷。</span>
+<NcePair en="Roy acted quickly and drove the bus" zh="罗伊反应迅速，立刻驾驶着公交车" />
 
-The one with the money got such a fright<br><span class="zh">那个拿钱的人吓了一大跳</span>
+<NcePair en="straight at the thieves." zh="直接冲向那些小偷。" />
 
-that he dropped the bag.<br><span class="zh">以至于他掉了那个袋子</span>
+<NcePair en="The one with the money got such a fright" zh="那个拿钱的人吓了一大跳" />
 
-As the thieves were trying to get away in their car,<br><span class="zh">当小偷们试图开车逃跑时，</span>
+<NcePair en="that he dropped the bag." zh="以至于他掉了那个袋子" />
 
-Roy drove his bus into the back of it.<br><span class="zh">罗伊驾驶他的公交车撞上了那辆车的后部。</span>
+<NcePair en="As the thieves were trying to get away in their car," zh="当小偷们试图开车逃跑时，" />
 
-While the battered car was moving away,<br><span class="zh">当那辆被撞坏的汽车开走时</span>
+<NcePair en="Roy drove his bus into the back of it." zh="罗伊驾驶他的公交车撞上了那辆车的后部。" />
 
-Roy stopped his bus and telephoned the police.<br><span class="zh">罗伊停下了他的公交车，然后拨打了报警电话。</span>
+<NcePair en="While the battered car was moving away," zh="当那辆被撞坏的汽车开走时" />
 
-The thieves' car was badly damaged and easy to recognize.<br><span class="zh">小偷们的汽车损坏严重，因此很容易被辨认出来。</span>
+<NcePair en="Roy stopped his bus and telephoned the police." zh="罗伊停下了他的公交车，然后拨打了报警电话。" />
 
-Shortly afterwards,<br><span class="zh">不久之后，</span>
+<NcePair en="The thieves' car was badly damaged and easy to recognize." zh="小偷们的汽车损坏严重，因此很容易被辨认出来。" />
 
-the police stopped the car and both men were arrested.<br><span class="zh">警察拦下了那辆车，两名男子都被逮捕了。</span>
+<NcePair en="Shortly afterwards," zh="不久之后，" />
+
+<NcePair en="the police stopped the car and both men were arrested." zh="警察拦下了那辆车，两名男子都被逮捕了。" />

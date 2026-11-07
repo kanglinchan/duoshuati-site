@@ -2,40 +2,42 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Is this your shirt?<br><span class="zh">这是你的衬衫吗？</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听录音，然后再回答这个问题。</span>
+<NcePair en="Is this your shirt?" zh="这是你的衬衫吗？" />
 
-Whose shirt is white?<br><span class="zh">谁的衬衫是白色的？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听录音，然后再回答这个问题。" />
 
-Whose shirt is that?<br><span class="zh">那是谁的衬衫？</span>
+<NcePair en="Whose shirt is white?" zh="谁的衬衫是白色的？" />
 
-Is this your shirt Dave?<br><span class="zh">这是你的衬衫吗，戴夫？</span>
+<NcePair en="Whose shirt is that?" zh="那是谁的衬衫？" />
 
-No. Sir.<br><span class="zh">不，先生。</span>
+<NcePair en="Is this your shirt Dave?" zh="这是你的衬衫吗，戴夫？" />
 
-It's not my shirt.<br><span class="zh">这不是我的衬衫。</span>
+<NcePair en="No. Sir." zh="不，先生。" />
 
-This is my shirt.<br><span class="zh">这是我的衬衫。</span>
+<NcePair en="It's not my shirt." zh="这不是我的衬衫。" />
 
-My shirt's blue.<br><span class="zh">我的衬衫是蓝色的。</span>
+<NcePair en="This is my shirt." zh="这是我的衬衫。" />
 
-Is this shirt Tim's?<br><span class="zh">这是蒂姆的衬衫吗？</span>
+<NcePair en="My shirt's blue." zh="我的衬衫是蓝色的。" />
 
-Perhaps it is sir.<br><span class="zh">也许是的，先生。</span>
+<NcePair en="Is this shirt Tim's?" zh="这是蒂姆的衬衫吗？" />
 
-Tim's shirt's white.<br><span class="zh">蒂姆的衬衫是白色的。</span>
+<NcePair en="Perhaps it is sir." zh="也许是的，先生。" />
 
-Tim!<br><span class="zh">蒂姆！</span>
+<NcePair en="Tim's shirt's white." zh="蒂姆的衬衫是白色的。" />
 
-Yes sir?<br><span class="zh">先生，什么事？</span>
+<NcePair en="Tim!" zh="蒂姆！" />
 
-Is this your shirt?<br><span class="zh">这是你的衬衫吗？</span>
+<NcePair en="Yes sir?" zh="先生，什么事？" />
 
-Yes sir.<br><span class="zh">是的，先生。</span>
+<NcePair en="Is this your shirt?" zh="这是你的衬衫吗？" />
 
-Here you are.<br><span class="zh">给你。</span>
+<NcePair en="Yes sir." zh="是的，先生。" />
 
-Catch!<br><span class="zh">接住！</span>
+<NcePair en="Here you are." zh="给你。" />
 
-Thank you sir.<br><span class="zh">谢谢您，先生。</span>
+<NcePair en="Catch!" zh="接住！" />
+
+<NcePair en="Thank you sir." zh="谢谢您，先生。" />

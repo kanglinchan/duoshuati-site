@@ -2,50 +2,52 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-A trip to Australia<br><span class="zh">澳大利亚之旅</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">听完录音后，请回答这个问题：</span>
+<NcePair en="A trip to Australia" zh="澳大利亚之旅" />
 
-Who is the man with the beard?<br><span class="zh">那个留着胡子的男人是谁？</span>
+<NcePair en="Listen to the tape then answer this question." zh="听完录音后，请回答这个问题：" />
 
-Look, Scott.<br><span class="zh">看，斯科特。</span>
+<NcePair en="Who is the man with the beard?" zh="那个留着胡子的男人是谁？" />
 
-This is a photograph I took during my trip to Australia.<br><span class="zh">这是我在澳大利亚旅行时拍的照片。</span>
+<NcePair en="Look, Scott." zh="看，斯科特。" />
 
-Let me see it, Mike.<br><span class="zh">让我看看，迈克。</span>
+<NcePair en="This is a photograph I took during my trip to Australia." zh="这是我在澳大利亚旅行时拍的照片。" />
 
-This is a good photograph.<br><span class="zh">这张照片真不错！</span>
+<NcePair en="Let me see it, Mike." zh="让我看看，迈克。" />
 
-Who are these people?<br><span class="zh">这些人是谁？</span>
+<NcePair en="This is a good photograph." zh="这张照片真不错！" />
 
-They're people I met during the trip.<br><span class="zh">他们是我在旅行中遇到的人。</span>
+<NcePair en="Who are these people?" zh="这些人是谁？" />
 
-That's the ship we travelled on.<br><span class="zh">那就是我们乘坐的船。</span>
+<NcePair en="They're people I met during the trip." zh="他们是我在旅行中遇到的人。" />
 
-What a beautiful ship!<br><span class="zh">多漂亮的船啊！</span>
+<NcePair en="That's the ship we travelled on." zh="那就是我们乘坐的船。" />
 
-Who's this?<br><span class="zh">这是谁？</span>
+<NcePair en="What a beautiful ship!" zh="多漂亮的船啊！" />
 
-That's the man I told you about.<br><span class="zh">就是我跟你提过的那个人。</span>
+<NcePair en="Who's this?" zh="这是谁？" />
 
-Remember?<br><span class="zh">记得吗？</span>
+<NcePair en="That's the man I told you about." zh="就是我跟你提过的那个人。" />
 
-Ah yes.<br><span class="zh">啊，对。</span>
+<NcePair en="Remember?" zh="记得吗？" />
 
-The one who offered you a job in Australia.<br><span class="zh">就是那个在澳大利亚给你提供工作机会的人。</span>
+<NcePair en="Ah yes." zh="啊，对。" />
 
-That's right.<br><span class="zh">没错。</span>
+<NcePair en="The one who offered you a job in Australia." zh="就是那个在澳大利亚给你提供工作机会的人。" />
 
-Who's this?<br><span class="zh">这是谁？</span>
+<NcePair en="That's right." zh="没错。" />
 
-Guess!<br><span class="zh">猜猜看！</span>
+<NcePair en="Who's this?" zh="这是谁？" />
 
-It's not you, is it?<br><span class="zh">肯定不是你吧？</span>
+<NcePair en="Guess!" zh="猜猜看！" />
 
-That's right.<br><span class="zh">没错。</span>
+<NcePair en="It's not you, is it?" zh="肯定不是你吧？" />
 
-I grew a beard during the trip, but I shaved it off when I came home.<br><span class="zh">我在旅途中留了胡子，但回家后就把它刮掉了。</span>
+<NcePair en="That's right." zh="没错。" />
 
-Why did you shave it off?<br><span class="zh">你为什么要刮掉胡子呢？</span>
+<NcePair en="I grew a beard during the trip, but I shaved it off when I came home." zh="我在旅途中留了胡子，但回家后就把它刮掉了。" />
 
-My wife didn't like it!<br><span class="zh">我妻子不喜欢！</span>
+<NcePair en="Why did you shave it off?" zh="你为什么要刮掉胡子呢？" />
+
+<NcePair en="My wife didn't like it!" zh="我妻子不喜欢！" />

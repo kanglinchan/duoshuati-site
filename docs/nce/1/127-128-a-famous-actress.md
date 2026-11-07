@@ -2,50 +2,52 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-A famous actress<br><span class="zh">一位著名的女演员</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">请听这段录音，然后回答这个问题：</span>
+<NcePair en="A famous actress" zh="一位著名的女演员" />
 
-Who is only twenty-nine, and why is it so unclear?<br><span class="zh">谁的年龄只有29岁？为什么这一点如此难以确定呢？</span>
+<NcePair en="Listen to the tape then answer this question." zh="请听这段录音，然后回答这个问题：" />
 
-Can you recognize that woman, Liz?<br><span class="zh">你能认出那个女人吗，莉兹？</span>
+<NcePair en="Who is only twenty-nine, and why is it so unclear?" zh="谁的年龄只有29岁？为什么这一点如此难以确定呢？" />
 
-I think I can, Kate.<br><span class="zh">我想我能认出来，凯特。</span>
+<NcePair en="Can you recognize that woman, Liz?" zh="你能认出那个女人吗，莉兹？" />
 
-It must be Karen Marsh, the actress.<br><span class="zh">那一定是凯伦·马什，那位女演员。</span>
+<NcePair en="I think I can, Kate." zh="我想我能认出来，凯特。" />
 
-I thought so.<br><span class="zh">我也这么认为。</span>
+<NcePair en="It must be Karen Marsh, the actress." zh="那一定是凯伦·马什，那位女演员。" />
 
-Who's that beside her?<br><span class="zh">她旁边的是谁？</span>
+<NcePair en="I thought so." zh="我也这么认为。" />
 
-That must be Conrad Reeves.<br><span class="zh">那一定是康拉德·里夫斯。</span>
+<NcePair en="Who's that beside her?" zh="她旁边的是谁？" />
 
-Conrad Reeves, the actor?<br><span class="zh">康拉德·里夫斯，那位演员？</span>
+<NcePair en="That must be Conrad Reeves." zh="那一定是康拉德·里夫斯。" />
 
-It can't be.<br><span class="zh">不可能是他。</span>
+<NcePair en="Conrad Reeves, the actor?" zh="康拉德·里夫斯，那位演员？" />
 
-Let me have another look.<br><span class="zh">让我再看看。</span>
+<NcePair en="It can't be." zh="不可能是他。" />
 
-I think you're right!<br><span class="zh">我觉得你是对的！</span>
+<NcePair en="Let me have another look." zh="让我再看看。" />
 
-Isn't he her third husband?<br><span class="zh">他不是她的第三任丈夫吗？</span>
+<NcePair en="I think you're right!" zh="我觉得你是对的！" />
 
-No.<br><span class="zh">不是。</span>
+<NcePair en="Isn't he her third husband?" zh="他不是她的第三任丈夫吗？" />
 
-He must be her fourth or fifth.<br><span class="zh">他一定是她的第四或第五任丈夫。</span>
+<NcePair en="No." zh="不是。" />
 
-Doesn't Karen Marsh look old!<br><span class="zh">凯伦·马什看起来真老啊！</span>
+<NcePair en="He must be her fourth or fifth." zh="他一定是她的第四或第五任丈夫。" />
 
-She does, doesn't she!<br><span class="zh">是啊，她看起来是挺老的。</span>
+<NcePair en="Doesn't Karen Marsh look old!" zh="凯伦·马什看起来真老啊！" />
 
-I read she's twenty-nine, but she must be at least forty.<br><span class="zh">我记得她才29岁，但实际上她至少有40岁了。</span>
+<NcePair en="She does, doesn't she!" zh="是啊，她看起来是挺老的。" />
 
-I'm sure she is.<br><span class="zh">我肯定她有。</span>
+<NcePair en="I read she's twenty-nine, but she must be at least forty." zh="我记得她才29岁，但实际上她至少有40岁了。" />
 
-She was a famous actress when I was still at school.<br><span class="zh">我还在上学的时候，她就已经是著名演员了。</span>
+<NcePair en="I'm sure she is." zh="我肯定她有。" />
 
-That was a long time ago, wasn't it?<br><span class="zh">那已经是很久以前的事了，对吧？</span>
+<NcePair en="She was a famous actress when I was still at school." zh="我还在上学的时候，她就已经是著名演员了。" />
 
-Not that long ago!<br><span class="zh">没那么久吧！</span>
+<NcePair en="That was a long time ago, wasn't it?" zh="那已经是很久以前的事了，对吧？" />
 
-I'm not more than twenty-nine myself.<br><span class="zh">我自己也才29岁。</span>
+<NcePair en="Not that long ago!" zh="没那么久吧！" />
+
+<NcePair en="I'm not more than twenty-nine myself." zh="我自己也才29岁。" />

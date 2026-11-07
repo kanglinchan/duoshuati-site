@@ -2,44 +2,46 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Carol's shopping list<br><span class="zh">卡罗尔的购物清单</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">请听录音，然后回答这个问题：</span>
+<NcePair en="Carol's shopping list" zh="卡罗尔的购物清单" />
 
-What is Carol not going to buy?<br><span class="zh">卡罗尔不会买什么？</span>
+<NcePair en="Listen to the tape then answer this question." zh="请听录音，然后回答这个问题：" />
 
-What are you doing, Carol?<br><span class="zh">你在做什么，卡罗尔？</span>
+<NcePair en="What is Carol not going to buy?" zh="卡罗尔不会买什么？" />
 
-I'm making a shopping list, Tom.<br><span class="zh">我在列购物清单呢，汤姆。</span>
+<NcePair en="What are you doing, Carol?" zh="你在做什么，卡罗尔？" />
 
-What do we need?<br><span class="zh">我们需要些什么？</span>
+<NcePair en="I'm making a shopping list, Tom." zh="我在列购物清单呢，汤姆。" />
 
-We need a lot of things this week.<br><span class="zh">这周我们需要很多东西。</span>
+<NcePair en="What do we need?" zh="我们需要些什么？" />
 
-I must go to the grocer's.<br><span class="zh">我必须去杂货店。</span>
+<NcePair en="We need a lot of things this week." zh="这周我们需要很多东西。" />
 
-We haven't got much tea or coffee, and we haven't got any sugar or jam.<br><span class="zh">我们的茶和咖啡都不多了，糖和果酱也用完了。</span>
+<NcePair en="I must go to the grocer's." zh="我必须去杂货店。" />
 
-What about vegetables?<br><span class="zh">蔬菜呢？</span>
+<NcePair en="We haven't got much tea or coffee, and we haven't got any sugar or jam." zh="我们的茶和咖啡都不多了，糖和果酱也用完了。" />
 
-I must go to the greengroce's.<br><span class="zh">我必须去蔬菜水果店。</span>
+<NcePair en="What about vegetables?" zh="蔬菜呢？" />
 
-We haven't got many tomatoes, but we've got a lot of potatoes.<br><span class="zh">我们的番茄不多，但是土豆有很多。</span>
+<NcePair en="I must go to the greengroce's." zh="我必须去蔬菜水果店。" />
 
-I must go to the butcher's, too.<br><span class="zh">我也必须去肉店一趟。</span>
+<NcePair en="We haven't got many tomatoes, but we've got a lot of potatoes." zh="我们的番茄不多，但是土豆有很多。" />
 
-We need some meat.<br><span class="zh">我们需要一些肉。</span>
+<NcePair en="I must go to the butcher's, too." zh="我也必须去肉店一趟。" />
 
-We haven't got any meat at all.<br><span class="zh">我们根本没有任何肉了。</span>
+<NcePair en="We need some meat." zh="我们需要一些肉。" />
 
-Have we got any beer and wine?<br><span class="zh">我们还有啤酒和葡萄酒吗？</span>
+<NcePair en="We haven't got any meat at all." zh="我们根本没有任何肉了。" />
 
-No, we haven't.<br><span class="zh">没有了，我们没有。</span>
+<NcePair en="Have we got any beer and wine?" zh="我们还有啤酒和葡萄酒吗？" />
 
-And I'm not going to get any!<br><span class="zh">而且我也不打算买！</span>
+<NcePair en="No, we haven't." zh="没有了，我们没有。" />
 
-I hope that you've got some money.<br><span class="zh">我希望你有些钱。</span>
+<NcePair en="And I'm not going to get any!" zh="而且我也不打算买！" />
 
-I haven't got much.<br><span class="zh">我的钱不多了。</span>
+<NcePair en="I hope that you've got some money." zh="我希望你有些钱。" />
 
-Well, I haven't got much either!<br><span class="zh">唉，我的钱也不多了！</span>
+<NcePair en="I haven't got much." zh="我的钱不多了。" />
+
+<NcePair en="Well, I haven't got much either!" zh="唉，我的钱也不多了！" />

@@ -2,34 +2,36 @@
 
 > [新概念英语 · 第二册 实践与进步](/nce/ "返回目录")
 
-Did the detectives save the diamonds?<br><span class="zh">侦探们保住那些钻石了吗？</span>
+<NceTranslateBar />
 
-The plane was late and detectives were waiting at the airport all morning.<br><span class="zh">飞机晚点了，侦探们一整个上午都在机场等待。</span>
+<NcePair en="Did the detectives save the diamonds?" zh="侦探们保住那些钻石了吗？" />
 
-They were expecting a valuable parcel of diamonds from South Africa.<br><span class="zh">他们正在等待一个从南非来的装有钻石的贵重包裹。</span>
+<NcePair en="The plane was late and detectives were waiting at the airport all morning." zh="飞机晚点了，侦探们一整个上午都在机场等待。" />
 
-A few hours earlier,<br><span class="zh">几个小时之前，</span>
+<NcePair en="They were expecting a valuable parcel of diamonds from South Africa." zh="他们正在等待一个从南非来的装有钻石的贵重包裹。" />
 
-someone had told the police that<br><span class="zh">有人告诉警方说</span>
+<NcePair en="A few hours earlier," zh="几个小时之前，" />
 
-thieves would try to steal the diamonds.<br><span class="zh">小偷会企图偷走那些钻石。</span>
+<NcePair en="someone had told the police that" zh="有人告诉警方说" />
 
-When the plane arrived,<br><span class="zh">当飞机降临时，</span>
+<NcePair en="thieves would try to steal the diamonds." zh="小偷会企图偷走那些钻石。" />
 
-some of the detectives were waiting<br><span class="zh">一些侦探正在等待。</span>
+<NcePair en="When the plane arrived," zh="当飞机降临时，" />
 
-inside the main building<br><span class="zh">在主楼内</span>
+<NcePair en="some of the detectives were waiting" zh="一些侦探正在等待。" />
 
-while others were waiting on the airfield.<br><span class="zh">而其他人则在停机坪上等待。</span>
+<NcePair en="inside the main building" zh="在主楼内" />
 
-Two men took the parcel off the plane<br><span class="zh">两名男子从飞机上取下了那个包裹。</span>
+<NcePair en="while others were waiting on the airfield." zh="而其他人则在停机坪上等待。" />
 
-and carried it into the Customs House.<br><span class="zh">然后把它搬进了海关大楼。</span>
+<NcePair en="Two men took the parcel off the plane" zh="两名男子从飞机上取下了那个包裹。" />
 
-While two detectives were keeping guard at the door,<br><span class="zh">当两名侦探在门口守卫时，</span>
+<NcePair en="and carried it into the Customs House." zh="然后把它搬进了海关大楼。" />
 
-two others opened the parcel.<br><span class="zh">另外两名侦探打开了那个包裹。</span>
+<NcePair en="While two detectives were keeping guard at the door," zh="当两名侦探在门口守卫时，" />
 
-To their surprise,<br><span class="zh">令他们惊讶的是，</span>
+<NcePair en="two others opened the parcel." zh="另外两名侦探打开了那个包裹。" />
 
-the precious parcel was full of stones and sand!<br><span class="zh">那个贵重的包裹里装满了石头和沙子！</span>
+<NcePair en="To their surprise," zh="令他们惊讶的是，" />
+
+<NcePair en="the precious parcel was full of stones and sand!" zh="那个贵重的包裹里装满了石头和沙子！" />

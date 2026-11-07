@@ -2,34 +2,36 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Mrs. Smith's living room<br><span class="zh">史密斯夫人的客厅</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Mrs. Smith's living room" zh="史密斯夫人的客厅" />
 
-Where are the books?<br><span class="zh">书在哪里？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Mrs. Smith's living room is large.<br><span class="zh">史密斯太太的客厅非常大。</span>
+<NcePair en="Where are the books?" zh="书在哪里？" />
 
-There is a television in the room.<br><span class="zh">房间里有一台电视机。</span>
+<NcePair en="Mrs. Smith's living room is large." zh="史密斯太太的客厅非常大。" />
 
-The television is near the window.<br><span class="zh">电视机放在窗户旁边。</span>
+<NcePair en="There is a television in the room." zh="房间里有一台电视机。" />
 
-There are some magazines on the television.<br><span class="zh">电视机上有几本杂志。</span>
+<NcePair en="The television is near the window." zh="电视机放在窗户旁边。" />
 
-There is a table in the room.<br><span class="zh">房间里有一张桌子。</span>
+<NcePair en="There are some magazines on the television." zh="电视机上有几本杂志。" />
 
-There are some newspapers on the table.<br><span class="zh">桌子上有一些报纸。</span>
+<NcePair en="There is a table in the room." zh="房间里有一张桌子。" />
 
-There are some armchairs in the room.<br><span class="zh">房间里有一些扶手椅。</span>
+<NcePair en="There are some newspapers on the table." zh="桌子上有一些报纸。" />
 
-The armchairs are near the table.<br><span class="zh">那些扶手椅都放在桌子旁边。</span>
+<NcePair en="There are some armchairs in the room." zh="房间里有一些扶手椅。" />
 
-There is a stereo in the room.<br><span class="zh">房间里有一台立体声音响。</span>
+<NcePair en="The armchairs are near the table." zh="那些扶手椅都放在桌子旁边。" />
 
-The stereo is near the door.<br><span class="zh">音响在门旁边。</span>
+<NcePair en="There is a stereo in the room." zh="房间里有一台立体声音响。" />
 
-There are some books on the stereo.<br><span class="zh">音响上有几本书。</span>
+<NcePair en="The stereo is near the door." zh="音响在门旁边。" />
 
-There are some pictures in the room.<br><span class="zh">房间里有几幅画。</span>
+<NcePair en="There are some books on the stereo." zh="音响上有几本书。" />
 
-The pictures are on the wall.<br><span class="zh">画在墙上。</span>
+<NcePair en="There are some pictures in the room." zh="房间里有几幅画。" />
+
+<NcePair en="The pictures are on the wall." zh="画在墙上。" />

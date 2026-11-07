@@ -2,34 +2,36 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Our new neighbour<br><span class="zh">我们的新邻居</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Our new neighbour" zh="我们的新邻居" />
 
-Why is Nigel a lucky man?<br><span class="zh">为什么奈杰尔是个幸运的人？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Nigel is our new next-door neighbour.<br><span class="zh">奈杰尔是我们的新邻居，住在我们隔壁。</span>
+<NcePair en="Why is Nigel a lucky man?" zh="为什么奈杰尔是个幸运的人？" />
 
-He's a pilot.<br><span class="zh">他是一名飞行员。</span>
+<NcePair en="Nigel is our new next-door neighbour." zh="奈杰尔是我们的新邻居，住在我们隔壁。" />
 
-He was in the R.A.F.<br><span class="zh">他曾在英国皇家空军（R.A.F.）服役。</span>
+<NcePair en="He's a pilot." zh="他是一名飞行员。" />
 
-He will fly to New York next month.<br><span class="zh">他下个月将飞往纽约。</span>
+<NcePair en="He was in the R.A.F." zh="他曾在英国皇家空军（R.A.F.）服役。" />
 
-The month after next he'll fly to Tokyo.<br><span class="zh">下下个月，他将飞往东京。</span>
+<NcePair en="He will fly to New York next month." zh="他下个月将飞往纽约。" />
 
-At the moment, he's in Madrid.<br><span class="zh">目前，他在马德里。</span>
+<NcePair en="The month after next he'll fly to Tokyo." zh="下下个月，他将飞往东京。" />
 
-He flew to Spain a week ago.<br><span class="zh">他一周前飞去了西班牙。</span>
+<NcePair en="At the moment, he's in Madrid." zh="目前，他在马德里。" />
 
-He'll return to London the week after next.<br><span class="zh">他将在下下周回到伦敦。</span>
+<NcePair en="He flew to Spain a week ago." zh="他一周前飞去了西班牙。" />
 
-He's only forty-one years old,<br><span class="zh">他才四十一岁。</span>
+<NcePair en="He'll return to London the week after next." zh="他将在下下周回到伦敦。" />
 
-and he has already been to nearly every country in the world.<br><span class="zh">他已经去过世界上几乎所有的国家了。</span>
+<NcePair en="He's only forty-one years old," zh="他才四十一岁。" />
 
-Nigel is a very lucky man.<br><span class="zh">奈杰尔是个非常幸运的人。</span>
+<NcePair en="and he has already been to nearly every country in the world." zh="他已经去过世界上几乎所有的国家了。" />
 
-But his wife isn't very lucky.<br><span class="zh">不过他的妻子运气不太好。</span>
+<NcePair en="Nigel is a very lucky man." zh="奈杰尔是个非常幸运的人。" />
 
-She usually stays at home!<br><span class="zh">她通常待在家里！</span>
+<NcePair en="But his wife isn't very lucky." zh="不过他的妻子运气不太好。" />
+
+<NcePair en="She usually stays at home!" zh="她通常待在家里！" />

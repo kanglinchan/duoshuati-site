@@ -2,32 +2,34 @@
 
 > [新概念英语 · 第二册 实践与进步](/nce/ "返回目录")
 
-Who will be driving the buses next week?<br><span class="zh">下周谁来负责驾驶这些公交车呢？</span>
+<NceTranslateBar />
 
-Busmen have decided to go on strike next week.<br><span class="zh">公交司机们已经决定下周举行罢工。</span>
+<NcePair en="Who will be driving the buses next week?" zh="下周谁来负责驾驶这些公交车呢？" />
 
-The strike is due to begin on Tuesday.<br><span class="zh">罢工定于周二开始。</span>
+<NcePair en="Busmen have decided to go on strike next week." zh="公交司机们已经决定下周举行罢工。" />
 
-No one knows how long it will last.<br><span class="zh">没有人知道这种情况会持续多久。</span>
+<NcePair en="The strike is due to begin on Tuesday." zh="罢工定于周二开始。" />
 
-The busmen have stated that the strike will continue until general agreement is reached about pay and working conditions.<br><span class="zh">公交司机们表示，罢工将持续进行，直到就工资和工作条件达成全面共识为止。</span>
+<NcePair en="No one knows how long it will last." zh="没有人知道这种情况会持续多久。" />
 
-Most people believe that the strike will last for at least a week.<br><span class="zh">大多数人认为这次罢工至少会持续一周。</span>
+<NcePair en="The busmen have stated that the strike will continue until general agreement is reached about pay and working conditions." zh="公交司机们表示，罢工将持续进行，直到就工资和工作条件达成全面共识为止。" />
 
-Many owners of private cars are going to offer 'free rides' to people on their way to work.<br><span class="zh">许多私家车主打算为上班途中的人们提供“免费搭乘”服务。</span>
+<NcePair en="Most people believe that the strike will last for at least a week." zh="大多数人认为这次罢工至少会持续一周。" />
 
-This will relieve pressure on the trains to some extent.<br><span class="zh">这将在一定程度上缓解火车的运行压力。</span>
+<NcePair en="Many owners of private cars are going to offer 'free rides' to people on their way to work." zh="许多私家车主打算为上班途中的人们提供“免费搭乘”服务。" />
 
-Meanwhile, a number of university students have volunteered to drive buses while the strike lasts.<br><span class="zh">与此同时，许多大学生志愿在罢工期间驾驶公交车。</span>
+<NcePair en="This will relieve pressure on the trains to some extent." zh="这将在一定程度上缓解火车的运行压力。" />
 
-All the students are expert drivers,<br><span class="zh">所有的学生都是驾驶技术高超的驾驶员。</span>
+<NcePair en="Meanwhile, a number of university students have volunteered to drive buses while the strike lasts." zh="与此同时，许多大学生志愿在罢工期间驾驶公交车。" />
 
-but before they drive any of the buses, they will have to pass a special test.<br><span class="zh">但在他们驾驶任何一辆公交车之前，都必须通过一项特殊的测试。</span>
+<NcePair en="All the students are expert drivers," zh="所有的学生都是驾驶技术高超的驾驶员。" />
 
-The students are going to take the test in two days' time.<br><span class="zh">学生们将在两天后参加考试。</span>
+<NcePair en="but before they drive any of the buses, they will have to pass a special test." zh="但在他们驾驶任何一辆公交车之前，都必须通过一项特殊的测试。" />
 
-Even so, people are going to find it difficult to get to work.<br><span class="zh">即便如此，人们仍然会发现上班变得很困难。</span>
+<NcePair en="The students are going to take the test in two days' time." zh="学生们将在两天后参加考试。" />
 
-But so far, the public has expressed its gratitude to the students in lettters to the Press.<br><span class="zh">不过到目前为止，公众已经通过致信媒体的方式表达了对学生的感激之情。</span>
+<NcePair en="Even so, people are going to find it difficult to get to work." zh="即便如此，人们仍然会发现上班变得很困难。" />
 
-Only one or two people have objected that the students will drive too fast!<br><span class="zh">只有寥寥一两个人提出反对意见，认为学生们开车时可能会太快！</span>
+<NcePair en="But so far, the public has expressed its gratitude to the students in lettters to the Press." zh="不过到目前为止，公众已经通过致信媒体的方式表达了对学生的感激之情。" />
+
+<NcePair en="Only one or two people have objected that the students will drive too fast!" zh="只有寥寥一两个人提出反对意见，认为学生们开车时可能会太快！" />

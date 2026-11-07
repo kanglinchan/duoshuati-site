@@ -2,36 +2,38 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-A cup of coffee<br><span class="zh">一杯咖啡</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">安喜欢什么样的咖啡？</span>
+<NcePair en="A cup of coffee" zh="一杯咖啡" />
 
-How does Ann like her coffee?<br><span class="zh">安喜欢她的咖啡吗？</span>
+<NcePair en="Listen to the tape then answer this question." zh="安喜欢什么样的咖啡？" />
 
-Do you like coffee, Ann?<br><span class="zh">你喜欢咖啡吗，安？</span>
+<NcePair en="How does Ann like her coffee?" zh="安喜欢她的咖啡吗？" />
 
-Yes, I do.<br><span class="zh">是的，我喜欢。</span>
+<NcePair en="Do you like coffee, Ann?" zh="你喜欢咖啡吗，安？" />
 
-Do you want a cup?<br><span class="zh">你想来一杯吗？</span>
+<NcePair en="Yes, I do." zh="是的，我喜欢。" />
 
-Yes, please, Christine.<br><span class="zh">是的，请给我来一杯，克里斯汀。</span>
+<NcePair en="Do you want a cup?" zh="你想来一杯吗？" />
 
-Do you want any sugar?<br><span class="zh">要加糖吗？</span>
+<NcePair en="Yes, please, Christine." zh="是的，请给我来一杯，克里斯汀。" />
 
-Yes, please.<br><span class="zh">需要，请加一些。</span>
+<NcePair en="Do you want any sugar?" zh="要加糖吗？" />
 
-Do you want any milk?<br><span class="zh">要加牛奶吗？</span>
+<NcePair en="Yes, please." zh="需要，请加一些。" />
 
-No, thank you.<br><span class="zh">不需要，谢谢。</span>
+<NcePair en="Do you want any milk?" zh="要加牛奶吗？" />
 
-I don't like milk in my coffee.<br><span class="zh">我不喜欢在咖啡里加牛奶。</span>
+<NcePair en="No, thank you." zh="不需要，谢谢。" />
 
-I like black coffee.<br><span class="zh">我喜欢黑咖啡。</span>
+<NcePair en="I don't like milk in my coffee." zh="我不喜欢在咖啡里加牛奶。" />
 
-Do you like biscuits?<br><span class="zh">你喜欢饼干吗？</span>
+<NcePair en="I like black coffee." zh="我喜欢黑咖啡。" />
 
-Yes, I do.<br><span class="zh">是的，我喜欢。</span>
+<NcePair en="Do you like biscuits?" zh="你喜欢饼干吗？" />
 
-Do you want one?<br><span class="zh">要来一块吗？</span>
+<NcePair en="Yes, I do." zh="是的，我喜欢。" />
 
-Yes, please.<br><span class="zh">是的，请给我来一块。</span>
+<NcePair en="Do you want one?" zh="要来一块吗？" />
+
+<NcePair en="Yes, please." zh="是的，请给我来一块。" />

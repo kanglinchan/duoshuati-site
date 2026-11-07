@@ -2,36 +2,38 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Tommy's breakfast<br><span class="zh">汤米的早餐</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Tommy's breakfast" zh="汤米的早餐" />
 
-What does she mean by 'change' in the last sentence?<br><span class="zh">她在最后一句话里说的“change”是什么意思？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-When my husband was going into the dining room this morning,<br><span class="zh">今天早上，当我丈夫走进餐厅的时候……</span>
+<NcePair en="What does she mean by 'change' in the last sentence?" zh="她在最后一句话里说的“change”是什么意思？" />
 
-he dropped some coins on the floor.<br><span class="zh">他把一些硬币掉在了地上。</span>
+<NcePair en="When my husband was going into the dining room this morning," zh="今天早上，当我丈夫走进餐厅的时候……" />
 
-There were coins everywhere.<br><span class="zh">硬币到处都是。</span>
+<NcePair en="he dropped some coins on the floor." zh="他把一些硬币掉在了地上。" />
 
-We looked for them, but we could not find them all.<br><span class="zh">我们寻找过它们，但没能全部找到。</span>
+<NcePair en="There were coins everywhere." zh="硬币到处都是。" />
 
-While we were having breakfast,<br><span class="zh">当我们正在吃早餐的时候……</span>
+<NcePair en="We looked for them, but we could not find them all." zh="我们寻找过它们，但没能全部找到。" />
 
-our little boy, Tommy, found two small coins on the floor.<br><span class="zh">我们的小男孩汤米在地板上发现了两枚小硬币。</span>
+<NcePair en="While we were having breakfast," zh="当我们正在吃早餐的时候……" />
 
-He put them both into his mouth.<br><span class="zh">他把它们都放进了嘴里。</span>
+<NcePair en="our little boy, Tommy, found two small coins on the floor." zh="我们的小男孩汤米在地板上发现了两枚小硬币。" />
 
-We both tried to get the coins, but it was too late.<br><span class="zh">我们都试图拿到那些硬币，但已经太晚了。</span>
+<NcePair en="He put them both into his mouth." zh="他把它们都放进了嘴里。" />
 
-Tommy had already swallowed them!<br><span class="zh">汤米已经把它们吞下去了！</span>
+<NcePair en="We both tried to get the coins, but it was too late." zh="我们都试图拿到那些硬币，但已经太晚了。" />
 
-Late that morning, when I was doing the housework,<br><span class="zh">那天上午晚些时候，当我正在做家务时……</span>
+<NcePair en="Tommy had already swallowed them!" zh="汤米已经把它们吞下去了！" />
 
-My husband phoned me from the office.<br><span class="zh">我丈夫从办公室给我打了电话。</span>
+<NcePair en="Late that morning, when I was doing the housework," zh="那天上午晚些时候，当我正在做家务时……" />
 
-'How's Tommy?' he asked.<br><span class="zh">“汤米怎么样了？”他问道。</span>
+<NcePair en="My husband phoned me from the office." zh="我丈夫从办公室给我打了电话。" />
 
-'I don't know,' I answered,<br><span class="zh">“我不知道，”我回答道。</span>
+<NcePair en="'How's Tommy?' he asked." zh="“汤米怎么样了？”他问道。" />
 
-'Tommy's been to the toilet three times this morning, but I haven't had any change yet!'<br><span class="zh">“今天早上汤米已经上了三次厕所了，但我还没有收到任何零钱呢！”</span>
+<NcePair en="'I don't know,' I answered," zh="“我不知道，”我回答道。" />
+
+<NcePair en="'Tommy's been to the toilet three times this morning, but I haven't had any change yet!'" zh="“今天早上汤米已经上了三次厕所了，但我还没有收到任何零钱呢！”" />

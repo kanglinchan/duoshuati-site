@@ -2,44 +2,46 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Is that you, John?<br><span class="zh">那是你吗，约翰？</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Is that you, John?" zh="那是你吗，约翰？" />
 
-Which John Smith does Graham Turner think he is talking to?<br><span class="zh">格雷厄姆·特纳认为他正在和哪个叫“约翰·史密斯”的人交谈呢？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Is that you, John?<br><span class="zh">那是你吗，约翰？</span>
+<NcePair en="Which John Smith does Graham Turner think he is talking to?" zh="格雷厄姆·特纳认为他正在和哪个叫“约翰·史密斯”的人交谈呢？" />
 
-Yes, speaking.<br><span class="zh">是的，我就是。</span>
+<NcePair en="Is that you, John?" zh="那是你吗，约翰？" />
 
-Tell Mary we'll be late for dinner this evening.<br><span class="zh">告诉玛丽，我们今晚吃晚饭会迟到。</span>
+<NcePair en="Yes, speaking." zh="是的，我就是。" />
 
-I'm afraid I don't understand.<br><span class="zh">恐怕我不太明白。</span>
+<NcePair en="Tell Mary we'll be late for dinner this evening." zh="告诉玛丽，我们今晚吃晚饭会迟到。" />
 
-Hasn't Mary told you?<br><span class="zh">玛丽不是已经告诉你了吗？</span>
+<NcePair en="I'm afraid I don't understand." zh="恐怕我不太明白。" />
 
-She invited Charlotte and me to dinner this evening.<br><span class="zh">她邀请了夏洛特和我今晚一起吃晚餐。</span>
+<NcePair en="Hasn't Mary told you?" zh="玛丽不是已经告诉你了吗？" />
 
-I said I would be at your house at six o'clock, but the boss wants me to do some extra work.<br><span class="zh">我说过六点会去你家，但老板让我去做一些额外的工作。</span>
+<NcePair en="She invited Charlotte and me to dinner this evening." zh="她邀请了夏洛特和我今晚一起吃晚餐。" />
 
-I'll have to stay at the office.<br><span class="zh">我得留在办公室。</span>
+<NcePair en="I said I would be at your house at six o'clock, but the boss wants me to do some extra work." zh="我说过六点会去你家，但老板让我去做一些额外的工作。" />
 
-I don't know when I'll finish.<br><span class="zh">我不知道我什么时候能弄完。</span>
+<NcePair en="I'll have to stay at the office." zh="我得留在办公室。" />
 
-Oh, and by the way, my wife wants to know if Mary needs any help.<br><span class="zh">哦，顺便问一下，我妻子想知道玛丽是否需要帮忙。</span>
+<NcePair en="I don't know when I'll finish." zh="我不知道我什么时候能弄完。" />
 
-I don't know what you're talking about.<br><span class="zh">我不明白你在说什么。</span>
+<NcePair en="Oh, and by the way, my wife wants to know if Mary needs any help." zh="哦，顺便问一下，我妻子想知道玛丽是否需要帮忙。" />
 
-That is John Smith, isn't it?<br><span class="zh">你是约翰·史密斯，对吧？</span>
+<NcePair en="I don't know what you're talking about." zh="我不明白你在说什么。" />
 
-Yes, I'm John Smith.<br><span class="zh">是的，我就是约翰·史密斯。</span>
+<NcePair en="That is John Smith, isn't it?" zh="你是约翰·史密斯，对吧？" />
 
-You are John Smith, the engineer, aren't you?<br><span class="zh">你是那位工程师约翰·史密斯，对吗？</span>
+<NcePair en="Yes, I'm John Smith." zh="是的，我就是约翰·史密斯。" />
 
-That's right.<br><span class="zh">没错。</span>
+<NcePair en="You are John Smith, the engineer, aren't you?" zh="你是那位工程师约翰·史密斯，对吗？" />
 
-You work for the Overseas Engineering Company, don't you?<br><span class="zh">你在海外工程公司工作，对吗？</span>
+<NcePair en="That's right." zh="没错。" />
 
-No, I don't.<br><span class="zh">不，我不在那里工作。</span>
+<NcePair en="You work for the Overseas Engineering Company, don't you?" zh="你在海外工程公司工作，对吗？" />
 
-I'm John Smith the telephone engineer and I'm repairing your telephone line.<br><span class="zh">我是电话工程师约翰·史密斯，我正在修理你们的电话线路。</span>
+<NcePair en="No, I don't." zh="不，我不在那里工作。" />
+
+<NcePair en="I'm John Smith the telephone engineer and I'm repairing your telephone line." zh="我是电话工程师约翰·史密斯，我正在修理你们的电话线路。" />

@@ -2,56 +2,58 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Going on holiday<br><span class="zh">去度假</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Going on holiday" zh="去度假" />
 
-Where did Sam go for his holiday this year?<br><span class="zh">今年山姆去哪里度假了？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-Hello, Sam.<br><span class="zh">你好，萨姆。</span>
+<NcePair en="Where did Sam go for his holiday this year?" zh="今年山姆去哪里度假了？" />
 
-Come in.<br><span class="zh">请进来。</span>
+<NcePair en="Hello, Sam." zh="你好，萨姆。" />
 
-Hi, Sam.<br><span class="zh">嗨，萨姆。</span>
+<NcePair en="Come in." zh="请进来。" />
 
-We're having lunch.<br><span class="zh">我们正在吃午饭。</span>
+<NcePair en="Hi, Sam." zh="嗨，萨姆。" />
 
-Do you want to have lunch with us?<br><span class="zh">你想和我们一起吃午饭吗？</span>
+<NcePair en="We're having lunch." zh="我们正在吃午饭。" />
 
-No, thank you, Tom.<br><span class="zh">不，谢谢你，汤姆。</span>
+<NcePair en="Do you want to have lunch with us?" zh="你想和我们一起吃午饭吗？" />
 
-I've already had lunch.<br><span class="zh">我已经吃过午饭了。</span>
+<NcePair en="No, thank you, Tom." zh="不，谢谢你，汤姆。" />
 
-I had lunch at half past twelve.<br><span class="zh">我十二点半吃了午饭。</span>
+<NcePair en="I've already had lunch." zh="我已经吃过午饭了。" />
 
-Have a cup of coffee then.<br><span class="zh">那就喝杯咖啡吧。</span>
+<NcePair en="I had lunch at half past twelve." zh="我十二点半吃了午饭。" />
 
-I've just had a cup, thank you.<br><span class="zh">我刚刚喝了一杯，谢谢。</span>
+<NcePair en="Have a cup of coffee then." zh="那就喝杯咖啡吧。" />
 
-I had one after my lunch.<br><span class="zh">我午饭后喝了一杯</span>
+<NcePair en="I've just had a cup, thank you." zh="我刚刚喝了一杯，谢谢。" />
 
-Let's go into the living room, Carol.<br><span class="zh">我们一起去客厅吧，卡罗尔。</span>
+<NcePair en="I had one after my lunch." zh="我午饭后喝了一杯" />
 
-We can have our coffee there.<br><span class="zh">我们可以在那里喝咖啡。</span>
+<NcePair en="Let's go into the living room, Carol." zh="我们一起去客厅吧，卡罗尔。" />
 
-Excuse the mess, Sam.<br><span class="zh">萨姆，不好意思，屋里有点乱</span>
+<NcePair en="We can have our coffee there." zh="我们可以在那里喝咖啡。" />
 
-This room's very untidy.<br><span class="zh">这个房间非常乱。</span>
+<NcePair en="Excuse the mess, Sam." zh="萨姆，不好意思，屋里有点乱" />
 
-We're packing our suitcases.<br><span class="zh">我们正在打包行李箱。</span>
+<NcePair en="This room's very untidy." zh="这个房间非常乱。" />
 
-We're going to leave tomorrow.<br><span class="zh">我们明天就要出发了。</span>
+<NcePair en="We're packing our suitcases." zh="我们正在打包行李箱。" />
 
-Tom and I are going to have a holiday.<br><span class="zh">我和汤姆打算去度个假。</span>
+<NcePair en="We're going to leave tomorrow." zh="我们明天就要出发了。" />
 
-Aren't you lucky!<br><span class="zh">你真幸运啊！</span>
+<NcePair en="Tom and I are going to have a holiday." zh="我和汤姆打算去度个假。" />
 
-When are you going to have a holiday, Sam?<br><span class="zh">萨姆，你什么时候去度假？</span>
+<NcePair en="Aren't you lucky!" zh="你真幸运啊！" />
 
-I don't know.<br><span class="zh">我不知道。</span>
+<NcePair en="When are you going to have a holiday, Sam?" zh="萨姆，你什么时候去度假？" />
 
-I've already had my holiday this year.<br><span class="zh">我今年已经度过了假期。</span>
+<NcePair en="I don't know." zh="我不知道。" />
 
-Where did you go?<br><span class="zh">你去哪里度假了？</span>
+<NcePair en="I've already had my holiday this year." zh="我今年已经度过了假期。" />
 
-I stayed at home!<br><span class="zh">我待在家里！</span>
+<NcePair en="Where did you go?" zh="你去哪里度假了？" />
+
+<NcePair en="I stayed at home!" zh="我待在家里！" />

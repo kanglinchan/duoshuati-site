@@ -2,38 +2,40 @@
 
 > [新概念英语 · 第二册 实践与进步](/nce/ "返回目录")
 
-Do they speak English?<br><span class="zh">他们说英语吗？</span>
+<NceTranslateBar />
 
-Why does the writer not understand the porter?<br><span class="zh">为什么作者听不懂那个行李搬运工的话？</span>
+<NcePair en="Do they speak English?" zh="他们说英语吗？" />
 
-I arrived in London at last.<br><span class="zh">我终于到了伦敦。</span>
+<NcePair en="Why does the writer not understand the porter?" zh="为什么作者听不懂那个行李搬运工的话？" />
 
-The railway station was big, black and dark.<br><span class="zh">火车站又大又黑，显得非常阴暗。</span>
+<NcePair en="I arrived in London at last." zh="我终于到了伦敦。" />
 
-I did not know the way to my hotel, so I asked a porter.<br><span class="zh">我不知道怎么去我的酒店，于是我问了一个行李搬运工。</span>
+<NcePair en="The railway station was big, black and dark." zh="火车站又大又黑，显得非常阴暗。" />
 
-I not only spoke English very carefully, but very clearly as well.<br><span class="zh">我不仅英语说得很仔细，而且发音也很清晰。</span>
+<NcePair en="I did not know the way to my hotel, so I asked a porter." zh="我不知道怎么去我的酒店，于是我问了一个行李搬运工。" />
 
-The porter, however, could not understand me.<br><span class="zh">然而，那个行李搬运工却听不懂我。</span>
+<NcePair en="I not only spoke English very carefully, but very clearly as well." zh="我不仅英语说得很仔细，而且发音也很清晰。" />
 
-I repeated my question several times and at last he understood.<br><span class="zh">我重复了几次我的问题，最后他才明白了。</span>
+<NcePair en="The porter, however, could not understand me." zh="然而，那个行李搬运工却听不懂我。" />
 
-he answered me, but he spoke neither slowly nor clearly.<br><span class="zh">他回答了我，但他说得既不慢也不清楚。</span>
+<NcePair en="I repeated my question several times and at last he understood." zh="我重复了几次我的问题，最后他才明白了。" />
 
-'I am a foreigner,' I said.<br><span class="zh">“我是外国人，”我说。</span>
+<NcePair en="he answered me, but he spoke neither slowly nor clearly." zh="他回答了我，但他说得既不慢也不清楚。" />
 
-Then he spoke slowly, but I could not understand him.<br><span class="zh">然后他放慢了语速，但我还是听不懂他。</span>
+<NcePair en="'I am a foreigner,' I said." zh="“我是外国人，”我说。" />
 
-My teacher never spoke English like that!<br><span class="zh">我的老师从来都不会用那样的方式说英语！</span>
+<NcePair en="Then he spoke slowly, but I could not understand him." zh="然后他放慢了语速，但我还是听不懂他。" />
 
-The porter and I looked at each other and smiled.<br><span class="zh">那个行李搬运工和我对视了一眼，然后都笑了。</span>
+<NcePair en="My teacher never spoke English like that!" zh="我的老师从来都不会用那样的方式说英语！" />
 
-Then he said something and I understood it.<br><span class="zh">接着他说了些什么，我听懂了。</span>
+<NcePair en="The porter and I looked at each other and smiled." zh="那个行李搬运工和我对视了一眼，然后都笑了。" />
 
-'You'll soon learn English!' he said.<br><span class="zh">“你很快就能学会英语了！”他说。</span>
+<NcePair en="Then he said something and I understood it." zh="接着他说了些什么，我听懂了。" />
 
-I wonder.<br><span class="zh">这可不好说。</span>
+<NcePair en="'You'll soon learn English!' he said." zh="“你很快就能学会英语了！”他说。" />
 
-In England, each person speaks a different language.<br><span class="zh">在英格兰，每个人说着不同的语言。</span>
+<NcePair en="I wonder." zh="这可不好说。" />
 
-The English understand each other, but I don't understand them!<br><span class="zh">英国人之间可以互相理解，但我却听不懂他们的话！</span>
+<NcePair en="In England, each person speaks a different language." zh="在英格兰，每个人说着不同的语言。" />
+
+<NcePair en="The English understand each other, but I don't understand them!" zh="英国人之间可以互相理解，但我却听不懂他们的话！" />

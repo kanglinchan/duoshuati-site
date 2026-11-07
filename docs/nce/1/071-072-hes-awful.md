@@ -2,46 +2,48 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-He's awful!<br><span class="zh">他太糟糕了！</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="He's awful!" zh="他太糟糕了！" />
 
-How did Pauline answer the telephone at nine o'clock?<br><span class="zh">保罗琳在九点钟是如何接电话的？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-What's Ron Marston like, Pauline?<br><span class="zh">罗恩·马斯顿是个什么样的人啊，保罗琳？</span>
+<NcePair en="How did Pauline answer the telephone at nine o'clock?" zh="保罗琳在九点钟是如何接电话的？" />
 
-He's awful!<br><span class="zh">他太糟糕了！</span>
+<NcePair en="What's Ron Marston like, Pauline?" zh="罗恩·马斯顿是个什么样的人啊，保罗琳？" />
 
-He telephoned me four times yesterday and three times the day before yesterday.<br><span class="zh">他昨天给我打了四次电话，前天则打了三次电话。</span>
+<NcePair en="He's awful!" zh="他太糟糕了！" />
 
-He telephoned the office yesterday morning and yesterday afternoon.<br><span class="zh">他昨天上午和昨天下午都给办公室打了电话。</span>
+<NcePair en="He telephoned me four times yesterday and three times the day before yesterday." zh="他昨天给我打了四次电话，前天则打了三次电话。" />
 
-My boss answered the telephone.<br><span class="zh">我的老板接了电话。</span>
+<NcePair en="He telephoned the office yesterday morning and yesterday afternoon." zh="他昨天上午和昨天下午都给办公室打了电话。" />
 
-What did your boss say to him?<br><span class="zh">你的老板对他说了什么？</span>
+<NcePair en="My boss answered the telephone." zh="我的老板接了电话。" />
 
-He said, 'Pauline is typing letters.<br><span class="zh">他说：“保罗琳正在打信件。</span>
+<NcePair en="What did your boss say to him?" zh="你的老板对他说了什么？" />
 
-She can't speak to you now!'<br><span class="zh">“她现在没法和你说话！”</span>
+<NcePair en="He said, 'Pauline is typing letters." zh="他说：“保罗琳正在打信件。" />
 
-Then I arrived home at six o'clock yesterday evening.<br><span class="zh">然后我昨天晚上六点钟回到了家。</span>
+<NcePair en="She can't speak to you now!'" zh="“她现在没法和你说话！”" />
 
-He telephoned again.<br><span class="zh">他又打了一次电话。</span>
+<NcePair en="Then I arrived home at six o'clock yesterday evening." zh="然后我昨天晚上六点钟回到了家。" />
 
-But I didn't answer the phone!<br><span class="zh">但我没有接电话啊！</span>
+<NcePair en="He telephoned again." zh="他又打了一次电话。" />
 
-Did he telephone again last night?<br><span class="zh">他昨晚又打电话来了吗？</span>
+<NcePair en="But I didn't answer the phone!" zh="但我没有接电话啊！" />
 
-Yes, he did.<br><span class="zh">是的，他确实这么做了。</span>
+<NcePair en="Did he telephone again last night?" zh="他昨晚又打电话来了吗？" />
 
-He telephoned at nine o'clock.<br><span class="zh">他是在九点钟打来的电话。</span>
+<NcePair en="Yes, he did." zh="是的，他确实这么做了。" />
 
-What did you say to him?<br><span class="zh">你对他说了什么？</span>
+<NcePair en="He telephoned at nine o'clock." zh="他是在九点钟打来的电话。" />
 
-I said, 'This is Pauline's mother.<br><span class="zh">我说：“我是保罗琳的母亲。</span>
+<NcePair en="What did you say to him?" zh="你对他说了什么？" />
 
-Please don't telephone my daughter again!'<br><span class="zh">“请不要再给我女儿打电话了！”</span>
+<NcePair en="I said, 'This is Pauline's mother." zh="我说：“我是保罗琳的母亲。" />
 
-Did he telephone again?<br><span class="zh">他又打电话来了吗？</span>
+<NcePair en="Please don't telephone my daughter again!'" zh="“请不要再给我女儿打电话了！”" />
 
-No, he didn't!<br><span class="zh">不，他并没有！</span>
+<NcePair en="Did he telephone again?" zh="他又打电话来了吗？" />
+
+<NcePair en="No, he didn't!" zh="不，他并没有！" />

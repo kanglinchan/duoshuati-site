@@ -2,50 +2,52 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Full of mistakes<br><span class="zh">满是错误</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">请听录音，然后回答这个问题：</span>
+<NcePair en="Full of mistakes" zh="满是错误" />
 
-What was Sandra's present?<br><span class="zh">桑德拉收到了什么礼物？</span>
+<NcePair en="Listen to the tape then answer this question." zh="请听录音，然后回答这个问题：" />
 
-Where's Sandra, Bob?<br><span class="zh">鲍勃，桑德拉在哪里？</span>
+<NcePair en="What was Sandra's present?" zh="桑德拉收到了什么礼物？" />
 
-I want her.<br><span class="zh">我找她。</span>
+<NcePair en="Where's Sandra, Bob?" zh="鲍勃，桑德拉在哪里？" />
 
-Do you want to speak to her?<br><span class="zh">你想和她说话吗？</span>
+<NcePair en="I want her." zh="我找她。" />
 
-Yes, I do.<br><span class="zh">是的，我想。</span>
+<NcePair en="Do you want to speak to her?" zh="你想和她说话吗？" />
 
-I want her to come to my office.<br><span class="zh">我希望她能来我的办公室。</span>
+<NcePair en="Yes, I do." zh="是的，我想。" />
 
-Tell her to come at once.<br><span class="zh">告诉她立刻过来。</span>
+<NcePair en="I want her to come to my office." zh="我希望她能来我的办公室。" />
 
-Did you want to see me?<br><span class="zh">你是想见我吗？</span>
+<NcePair en="Tell her to come at once." zh="告诉她立刻过来。" />
 
-Ah, yes, Sandra.<br><span class="zh">啊，是的，桑德拉。</span>
+<NcePair en="Did you want to see me?" zh="你是想见我吗？" />
 
-How do you spell 'intelligent'?<br><span class="zh">“intelligent”怎么拼写？</span>
+<NcePair en="Ah, yes, Sandra." zh="啊，是的，桑德拉。" />
 
-Can you tell me?<br><span class="zh">你能告诉我吗？</span>
+<NcePair en="How do you spell 'intelligent'?" zh="“intelligent”怎么拼写？" />
 
-I-N-T-E-L-L-I-G-E-N-T.<br><span class="zh">I-N-T-E-L-L-I-G-E-N-T。</span>
+<NcePair en="Can you tell me?" zh="你能告诉我吗？" />
 
-That's right.<br><span class="zh">没错。</span>
+<NcePair en="I-N-T-E-L-L-I-G-E-N-T." zh="I-N-T-E-L-L-I-G-E-N-T。" />
 
-You've typed it with only one 'L'.<br><span class="zh">你只打了一个'L'。</span>
+<NcePair en="That's right." zh="没错。" />
 
-This letter's full of mistakes.<br><span class="zh">这封信里满是错误。</span>
+<NcePair en="You've typed it with only one 'L'." zh="你只打了一个'L'。" />
 
-I want you to type it again.<br><span class="zh">我要你重新打一遍。</span>
+<NcePair en="This letter's full of mistakes." zh="这封信里满是错误。" />
 
-Yes, I'll do that.<br><span class="zh">好的，我会的。</span>
+<NcePair en="I want you to type it again." zh="我要你重新打一遍。" />
 
-I'm sorry about that.<br><span class="zh">真抱歉。</span>
+<NcePair en="Yes, I'll do that." zh="好的，我会的。" />
 
-And here's a little present for you.<br><span class="zh">这里有一个小礼物给你。</span>
+<NcePair en="I'm sorry about that." zh="真抱歉。" />
 
-What is it?<br><span class="zh">是什么礼物呢？</span>
+<NcePair en="And here's a little present for you." zh="这里有一个小礼物给你。" />
 
-It's a dictionary.<br><span class="zh">是一本字典。</span>
+<NcePair en="What is it?" zh="是什么礼物呢？" />
 
-I hope it'll help you.<br><span class="zh">希望这能对你有所帮助。</span>
+<NcePair en="It's a dictionary." zh="是一本字典。" />
+
+<NcePair en="I hope it'll help you." zh="希望这能对你有所帮助。" />

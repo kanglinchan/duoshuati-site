@@ -2,38 +2,40 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Our village<br><span class="zh">我们的村庄</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">先听这段录音，然后再回答这个问题。</span>
+<NcePair en="Our village" zh="我们的村庄" />
 
-Are the children coming out of the park or going into it?<br><span class="zh">孩子们是从公园里出来，还是正要进入公园呢？</span>
+<NcePair en="Listen to the tape then answer this question." zh="先听这段录音，然后再回答这个问题。" />
 
-This is a photograph of our village.<br><span class="zh">这是一张我们村庄的照片。</span>
+<NcePair en="Are the children coming out of the park or going into it?" zh="孩子们是从公园里出来，还是正要进入公园呢？" />
 
-Our village is in a valley.<br><span class="zh">我们的村庄在一个山谷里。</span>
+<NcePair en="This is a photograph of our village." zh="这是一张我们村庄的照片。" />
 
-It is between two hills.<br><span class="zh">它在两座小山之间。</span>
+<NcePair en="Our village is in a valley." zh="我们的村庄在一个山谷里。" />
 
-The village is on a river.<br><span class="zh">这个村庄在一条河边。</span>
+<NcePair en="It is between two hills." zh="它在两座小山之间。" />
 
-Here is another photograph of the village.<br><span class="zh">这是另一张村庄的照片。</span>
+<NcePair en="The village is on a river." zh="这个村庄在一条河边。" />
 
-My wife and I are walking along the banks of the river.<br><span class="zh">我和我的妻子正在河边散步。</span>
+<NcePair en="Here is another photograph of the village." zh="这是另一张村庄的照片。" />
 
-We are on the left.<br><span class="zh">我们在左边。</span>
+<NcePair en="My wife and I are walking along the banks of the river." zh="我和我的妻子正在河边散步。" />
 
-There is a boy in the water.<br><span class="zh">水里有一个男孩。</span>
+<NcePair en="We are on the left." zh="我们在左边。" />
 
-He is swimming across the river.<br><span class="zh">他正在游过这条河。</span>
+<NcePair en="There is a boy in the water." zh="水里有一个男孩。" />
 
-Here is another photograph.<br><span class="zh">这是另一张照片。</span>
+<NcePair en="He is swimming across the river." zh="他正在游过这条河。" />
 
-This is the school building.<br><span class="zh">这是学校大楼。</span>
+<NcePair en="Here is another photograph." zh="这是另一张照片。" />
 
-It is beside a park.<br><span class="zh">它在一个公园旁边。</span>
+<NcePair en="This is the school building." zh="这是学校大楼。" />
 
-The park is on the right.<br><span class="zh">公园在右边。</span>
+<NcePair en="It is beside a park." zh="它在一个公园旁边。" />
 
-Some children are coming out of the building.<br><span class="zh">一些孩子正从大楼里走出来。</span>
+<NcePair en="The park is on the right." zh="公园在右边。" />
 
-Some of them are going into the park.<br><span class="zh">其中一些人正前往公园。</span>
+<NcePair en="Some children are coming out of the building." zh="一些孩子正从大楼里走出来。" />
+
+<NcePair en="Some of them are going into the park." zh="其中一些人正前往公园。" />

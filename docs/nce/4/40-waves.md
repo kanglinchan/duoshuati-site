@@ -2,50 +2,52 @@
 
 > [新概念英语 · 第四册 流利英语](/nce/ "返回目录")
 
-Waves<br><span class="zh">波浪</span>
+<NceTranslateBar />
 
-What false impression does an ocean wave convey to the observer?<br><span class="zh">海浪会给观察者留下什么样的错误印象呢？</span>
+<NcePair en="Waves" zh="波浪" />
 
-Waves are the children of the struggle between ocean and atmosphere, the ongoing signatures of infinity.<br><span class="zh">海浪是海洋与大气相互作用的产物，是永恒不息的印记。</span>
+<NcePair en="What false impression does an ocean wave convey to the observer?" zh="海浪会给观察者留下什么样的错误印象呢？" />
 
-Rays from the sun excite and energize the atmosphere of the earth, awakening it to flow, to movement, to rhythm, to life.<br><span class="zh">太阳的光线激发并赋予地球大气层能量，使其开始流动、运动、产生节奏，并充满生机。</span>
+<NcePair en="Waves are the children of the struggle between ocean and atmosphere, the ongoing signatures of infinity." zh="海浪是海洋与大气相互作用的产物，是永恒不息的印记。" />
 
-The wind then speaks the message of the sun to the sea<br><span class="zh">然后，风将太阳的信息传递给了大海。</span>
+<NcePair en="Rays from the sun excite and energize the atmosphere of the earth, awakening it to flow, to movement, to rhythm, to life." zh="太阳的光线激发并赋予地球大气层能量，使其开始流动、运动、产生节奏，并充满生机。" />
 
-and the sea transmits it on through waves--an ancient, exquisite powerful message.<br><span class="zh">海水通过海浪将这一信息传递出去——一条古老而精美的、充满力量的信息。</span>
+<NcePair en="The wind then speaks the message of the sun to the sea" zh="然后，风将太阳的信息传递给了大海。" />
 
-These ocean waves are among the earth's most complicated natural phenomena.<br><span class="zh">这些海浪是地球上最复杂的自然现象之一。</span>
+<NcePair en="and the sea transmits it on through waves--an ancient, exquisite powerful message." zh="海水通过海浪将这一信息传递出去——一条古老而精美的、充满力量的信息。" />
 
-The basic features include a crest (the highest point of the wave),<br><span class="zh">基本特征包括波峰（即波浪的最高点）。</span>
+<NcePair en="These ocean waves are among the earth's most complicated natural phenomena." zh="这些海浪是地球上最复杂的自然现象之一。" />
 
-a trough (the lowest point), a height (the vertical distance from the trough to the crest),<br><span class="zh">波谷（即最低点），波高（即从波谷到波峰的垂直距离），</span>
+<NcePair en="The basic features include a crest (the highest point of the wave)," zh="基本特征包括波峰（即波浪的最高点）。" />
 
-a wave length (the horizontal distance between two wave crests),<br><span class="zh">波长（即两个波峰之间的水平距离）</span>
+<NcePair en="a trough (the lowest point), a height (the vertical distance from the trough to the crest)," zh="波谷（即最低点），波高（即从波谷到波峰的垂直距离），" />
 
-and a period (which is the time it takes awave crest to travel one wave length).<br><span class="zh">以及周期（即波峰传播一个波长所需的时间）。</span>
+<NcePair en="a wave length (the horizontal distance between two wave crests)," zh="波长（即两个波峰之间的水平距离）" />
 
-Although an ocean wave gives the impression of a wall of water moving in your direction,<br><span class="zh">虽然海浪看起来像是一堵朝你方向涌来的水墙，</span>
+<NcePair en="and a period (which is the time it takes awave crest to travel one wave length)." zh="以及周期（即波峰传播一个波长所需的时间）。" />
 
-in actuality waves move through the water leaving the water about where it was.<br><span class="zh">实际上，波浪在水中传播时，水本身基本停留在原处。</span>
+<NcePair en="Although an ocean wave gives the impression of a wall of water moving in your direction," zh="虽然海浪看起来像是一堵朝你方向涌来的水墙，" />
 
-If the water was moving with the wave,<br><span class="zh">如果水是随着波浪一起运动的……</span>
+<NcePair en="in actuality waves move through the water leaving the water about where it was." zh="实际上，波浪在水中传播时，水本身基本停留在原处。" />
 
-the ocean and everything on it would be racing in to the shore with obviously catastrophic results.<br><span class="zh">海洋以及其中的一切都会被冲向海岸，这显然会造成灾难性的后果。</span>
+<NcePair en="If the water was moving with the wave," zh="如果水是随着波浪一起运动的……" />
 
-An ocean wave passing through deep water causes a particle on the surface to move in a roughly circular orbit,<br><span class="zh">当海浪穿过深水区域时，水面上的一个颗粒会沿着近似圆形的轨道运动。</span>
+<NcePair en="the ocean and everything on it would be racing in to the shore with obviously catastrophic results." zh="海洋以及其中的一切都会被冲向海岸，这显然会造成灾难性的后果。" />
 
-drawing the particle first towards the advancing wave, then up into the wave,<br><span class="zh">首先将粒子吸引向前进的波浪，然后使其向上融入到波浪中。</span>
+<NcePair en="An ocean wave passing through deep water causes a particle on the surface to move in a roughly circular orbit," zh="当海浪穿过深水区域时，水面上的一个颗粒会沿着近似圆形的轨道运动。" />
 
-then forward with it and then--as the wave leaves the particles behind--back to its starting point again.<br><span class="zh">然后随波浪前进，最后——当波浪离开粒子后——粒子又回到起点。</span>
+<NcePair en="drawing the particle first towards the advancing wave, then up into the wave," zh="首先将粒子吸引向前进的波浪，然后使其向上融入到波浪中。" />
 
-From both maturity to death, a wave is subject to the same laws as any other 'living' thing.<br><span class="zh">从成熟到消亡，海浪也遵循着与其他'生命体'相同的规律。</span>
+<NcePair en="then forward with it and then--as the wave leaves the particles behind--back to its starting point again." zh="然后随波浪前进，最后——当波浪离开粒子后——粒子又回到起点。" />
 
-For a time it assumes a miraculous individuality that, in the end, is reabsorbed into the great ocean of life.<br><span class="zh">在一段时间内，它展现出一种仿佛奇迹般的独特性；然而最终，这种独特性还是被重新融入了浩瀚的生命之海中。</span>
+<NcePair en="From both maturity to death, a wave is subject to the same laws as any other 'living' thing." zh="从成熟到消亡，海浪也遵循着与其他'生命体'相同的规律。" />
 
-The undulating waves of the open sea are generated by three natural causes:<br><span class="zh">开阔海域中那些起伏的波浪是由三种自然原因形成的：</span>
+<NcePair en="For a time it assumes a miraculous individuality that, in the end, is reabsorbed into the great ocean of life." zh="在一段时间内，它展现出一种仿佛奇迹般的独特性；然而最终，这种独特性还是被重新融入了浩瀚的生命之海中。" />
 
-wind, earth movements or tremors, and the gravitational pull of the moon and the sun.<br><span class="zh">风、地壳运动或震动，以及月球和太阳的引力。</span>
+<NcePair en="The undulating waves of the open sea are generated by three natural causes:" zh="开阔海域中那些起伏的波浪是由三种自然原因形成的：" />
 
-Once waves have been generated,<br><span class="zh">一旦海浪被生成（或：波浪开始形成），</span>
+<NcePair en="wind, earth movements or tremors, and the gravitational pull of the moon and the sun." zh="风、地壳运动或震动，以及月球和太阳的引力。" />
 
-gravity is the force that drives them in a continual attempt to restore the ocean surface to a flat plain.<br><span class="zh">重力是驱动波浪的力量，它不断试图使海面恢复平坦。</span>
+<NcePair en="Once waves have been generated," zh="一旦海浪被生成（或：波浪开始形成），" />
+
+<NcePair en="gravity is the force that drives them in a continual attempt to restore the ocean surface to a flat plain." zh="重力是驱动波浪的力量，它不断试图使海面恢复平坦。" />

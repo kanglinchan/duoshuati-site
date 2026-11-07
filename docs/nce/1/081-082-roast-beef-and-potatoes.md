@@ -2,54 +2,56 @@
 
 > [新概念英语 · 第一册 英语初阶](/nce/ "返回目录")
 
-Roast beef and potatoes<br><span class="zh">烤牛肉配土豆</span>
+<NceTranslateBar />
 
-Listen to the tape then answer this question.<br><span class="zh">听完录音后回答这个问题：</span>
+<NcePair en="Roast beef and potatoes" zh="烤牛肉配土豆" />
 
-Why is Carol disappointed?<br><span class="zh">为什么卡罗尔感到失望？</span>
+<NcePair en="Listen to the tape then answer this question." zh="听完录音后回答这个问题：" />
 
-Hi, Carol! Where's Tom?<br><span class="zh">嗨，Carol！Tom在哪儿？</span>
+<NcePair en="Why is Carol disappointed?" zh="为什么卡罗尔感到失望？" />
 
-He's upstairs.<br><span class="zh">他在楼上。</span>
+<NcePair en="Hi, Carol! Where's Tom?" zh="嗨，Carol！Tom在哪儿？" />
 
-He's having a bath.<br><span class="zh">他正在洗澡。</span>
+<NcePair en="He's upstairs." zh="他在楼上。" />
 
-Tom!<br><span class="zh">汤姆！</span>
+<NcePair en="He's having a bath." zh="他正在洗澡。" />
 
-Yes?<br><span class="zh">怎么了？</span>
+<NcePair en="Tom!" zh="汤姆！" />
 
-Sam's here.<br><span class="zh">山姆来了。</span>
+<NcePair en="Yes?" zh="怎么了？" />
 
-I'm nearly ready.<br><span class="zh">我差不多准备好了。</span>
+<NcePair en="Sam's here." zh="山姆来了。" />
 
-Hello, Sam.<br><span class="zh">你好，山姆。</span>
+<NcePair en="I'm nearly ready." zh="我差不多准备好了。" />
 
-Have a cigarette.<br><span class="zh">来一支烟吧。</span>
+<NcePair en="Hello, Sam." zh="你好，山姆。" />
 
-No, thanks, Tom.<br><span class="zh">不，谢谢，汤姆。</span>
+<NcePair en="Have a cigarette." zh="来一支烟吧。" />
 
-Have a glass of whisky then.<br><span class="zh">那就喝一杯威士忌吧。</span>
+<NcePair en="No, thanks, Tom." zh="不，谢谢，汤姆。" />
 
-OK.<br><span class="zh">好的。</span>
+<NcePair en="Have a glass of whisky then." zh="那就喝一杯威士忌吧。" />
 
-Thanks.<br><span class="zh">谢谢。</span>
+<NcePair en="OK." zh="好的。" />
 
-Is dinnner ready, Carol?<br><span class="zh">卡罗尔，晚餐准备好了吗？</span>
+<NcePair en="Thanks." zh="谢谢。" />
 
-It's nearly ready.<br><span class="zh">差不多准备好了。</span>
+<NcePair en="Is dinnner ready, Carol?" zh="卡罗尔，晚餐准备好了吗？" />
 
-We can have dinner at seven o'clock.<br><span class="zh">我们可以在七点钟吃晚饭。</span>
+<NcePair en="It's nearly ready." zh="差不多准备好了。" />
 
-Sam and I had lunch together today.<br><span class="zh">今天我和山姆一起吃了午饭。</span>
+<NcePair en="We can have dinner at seven o'clock." zh="我们可以在七点钟吃晚饭。" />
 
-We went to a restaurant.<br><span class="zh">我们去了餐厅。</span>
+<NcePair en="Sam and I had lunch together today." zh="今天我和山姆一起吃了午饭。" />
 
-What did you have?<br><span class="zh">你吃了什么？</span>
+<NcePair en="We went to a restaurant." zh="我们去了餐厅。" />
 
-We had roast beef and potatoes.<br><span class="zh">我们吃了烤牛肉和土豆。</span>
+<NcePair en="What did you have?" zh="你吃了什么？" />
 
-Oh!<br><span class="zh">哦！</span>
+<NcePair en="We had roast beef and potatoes." zh="我们吃了烤牛肉和土豆。" />
 
-What's the matter, Carol?<br><span class="zh">怎么了，卡罗尔？</span>
+<NcePair en="Oh!" zh="哦！" />
 
-Well, you're going to have roast beef and potatoes again tonight!<br><span class="zh">嗯，今晚你又可以吃烤牛肉和土豆了！</span>
+<NcePair en="What's the matter, Carol?" zh="怎么了，卡罗尔？" />
+
+<NcePair en="Well, you're going to have roast beef and potatoes again tonight!" zh="嗯，今晚你又可以吃烤牛肉和土豆了！" />

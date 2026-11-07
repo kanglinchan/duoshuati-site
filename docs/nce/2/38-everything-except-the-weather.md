@@ -2,42 +2,44 @@
 
 > [新概念英语 · 第二册 实践与进步](/nce/ "返回目录")
 
-Why did Harrison sell his house so quickly?<br><span class="zh">为什么哈里森这么快就卖掉了他的房子？</span>
+<NceTranslateBar />
 
-My old friend, Harrison, had lived in<br><span class="zh">我的老朋友哈里森曾经住在这里。</span>
+<NcePair en="Why did Harrison sell his house so quickly?" zh="为什么哈里森这么快就卖掉了他的房子？" />
 
-the Mediterranean for many years<br><span class="zh">在地中海地区生活了许多年</span>
+<NcePair en="My old friend, Harrison, had lived in" zh="我的老朋友哈里森曾经住在这里。" />
 
-before he returned to England.<br><span class="zh">在他回到英格兰之前。</span>
+<NcePair en="the Mediterranean for many years" zh="在地中海地区生活了许多年" />
 
-He had often dreamed of retiring in England<br><span class="zh">他经常梦想着在英格兰退休。</span>
+<NcePair en="before he returned to England." zh="在他回到英格兰之前。" />
 
-and had planned to settle down in the country.<br><span class="zh">并且计划在乡下安顿下来</span>
+<NcePair en="He had often dreamed of retiring in England" zh="他经常梦想着在英格兰退休。" />
 
-He had no sooner returned than he bought<br><span class="zh">他一回来就买了</span>
+<NcePair en="and had planned to settle down in the country." zh="并且计划在乡下安顿下来" />
 
-a house and went to live there.<br><span class="zh">一栋房子并搬去那里住</span>
+<NcePair en="He had no sooner returned than he bought" zh="他一回来就买了" />
 
-Almost immediately he began to complain<br><span class="zh">几乎立刻，他就开始抱怨起来。</span>
+<NcePair en="a house and went to live there." zh="一栋房子并搬去那里住" />
 
-about the weather,<br><span class="zh">抱怨天气</span>
+<NcePair en="Almost immediately he began to complain" zh="几乎立刻，他就开始抱怨起来。" />
 
-for even though it was still summer,<br><span class="zh">因为尽管还是夏天</span>
+<NcePair en="about the weather," zh="抱怨天气" />
 
-it rained continually and it was often bitterly cold.<br><span class="zh">雨一直下个不停，天气也常常非常寒冷。</span>
+<NcePair en="for even though it was still summer," zh="因为尽管还是夏天" />
 
-After so many years of sunshine,<br><span class="zh">在享受了多年阳光之后</span>
+<NcePair en="it rained continually and it was often bitterly cold." zh="雨一直下个不停，天气也常常非常寒冷。" />
 
-Harrison got a shock.<br><span class="zh">哈里森感到非常震惊。</span>
+<NcePair en="After so many years of sunshine," zh="在享受了多年阳光之后" />
 
-He acted as if he had never lived in England before.<br><span class="zh">他的举止就好像他以前从未在英国生活过一样。</span>
+<NcePair en="Harrison got a shock." zh="哈里森感到非常震惊。" />
 
-In the end, it was more than he could bear.<br><span class="zh">最终，这超出了他的承受能力。</span>
+<NcePair en="He acted as if he had never lived in England before." zh="他的举止就好像他以前从未在英国生活过一样。" />
 
-He had hardly had time to settle down<br><span class="zh">他几乎还没来得及安顿下来呢。</span>
+<NcePair en="In the end, it was more than he could bear." zh="最终，这超出了他的承受能力。" />
 
-when he sold the house and left the country.<br><span class="zh">就卖掉了房子离开了这个国家</span>
+<NcePair en="He had hardly had time to settle down" zh="他几乎还没来得及安顿下来呢。" />
 
-The dream he had had for so many years ended there.<br><span class="zh">他怀揣多年的梦想就此破灭</span>
+<NcePair en="when he sold the house and left the country." zh="就卖掉了房子离开了这个国家" />
 
-Harrison had thought of everything except the weather.<br><span class="zh">哈里森考虑到了所有可能的因素，唯独没有考虑到天气。</span>
+<NcePair en="The dream he had had for so many years ended there." zh="他怀揣多年的梦想就此破灭" />
+
+<NcePair en="Harrison had thought of everything except the weather." zh="哈里森考虑到了所有可能的因素，唯独没有考虑到天气。" />

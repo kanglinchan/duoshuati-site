@@ -2,84 +2,86 @@
 
 > [新概念英语 · 第四册 流利英语](/nce/ "返回目录")
 
-Hobbies<br><span class="zh">爱好</span>
+<NceTranslateBar />
 
-Who, according to the author, are 'Fortune's favoured children'?<br><span class="zh">根据作者的观点，谁是《财富》杂志所青睐的“宠儿”呢？</span>
+<NcePair en="Hobbies" zh="爱好" />
 
-A gifted American psychologist has said, 'Worry is a spasm of the emotion;<br><span class="zh">一位才华横溢的美国心理学家曾说过：“忧虑其实是一种情绪的突然发作（或：忧虑是情绪的一种剧烈波动）。”</span>
+<NcePair en="Who, according to the author, are 'Fortune's favoured children'?" zh="根据作者的观点，谁是《财富》杂志所青睐的“宠儿”呢？" />
 
-the mind catches hold of something and will not let it go.'<br><span class="zh">“人的思维一旦抓住了某个想法或概念，就会紧紧不放。”</span>
+<NcePair en="A gifted American psychologist has said, 'Worry is a spasm of the emotion;" zh="一位才华横溢的美国心理学家曾说过：“忧虑其实是一种情绪的突然发作（或：忧虑是情绪的一种剧烈波动）。”" />
 
-It is useless to argue with the mind in this condition.<br><span class="zh">在这种状态下，与“理智”（或“思维”）争论是毫无意义的。</span>
+<NcePair en="the mind catches hold of something and will not let it go.'" zh="“人的思维一旦抓住了某个想法或概念，就会紧紧不放。”" />
 
-The stronger the will, the more futile the task.<br><span class="zh">意志越坚强，这项任务就越显得徒劳无功（即完成这项任务的难度就越大）。</span>
+<NcePair en="It is useless to argue with the mind in this condition." zh="在这种状态下，与“理智”（或“思维”）争论是毫无意义的。" />
 
-One can only gently insinuate something else into its convulsive grasp.<br><span class="zh">人们只能小心翼翼地、慢慢地将其他东西引入它那“抽搐般”的、难以控制的掌控之中。</span>
+<NcePair en="The stronger the will, the more futile the task." zh="意志越坚强，这项任务就越显得徒劳无功（即完成这项任务的难度就越大）。" />
 
-And if this something else is rightly chosen, if it is really attended by the illumination of another field of interest,<br><span class="zh">那么，如果这个“其他的东西”被正确地选中了，如果它确实得到了另一个研究领域的支持或帮助（即得到了该领域专家的指导或资源），</span>
+<NcePair en="One can only gently insinuate something else into its convulsive grasp." zh="人们只能小心翼翼地、慢慢地将其他东西引入它那“抽搐般”的、难以控制的掌控之中。" />
 
-gradually, and often quite swiftly, the old undue grip relaxes and the process of recuperation and repair begins.<br><span class="zh">慢慢地，而且往往速度相当快，那些旧有的、不必要的束缚就会逐渐消失，身体开始恢复和修复的过程。</span>
+<NcePair en="And if this something else is rightly chosen, if it is really attended by the illumination of another field of interest," zh="那么，如果这个“其他的东西”被正确地选中了，如果它确实得到了另一个研究领域的支持或帮助（即得到了该领域专家的指导或资源），" />
 
-The cultivation of a hobby and new forms of interest is therefore a policy of the first importance to a public man.<br><span class="zh">因此，培养个人爱好和新的兴趣爱好对于一位公众人物来说是一项至关重要的政策（或：对于公众人物而言，培养个人爱好和新的兴趣爱好是一项非常重要的举措）。</span>
+<NcePair en="gradually, and often quite swiftly, the old undue grip relaxes and the process of recuperation and repair begins." zh="慢慢地，而且往往速度相当快，那些旧有的、不必要的束缚就会逐渐消失，身体开始恢复和修复的过程。" />
 
-But this is not a business that can be undertaken in a day or swiftly improvised by a mere command of the will.<br><span class="zh">但这并不是一项能够在一天内完成、或者仅仅通过一时的意志力就能迅速解决的事情。</span>
+<NcePair en="The cultivation of a hobby and new forms of interest is therefore a policy of the first importance to a public man." zh="因此，培养个人爱好和新的兴趣爱好对于一位公众人物来说是一项至关重要的政策（或：对于公众人物而言，培养个人爱好和新的兴趣爱好是一项非常重要的举措）。" />
 
-The growth of alternative mental interests is a long process.<br><span class="zh">培养其他类型的兴趣爱好是一个漫长的过程。</span>
+<NcePair en="But this is not a business that can be undertaken in a day or swiftly improvised by a mere command of the will." zh="但这并不是一项能够在一天内完成、或者仅仅通过一时的意志力就能迅速解决的事情。" />
 
-The seeds must be carefully chosen; they must fall on good ground;<br><span class="zh">种子必须经过精心挑选；它们必须被种在肥沃的土壤里。</span>
+<NcePair en="The growth of alternative mental interests is a long process." zh="培养其他类型的兴趣爱好是一个漫长的过程。" />
 
-they must be sedulously tended, if the vivifying fruits are to be at hand when needed.<br><span class="zh">如果想要在需要时立即获得那些能够带来活力的成果，就必须对这些事物进行精心照料（或：必须对这些事物进行持续的管理和维护）。</span>
+<NcePair en="The seeds must be carefully chosen; they must fall on good ground;" zh="种子必须经过精心挑选；它们必须被种在肥沃的土壤里。" />
 
-To be really happy and really safe, one ought to have at least two or three hobbies, and they must all be real.<br><span class="zh">要想真正获得幸福和安全感，一个人至少应该有两到三个爱好，而且这些爱好都必须是真实存在的（即不是为了满足他人或社会期望而虚假拥有的）。</span>
+<NcePair en="they must be sedulously tended, if the vivifying fruits are to be at hand when needed." zh="如果想要在需要时立即获得那些能够带来活力的成果，就必须对这些事物进行精心照料（或：必须对这些事物进行持续的管理和维护）。" />
 
-It is no use starting late in life to say: 'I will take an interest in this or that.'<br><span class="zh">人生晚些时候才开始说“我想对这件事或那件事产生兴趣”，也是无济于事的。</span>
+<NcePair en="To be really happy and really safe, one ought to have at least two or three hobbies, and they must all be real." zh="要想真正获得幸福和安全感，一个人至少应该有两到三个爱好，而且这些爱好都必须是真实存在的（即不是为了满足他人或社会期望而虚假拥有的）。" />
 
-Such an attempt only aggravates the strain of mental effort.<br><span class="zh">这样的尝试只会加剧精神上的压力（或：只会让精神负担更加沉重）。</span>
+<NcePair en="It is no use starting late in life to say: 'I will take an interest in this or that.'" zh="人生晚些时候才开始说“我想对这件事或那件事产生兴趣”，也是无济于事的。" />
 
-A man may acquire great knowledge of topics unconnected with his daily work, and yet get hardly any benefit or relief.<br><span class="zh">一个人可能会在那些与他的日常工作无关的领域获得丰富的知识，但却几乎无法从中获得任何实际的好处或帮助（即这些知识无法应用于他的工作中）。</span>
+<NcePair en="Such an attempt only aggravates the strain of mental effort." zh="这样的尝试只会加剧精神上的压力（或：只会让精神负担更加沉重）。" />
 
-It is no use doing what you like; you have got to like what you do.<br><span class="zh">光做自己喜欢的事情是没有用的；你必须真正喜欢自己所做的事情。</span>
+<NcePair en="A man may acquire great knowledge of topics unconnected with his daily work, and yet get hardly any benefit or relief." zh="一个人可能会在那些与他的日常工作无关的领域获得丰富的知识，但却几乎无法从中获得任何实际的好处或帮助（即这些知识无法应用于他的工作中）。" />
 
-Broadly speaking, human beings may be divided into three classes:<br><span class="zh">广义上讲，人类可以分为三类：</span>
+<NcePair en="It is no use doing what you like; you have got to like what you do." zh="光做自己喜欢的事情是没有用的；你必须真正喜欢自己所做的事情。" />
 
-those who are toiled to death, those who are worried to death, and those who are bored to death.<br><span class="zh">那些累死的人，那些担心死的人，以及那些无聊死的人。</span>
+<NcePair en="Broadly speaking, human beings may be divided into three classes:" zh="广义上讲，人类可以分为三类：" />
 
-It is no use offering the manual labourer,<br><span class="zh">向那些从事体力劳动的人提供帮助（或资源）是没有用的。</span>
+<NcePair en="those who are toiled to death, those who are worried to death, and those who are bored to death." zh="那些累死的人，那些担心死的人，以及那些无聊死的人。" />
 
-tired out with a hard week's sweat and effort the chance of playing a game of football or baseball on Saturday afternoon.<br><span class="zh">经过一周的辛勤工作和劳累，终于在周六下午有了机会去踢足球或打棒球了。</span>
+<NcePair en="It is no use offering the manual labourer," zh="向那些从事体力劳动的人提供帮助（或资源）是没有用的。" />
 
-It is no use inviting the politician or the professional or business man, who has been working or worrying about serious things for six days,<br><span class="zh">邀请那位政客、专业人士或商人是没有用的——他们已经连续六天都在处理一些严肃、重要的事务了，根本无暇顾及其他事情。</span>
+<NcePair en="tired out with a hard week's sweat and effort the chance of playing a game of football or baseball on Saturday afternoon." zh="经过一周的辛勤工作和劳累，终于在周六下午有了机会去踢足球或打棒球了。" />
 
-to work or worry about trifling things at the weekend.<br><span class="zh">在周末的时候，就别去忙那些琐碎的事情了，也别为此烦恼了。</span>
+<NcePair en="It is no use inviting the politician or the professional or business man, who has been working or worrying about serious things for six days," zh="邀请那位政客、专业人士或商人是没有用的——他们已经连续六天都在处理一些严肃、重要的事务了，根本无暇顾及其他事情。" />
 
-As for the unfortunate people who can command everything they want,<br><span class="zh">至于那些不幸的人——他们虽然能够随心所欲地支配一切，</span>
+<NcePair en="to work or worry about trifling things at the weekend." zh="在周末的时候，就别去忙那些琐碎的事情了，也别为此烦恼了。" />
 
-who can gratify every caprice and lay their hands on almost every object of desire--for them a new pleasure a new excitement is only an additional satiation.<br><span class="zh">那些能够满足自己所有的任性欲望、几乎可以得到任何想要的东西的人，对他们来说，新的快乐或新的刺激只不过是一种额外的满足罢了。</span>
+<NcePair en="As for the unfortunate people who can command everything they want," zh="至于那些不幸的人——他们虽然能够随心所欲地支配一切，" />
 
-In vain they rush frantically round from place to place, trying to escape from avenging boredom by mere clatter and motion.<br><span class="zh">他们徒劳地四处奔忙，试图通过制造噪音和动作来逃避那种令人痛苦的、无意义的无聊感。</span>
+<NcePair en="who can gratify every caprice and lay their hands on almost every object of desire--for them a new pleasure a new excitement is only an additional satiation." zh="那些能够满足自己所有的任性欲望、几乎可以得到任何想要的东西的人，对他们来说，新的快乐或新的刺激只不过是一种额外的满足罢了。" />
 
-For them discipline in one form or another is the most hopeful path.<br><span class="zh">对他们来说，无论以何种形式存在，纪律都是通往成功的最有希望的道路。</span>
+<NcePair en="In vain they rush frantically round from place to place, trying to escape from avenging boredom by mere clatter and motion." zh="他们徒劳地四处奔忙，试图通过制造噪音和动作来逃避那种令人痛苦的、无意义的无聊感。" />
 
-It may also be said that rational, industrious, useful human beings are divided into two classes:<br><span class="zh">也可以这样说：那些理性、勤奋且有用的人被分成了两个阶层。</span>
+<NcePair en="For them discipline in one form or another is the most hopeful path." zh="对他们来说，无论以何种形式存在，纪律都是通往成功的最有希望的道路。" />
 
-first, those whose work is work and whose pleasure is pleasure;<br><span class="zh">首先，那些将工作视为工作、将娱乐视为娱乐的人；</span>
+<NcePair en="It may also be said that rational, industrious, useful human beings are divided into two classes:" zh="也可以这样说：那些理性、勤奋且有用的人被分成了两个阶层。" />
 
-and secondly, those whose work and pleasure are one.<br><span class="zh">其次，那些将工作与个人乐趣融为一体的人。</span>
+<NcePair en="first, those whose work is work and whose pleasure is pleasure;" zh="首先，那些将工作视为工作、将娱乐视为娱乐的人；" />
 
-Of these the former are the majority. They have their compensations.<br><span class="zh">其中，前者占大多数。它们也有自己的优势（或：它们也有自己的补偿机制）。</span>
+<NcePair en="and secondly, those whose work and pleasure are one." zh="其次，那些将工作与个人乐趣融为一体的人。" />
 
-The long hours in the office or the factory bring with them as their reward,<br><span class="zh">在办公室或工厂长时间工作所带来的“回报”是……（不过原文后半部分内容缺失，无法完整翻译。）</span>
+<NcePair en="Of these the former are the majority. They have their compensations." zh="其中，前者占大多数。它们也有自己的优势（或：它们也有自己的补偿机制）。" />
 
-not only the means of sustenance, but a keen appetite for pleasure even in its simplest and most modest forms.<br><span class="zh">人们不仅需要维持生计的手段，同时也渴望享受各种乐趣——哪怕这些乐趣是最简单、最朴素的。</span>
+<NcePair en="The long hours in the office or the factory bring with them as their reward," zh="在办公室或工厂长时间工作所带来的“回报”是……（不过原文后半部分内容缺失，无法完整翻译。）" />
 
-But Fortune's favoured children belong to the second class.<br><span class="zh">但那些受到《财富》杂志青睐的人属于第二阶层。</span>
+<NcePair en="not only the means of sustenance, but a keen appetite for pleasure even in its simplest and most modest forms." zh="人们不仅需要维持生计的手段，同时也渴望享受各种乐趣——哪怕这些乐趣是最简单、最朴素的。" />
 
-Their life is a natural harmony.<br><span class="zh">他们的生活充满了和谐与宁静。</span>
+<NcePair en="But Fortune's favoured children belong to the second class." zh="但那些受到《财富》杂志青睐的人属于第二阶层。" />
 
-For them the working hours are never long enough.<br><span class="zh">对他们来说，工作时间永远都不够长；每一天都像节日一样美好。</span>
+<NcePair en="Their life is a natural harmony." zh="他们的生活充满了和谐与宁静。" />
 
-Each day is a holiday, and ordinary holidays, when they come, are grudged as enforced interruptions in an absorbing vocation.<br><span class="zh">然而，当普通的假期到来时，他们却会将其视为对这份令人着迷的工作的打扰，因而感到不满。</span>
+<NcePair en="For them the working hours are never long enough." zh="对他们来说，工作时间永远都不够长；每一天都像节日一样美好。" />
 
-Yet to both classes, the need of an alternative outlook, of a change of atmosphere of a diversion of effort, is essential.<br><span class="zh">其实，对于这两个阶层的人来说，都需要一种不同的生活方式、一种能够改变氛围、转移注意力的方式。</span>
+<NcePair en="Each day is a holiday, and ordinary holidays, when they come, are grudged as enforced interruptions in an absorbing vocation." zh="然而，当普通的假期到来时，他们却会将其视为对这份令人着迷的工作的打扰，因而感到不满。" />
 
-Indeed, it may well be that those whose work is their pleasure are those who most need the means of banishing it at intervals from their minds.<br><span class="zh">事实上，那些将工作视为乐趣的人，或许正是最需要偶尔将工作从脑海中暂时抛开的人。</span>
+<NcePair en="Yet to both classes, the need of an alternative outlook, of a change of atmosphere of a diversion of effort, is essential." zh="其实，对于这两个阶层的人来说，都需要一种不同的生活方式、一种能够改变氛围、转移注意力的方式。" />
+
+<NcePair en="Indeed, it may well be that those whose work is their pleasure are those who most need the means of banishing it at intervals from their minds." zh="事实上，那些将工作视为乐趣的人，或许正是最需要偶尔将工作从脑海中暂时抛开的人。" />
