@@ -2,72 +2,72 @@
 
 > [新概念英语 · 第三册 培养技能](/nce/ "返回目录")
 
-<NceTranslateBar />
+<NceTranslateBar :has-ex="true" />
 
-<NcePair en="From the earth: Greetings" zh="来自地球的问候：" />
+<NcePair en="From the earth: Greetings" zh="来自地球的问候：" ex="标题四个词却制造悬念:地球向宇宙发出的问候(greetings 常用复数,如 Seasons' greetings)能否得到回应?全文以科学家的冷静口吻作答:先别指望小绿人。" />
 
-<NcePair en="Which life forms are most likely to develop on a distant planet?" zh="哪些生命形式最有可能在遥远的行星上出现？" />
+<NcePair en="Which life forms are most likely to develop on a distant planet?" zh="哪些生命形式最有可能在遥远的行星上出现？" ex="本课的阅读理解目标问题,答案要到结尾才揭晓:最可能出现的生命形式是 **bacteria**(细菌)。**be most likely to do** 表'最有可能做',主语可为物。" />
 
-<NcePair en="Recent developments in astronomy have made it possible to detect planets in our own Milky Way and in other galaxies." zh="天文学的最新发展使得我们能够探测到我们自己的银河系以及其他星系中的行星。" />
+<NcePair en="Recent developments in astronomy have made it possible to detect planets in our own Milky Way and in other galaxies." zh="天文学的最新发展使得我们能够探测到我们自己的银河系以及其他星系中的行星。" ex="**make it possible to do** 中 it 是形式宾语,真宾语是不定式,写作中避免头重脚轻的经典手法。**detect** 凭仪器或敏锐观察'探测、察觉',比 discover 更强调捕捉细微迹象。**Milky Way** 银河系。" />
 
-<NcePair en="This is a major achievement because, in relative terms, planets are very small and do not emit light." zh="这是一个重大成就，因为在相对而言，行昂数体积很小，而且自身并不 emitting 光。" />
+<NcePair en="This is a major achievement because, in relative terms, planets are very small and do not emit light." zh="这是一个重大成就，因为在相对而言，行昂数体积很小，而且自身并不 emitting 光。" ex="**in relative terms** 相对而言,插入语式限定,同类 in absolute terms;**emit** /i'mit/ 发出(光、热),名词 emission。行星不发光、只反光,这正是探测它难的原因,因果藏在 because 从句里。" />
 
-<NcePair en="Finding planets is proving hard enough, but finding life on them will prove infinitely more difficult." zh="这是一个重大成就，因为相对于其他天体而言，行星体积非常小，且本身并不发光。" />
+<NcePair en="Finding planets is proving hard enough, but finding life on them will prove infinitely more difficult." zh="这是一个重大成就，因为相对于其他天体而言，行星体积非常小，且本身并不发光。" ex="两个动名词短语作主语形成对照。**prove** 在此是系动词'结果是'(prove hard/difficult);**infinitely more difficult** 把难度推向无限,比 much more difficult 更具夸张修辞力。" />
 
-<NcePair en="The first question to answer is whether a planet can actually support life." zh="找到行星已经相当困难，而在行星上寻找生命则更加艰巨。" />
+<NcePair en="The first question to answer is whether a planet can actually support life." zh="找到行星已经相当困难，而在行星上寻找生命则更加艰巨。" ex="**The first question to answer** 不定式作后置定语:'首要回答的问题'。表语从句须用 **whether** 引导,if 不能置于表语位置。**support life** '维持生命存在',support 不只'支持'。" />
 
-<NcePair en="In our own solar system, for example, Venus is far to hot and Mars is far too cold to support life." zh="首先需要回答的问题是：行星是否真的能够支持生命存在。" />
+<NcePair en="In our own solar system, for example, Venus is far to hot and Mars is far too cold to support life." zh="首先需要回答的问题是：行星是否真的能够支持生命存在。" ex="**far too + 形容词** 中 far 加强语气'过于';后接 **too...to...** '太……而不能'。原句 to hot 应为 too hot 之误。金星过热、火星过冷,太阳系自带两块'反面教材'。" />
 
-<NcePair en="Only the Earth provides ideal conditions, and even here it has taken more than four billion years for plant and animal life to evolve." zh="以我们的太阳系为例，金星温度过高，而火星则过于寒冷，都无法维持生命。" />
+<NcePair en="Only the Earth provides ideal conditions, and even here it has taken more than four billion years for plant and animal life to evolve." zh="以我们的太阳系为例，金星温度过高，而火星则过于寒冷，都无法维持生命。" ex="**It has taken...for sth to evolve** 是 take 表'花费时间'的完成时形态,for 引出进化主体。**even here** 让步:连最理想的地球也耗了四十多亿年,为'寻找生命极难'张本。" />
 
-<NcePair en="Whether a planet can support life depends on the size and brightness of its star, that is its 'sun'." zh="只有地球具备了理想的生存条件；即便如此，植物和动物的进化也花费了超过40亿年的时间。" />
+<NcePair en="Whether a planet can support life depends on the size and brightness of its star, that is its 'sun'." zh="只有地球具备了理想的生存条件；即便如此，植物和动物的进化也花费了超过40亿年的时间。" ex="**Whether...depends on...** 主语从句开头,whether 不可换 if。**that is** '即',插入语引出同位解释,比 in other words 简洁。论点句把决定权从行星交给恒星。" />
 
-<NcePair en="Imagine a star up to twenty times larger, brighter and hotter than our own sun." zh="一个行星能否支持生命，取决于其恒星（即它的“太阳”）的大小和亮度。" />
+<NcePair en="Imagine a star up to twenty times larger, brighter and hotter than our own sun." zh="一个行星能否支持生命，取决于其恒星（即它的“太阳”）的大小和亮度。" ex="**up to** '多达、高达';**倍数 + 比较级 + than** 是倍数表达的正统结构,twenty times larger 即'是太阳的二十倍'。祈使式 Imagine 把读者拉进思想实验。" />
 
-<NcePair en="A planet would have to be a very long way from it to be capable of supporting life." zh="想象一颗比我们的太阳大20倍、亮20倍、热20倍的恒星。那么，行星必须距离它非常遥远，才有可能支持生命。" />
+<NcePair en="A planet would have to be a very long way from it to be capable of supporting life." zh="想象一颗比我们的太阳大20倍、亮20倍、热20倍的恒星。那么，行星必须距离它非常遥远，才有可能支持生命。" ex="**would have to** 用过去将来形式表达'设想中不得不',是假设语境的信号,贯穿全课。**be capable of doing** 比 be able to 书面,主语可为物,且后接 of + 动名词。" />
 
-<NcePair en="Alternatively, if the star were small," zh="或者，如果那颗恒星很小，" />
+<NcePair en="Alternatively, if the star were small," zh="或者，如果那颗恒星很小，" ex="**Alternatively** '或者,另一种可能',正式的列举衔接词,开启与上文并列的假设分支。从句用 **were**(不用 was)是虚拟语气的规范形式,提醒读者:这整套讨论都是思想实验。" />
 
-<NcePair en="the life-supporting planet would have to have a close orbit round it and also provide the perfect conditions for life forms to develop." zh="这颗能够维持生命的行星必须拥有一个靠近该恒星的轨道，并且必须提供适合生命形式发展的完美条件。" />
+<NcePair en="the life-supporting planet would have to have a close orbit round it and also provide the perfect conditions for life forms to develop." zh="这颗能够维持生命的行星必须拥有一个靠近该恒星的轨道，并且必须提供适合生命形式发展的完美条件。" ex="**life-supporting** 属'名词 + V-ing'复合形容词,同类 time-consuming、energy-saving,是三册高频写作构词。本句与上句共同组成大虚拟条件句,would have to 相互呼应。" />
 
-<NcePair en="But how would we find such a planet?" zh="但是，我们该如何找到这样一颗行星呢？" />
+<NcePair en="But how would we find such a planet?" zh="但是，我们该如何找到这样一颗行星呢？" ex="段落过渡设问:轨道条件讨论完,作者用 **how would we...** 把话题从'行星在哪'转向'怎么找到它'。would 的虚拟色彩延续全篇假设语气,问而不答、引出下文。" />
 
-<NcePair en="At present, there is no telescope in existence that is capable of detecting the presence of life." zh="目前，还没有任何现有的望远镜能够探测到生命的存在。" />
+<NcePair en="At present, there is no telescope in existence that is capable of detecting the presence of life." zh="目前，还没有任何现有的望远镜能够探测到生命的存在。" ex="**in existence** '现存的',后置修饰 telescope;that 从句与先行词被隔开,构成**分隔定语从句**,是本课句法重点。**the presence of life** 名词化表达,比 life exists 更正式。" />
 
-<NcePair en="The development of such a telescope will be one of the great astronomical projects of the 21st century." zh="开发这样的望远镜将是21世纪最重要的天文项目之一。" />
+<NcePair en="The development of such a telescope will be one of the great astronomical projects of the 21st century." zh="开发这样的望远镜将是21世纪最重要的天文项目之一。" ex="主语 **The development of...** 以名词化结构替代 to develop such a telescope,正式文体标志。**astronomical** 一词两义:既指'天文学的',又引申'天文数字般巨大的'。" />
 
-<NcePair en="It is impossible to look for life on another planet using earth-based telescopes." zh="使用地球上的望远镜，是不可能在其他行星上寻找生命的。" />
+<NcePair en="It is impossible to look for life on another planet using earth-based telescopes." zh="使用地球上的望远镜，是不可能在其他行星上寻找生命的。" ex="**earth-based** '架设在地面的',名词+过去分词复合形容词,同类 man-made、home-based。**using...** 是 V-ing 短语作方式状语,其逻辑主语须与主句泛指的 we 一致——分词状语的硬规则。" />
 
-<NcePair en="Our own warm atmosphere and the heat generated by the telescope" zh="我们自身的温暖环境，以及望远镜所产生的热量……" />
+<NcePair en="Our own warm atmosphere and the heat generated by the telescope" zh="我们自身的温暖环境，以及望远镜所产生的热量……" ex="**generated by the telescope** 过去分词短语作后置定语,相当于 which is generated by...,表被动。本句是跨行主语,谓语要到下句 would make 才出现,阅读时注意排版切分。" />
 
-<NcePair en="would make it impossible to detect objects as small as planets." zh="这将使得检测像行星这样微小的物体变得不可能。" />
+<NcePair en="would make it impossible to detect objects as small as planets." zh="这将使得检测像行星这样微小的物体变得不可能。" ex="与上句连读才完整:主语是'温暖大气层 + 望远镜自身热量'。**make it impossible to do** 又见 it 形式宾语,与第三句呼应;**as small as planets** 用原级比较反衬行星之微、探测之难。" />
 
-<NcePair en="Even a telescope in orbit round the earth, like the very successful Hubble telescope," zh="即使是像哈勃望远镜这样非常成功的、位于地球轨道上的望远镜，" />
+<NcePair en="Even a telescope in orbit round the earth, like the very successful Hubble telescope," zh="即使是像哈勃望远镜这样非常成功的、位于地球轨道上的望远镜，" ex="**Even** 是让步信号:连最成功的哈勃也不行。**in orbit round the earth** 介词短语作后置定语'绕地运行的';like 引出的例子是插入语,把主语与谓语隔开,又是'分隔'手法。" />
 
-<NcePair en="would not be suitable because of the dust particles in our solar system." zh="由于太阳系中存在大量的尘埃颗粒，这种方法并不适用。" />
+<NcePair en="would not be suitable because of the dust particles in our solar system." zh="由于太阳系中存在大量的尘埃颗粒，这种方法并不适用。" ex="上句长主语的谓语在此登场:**would not be suitable**。**because of + 名词短语** 比 because 从句紧凑;**dust particles** 尘埃颗粒,particle 指微粒,-cle 是指小后缀。" />
 
-<NcePair en="A telescope would have to be as far away as the planet Jupiter to look for life in outer space," zh="望远镜必须远到像木星那样远的地方，才能在外太空寻找生命，" />
+<NcePair en="A telescope would have to be as far away as the planet Jupiter to look for life in outer space," zh="望远镜必须远到像木星那样远的地方，才能在外太空寻找生命，" ex="**as far away as** 原级比较'像木星那么远',用具体地标让'远'变得可感。would have to 再度出现,把全篇的假设语气一以贯之——情态动词的选择本身就是本课的文体特色。" />
 
-<NcePair en="because the dust becomes thinner the further we travel towards the outer edges of our own solar system." zh="因为我们越往太阳系外围走，尘埃就越稀薄。" />
+<NcePair en="because the dust becomes thinner the further we travel towards the outer edges of our own solar system." zh="因为我们越往太阳系外围走，尘埃就越稀薄。" ex="**the + 比较级…, the + 比较级…** 的变体:规范语序是 the further we travel, the thinner the dust becomes,此处把结果分句提前,属修辞性倒装;towards the outer edges 由近及远,方向感与句意契合。" />
 
-<NcePair en="Once we detected a planet, we would have to find a way of blotting out the light from its star," zh="一旦我们发现了一颗行星，我们就必须想办法遮挡掉来自该行星恒星的光线。" />
+<NcePair en="Once we detected a planet, we would have to find a way of blotting out the light from its star," zh="一旦我们发现了一颗行星，我们就必须想办法遮挡掉来自该行星恒星的光线。" ex="**Once** '一旦',引导条件从句;主句 would have to 维持虚拟链条。**blot out** '遮蔽、抹去'(blot 本指墨渍),全文最形象的短语;**way of doing** 比 way to do 更偏书面。" />
 
-<NcePair en="so that we would be able to 'see' the planet properly and analyse its atmosphere." zh="这样我们就能清楚地“看到”这颗行星，并分析其大气层了。" />
+<NcePair en="so that we would be able to 'see' the planet properly and analyse its atmosphere." zh="这样我们就能清楚地“看到”这颗行星，并分析其大气层了。" ex="**so that** 引导目的状语从句,从句中 would be able 与主句虚拟配套。**'see'** 加引号是自觉的修辞:并非肉眼看见,而是遮住星光后'还原'出行星,再 analyse(分析)其大气。" />
 
-<NcePair en="In the first instance, we would be looking for plant life, rather than 'little green men'." zh="首先，我们寻找的是植物生命，而不是所谓的“小绿人”。" />
+<NcePair en="In the first instance, we would be looking for plant life, rather than 'little green men'." zh="首先，我们寻找的是植物生命，而不是所谓的“小绿人”。" ex="**In the first instance** '首先',正式书面语,近 to begin with。**rather than** '而非',连接对比双方;先把期望降到最低,'小绿人'加引号是对科幻想象的善意调侃。" />
 
-<NcePair en="The life forms most likely to develop on a planet would be bacteria." zh="最有可能在行星上生存的生命形式是细菌。" />
+<NcePair en="The life forms most likely to develop on a planet would be bacteria." zh="最有可能在行星上生存的生命形式是细菌。" ex="**most likely to develop** 形容词短语作后置定语修饰 life forms,正面回答了开篇的目标问题。**bacteria** /bæk'tiəriə/ 是 bacterium 的复数,谓语须配复数(下句 have 即是)。" />
 
-<NcePair en="It is bacteria that have generated the oxygen we breathe on earth." zh="正是细菌产生了我们地球上所呼吸的氧气。" />
+<NcePair en="It is bacteria that have generated the oxygen we breathe on earth." zh="正是细菌产生了我们地球上所呼吸的氧气。" ex="**It is...that...** 强调句,bacteria 为复数,故 that 后用 have。强调的落点耐人寻味:造出我们呼吸的氧气的,竟是最不起眼的细菌。**we breathe** 是省略关系词的定语从句。" />
 
-<NcePair en="For most of the earth's history they have been the only form of life on our planet." zh="在地球历史的大部分时间里，它们都是地球上唯一的生命形式。" />
+<NcePair en="For most of the earth's history they have been the only form of life on our planet." zh="在地球历史的大部分时间里，它们都是地球上唯一的生命形式。" ex="**For most of the earth's history** 时间状语前置,与现在完成时 have been 搭配,强调从过去延续至今。细菌曾是地球唯一的主人——找生命,先找细菌,逻辑顺流而下。" />
 
-<NcePair en="As Earth-dwellers, we always cherish the hope that we will be visited by little green men and that we will be able to communicate with them." zh="作为地球人，我们始终怀揣着这样的希望：有一天，外星的小绿人会来到我们身边，我们能够与他们进行交流。" />
+<NcePair en="As Earth-dwellers, we always cherish the hope that we will be visited by little green men and that we will be able to communicate with them." zh="作为地球人，我们始终怀揣着这样的希望：有一天，外星的小绿人会来到我们身边，我们能够与他们进行交流。" ex="**Earth-dwellers** '地球居民',dwell(居住)构成的复合名词,与 earth-based 构词呼应。**cherish the hope that...** 中 that 从句是 hope 的同位语,并与第二个 that 从句并列;**cherish** 比 hold 更见感情。" />
 
-<NcePair en="But this hope is always in the realms of science fiction." zh="然而，这种希望始终只存在于科幻作品的范畴之中。" />
+<NcePair en="But this hope is always in the realms of science fiction." zh="然而，这种希望始终只存在于科幻作品的范畴之中。" ex="**in the realms of** '在……的领域',realm 比 field 正式且带空间感,60 课讲 realm 表'领域'可对照。一个 But 把美好愿望按住:小绿人只活在科幻里。" />
 
-<NcePair en="If we were able to discover lowly forms of life like bacteria on another planet, it would completely change our view of ourselves." zh="如果我们能够在另一颗行星上发现像细菌这样的简单生命形式，那将彻底改变我们对自己的认知。" />
+<NcePair en="If we were able to discover lowly forms of life like bacteria on another planet, it would completely change our view of ourselves." zh="如果我们能够在另一颗行星上发现像细菌这样的简单生命形式，那将彻底改变我们对自己的认知。" ex="**If we were able to..., it would...** 标准虚拟条件句,与将来事实相反,与全篇假设一脉相承。**lowly** '低等的、卑微的',与 low 不同,兼有地位低贱义,反衬发现之重大。" />
 
-<NcePair en="As Daniel Goldin of NASA observed, 'Finding life elsewhere would change everything." zh="正如NASA的丹尼尔·戈尔丁所说：“在其它地方发现生命将会改变一切。”" />
+<NcePair en="As Daniel Goldin of NASA observed, 'Finding life elsewhere would change everything." zh="正如NASA的丹尼尔·戈尔丁所说：“在其它地方发现生命将会改变一切。”" ex="**As...observed** 中 as 指代整个引语,'正如……所说',可置句首句尾,是引用名言的高频句式。**observe** 作'评论、说'讲比 say 正式;动名词短语 Finding life elsewhere 作引语主语。" />
 
-<NcePair en="No human endeavour or thought would be unchanged by it.'" zh="没有任何人类的努力或思想会因此而保持不变。" />
+<NcePair en="No human endeavour or thought would be unchanged by it.'" zh="没有任何人类的努力或思想会因此而保持不变。" ex="**No...would be unchanged** 双重否定表全称肯定:'一切都将被改变',比 Everything...would change 更有力,是收束全文的金句。**endeavour** /in'devə/ '努力、事业',正式词,美式拼 endeavor。" />
