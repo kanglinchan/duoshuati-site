@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import QuizBlock from './QuizBlock.vue'
 import CopyArticle from './CopyArticle.vue'
+import './custom.css'
 
 export default {
   extends: DefaultTheme,

@@ -1,0 +1,53 @@
+# 第 5 课：Youth
+
+> [新概念英语 · 第四册 流利英语](/nce/ "返回目录")
+
+Youth<br><span class="zh">青年；年轻人</span>
+
+How does the writer like to treat young people?<br><span class="zh">人们总是在谈论‘年轻人的问题’。</span>
+
+People are always talking about 'the problem of youth'.<br><span class="zh">人们总是谈论“年轻人的问题”。</span>
+
+If there is one -- which I take leave to doubt<br><span class="zh">如果真有这样的东西的话（不过我对此表示怀疑）……</span>
+
+-- then it is older people who create it, not the young themselves.<br><span class="zh">那么，创造这种东西的其实是老年人，而不是年轻人自己。</span>
+
+Let us get down to fundamentals and agree that the young are after all human beings<br><span class="zh">让我们回归到基本事实：年轻人终究也是人。</span>
+
+-- people just like their elders.<br><span class="zh">——和他们的长辈一样的人。</span>
+
+There is only one difference between an old man and a young one:<br><span class="zh">老人和年轻人之间只有一个区别：</span>
+
+the young man has a glorious future before him<br><span class="zh">这个年轻人前途光明，充满希望。</span>
+
+and the old one has a splendid future behind him: and maybe that is where the rub is.<br><span class="zh">而那个老人则拥有一个辉煌的过去：也许症结就在这里。</span>
+
+When I was a teenager, I felt that I was just young and uncertain --<br><span class="zh">当我还是个青少年的时候，我觉得自己既年轻又迷茫——</span>
+
+that I was a new boy in a huge school,<br><span class="zh">我当时只是那所大型学校里的一名新生罢了。</span>
+
+and I would have been very pleased to be regarded as something so interesting as a problem.<br><span class="zh">如果我能被看作是一个“有趣的问题”（即一个值得研究或关注的问题），我会非常高兴的。</span>
+
+For one thing, being a problem gives you a certain identity,<br><span class="zh">首先，成为一个“问题”（即被视作需要解决的问题）会让你获得某种特定的“身份”或地位。</span>
+
+and that is one of the things the young are busily engaged in seeking.<br><span class="zh">而这正是年轻人正在积极寻求的东西之一。</span>
+
+I find young people exciting.<br><span class="zh">我觉得年轻人非常令人兴奋。</span>
+
+They have an air of freedom,<br><span class="zh">他们身上散发着一种自由的气息。</span>
+
+and they have not a dreary commitment to mean ambitions or love of comfort.<br><span class="zh">他们没有对卑劣野心的沉闷执着，也没有对安逸生活的贪恋。</span>
+
+They are not anxious social climbers, and they have no devotion to material things.<br><span class="zh">他们不是焦虑的社会攀爬者，对物质也没有什么执着。</span>
+
+All this seems to me to link them with life and the origins of things.<br><span class="zh">在我看来，所有这些都将他们与生命和事物的本源联系在一起。</span>
+
+It's as if they were in some sense cosmic beings in violent and lovely contrast with us suburban creatures.<br><span class="zh">他们仿佛是某种宇宙生灵，与我们这些市井之徒形成强烈而美妙的对比。</span>
+
+All that is in my mind when I meet a young person.<br><span class="zh">每当我遇到一个年轻人时，我脑海中想到的就是这些。</span>
+
+He may be conceited, ill-mannered,  presumptuous or fatuous,  but I do not turn for protection to dreary cliches about respect for elders --<br><span class="zh">他也许自负、没礼貌、放肆或愚蠢，但我不会搬出那些关于尊敬长辈的陈词滥调来当挡箭牌——</span>
+
+as if mere age were a reason for respect.<br><span class="zh">好像单凭年长就值得尊敬似的。</span>
+
+I accept that we are equals, and I will argue with him, as an equal, if I think he is wrong.<br><span class="zh">我承认我们彼此平等；如果我认为他错了，我会以平等的身份与他争论。</span>

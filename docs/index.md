@@ -59,3 +59,11 @@ hero:
 - [03. 矩阵乘法和逆矩阵](/chapters/2026-11-mit-linear-algebra-03-multiplication-and-inverse-matrices)
 - [04. 矩阵的 LU 分解](/chapters/2026-11-mit-linear-algebra-04-factorization-into-lu)
 - ……共 36 讲，[查看全部](/courses)
+
+### 新概念英语 · 默认专栏
+
+- [第一册 · 英语初阶（72 课）](/nce/1/001-002-excuse-me)
+- [第二册 · 实践与进步（96 课）](/nce/2/01-a-private-conversation)
+- [第三册 · 培养技能（60 课）](/nce/3/01-a-puma-at-large)
+- [第四册 · 流利英语（48 课）](/nce/4/01-finding-fossil-man)
+- ……全 4 册 276 课逐句对照，[查看总目录](/nce/)

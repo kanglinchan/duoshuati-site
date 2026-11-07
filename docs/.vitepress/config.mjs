@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import mathjax3 from 'markdown-it-mathjax3'
+import nceSidebar from './nce-sidebar.json'
 
 export default defineConfig({
   // IDE 环境的 safe-delete shim 会拦截 vite 清空 dist 导致 build 失败，关闭 emptyOutDir 绕过（见 quizCraft SKILL.md 踩坑实录）
@@ -147,6 +148,15 @@ export default defineConfig({
               { text: '斯特朗教授谈线性代数教学（访谈）', link: '/chapters/2026-11-mit-linear-algebra-36-appendix-strang-interview' }
             ]
           }
+        ]
+      },
+      {
+        // 由 scripts/gen-nce-pages.js 生成，共 276 课
+        text: '新概念英语',
+        collapsed: false,
+        items: [
+          { text: '四册总目录', link: '/nce/' },
+          ...nceSidebar
         ]
       }
     ],

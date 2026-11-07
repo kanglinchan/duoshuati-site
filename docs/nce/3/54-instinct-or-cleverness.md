@@ -1,0 +1,75 @@
+# 第 54 课：Instinct or Cleverness
+
+> [新概念英语 · 第三册 培养技能](/nce/ "返回目录")
+
+Instinct or cleverness?<br><span class="zh">是本能，还是智慧？</span>
+
+Was the writer successful in protecting his peach tree? Why not?<br><span class="zh">作者成功保护了他的桃树吗？为什么没有呢？</span>
+
+We have been brought up to fear insects.<br><span class="zh">我们从小就被教导要害怕昆虫。</span>
+
+We regard them as unnecessary creatures that do more harm than good.<br><span class="zh">我们认为它们是毫无必要的生物，带来的危害远大于好处。</span>
+
+We continually wage war on them, for they contaminate our food, carry diseases, or devour our crops.<br><span class="zh">我们一直在与它们作斗争——因为它们会污染我们的食物、传播疾病，或者啃食我们的庄稼。</span>
+
+They sting or bite without provocation; they fly uninvited into our rooms on summer nights, or beat against our lighted windows.<br><span class="zh">它们会无缘无故地蜇人或咬人；在夏夜，它们会不请自来地飞进我们的房间，或者撞击我们亮着的窗户。</span>
+
+We live in dread not only of unpleasant insects like spiders or wasps, but of quite harmless ones like moths.<br><span class="zh">我们不仅害怕像蜘蛛或黄蜂这样的令人不快的昆虫，也害怕像蛾子这样其实完全无害的昆虫。</span>
+
+Reading about them increases our understanding without dispelling our fears.<br><span class="zh">阅读关于他们的信息确实能增加我们的理解，但并不会消除我们的恐惧。</span>
+
+Knowing that the industrious ant lives in a highly organized society<br><span class="zh">我们知道，勤劳的蚂蚁生活在一种高度有序的社会中。</span>
+
+does nothing to prevent us from being filled with revulsion when we find hordes of them crawling over a carefully prepared picnic lunch.<br><span class="zh">这丝毫无法阻止我们看到成群这样的生物爬在我们精心准备的野餐食物上时感到极度厌恶。</span>
+
+No matter how much we like honey,<br><span class="zh">无论我们多么喜欢蜂蜜，</span>
+
+or how much we have read about the uncanny sense of direction which bees possess, we have a horror of being stung.<br><span class="zh">无论我们读过多少关于蜜蜂惊人方向感的描述，我们仍然对被蜜蜂蜇伤感到恐惧。</span>
+
+Most of our fears are unreasonable, but they are impossible to erase.<br><span class="zh">我们的大多数恐惧都是毫无道理的，但它们却无法被彻底消除。</span>
+
+At the same time, however, insects are strangely fascinating.<br><span class="zh">然而，昆虫同时又有一种奇妙的魅力，让人着迷。</span>
+
+We enjoy reading about them, especially when we find that, like the praying mantis, they lead perfectly horrible lives.<br><span class="zh">我们喜欢阅读关于它们的内容，尤其是当发现它们（就像螳螂一样）过着极其恐怖的生活时。</span>
+
+We enjoy staring at them, entranced as they go about their business, unaware (we hope) of our presence.<br><span class="zh">我们喜欢凝视着他们，看着他们忙着自己的事情；希望他们没有察觉到我们的存在。</span>
+
+Who has not stood in awe at the sight of a spider pouncing on a fly,<br><span class="zh">谁没有在看到蜘蛛突然扑向一只苍蝇的瞬间感到惊叹呢？</span>
+
+or a column of ants triumphantly bearing home an enormous dead beetle?<br><span class="zh">或者是一队蚂蚁，胜利地抬着一只巨大的死甲虫回家？</span>
+
+Last summer I spent days in the garden watching thousands of ants crawling up the trunk of my prize peach tree.<br><span class="zh">去年夏天，我在花园里待了好几天，观察成千上万的蚂蚁爬上我那棵珍贵的桃树的树干。</span>
+
+The tree has grown against a warm wall on a sheltered side of the house.<br><span class="zh">这棵树生长在房子背风的一侧，紧靠着一面温暖的墙壁。</span>
+
+I am especially proud of it,<br><span class="zh">我对此感到特别自豪。</span>
+
+not only because it has survived several severe winters, but because it occasionally produces luscious peaches.<br><span class="zh">不仅因为它经受住了几个严冬的考验，还因为它偶尔会结出美味的桃子。</span>
+
+During the summer, I noticed that the leaves of the tree were beginning to wither.<br><span class="zh">夏天时，我注意到树上的叶子开始枯萎了。</span>
+
+Clusters of tiny insects called aphides were to be found on the underside of the leaves.<br><span class="zh">在叶子的背面，可以发现一群被称为蚜虫的微小昆虫。</span>
+
+They were visited by a large colony of ants which obtained a sort of honey from them.<br><span class="zh">有一大群蚂蚁造访了它们，并从它们身上获取了一种类似蜂蜜的物质。</span>
+
+I immediately embarked on an experiment which even though it failed to get rid of the ants kept me fascinated for twenty-four hours.<br><span class="zh">我立刻开始了一项实验。尽管这项实验未能彻底消灭那些蚂蚁，但它让我着迷了整整24个小时。</span>
+
+I bound the base of the tree with sticky tape, making it impossible for the ants to reach the aphides.<br><span class="zh">我用粘性胶带把树干的底部缠了起来，这样蚂蚁就无法接触到蚜虫了。</span>
+
+The tape was so sticky that they did not dare to cross it.<br><span class="zh">胶带非常粘，它们不敢爬过去。</span>
+
+For a long time, I watched them scurrying around the base of the tree in bewilderment.<br><span class="zh">很长时间里，我看着它们困惑地在树根周围慌乱地爬来爬去。</span>
+
+I even went out at midnight with a torch and noted with satisfaction (and surprise)<br><span class="zh">我甚至在午夜时分拿着手电筒出门，满意地（又惊讶地）看到</span>
+
+that the ants were still swarming around the sticky tape without being able to do anything about it.<br><span class="zh">那些蚂蚁仍然在粘性胶带周围团团转，却对此束手无策。</span>
+
+I got up early next morning hoping to find that the ants had given up in despair.<br><span class="zh">第二天早上我早早起床，希望看到蚂蚁们已经绝望地放弃了。</span>
+
+Instead, I saw that they had discovered a new route.<br><span class="zh">相反，我发现他们发现了一条新的路线。</span>
+
+They were climbing up the wall of the house and then on to the leaves of the tree.<br><span class="zh">它们沿着房子的墙壁爬上去，然后又爬到了树上的叶子上。</span>
+
+I realized sadly that I had been completely defeated by their ingenuity.<br><span class="zh">遗憾的是，我发现自己完全被他们的聪明才智给打败了。</span>
+
+The ants had been quick to find an answer to my thoroughly unscientific methods!<br><span class="zh">蚂蚁们很快就找到了对付我那些完全不科学的方法的办法！</span>

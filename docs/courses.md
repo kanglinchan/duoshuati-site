@@ -65,3 +65,10 @@
 - [33. 左右逆和伪逆](/chapters/2026-11-mit-linear-algebra-33-left-and-right-inverses-pseudoinverse)
 - [34. 总复习](/chapters/2026-11-mit-linear-algebra-34-final-course-review)
 - [附录. 附录：斯特朗教授谈线性代数教学](/chapters/2026-11-mit-linear-algebra-36-appendix-strang-interview)
+
+## 新概念英语
+
+- [第一册 · 英语初阶（72 课）](/nce/1/001-002-excuse-me)
+- [第二册 · 实践与进步（96 课）](/nce/2/01-a-private-conversation)
+- [第三册 · 培养技能（60 课）](/nce/3/01-a-puma-at-large)
+- [第四册 · 流利英语（48 课）](/nce/4/01-finding-fossil-man)
