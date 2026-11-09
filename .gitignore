@@ -4,3 +4,6 @@ docs/.vitepress/cache
 .DS_Store
 *.log
 scripts/nce-explanations/src/
+# 词典库由 CI 构建（deploy.yml），本地原型不入库
+docs/public/dict/
+_dict-proto/

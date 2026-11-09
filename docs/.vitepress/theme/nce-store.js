@@ -12,3 +12,15 @@ export const nceExAll = ref(false)
 /** 各自的全篇切换计数：NcePair 监听它清空对应的单句覆盖 */
 export const nceZhEpoch = ref(0)
 export const nceExEpoch = ref(0)
+
+/** 点词查词：是否开启（默认开） */
+export const nceDictOn = ref(true)
+/** 当前打开的释义卡片 { word, en, zh }；null = 关闭 */
+export const nceDictCard = ref(null)
+
+export function openDictCard(payload) {
+  nceDictCard.value = payload
+}
+export function closeDictCard() {
+  nceDictCard.value = null
+}

@@ -18,13 +18,22 @@
         <button :class="{ on: !exAll }" @click="setEx(false)">全篇隐藏</button>
       </span>
     </span>
-    <span class="nce-bar-tip">点句末图标可单独切换本句译文{{ hasEx ? ' / 讲解' : '' }}</span>
+    <span class="nce-bar-group">
+      <span class="nce-bar-state">
+        查词：<strong>{{ dictOn ? '开' : '关' }}</strong>
+      </span>
+      <span class="nce-bar-actions">
+        <button :class="{ on: dictOn }" @click="setDict(true)">开</button>
+        <button :class="{ on: !dictOn }" @click="setDict(false)">关</button>
+      </span>
+    </span>
+    <span class="nce-bar-tip">点单词查词（下划线提示），再点或长按看完整释义；点句末图标可单独切换本句译文{{ hasEx ? ' / 讲解' : '' }}</span>
   </div>
 </template>
 
 <script setup>
 import { computed } from 'vue'
-import { nceZhAll, nceExAll, nceZhEpoch, nceExEpoch } from './nce-store'
+import { nceZhAll, nceExAll, nceZhEpoch, nceExEpoch, nceDictOn } from './nce-store'
 
 const props = defineProps({
   hasEx: { type: Boolean, default: false }
@@ -32,6 +41,11 @@ const props = defineProps({
 
 const zhAll = computed(() => nceZhAll.value)
 const exAll = computed(() => nceExAll.value)
+const dictOn = computed(() => nceDictOn.value)
+
+function setDict(v) {
+  nceDictOn.value = v
+}
 
 function setZh(v) {
   if (nceZhAll.value === v) return

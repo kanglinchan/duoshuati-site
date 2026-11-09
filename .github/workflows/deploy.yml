@@ -35,6 +35,21 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # 词典库不进 git：CI 里现做（ECDICT CSV + scripts/build_dict.py，约 1 分钟）
+      - name: Cache ECDICT source
+        uses: actions/cache@v4
+        with:
+          path: /tmp/ecdict.csv
+          key: ecdict-csv-1.0.28
+
+      - name: Build dictionary database
+        run: |
+          if [ ! -f /tmp/ecdict.csv ]; then
+            curl -sSL --retry 3 -o /tmp/ecdict.csv \
+              https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv
+          fi
+          python3 scripts/build_dict.py /tmp/ecdict.csv docs/public/dict/dict.sqlite
+
       - name: Build with VitePress
         run: npm run build
 

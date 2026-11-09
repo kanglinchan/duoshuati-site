@@ -1,8 +1,22 @@
 <template>
   <p class="nce-pair">
     <span class="nce-en"
-      >{{ en
-      }}<button
+      ><template v-if="nceDictOn"><template
+          v-for="(seg, i) in segments"
+          :key="i"
+        ><span
+            v-if="seg.word"
+            class="nce-w"
+            @click="onWordClick(seg.text)"
+            @pointerdown="startLongPress(seg.text, $event)"
+            @pointermove="cancelLongPress"
+            @pointerup="cancelLongPress"
+            @pointercancel="cancelLongPress"
+            @contextmenu.prevent="openCard(seg.text)"
+          >{{ seg.text }}<span
+              v-if="glossOf(seg.text)"
+              class="nce-w-gloss"
+            >{{ glossOf(seg.text) }}</span></span><template v-else>{{ seg.text }}</template></template></template><template v-else>{{ en }}</template><button
         v-if="zh"
         class="nce-icon"
         :class="{ on: zhVisible }"
@@ -37,11 +51,14 @@
     <span v-if="zhVisible && zh" class="nce-zh">{{ zh }}</span>
     <span v-if="exVisible && ex" class="nce-ex" v-html="exHtml"></span>
   </p>
+  <NceDictPopup />
 </template>
 
 <script setup>
-import { computed, ref, watch } from 'vue'
-import { nceZhAll, nceExAll, nceZhEpoch, nceExEpoch } from './nce-store'
+import { computed, onUnmounted, ref, watch } from 'vue'
+import { nceZhAll, nceExAll, nceZhEpoch, nceExEpoch, nceDictOn, openDictCard } from './nce-store'
+import { lookupWord, shortGloss } from './dict-worker'
+import NceDictPopup from './NceDictPopup.vue'
 
 const props = defineProps({
   en: { type: String, required: true },
@@ -80,6 +97,91 @@ const exHtml = computed(() => {
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\n/g, '<br>')
 })
+
+// ===== 点词查词 =====
+// 英文句子切成词/非词片段，词片段可点；标点原样保留
+const WORD_RE = /[A-Za-z][A-Za-z'’-]*/g
+const segments = computed(() => {
+  const out = []
+  let last = 0
+  for (const m of props.en.matchAll(WORD_RE)) {
+    if (m.index > last) out.push({ word: false, text: props.en.slice(last, m.index) })
+    out.push({ word: true, text: m[0] })
+    last = m.index + m[0].length
+  }
+  if (last < props.en.length) out.push({ word: false, text: props.en.slice(last) })
+  return out
+})
+
+// 已查词的短释义：lower -> gloss（'' 表示词典未命中）
+const lookups = ref(new Map())
+const pending = ref(new Set())
+const dictVersion = ref(0)
+
+function glossOf(text) {
+  void dictVersion.value
+  const v = lookups.value.get(text.toLowerCase())
+  return v || ''
+}
+
+async function ensureLookup(text) {
+  const lower = text.toLowerCase()
+  if (lookups.value.has(lower) || pending.value.has(lower)) return
+  pending.value = new Set(pending.value).add(lower)
+  try {
+    const hit = await lookupWord(text)
+    lookups.value = new Map(lookups.value).set(lower, hit ? shortGloss(hit.translation) : '')
+  } catch (e) {
+    console.error('[nce-dict] 查询失败', e)
+  } finally {
+    const rest = new Set(pending.value)
+    rest.delete(lower)
+    pending.value = rest
+    dictVersion.value++
+  }
+}
+
+function openCard(text) {
+  openDictCard({ word: text, en: props.en, zh: props.zh })
+}
+
+// 长按触发后抑制紧随而来的 click
+let lpTimer = null
+let lpFired = false
+
+function onWordClick(text) {
+  if (lpFired) {
+    lpFired = false
+    return
+  }
+  if (!nceDictOn.value) return
+  const lower = text.toLowerCase()
+  if (pending.value.has(lower)) return
+  if (lookups.value.get(lower)) {
+    openCard(text) // 已查过：再次点击看完整释义
+    return
+  }
+  ensureLookup(text).then(() => {
+    if (!lookups.value.get(lower)) openCard(text) // 词典未命中：直接给卡片兜底
+  })
+}
+
+function startLongPress(text, e) {
+  if (e.pointerType === 'mouse' && e.button !== 0) return
+  cancelLongPress()
+  lpTimer = setTimeout(() => {
+    lpTimer = null
+    lpFired = true
+    openCard(text)
+  }, 450)
+}
+function cancelLongPress() {
+  if (lpTimer) {
+    clearTimeout(lpTimer)
+    lpTimer = null
+  }
+}
+onUnmounted(cancelLongPress)
 </script>
 
 <style scoped>
@@ -135,5 +237,36 @@ const exHtml = computed(() => {
 .nce-ex :deep(strong) {
   color: var(--vp-c-text-1);
   font-weight: 600;
+}
+/* ===== 点词查词 ===== */
+.nce-w {
+  position: relative;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+.nce-w:hover {
+  background: var(--vp-c-brand-soft, rgba(0, 0, 0, 0.05));
+}
+.nce-w:has(.nce-w-gloss) {
+  border-bottom-color: var(--vp-c-brand-1);
+}
+.nce-w-gloss {
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  padding: 0 4px;
+  border-radius: 3px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-brand-1);
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: nowrap;
+  pointer-events: none;
 }
 </style>
