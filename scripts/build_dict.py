@@ -5,6 +5,7 @@
 import csv, sqlite3, sys, os
 
 SRC, DST = sys.argv[1], sys.argv[2]
+os.makedirs(os.path.dirname(DST) or '.', exist_ok=True)  # CI 里目标目录不存在（gitignored）
 if os.path.exists(DST):
     os.remove(DST)
 
