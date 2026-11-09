@@ -58,16 +58,7 @@ con.close()  # Windows 下未关闭会锁文件
 size = os.path.getsize(DST)
 print(f"词条: {n_words:,}  词形映射: {n_forms:,}")
 print(f"文件: {DST}  {size/1e6:.1f} MB  页数: {size // 1024:,}  页大小: 1024B")
-
-# 版本指纹：前端用它判断 IndexedDB 里的库是否需要更新（GH Pages 不支持
-# If-None-Match 条件请求，整库 88MB 不能靠 304 增量，只能小文件比对）
-import hashlib, json
-with open(DST, 'rb') as f:
-    digest = hashlib.md5(f.read()).hexdigest()
-ver = {"bytes": size, "md5": digest, "words": n_words}
-vp = os.path.join(os.path.dirname(DST), 'version.json')
-with open(vp, 'w', encoding='utf-8') as f:
-    json.dump(ver, f)
-print(f"版本指纹: {vp} -> {json.dumps(ver)}")
-# 架构说明：站点侧不做 HTTP Range 懒取（GitHub Pages 对所有响应 gzip，
-# Range 字节区间会落在压缩流上错位），前端整库下载一次存 IndexedDB。
+# 架构说明：前端走 sql.js-httpvfs 按页 Range 懒取（每次点词几 KB，不整库下载）。
+# 注意输出文件名必须是 .png 之类图片扩展名（CI 调用时 DST 传 dict.png）：
+# GitHub Pages 的 CDN 对图片类型不做 gzip，Range 字节区间才是原始字节；
+# octet-stream 会被 gzip，Range 偏移错位无法使用。

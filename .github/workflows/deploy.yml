@@ -48,7 +48,8 @@ jobs:
             curl -sSL --retry 3 -o /tmp/ecdict.csv \
               https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv
           fi
-          python3 scripts/build_dict.py /tmp/ecdict.csv docs/public/dict/dict.sqlite
+          # 输出为 .png：GH Pages CDN 对图片类型不 gzip，前端按 Range 原始字节懒取
+          python3 scripts/build_dict.py /tmp/ecdict.csv docs/public/dict/dict.png
 
       - name: Build with VitePress
         run: npm run build

@@ -161,10 +161,10 @@ function onWordClick(text) {
     openCard(text) // 已查过：再次点击看完整释义
     return
   }
-  // 冷启动（首次下载词典需几十秒）：先开卡让用户看到下载进度
-  if (dictLoad.value.state !== 'ready') openCard(text)
+  // 词典首次开库（拉 wasm 约 1-2 秒）期间先开卡，给"正在打开"反馈
+  if (dictLoad.value.state === 'opening' || dictLoad.value.state === 'idle') openCard(text)
   ensureLookup(text).then(() => {
-    if (!lookups.value.get(lower) && dictLoad.value.state === 'ready') openCard(text)
+    if (!lookups.value.get(lower)) openCard(text) // 词典未命中：直接给卡片兜底
   })
 }
 

@@ -105,7 +105,7 @@
     "space-separated-tokens": "^2.0.2",
     "speakingurl": "^14.0.1",
     "speech-rule-engine": "^4.1.4",
-    "sql.js": "^1.15.2",
+    "sql.js-httpvfs": "^0.8.12",
     "stringify-entities": "^4.0.4",
     "superjson": "^2.2.6",
     "tabbable": "^6.5.0",

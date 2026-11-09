@@ -1,176 +1,57 @@
 /**
- * 词典：整库下载一次 -> IndexedDB 缓存 -> sql.js 内存查询
+ * 词典查询单例：SQLite 按 HTTP Range 按页懒取（sql.js-httpvfs）
+ * 数据库文件 docs/public/dict/dict.png 由 scripts/build_dict.py 生成（CI 构建步骤同款）。
  *
- * 为什么不用 HTTP Range 按页懒取：GitHub Pages 的 CDN 会对一切响应做 gzip
- * （浏览器必然携带 Accept-Encoding），Range 字节区间落在压缩流上，SQLite 页
- * 偏移全部错位（实测 206 的 Content-Range 总长是压缩后大小）。因此整库下载：
- * 首次约 29MB（gzip 传输，浏览器自动解压），之后 IndexedDB 秒开、完全离线；
- * ETag 变化时自动重新下载。
+ * 为什么文件是 .png：GitHub Pages 的 CDN 对一切非图片响应强制 gzip（包括
+ * octet-stream），Range 的字节区间会落在压缩流上，SQLite 页偏移全部错位；
+ * 图片类型豁免压缩（png 本身已压缩，CDN 再压无意义），返回原始字节的 206。
+ * 文件内容就是 SQLite 数据库一字节不改，扩展名只决定 CDN 的 MIME 分类。
+ * 实测见 build_dict.py 头注释与 2026-11-09 线上验证。
+ *
+ * worker 首次点词才创建（懒加载 ~1.2MB wasm），SPA 内跨页面复用
  */
-import initSqlJs from 'sql.js'
-import wasmUrl from 'sql.js/dist/sql-wasm.wasm?url'
+import sqlHttpvfs from 'sql.js-httpvfs' // CJS 包：SSG 下命名导入构建报错，必须默认导入解构
+import workerUrl from 'sql.js-httpvfs/dist/sqlite.worker.js?url'
+import wasmUrl from 'sql.js-httpvfs/dist/sql-wasm.wasm?url'
 import { ref } from 'vue'
 
-/** 首次加载进度：state = idle|checking|downloading|opening|ready|error */
+const { createDbWorker } = sqlHttpvfs
+
+/** 词典开库状态：idle（从未点词）| opening（首次拉 wasm+页，约 1-2 秒）| ready */
 export const dictLoad = ref({ state: 'idle' })
 
-const DB_URL = import.meta.env.BASE_URL + 'dict/dict.sqlite'
-const IDB_NAME = 'nce-dict'
-const IDB_STORE = 'files'
-
-let dbPromise = null
-
-// ===== IndexedDB 极简封装 =====
-function withStore(mode) {
-  return new Promise((resolve, reject) => {
-    const open = indexedDB.open(IDB_NAME, 1)
-    open.onupgradeneeded = () => open.result.createObjectStore(IDB_STORE)
-    open.onsuccess = () => {
-      const db = open.result
-      const tx = db.transaction(IDB_STORE, mode)
-      resolve({ store: tx.objectStore(IDB_STORE), tx, db })
-    }
-    open.onerror = () => reject(open.error)
-  })
-}
-function idbGet(key) {
-  return withStore('readonly').then(
-    ({ store }) =>
-      new Promise((resolve, reject) => {
-        const r = store.get(key)
-        r.onsuccess = () => resolve(r.result || null)
-        r.onerror = () => reject(r.error)
-      })
-  )
-}
-function idbPut(key, val) {
-  return withStore('readwrite').then(
-    ({ store, tx }) =>
-      new Promise((resolve, reject) => {
-        store.put(val, key)
-        tx.oncomplete = () => resolve()
-        tx.onerror = () => reject(tx.error)
-      })
-  )
-}
-
-// ===== 数据库获取 =====
-/**
- * 条件 GET（If-None-Match）：一个请求同时完成更新检查与下载。
- * 返回 null = 服务器 304，本地缓存仍有效；否则 { bytes: Uint8Array, etag }。
- * 不用 HEAD 探测 —— Chromium 会把 HEAD 响应缓存为同 URL GET 的条目，
- * 导致随后的 GET 拿到没有 body 的假响应（实测 decodedBodySize: 0）。
- */
-async function fetchDbBytes(knownEtag) {
-  dictLoad.value = { state: 'downloading', received: 0 }
-  const headers = knownEtag ? { 'If-None-Match': knownEtag } : undefined
-  let resp
-  try {
-    resp = await fetch(DB_URL, { headers })
-  } catch (e) {
-    // 断网：有缓存就当仍有效（词典完全离线可用）
-    if (knownEtag) throw Object.assign(new Error('network unavailable'), { cacheStillValid: true })
-    throw e
-  }
-  if (resp.status === 304) return null
-  if (!resp.ok) throw new Error(`dict.sqlite 下载失败: HTTP ${resp.status}`)
-  const etag = resp.headers.get('etag') || 'unknown'
-  const reader = resp.body.getReader()
-  const chunks = []
-  let received = 0
-  for (;;) {
-    const { done, value } = await reader.read()
-    if (done) break
-    chunks.push(value)
-    received += value.length
-    dictLoad.value = { state: 'downloading', received }
-  }
-  const bytes = new Uint8Array(received)
-  let off = 0
-  for (const c of chunks) {
-    bytes.set(c, off)
-    off += c.length
-  }
-  return { bytes, etag }
-}
+let workerPromise = null
 
 function getDb() {
-  if (!dbPromise) {
-    dbPromise = (async () => {
-      dictLoad.value = { state: 'opening' }
-      const SQL = await initSqlJs({ locateFile: () => wasmUrl })
-      const cached = await idbGet('db').catch(() => null)
-      if (cached && cached.bytes) {
-        // 回场用户：立即用本地缓存开库（实测 <0.5s），词典离线可用
-        const db = new SQL.Database(cached.bytes)
-        dictLoad.value = { state: 'ready' }
-        revalidateInBackground(cached)
-        return db
-      }
-      // 冷启动：整库下载（卡片展示进度）
-      const record = await fetchDbBytes(null)
-      let md5 = null
-      try {
-        const vr = await fetch(`${import.meta.env.BASE_URL}dict/version.json?t=${Date.now()}`)
-        if (vr.ok) md5 = (await vr.json()).md5
-      } catch (e) {} // 指纹拿不到也无妨，1 小时后的后台校验会补
-      await idbPut('db', { ...record, md5, checkedAt: Date.now() }).catch(() => {})
-      const db = new SQL.Database(record.bytes)
+  if (!workerPromise) {
+    dictLoad.value = { state: 'opening' }
+    workerPromise = createDbWorker(
+      [
+        {
+          from: 'inline',
+          config: {
+            serverMode: 'full',
+            requestChunkSize: 1024, // 必须等于建库时 PRAGMA page_size
+            url: import.meta.env.BASE_URL + 'dict/dict.png'
+          }
+        }
+      ],
+      workerUrl,
+      wasmUrl
+    ).then((w) => {
       dictLoad.value = { state: 'ready' }
-      return db
-    })()
-    dbPromise.catch((e) => {
+      return w.db
+    })
+    workerPromise.catch((e) => {
       console.error('[nce-dict] 数据库加载失败', e)
-      dbPromise = null
-      dictLoad.value = { state: 'error' }
+      workerPromise = null
+      dictLoad.value = { state: 'idle' }
     })
   }
-  return dbPromise
+  return workerPromise
 }
 
-/**
- * 后台版本校验（stale-while-revalidate）：比对 version.json 的 MD5 指纹。
- * GH Pages/Fastly 不支持 If-None-Match（实测恒 200），靠它做 304 增量只会
- * 每次会话整库重下；version.json 只有几十字节，按需拉取即可。
- * 词典更新时后台静默换库，下次会话生效，不打扰当前阅读。
- */
-function revalidateInBackground(cached) {
-  const now = Date.now()
-  if (cached.checkedAt && now - cached.checkedAt < 3600000) return // 1 小时内不重复校验
-  idbPut('db', { ...cached, checkedAt: now }).catch(() => {})
-  fetch(`${import.meta.env.BASE_URL}dict/version.json?t=${now}`)
-    .then((r) => (r.ok ? r.json() : null))
-    .then(async (ver) => {
-      if (!ver || ver.md5 === cached.md5) return
-      console.info('[nce-dict] 检测到词典新版本，后台更新')
-      const resp = await fetch(DB_URL)
-      if (!resp.ok) return
-      const buf = new Uint8Array(await resp.arrayBuffer())
-      if (buf.length) {
-        await idbPut('db', {
-          bytes: buf,
-          etag: resp.headers.get('etag') || 'unknown',
-          md5: ver.md5,
-          checkedAt: Date.now()
-        }).catch(() => {})
-      }
-    })
-    .catch(() => {}) // 后台任务静默失败
-}
-
-// ===== 查询 =====
-function q(db, sql, params) {
-  const stmt = db.prepare(sql)
-  try {
-    stmt.bind(params)
-    const rows = []
-    while (stmt.step()) rows.push(stmt.getAsObject())
-    return rows
-  } finally {
-    stmt.free()
-  }
-}
-
+// 注意：db.query 的绑定参数必须传数组，传字符串会静默返回空
 const cache = new Map()
 
 /**
@@ -183,13 +64,12 @@ export async function lookupWord(raw) {
   if (cache.has(key)) return cache.get(key)
   const db = await getDb()
   const cols = 'word, phonetic, translation, definition'
-  let rows = q(db, `SELECT ${cols} FROM dict WHERE word = ?`, [key])
+  let rows = await db.query(`SELECT ${cols} FROM dict WHERE word = ?`, [key])
   if (!rows.length) {
     const lower = key.toLowerCase()
-    if (lower !== key) rows = q(db, `SELECT ${cols} FROM dict WHERE word = ?`, [lower])
+    if (lower !== key) rows = await db.query(`SELECT ${cols} FROM dict WHERE word = ?`, [lower])
     if (!rows.length) {
-      rows = q(
-        db,
+      rows = await db.query(
         `SELECT d.word AS word, d.phonetic AS phonetic, d.translation AS translation, d.definition AS definition
          FROM forms f JOIN dict d ON d.word = f.lemma WHERE f.form = ? LIMIT 1`,
         [lower]
