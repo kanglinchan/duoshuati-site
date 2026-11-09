@@ -1,39 +1,151 @@
 /**
- * 词典查询单例：SQLite + HTTP Range（sql.js-httpvfs）
- * 数据库文件 docs/public/dict/dict.sqlite 由 scripts/build_dict.py 生成（CI 构建步骤同款）
- * worker 首次点词才创建（懒加载 ~1.2MB wasm），SPA 内跨页面复用
+ * 词典：整库下载一次 -> IndexedDB 缓存 -> sql.js 内存查询
+ *
+ * 为什么不用 HTTP Range 按页懒取：GitHub Pages 的 CDN 会对一切响应做 gzip
+ * （浏览器必然携带 Accept-Encoding），Range 字节区间落在压缩流上，SQLite 页
+ * 偏移全部错位（实测 206 的 Content-Range 总长是压缩后大小）。因此整库下载：
+ * 首次约 29MB（gzip 传输，浏览器自动解压），之后 IndexedDB 秒开、完全离线；
+ * ETag 变化时自动重新下载。
  */
-// sql.js-httpvfs 是 CJS 包：SSG 在 Node ESM 下执行，命名导入会报
-// "Named export not found"，必须走默认导出解构
-import sqlHttpvfs from 'sql.js-httpvfs'
-import workerUrl from 'sql.js-httpvfs/dist/sqlite.worker.js?url'
-import wasmUrl from 'sql.js-httpvfs/dist/sql-wasm.wasm?url'
+import initSqlJs from 'sql.js'
+import wasmUrl from 'sql.js/dist/sql-wasm.wasm?url'
+import { ref } from 'vue'
 
-const { createDbWorker } = sqlHttpvfs
+/** 首次加载进度：state = idle|checking|downloading|opening|ready|error */
+export const dictLoad = ref({ state: 'idle' })
 
-let workerPromise = null
+const DB_URL = import.meta.env.BASE_URL + 'dict/dict.sqlite'
+const IDB_NAME = 'nce-dict'
+const IDB_STORE = 'files'
 
-function getDb() {
-  if (!workerPromise) {
-    workerPromise = createDbWorker(
-      [
-        {
-          from: 'inline',
-          config: {
-            serverMode: 'full',
-            requestChunkSize: 1024, // 必须等于建库时 PRAGMA page_size
-            url: import.meta.env.BASE_URL + 'dict/dict.sqlite'
-          }
-        }
-      ],
-      workerUrl,
-      wasmUrl
-    ).then((w) => w.db)
-  }
-  return workerPromise
+let dbPromise = null
+
+// ===== IndexedDB 极简封装 =====
+function withStore(mode) {
+  return new Promise((resolve, reject) => {
+    const open = indexedDB.open(IDB_NAME, 1)
+    open.onupgradeneeded = () => open.result.createObjectStore(IDB_STORE)
+    open.onsuccess = () => {
+      const db = open.result
+      const tx = db.transaction(IDB_STORE, mode)
+      resolve({ store: tx.objectStore(IDB_STORE), tx, db })
+    }
+    open.onerror = () => reject(open.error)
+  })
+}
+function idbGet(key) {
+  return withStore('readonly').then(
+    ({ store }) =>
+      new Promise((resolve, reject) => {
+        const r = store.get(key)
+        r.onsuccess = () => resolve(r.result || null)
+        r.onerror = () => reject(r.error)
+      })
+  )
+}
+function idbPut(key, val) {
+  return withStore('readwrite').then(
+    ({ store, tx }) =>
+      new Promise((resolve, reject) => {
+        store.put(val, key)
+        tx.oncomplete = () => resolve()
+        tx.onerror = () => reject(tx.error)
+      })
+  )
 }
 
-// 注意：db.query 的绑定参数必须传数组，传字符串会静默返回空
+// ===== 数据库获取 =====
+/**
+ * 条件 GET（If-None-Match）：一个请求同时完成更新检查与下载。
+ * 返回 null = 服务器 304，本地缓存仍有效；否则 { bytes: Uint8Array, etag }。
+ * 不用 HEAD 探测 —— Chromium 会把 HEAD 响应缓存为同 URL GET 的条目，
+ * 导致随后的 GET 拿到没有 body 的假响应（实测 decodedBodySize: 0）。
+ */
+async function fetchDbBytes(knownEtag) {
+  dictLoad.value = { state: 'downloading', received: 0 }
+  const headers = knownEtag ? { 'If-None-Match': knownEtag } : undefined
+  let resp
+  try {
+    resp = await fetch(DB_URL, { headers })
+  } catch (e) {
+    // 断网：有缓存就当仍有效（词典完全离线可用）
+    if (knownEtag) throw Object.assign(new Error('network unavailable'), { cacheStillValid: true })
+    throw e
+  }
+  if (resp.status === 304) return null
+  if (!resp.ok) throw new Error(`dict.sqlite 下载失败: HTTP ${resp.status}`)
+  const etag = resp.headers.get('etag') || 'unknown'
+  const reader = resp.body.getReader()
+  const chunks = []
+  let received = 0
+  for (;;) {
+    const { done, value } = await reader.read()
+    if (done) break
+    chunks.push(value)
+    received += value.length
+    dictLoad.value = { state: 'downloading', received }
+  }
+  const bytes = new Uint8Array(received)
+  let off = 0
+  for (const c of chunks) {
+    bytes.set(c, off)
+    off += c.length
+  }
+  return { bytes, etag }
+}
+
+function getDb() {
+  if (!dbPromise) {
+    dbPromise = (async () => {
+      dictLoad.value = { state: 'opening' }
+      const SQL = await initSqlJs({ locateFile: () => wasmUrl })
+      const cached = await idbGet('db').catch(() => null)
+      let record = null
+      if (cached && cached.bytes) {
+        try {
+          const fresh = await fetchDbBytes(cached.etag) // 304 => null，用本地缓存
+          if (fresh) {
+            record = fresh
+            idbPut('db', record).catch(() => {})
+          }
+        } catch (e) {
+          if (!e.cacheStillValid) console.error('[nce-dict] 更新检查失败，使用本地缓存', e)
+        }
+      }
+      if (!record) {
+        if (cached && cached.bytes) {
+          record = cached // 断网等场景：直接用本地缓存
+        } else {
+          record = await fetchDbBytes(null)
+          idbPut('db', record).catch(() => {})
+        }
+      }
+      const db = new SQL.Database(record.bytes)
+      dictLoad.value = { state: 'ready' }
+      return db
+    })()
+    dbPromise.catch((e) => {
+      console.error('[nce-dict] 数据库加载失败', e)
+      dbPromise = null
+      dictLoad.value = { state: 'error' }
+    })
+  }
+  return dbPromise
+}
+
+// ===== 查询 =====
+function q(db, sql, params) {
+  const stmt = db.prepare(sql)
+  try {
+    stmt.bind(params)
+    const rows = []
+    while (stmt.step()) rows.push(stmt.getAsObject())
+    return rows
+  } finally {
+    stmt.free()
+  }
+}
+
 const cache = new Map()
 
 /**
@@ -46,12 +158,13 @@ export async function lookupWord(raw) {
   if (cache.has(key)) return cache.get(key)
   const db = await getDb()
   const cols = 'word, phonetic, translation, definition'
-  let rows = await db.query(`SELECT ${cols} FROM dict WHERE word = ?`, [key])
+  let rows = q(db, `SELECT ${cols} FROM dict WHERE word = ?`, [key])
   if (!rows.length) {
     const lower = key.toLowerCase()
-    if (lower !== key) rows = await db.query(`SELECT ${cols} FROM dict WHERE word = ?`, [lower])
+    if (lower !== key) rows = q(db, `SELECT ${cols} FROM dict WHERE word = ?`, [lower])
     if (!rows.length) {
-      rows = await db.query(
+      rows = q(
+        db,
         `SELECT d.word AS word, d.phonetic AS phonetic, d.translation AS translation, d.definition AS definition
          FROM forms f JOIN dict d ON d.word = f.lemma WHERE f.form = ? LIMIT 1`,
         [lower]

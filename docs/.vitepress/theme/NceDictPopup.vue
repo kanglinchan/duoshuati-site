@@ -4,7 +4,16 @@
       <div class="nce-dict-card" role="dialog" aria-label="查词释义">
         <button class="nce-dict-close" aria-label="关闭" @click="close">✕</button>
 
-        <template v-if="loading">查询中…</template>
+        <template v-if="loading">
+          <div v-if="loadState === 'downloading'" class="nce-dict-loading">
+            词典首次加载中，已下载 {{ receivedMb }} MB…<br>
+            <span class="nce-dict-sub">只需一次，之后完全离线可用</span>
+          </div>
+          <div v-else-if="loadState === 'opening' || loadState === 'checking'" class="nce-dict-loading">
+            正在打开词典…
+          </div>
+          <div v-else class="nce-dict-loading">查询中…</div>
+        </template>
         <template v-else-if="!entry">
           <div class="nce-dict-head"><span class="nce-dict-word">{{ card.word }}</span></div>
           <div class="nce-dict-none">词典中未收录该词形</div>
@@ -43,11 +52,14 @@
 <script setup>
 import { computed, ref, watch } from 'vue'
 import { nceDictCard, closeDictCard } from './nce-store'
-import { lookupWord } from './dict-worker'
+import { lookupWord, dictLoad } from './dict-worker'
 
 const card = nceDictCard
 const loading = ref(false)
 const entry = ref(null)
+
+const loadState = computed(() => dictLoad.value.state)
+const receivedMb = computed(() => ((dictLoad.value.received || 0) / 1048576).toFixed(1))
 
 const canSpeak = typeof window !== 'undefined' && 'speechSynthesis' in window
 
@@ -169,6 +181,16 @@ const senHtml = computed(() => {
   margin-top: 8px;
   color: var(--vp-c-text-3);
   font-size: 13px;
+}
+.nce-dict-loading {
+  margin-top: 10px;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.nce-dict-sub {
+  color: var(--vp-c-text-3);
+  font-size: 12px;
 }
 .nce-dict-sec {
   margin-top: 14px;

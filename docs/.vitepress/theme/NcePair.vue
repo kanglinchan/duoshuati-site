@@ -57,7 +57,7 @@
 <script setup>
 import { computed, onUnmounted, ref, watch } from 'vue'
 import { nceZhAll, nceExAll, nceZhEpoch, nceExEpoch, nceDictOn, openDictCard } from './nce-store'
-import { lookupWord, shortGloss } from './dict-worker'
+import { lookupWord, shortGloss, dictLoad } from './dict-worker'
 import NceDictPopup from './NceDictPopup.vue'
 
 const props = defineProps({
@@ -161,8 +161,10 @@ function onWordClick(text) {
     openCard(text) // 已查过：再次点击看完整释义
     return
   }
+  // 冷启动（首次下载词典需几十秒）：先开卡让用户看到下载进度
+  if (dictLoad.value.state !== 'ready') openCard(text)
   ensureLookup(text).then(() => {
-    if (!lookups.value.get(lower)) openCard(text) // 词典未命中：直接给卡片兜底
+    if (!lookups.value.get(lower) && dictLoad.value.state === 'ready') openCard(text)
   })
 }
 

@@ -54,6 +54,9 @@ print('VACUUM 中（重写为紧凑有序文件，需几十秒）...')
 con.execute("VACUUM")
 con.commit()
 
+con.close()  # Windows 下未关闭会锁文件
 size = os.path.getsize(DST)
 print(f"词条: {n_words:,}  词形映射: {n_forms:,}")
 print(f"文件: {DST}  {size/1e6:.1f} MB  页数: {size // 1024:,}  页大小: 1024B")
+# 架构说明：站点侧不做 HTTP Range 懒取（GitHub Pages 对所有响应 gzip，
+# Range 字节区间会落在压缩流上错位），而是前端整库下载一次存 IndexedDB。
