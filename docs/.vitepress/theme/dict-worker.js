@@ -100,26 +100,21 @@ function getDb() {
       dictLoad.value = { state: 'opening' }
       const SQL = await initSqlJs({ locateFile: () => wasmUrl })
       const cached = await idbGet('db').catch(() => null)
-      let record = null
       if (cached && cached.bytes) {
-        try {
-          const fresh = await fetchDbBytes(cached.etag) // 304 => null，用本地缓存
-          if (fresh) {
-            record = fresh
-            idbPut('db', record).catch(() => {})
-          }
-        } catch (e) {
-          if (!e.cacheStillValid) console.error('[nce-dict] 更新检查失败，使用本地缓存', e)
-        }
+        // 回场用户：立即用本地缓存开库（实测 <0.5s），词典离线可用
+        const db = new SQL.Database(cached.bytes)
+        dictLoad.value = { state: 'ready' }
+        revalidateInBackground(cached)
+        return db
       }
-      if (!record) {
-        if (cached && cached.bytes) {
-          record = cached // 断网等场景：直接用本地缓存
-        } else {
-          record = await fetchDbBytes(null)
-          idbPut('db', record).catch(() => {})
-        }
-      }
+      // 冷启动：整库下载（卡片展示进度）
+      const record = await fetchDbBytes(null)
+      let md5 = null
+      try {
+        const vr = await fetch(`${import.meta.env.BASE_URL}dict/version.json?t=${Date.now()}`)
+        if (vr.ok) md5 = (await vr.json()).md5
+      } catch (e) {} // 指纹拿不到也无妨，1 小时后的后台校验会补
+      await idbPut('db', { ...record, md5, checkedAt: Date.now() }).catch(() => {})
       const db = new SQL.Database(record.bytes)
       dictLoad.value = { state: 'ready' }
       return db
@@ -131,6 +126,36 @@ function getDb() {
     })
   }
   return dbPromise
+}
+
+/**
+ * 后台版本校验（stale-while-revalidate）：比对 version.json 的 MD5 指纹。
+ * GH Pages/Fastly 不支持 If-None-Match（实测恒 200），靠它做 304 增量只会
+ * 每次会话整库重下；version.json 只有几十字节，按需拉取即可。
+ * 词典更新时后台静默换库，下次会话生效，不打扰当前阅读。
+ */
+function revalidateInBackground(cached) {
+  const now = Date.now()
+  if (cached.checkedAt && now - cached.checkedAt < 3600000) return // 1 小时内不重复校验
+  idbPut('db', { ...cached, checkedAt: now }).catch(() => {})
+  fetch(`${import.meta.env.BASE_URL}dict/version.json?t=${now}`)
+    .then((r) => (r.ok ? r.json() : null))
+    .then(async (ver) => {
+      if (!ver || ver.md5 === cached.md5) return
+      console.info('[nce-dict] 检测到词典新版本，后台更新')
+      const resp = await fetch(DB_URL)
+      if (!resp.ok) return
+      const buf = new Uint8Array(await resp.arrayBuffer())
+      if (buf.length) {
+        await idbPut('db', {
+          bytes: buf,
+          etag: resp.headers.get('etag') || 'unknown',
+          md5: ver.md5,
+          checkedAt: Date.now()
+        }).catch(() => {})
+      }
+    })
+    .catch(() => {}) // 后台任务静默失败
 }
 
 // ===== 查询 =====
