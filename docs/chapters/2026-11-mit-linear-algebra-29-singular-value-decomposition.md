@@ -192,6 +192,10 @@ $$
 
 （先选 $V$，再让 $U$ 服从 $A\mathbf{v}_{i}=\sigma_{i}\mathbf{u}_{i}$——符号一次到位。）
 
+![SVD 几何（动态）：单位圆经 A=[4 4; −3 3] 变成椭圆，半轴 σ₁=4√2、σ₂=3√2](/assets/images/mit1806/mit1806-29-svd-circle-ellipse.gif)
+
+![Avᵢ=σᵢuᵢ 完整链条：AᵀA → λ=32,18 → σ → U、Σ、V 组装出 A](/assets/images/mit1806/mit1806-29-av-u-chain.png)
+
 ## 八、例二：秩 1 矩阵的 SVD
 
 $$

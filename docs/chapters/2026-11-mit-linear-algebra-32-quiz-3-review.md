@@ -264,6 +264,8 @@ $$
 7. 只给 SVD 因子：读出可逆性、秩、零空间向量（$\sigma=0$ 的 $\mathbf{v}$）；
 8. 对称+正交 ⟹ $\lambda=\pm1$、$A^{2}=I$、$\tfrac12(A+I)$ 是投影。
 
+![小测 3 两大考点速览：Gram-Schmidt（减影子→除长度）与 SVD（圆→椭圆，σ=半轴长）](/assets/images/mit1806/mit1806-32-quiz3-gs-svd.png)
+
 ## 十二、课后练习
 
 ### 练习 1：反对称矩阵的谱

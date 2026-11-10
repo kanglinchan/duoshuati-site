@@ -74,6 +74,8 @@ $$
 
 - **$\lambda=1$ 的特征向量**：不动的向量——$\mathbf{a}$ 自己！验证：$P\mathbf{a}=\mathbf{a}\,\dfrac{\mathbf{a}^{T}\mathbf{a}}{\mathbf{a}^{T}\mathbf{a}}=\mathbf{a}$ ✓。
 
+![小测 2 速算：秩 1 投影矩阵 P=(1/9)[4 2 4; 2 1 2; 4 2 4] 的 λ=0,0,1 与特征向量 (2,1,2)](/assets/images/mit1806/mit1806-24b-quiz2-eigen-quick.png)
+
 ## 四、题一（续）：差分方程 u_{k+1} = Pu_k
 
 > $\mathbf{u}_{0}=(9,9,0)^{T}$，求 $\mathbf{u}_{k}$。

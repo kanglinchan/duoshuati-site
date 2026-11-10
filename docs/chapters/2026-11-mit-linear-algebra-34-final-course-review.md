@@ -59,6 +59,8 @@ $$
 
 **(4) $A^{T}\mathbf{y}=\mathbf{c}$ 对每个 $\mathbf{c}$ 至少一解、且无穷多解？——真。**$A^{T}$（$n\times m$）行无关（$A$ 列无关的转置版）⟹ 恒可解；$N(A^{T})$ 维数 $=m-r>0$ ⟹ 无穷多解。
 
+![真题速查：A=[0 1; 1 1; 0 0] 的四条真假判断与理由（AᵀA 可逆、AAᵀ 奇异）](/assets/images/mit1806/mit1806-34-review-truefalse.png)
+
 ## 四、题一（续）：Aᵀy = c 的解
 
 （并入第三节 (4)。复习要点：可解性看**行秩**、解的多少看**零空间维数** $m-r$。）
@@ -188,6 +190,8 @@ $$
 \quad\Longrightarrow\quad
 \hat{\mathbf{x}}=(0,0)^{T}.
 $$
+
+![全课程地图（动态）：从 Ax=b 出发，六站走到特征值与 SVD](/assets/images/mit1806/mit1806-34-course-map.gif)
 
 ## 九、课程终了
 

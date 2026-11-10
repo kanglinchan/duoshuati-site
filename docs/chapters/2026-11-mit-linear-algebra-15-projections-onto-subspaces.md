@@ -32,6 +32,8 @@
 - **正交性是全部关键**：误差向量 $\mathbf{e}=\mathbf{b}-\mathbf{p}$（"我错了多少"）与直线**垂直**——那个直角告诉我们 $\mathbf{p}$ 在哪里；
 - 三角学路线（$\sin\theta,\cos\theta$）会给出难看的公式；线性代数给出的公式干净漂亮。
 
+![投影（动态）：b 在哪，垂足 p 都是直线上离 b 最近的点，误差 e 恒⊥a](/assets/images/mit1806/mit1806-15-projection-line.gif)
+
 ## 二、一维投影的方程与三个公式
 
 $\mathbf{p}$ 在直线上，必是 $\mathbf{a}$ 的倍数：
@@ -75,6 +77,8 @@ $$
 （$\mathbf{a}^{T}\mathbf{b}/\mathbf{a}^{T}\mathbf{a}$ 里其实藏着 $\cos\theta$，但我们从头到尾不需要角度——只有向量。）第三个公式马上出场。
 
 ## 三、公式的两个快问快答
+
+![一维投影公式总览（示例 a=(1,1)，b=(4,2)）：p=(3,3)，e=(1,−1)⊥a，P=aaᵀ/aᵀa](/assets/images/mit1806/mit1806-15-projection-formula.png)
 
 **问：$\mathbf{b}$ 加倍，投影怎样？**——加倍。$\mathbf{b}\to2\mathbf{b}$ 使分子多出因子 2，$\mathbf{p}$ 跟着翻倍（画图一致：$\mathbf{b}$ 走多远，垂足走多远）。
 
