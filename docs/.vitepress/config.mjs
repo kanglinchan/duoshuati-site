@@ -20,6 +20,16 @@ export default defineConfig({
   markdown: {
     config: (md) => {
       md.use(mathjax3)
+      // 章节插图多为大体积 GIF：正文先渲染，图片滚动到视口再下载
+      const defaultImage = md.renderer.rules.image
+      md.renderer.rules.image = (tokens, idx, options, env, self) => {
+        const token = tokens[idx]
+        if (token.attrIndex('loading') < 0) {
+          token.attrSet('loading', 'lazy')
+          token.attrSet('decoding', 'async')
+        }
+        return defaultImage(tokens, idx, options, env, self)
+      }
     }
   },
   themeConfig: {
