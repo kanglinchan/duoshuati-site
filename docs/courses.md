@@ -72,3 +72,43 @@
 - [第二册 · 实践与进步（96 课）](/nce/2/01-a-private-conversation)
 - [第三册 · 培养技能（60 课）](/nce/3/01-a-puma-at-large)
 - [第四册 · 流利英语（48 课）](/nce/4/01-finding-fossil-man)
+
+## C++ 设计模式
+
+王健伟《C++ 新经典：设计模式》扫描版 OCR 逐章校对整理，23 种 GoF 模式 + C++ 类基础两篇附录，每个模式配结构示意图与 mermaid UML。
+
+- [00. 总目录与学习指引](/chapters/2026-11-cpp-design-patterns-00-overview)
+- [01. 设计模式与软件开发思想](/chapters/2026-11-cpp-design-patterns-01-design-patterns-overview)
+- [02. 模板方法模式](/chapters/2026-11-cpp-design-patterns-02-template-method)
+- [03. 工厂模式、原型模式、建造者模式](/chapters/2026-11-cpp-design-patterns-03-factory-prototype-builder)
+- [04. 策略模式](/chapters/2026-11-cpp-design-patterns-04-strategy)
+- [05. 观察者模式](/chapters/2026-11-cpp-design-patterns-05-observer)
+- [06. 装饰模式](/chapters/2026-11-cpp-design-patterns-06-decorator)
+- [07. 单件模式](/chapters/2026-11-cpp-design-patterns-07-singleton)
+- [08. 外观模式](/chapters/2026-11-cpp-design-patterns-08-facade)
+- [09. 命令模式](/chapters/2026-11-cpp-design-patterns-09-command)
+- [10. 迭代器模式](/chapters/2026-11-cpp-design-patterns-10-iterator)
+- [11. 组合模式](/chapters/2026-11-cpp-design-patterns-11-composite)
+- [12. 状态模式](/chapters/2026-11-cpp-design-patterns-12-state)
+- [13. 享元模式](/chapters/2026-11-cpp-design-patterns-13-flyweight)
+- [14. 代理模式](/chapters/2026-11-cpp-design-patterns-14-proxy)
+- [15. 适配器模式](/chapters/2026-11-cpp-design-patterns-15-adapter)
+- [16. 桥接模式](/chapters/2026-11-cpp-design-patterns-16-bridge)
+- [17. 中介者模式](/chapters/2026-11-cpp-design-patterns-17-mediator)
+- [18. 备忘录模式](/chapters/2026-11-cpp-design-patterns-18-memento)
+- [19. 职责链模式](/chapters/2026-11-cpp-design-patterns-19-chain-of-responsibility)
+- [20. 访问者模式](/chapters/2026-11-cpp-design-patterns-20-visitor)
+- [21. 解释器模式](/chapters/2026-11-cpp-design-patterns-21-interpreter)
+- [22. 设计模式总结](/chapters/2026-11-cpp-design-patterns-22-design-patterns-summary)
+- [23. 附录 A：类和对象](/chapters/2026-11-cpp-design-patterns-23-appendix-a-classes-and-objects)
+- [24. 附录 B：引用计数基础理论和实践](/chapters/2026-11-cpp-design-patterns-24-appendix-b-reference-counting)
+
+## Word Power Made Easy
+
+Norman Lewis 词源学词汇经典，OCR 整理自个人藏书，正文支持点词查词。
+
+- [总目录（19 章 47 节）](/wpme/)
+- [前言 · How to Use This Book](/wpme/intro)
+- [Session 1 · 个性类型](/wpme/s01)
+- [Session 14 · 谎言的分级词汇](/wpme/s14)
+- [Session 47 · 综合测验 III](/wpme/s47)

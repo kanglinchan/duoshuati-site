@@ -67,3 +67,14 @@ hero:
 - [第三册 · 培养技能（60 课）](/nce/3/01-a-puma-at-large)
 - [第四册 · 流利英语（48 课）](/nce/4/01-finding-fossil-man)
 - ……全 4 册 276 课逐句对照，[查看总目录](/nce/)
+
+### C++ 设计模式 · 默认专栏
+
+《C++ 新经典：设计模式》全书 24 章逐章校对整理，每个模式配结构示意图与 mermaid UML。
+
+- [01. 设计模式与软件开发思想](/chapters/2026-11-cpp-design-patterns-01-design-patterns-overview)
+- [02. 模板方法模式](/chapters/2026-11-cpp-design-patterns-02-template-method)
+- [04. 策略模式](/chapters/2026-11-cpp-design-patterns-04-strategy)
+- [05. 观察者模式](/chapters/2026-11-cpp-design-patterns-05-observer)
+- [07. 单件模式](/chapters/2026-11-cpp-design-patterns-07-singleton)
+- ……共 22 章 + 2 附录，[查看总目录](/chapters/2026-11-cpp-design-patterns-00-overview)

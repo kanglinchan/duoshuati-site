@@ -6,4 +6,5 @@
 - [英语语法精要](/chapters/2026-08-english-grammar-01-five-basic-sentence-patterns)（1 章）
 - [图解 ARM 汇编](/chapters/2026-08-arm-assembly-01-mov-exit-syscall)（11 章）
 - [MIT 18.06 线性代数](/chapters/2026-11-mit-linear-algebra-01-geometry-of-linear-equations)（36 章）
+- [C++ 设计模式](/chapters/2026-11-cpp-design-patterns-00-overview)（24 章）
 - [新概念英语 1-4 册](/nce/)（276 课）

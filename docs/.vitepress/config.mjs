@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import mathjax3 from 'markdown-it-mathjax3'
 import nceSidebar from './nce-sidebar.json'
+import wpmeSidebar from './wpme-sidebar.json'
 
 export default defineConfig({
   // IDE 环境的 safe-delete shim 会拦截 vite 清空 dist 导致 build 失败，关闭 emptyOutDir 绕过（见 quizCraft SKILL.md 踩坑实录）
@@ -20,6 +21,16 @@ export default defineConfig({
   markdown: {
     config: (md) => {
       md.use(mathjax3)
+      // mermaid 代码块 → <Mermaid> 组件（theme/Mermaid.vue 客户端渲染 UML）
+      const defaultFence = md.renderer.rules.fence
+      md.renderer.rules.fence = (tokens, idx, options, env, self) => {
+        const token = tokens[idx]
+        if (token.info.trim().split(/\s+/)[0] === 'mermaid') {
+          const code = encodeURIComponent(token.content)
+          return `<Mermaid diagram="${code}" />`
+        }
+        return defaultFence(tokens, idx, options, env, self)
+      }
       // 章节插图多为大体积 GIF：正文先渲染，图片滚动到视口再下载
       const defaultImage = md.renderer.rules.image
       md.renderer.rules.image = (tokens, idx, options, env, self) => {
@@ -161,12 +172,53 @@ export default defineConfig({
         ]
       },
       {
+        // 《C++ 新经典：设计模式》OCR 整理，共 24 章 + 总目录
+        text: 'C++ 设计模式',
+        collapsed: false,
+        items: [
+          { text: '00. 总目录与学习指引', link: '/chapters/2026-11-cpp-design-patterns-00-overview' },
+          { text: '01. 设计模式与软件开发思想', link: '/chapters/2026-11-cpp-design-patterns-01-design-patterns-overview' },
+          { text: '02. 模板方法模式', link: '/chapters/2026-11-cpp-design-patterns-02-template-method' },
+          { text: '03. 工厂、原型、建造者模式', link: '/chapters/2026-11-cpp-design-patterns-03-factory-prototype-builder' },
+          { text: '04. 策略模式', link: '/chapters/2026-11-cpp-design-patterns-04-strategy' },
+          { text: '05. 观察者模式', link: '/chapters/2026-11-cpp-design-patterns-05-observer' },
+          { text: '06. 装饰模式', link: '/chapters/2026-11-cpp-design-patterns-06-decorator' },
+          { text: '07. 单件模式', link: '/chapters/2026-11-cpp-design-patterns-07-singleton' },
+          { text: '08. 外观模式', link: '/chapters/2026-11-cpp-design-patterns-08-facade' },
+          { text: '09. 命令模式', link: '/chapters/2026-11-cpp-design-patterns-09-command' },
+          { text: '10. 迭代器模式', link: '/chapters/2026-11-cpp-design-patterns-10-iterator' },
+          { text: '11. 组合模式', link: '/chapters/2026-11-cpp-design-patterns-11-composite' },
+          { text: '12. 状态模式', link: '/chapters/2026-11-cpp-design-patterns-12-state' },
+          { text: '13. 享元模式', link: '/chapters/2026-11-cpp-design-patterns-13-flyweight' },
+          { text: '14. 代理模式', link: '/chapters/2026-11-cpp-design-patterns-14-proxy' },
+          { text: '15. 适配器模式', link: '/chapters/2026-11-cpp-design-patterns-15-adapter' },
+          { text: '16. 桥接模式', link: '/chapters/2026-11-cpp-design-patterns-16-bridge' },
+          { text: '17. 中介者模式', link: '/chapters/2026-11-cpp-design-patterns-17-mediator' },
+          { text: '18. 备忘录模式', link: '/chapters/2026-11-cpp-design-patterns-18-memento' },
+          { text: '19. 职责链模式', link: '/chapters/2026-11-cpp-design-patterns-19-chain-of-responsibility' },
+          { text: '20. 访问者模式', link: '/chapters/2026-11-cpp-design-patterns-20-visitor' },
+          { text: '21. 解释器模式', link: '/chapters/2026-11-cpp-design-patterns-21-interpreter' },
+          { text: '22. 设计模式总结', link: '/chapters/2026-11-cpp-design-patterns-22-design-patterns-summary' },
+          { text: '23. 附录 A · 类和对象', link: '/chapters/2026-11-cpp-design-patterns-23-appendix-a-classes-and-objects' },
+          { text: '24. 附录 B · 引用计数', link: '/chapters/2026-11-cpp-design-patterns-24-appendix-b-reference-counting' }
+        ]
+      },
+      {
         // 由 scripts/gen-nce-pages.js 生成，共 276 课
         text: '新概念英语',
         collapsed: false,
         items: [
           { text: '四册总目录', link: '/nce/' },
           ...nceSidebar
+        ]
+      },
+      {
+        // Word Power Made Easy：OCR 整理，共 19 章 47 节
+        text: 'Word Power Made Easy',
+        collapsed: false,
+        items: [
+          { text: '总目录', link: '/wpme/' },
+          ...wpmeSidebar
         ]
       }
     ],

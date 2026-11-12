@@ -66,6 +66,7 @@
     "mark.js": "^8.11.1",
     "mdast-util-to-hast": "^13.2.1",
     "mensch": "^0.3.4",
+    "mermaid": "^12.3.0",
     "mhchemparser": "^4.2.1",
     "micromark-util-character": "^2.1.1",
     "micromark-util-encode": "^2.0.1",
