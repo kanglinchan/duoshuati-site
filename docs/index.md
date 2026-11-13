@@ -78,3 +78,18 @@ hero:
 - [05. 观察者模式](/chapters/2026-11-cpp-design-patterns-05-observer)
 - [07. 单件模式](/chapters/2026-11-cpp-design-patterns-07-singleton)
 - ……共 22 章 + 2 附录，[查看总目录](/chapters/2026-11-cpp-design-patterns-00-overview)
+
+### 征服 C 指针 · 默认专栏
+
+《征服C指针（第2版）》（前桥和弥）重点提炼：只保留指针主线，面向前端开发者的 10 篇笔记，配 19 张内存图解。
+
+- [00. 导读：为什么前端要懂 C 指针](/chapters/2026-11-c-pointers-00-overview)
+- [01. 指针是什么：内存与地址](/chapters/2026-11-c-pointers-01-memory-and-address)
+- [02. 指针运算与数组：a[i] 底层就是指针](/chapters/2026-11-c-pointers-02-pointer-arith-and-array)
+- [03. C 的内存布局：变量到底住在哪里](/chapters/2026-11-c-pointers-03-memory-layout)
+- [04. 堆与动态内存：malloc / free](/chapters/2026-11-c-pointers-04-heap-malloc)
+- [05. 读懂 C 声明：类型派生与阅读法](/chapters/2026-11-c-pointers-05-declarations)
+- [06. 数组与指针的本质区别](/chapters/2026-11-c-pointers-06-array-vs-pointer)
+- [07. 实战：数组、指针与函数参数](/chapters/2026-11-c-pointers-07-practice)
+- [08. 指针的真正用法：链表与函数指针](/chapters/2026-11-c-pointers-08-data-structures)
+- [09. 陷阱与惯用写法速查](/chapters/2026-11-c-pointers-09-pitfalls)

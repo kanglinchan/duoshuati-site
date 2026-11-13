@@ -7,4 +7,5 @@
 - [图解 ARM 汇编](/chapters/2026-08-arm-assembly-01-mov-exit-syscall)（11 章）
 - [MIT 18.06 线性代数](/chapters/2026-11-mit-linear-algebra-01-geometry-of-linear-equations)（36 章）
 - [C++ 设计模式](/chapters/2026-11-cpp-design-patterns-00-overview)（24 章）
+- [征服 C 指针](/chapters/2026-11-c-pointers-00-overview)（10 章）
 - [新概念英语 1-4 册](/nce/)（276 课）

@@ -28,3 +28,15 @@
 - [09. 循环 自测](/chapters/2026-08-arm-assembly-09-while-loops#本章自测)
 - [10. 函数调用 自测](/chapters/2026-08-arm-assembly-10-function-calls#本章自测)
 - [11. 栈上传参 自测](/chapters/2026-08-arm-assembly-11-stack-args#本章自测)
+
+## 征服 C 指针
+
+- [01. 指针是什么：内存与地址 自测](/chapters/2026-11-c-pointers-01-memory-and-address#本章自测)
+- [02. 指针运算与数组 自测](/chapters/2026-11-c-pointers-02-pointer-arith-and-array#本章自测)
+- [03. 内存布局 自测](/chapters/2026-11-c-pointers-03-memory-layout#本章自测)
+- [04. malloc 与 free 自测](/chapters/2026-11-c-pointers-04-heap-malloc#本章自测)
+- [05. 读懂 C 声明 自测](/chapters/2026-11-c-pointers-05-declarations#本章自测)
+- [06. 数组与指针的本质区别 自测](/chapters/2026-11-c-pointers-06-array-vs-pointer#本章自测)
+- [07. 实战：数组指针与参数 自测](/chapters/2026-11-c-pointers-07-practice#本章自测)
+- [08. 数据结构与多态 自测](/chapters/2026-11-c-pointers-08-data-structures#本章自测)
+- [09. 陷阱与惯用写法 自测](/chapters/2026-11-c-pointers-09-pitfalls#本章自测)

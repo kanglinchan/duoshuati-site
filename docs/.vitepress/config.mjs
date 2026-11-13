@@ -204,6 +204,23 @@ export default defineConfig({
         ]
       },
       {
+        // 《征服C指针（第2版）》重点提炼，配图由 scripts/gen-c-pointers-figs.js 生成
+        text: '征服 C 指针',
+        collapsed: false,
+        items: [
+          { text: '00. 导读：为什么前端要懂 C 指针', link: '/chapters/2026-11-c-pointers-00-overview' },
+          { text: '01. 指针是什么：内存与地址', link: '/chapters/2026-11-c-pointers-01-memory-and-address' },
+          { text: '02. 指针运算与数组：a[i] 底层就是指针', link: '/chapters/2026-11-c-pointers-02-pointer-arith-and-array' },
+          { text: '03. C 的内存布局：变量到底住在哪里', link: '/chapters/2026-11-c-pointers-03-memory-layout' },
+          { text: '04. 堆与动态内存：malloc / free', link: '/chapters/2026-11-c-pointers-04-heap-malloc' },
+          { text: '05. 读懂 C 声明：类型派生与阅读法', link: '/chapters/2026-11-c-pointers-05-declarations' },
+          { text: '06. 数组与指针的本质区别', link: '/chapters/2026-11-c-pointers-06-array-vs-pointer' },
+          { text: '07. 实战：数组、指针与函数参数', link: '/chapters/2026-11-c-pointers-07-practice' },
+          { text: '08. 指针的真正用法：链表与函数指针', link: '/chapters/2026-11-c-pointers-08-data-structures' },
+          { text: '09. 陷阱与惯用写法速查', link: '/chapters/2026-11-c-pointers-09-pitfalls' }
+        ]
+      },
+      {
         // 由 scripts/gen-nce-pages.js 生成，共 276 课
         text: '新概念英语',
         collapsed: false,

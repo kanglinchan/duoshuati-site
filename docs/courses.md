@@ -103,6 +103,21 @@
 - [23. 附录 A：类和对象](/chapters/2026-11-cpp-design-patterns-23-appendix-a-classes-and-objects)
 - [24. 附录 B：引用计数基础理论和实践](/chapters/2026-11-cpp-design-patterns-24-appendix-b-reference-counting)
 
+## 征服 C 指针
+
+前桥和弥《征服C指针（第2版）》重点提炼：砍掉 C 历史与编译器考古，只保留指针主线（内存模型 → 声明语法 → 数组与指针之别 → 实战 → 数据结构 → 陷阱速查），面向有编程基础的前端开发者，每篇配内存示意图。
+
+- [00. 导读：为什么前端要懂 C 指针](/chapters/2026-11-c-pointers-00-overview)
+- [01. 指针是什么：内存与地址](/chapters/2026-11-c-pointers-01-memory-and-address)
+- [02. 指针运算与数组：a[i] 底层就是指针](/chapters/2026-11-c-pointers-02-pointer-arith-and-array)
+- [03. C 的内存布局：变量到底住在哪里](/chapters/2026-11-c-pointers-03-memory-layout)
+- [04. 堆与动态内存：malloc / free](/chapters/2026-11-c-pointers-04-heap-malloc)
+- [05. 读懂 C 声明：类型派生与阅读法](/chapters/2026-11-c-pointers-05-declarations)
+- [06. 数组与指针的本质区别](/chapters/2026-11-c-pointers-06-array-vs-pointer)
+- [07. 实战：数组、指针与函数参数](/chapters/2026-11-c-pointers-07-practice)
+- [08. 指针的真正用法：链表与函数指针](/chapters/2026-11-c-pointers-08-data-structures)
+- [09. 陷阱与惯用写法速查](/chapters/2026-11-c-pointers-09-pitfalls)
+
 ## Word Power Made Easy
 
 Norman Lewis 词源学词汇经典，OCR 整理自个人藏书，正文支持点词查词。
