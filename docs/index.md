@@ -52,14 +52,6 @@ hero:
 - [图解 ARM 汇编 · 各章自测汇总](/answers#图解-arm-汇编)
 - [专栏与课程归属总览](/columns)
 
-### MIT 18.06 线性代数 · 默认专栏
-
-- [01. 线性方程的几何意义](/chapters/2026-11-mit-linear-algebra-01-geometry-of-linear-equations)
-- [02. 矩阵消元](/chapters/2026-11-mit-linear-algebra-02-elimination-with-matrices)
-- [03. 矩阵乘法和逆矩阵](/chapters/2026-11-mit-linear-algebra-03-multiplication-and-inverse-matrices)
-- [04. 矩阵的 LU 分解](/chapters/2026-11-mit-linear-algebra-04-factorization-into-lu)
-- ……共 36 讲，[查看全部](/courses)
-
 ### 新概念英语 · 默认专栏
 
 - [第一册 · 英语初阶（72 课）](/nce/1/001-002-excuse-me)
