@@ -27,6 +27,14 @@
 - [10. 函数调用：让代码学会复用](/chapters/2026-08-arm-assembly-10-function-calls)
 - [11. 栈上传参：寄存器不够用怎么办](/chapters/2026-08-arm-assembly-11-stack-args)
 
+## MIT 18.06 线性代数
+
+- [01. 线性方程的几何意义](/chapters/2026-11-mit-linear-algebra-01-geometry-of-linear-equations)
+- [02. 矩阵消元](/chapters/2026-11-mit-linear-algebra-02-elimination-with-matrices)
+- [03. 矩阵乘法和逆矩阵](/chapters/2026-11-mit-linear-algebra-03-multiplication-and-inverse-matrices)
+- [04. 矩阵的 LU 分解](/chapters/2026-11-mit-linear-algebra-04-factorization-into-lu)
+- [05. 转置、置换和向量空间](/chapters/2026-11-mit-linear-algebra-05-transposes-permutations-spaces-rn)
+
 ## 新概念英语
 
 - [第一册 · 英语初阶（72 课）](/nce/1/001-002-excuse-me)

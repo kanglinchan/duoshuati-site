@@ -12,9 +12,6 @@ export default defineConfig({
   // 入口已从 courses / index / columns / 侧边栏移除；未重写的 34 讲不参与构建，
   // 仅保留已重写的第 1、2 讲（URL 不变）。重写一篇，从这里恢复一篇。
   srcExclude: [
-    'chapters/2026-11-mit-linear-algebra-03-*.md',
-    'chapters/2026-11-mit-linear-algebra-04-*.md',
-    'chapters/2026-11-mit-linear-algebra-05-*.md',
     'chapters/2026-11-mit-linear-algebra-06-*.md',
     'chapters/2026-11-mit-linear-algebra-07-*.md',
     'chapters/2026-11-mit-linear-algebra-08-*.md',
@@ -124,6 +121,29 @@ export default defineConfig({
           { text: '09. 循环：让代码重复执行', link: '/chapters/2026-08-arm-assembly-09-while-loops' },
           { text: '10. 函数调用：让代码学会复用', link: '/chapters/2026-08-arm-assembly-10-function-calls' },
           { text: '11. 栈上传参：寄存器不够用怎么办', link: '/chapters/2026-08-arm-assembly-11-stack-args' }
+        ]
+      },
+      {
+        text: 'MIT 18.06 线性代数',
+        collapsed: false,
+        items: [
+          {
+            text: '第一部分 · 线性方程组与矩阵消元',
+            collapsed: false,
+            items: [
+              { text: '01. 线性方程的几何意义', link: '/chapters/2026-11-mit-linear-algebra-01-geometry-of-linear-equations' },
+              { text: '02. 矩阵消元', link: '/chapters/2026-11-mit-linear-algebra-02-elimination-with-matrices' },
+              { text: '03. 矩阵乘法和逆矩阵', link: '/chapters/2026-11-mit-linear-algebra-03-multiplication-and-inverse-matrices' },
+              { text: '04. 矩阵的 LU 分解', link: '/chapters/2026-11-mit-linear-algebra-04-factorization-into-lu' }
+            ]
+          },
+          {
+            text: '第二部分 · 向量空间与四个基本子空间',
+            collapsed: false,
+            items: [
+              { text: '05. 转置、置换和向量空间', link: '/chapters/2026-11-mit-linear-algebra-05-transposes-permutations-spaces-rn' }
+            ]
+          }
         ]
       },
       {
