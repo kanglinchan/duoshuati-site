@@ -212,6 +212,15 @@ export default defineConfig({
           { text: '总目录', link: '/wpme/' },
           ...wpmeSidebar
         ]
+      },
+      {
+        // 数学笔记：按「先定顺序，再选方法」组织的中学数学专题
+        text: '数学笔记',
+        collapsed: false,
+        items: [
+          { text: '00. 导读：这门笔记怎么写', link: '/chapters/2026-11-math-notes-00-overview' },
+          { text: '01. 因式分解：先定顺序，再选方法', link: '/chapters/2026-11-math-notes-01-factorization' }
+        ]
       }
     ],
     outline: { level: [2, 3], label: '本页目录' },

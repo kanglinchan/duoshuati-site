@@ -8,4 +8,5 @@
 - [MIT 18.06 线性代数](/chapters/2026-11-mit-linear-algebra-01-geometry-of-linear-equations)（已上线 5 讲）
 - [C++ 设计模式](/chapters/2026-11-cpp-design-patterns-00-overview)（24 章）
 - [征服 C 指针](/chapters/2026-11-c-pointers-00-overview)（10 章）
+- [数学笔记](/chapters/2026-11-math-notes-00-overview)（1 篇）
 - [新概念英语 1-4 册](/nce/)（276 课）

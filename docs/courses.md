@@ -35,6 +35,13 @@
 - [04. 矩阵的 LU 分解](/chapters/2026-11-mit-linear-algebra-04-factorization-into-lu)
 - [05. 转置、置换和向量空间](/chapters/2026-11-mit-linear-algebra-05-transposes-permutations-spaces-rn)
 
+## 数学笔记
+
+按「先定顺序，再选方法」组织的中学数学专题笔记：每个专题先给判断顺序，再给完整例题，最后配自测。只在有理数范围内讨论，例题全部手算，不写「易得」「显然」。
+
+- [00. 导读：这门笔记怎么写](/chapters/2026-11-math-notes-00-overview)
+- [01. 因式分解：先定顺序，再选方法](/chapters/2026-11-math-notes-01-factorization)
+
 ## 新概念英语
 
 - [第一册 · 英语初阶（72 课）](/nce/1/001-002-excuse-me)

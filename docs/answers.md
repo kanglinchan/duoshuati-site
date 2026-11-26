@@ -40,3 +40,7 @@
 - [07. 实战：数组指针与参数 自测](/chapters/2026-11-c-pointers-07-practice#本章自测)
 - [08. 数据结构与多态 自测](/chapters/2026-11-c-pointers-08-data-structures#本章自测)
 - [09. 陷阱与惯用写法 自测](/chapters/2026-11-c-pointers-09-pitfalls#本章自测)
+
+## 数学笔记
+
+- [01. 因式分解：先定顺序，再选方法 自测](/chapters/2026-11-math-notes-01-factorization#本章自测)
